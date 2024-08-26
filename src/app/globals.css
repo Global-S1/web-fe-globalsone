@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --body-gb-color: #0E032A;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--body-gb-color);
+  color: white;
+  overflow-x: hidden;
+}
+
+.s_section_base{
+  @apply container flex flex-col mx-auto justify-center items-center  max-w-[1200px];
+}
+
+/*---------------carrucel---------------*/
+.swiper {
+  width: 1000px;
+  height: 550px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.image-container img {
+  height: 100%;
+  object-fit: cover;
+}
+/*---------------carrucel---------------*/
+
+/*---------------animation---------------*/
+.background_animate {
+  position: relative;
+  overflow: hidden;
+}
+
+.falling-leaf {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fall cubic-bezier(0,0,1,1) infinite, fadeInOut linear infinite;
+}
+
+.leaf4 {
+  background-image: url('../assets/leavesImg/leave2.png');
+  left: 1%;
+  animation-duration: 21s;
+  animation-delay: 2s;
+}
+
+.leaf1 {
+  background-image: url('../assets/leavesImg/leave2.png');
+  left: 5%;
+  animation-duration: 18s;
+  animation-delay: 20s;
+}
+
+.leaf7 {
+  background-image: url('../assets/leavesImg/leave1.png');
+  left: 15%;
+  animation-duration: 15s;
+  animation-delay: 7s;
+}
+
+.leaf2 {
+  background-image: url('../assets/leavesImg/leave3.png');
+  left: 30%;
+  animation-duration: 20s;
+  animation-delay: 3s;
+}
+
+.leaf8 {
+  background-image: url('../assets/leavesImg/leave1.png');
+  left: 45%;
+  animation-duration: 24s;
+  animation-delay: 6s;
+}
+
+.leaf5 {
+  background-image: url('../assets/leavesImg/leave3.png');
+  left: 50%;
+  animation-duration: 22s;
+  animation-delay: 4s;
+}
+
+.leaf3 {
+  background-image: url('../assets/leavesImg/leave3.png');
+  left: 60%;
+  animation-duration: 16s;
+  animation-delay: 5s;
+}
+
+.leaf9 {
+  background-image: url('../assets/leavesImg/leave3.png');
+  left: 75%;
+  animation-duration: 26s; /* Aumentado para caer más lentamente */
+  animation-delay: 9s;
+}
+
+.leaf6 {
+  background-image: url('../assets/leavesImg/leave2.png');
+  left: 89%;
+  animation-duration: 21s; /* Aumentado para caer más lentamente */
+  animation-delay: 1s;
+}
+
+
+@keyframes fall {
+  0% {
+    transform: translate(-50px, -100px) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, 25vh) rotate(45deg);
+  }
+  50% {
+    transform: translate(-50px, 50vh) rotate(90deg);
+  }
+  75% {
+    transform: translate(50px, 75vh) rotate(135deg);
+  }
+  100% {
+    transform: translate(-50px, 100vh) rotate(180deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
