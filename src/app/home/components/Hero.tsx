@@ -36,10 +36,17 @@ const Hero = () => {
           <CentralImg />
         </div>
         <div className="absolute right-4 sm:bottom-5 md:bottom-28 lg:bottom-16 xl:bottom-5 text-right -translate-y-1/2 text-[1.5rem] md:text-[2.5rem] lg:text-[3.3rem] xl:text-[4rem] xl:leading-none lg:leading-tight md:leading-[2.9rem]">
-          <h2>
-            soluciones <br />
-            de software <br /> a medida
-          </h2>
+          <div>
+            <Image
+              src={BgTextright}
+              alt="background title"
+              className="absolute -z-10 -right-28 -bottom-20"
+            />
+            <h2>
+              soluciones <br />
+              de software <br /> a medida
+            </h2>
+          </div>
         </div>
       </div>
 
