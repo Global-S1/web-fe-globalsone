@@ -5,6 +5,7 @@ import Header from "@/components/common/Header";
 import "./globals.css";
 import Footer from "@/components/common/Footer";
 import Main from "@/components/common/Main";
+import HeaderMobile from "@/components/common/HeaderMobile/HeaderMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${grandis.variable} ${futuraMedium.variable}`}>
       <body className="font-grandis">
         <Header />
+        <HeaderMobile />
         <Main>{children}</Main>
         <Footer />
       </body>

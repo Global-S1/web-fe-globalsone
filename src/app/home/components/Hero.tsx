@@ -8,48 +8,41 @@ import { CentralImg } from "./CentralImg";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import Section from "@/components/common/Section";
 import Insides from "@/components/Insides";
+import logoHero from "@/assets/heroImg.png";
 
 const Hero = () => {
   return (
     <Section styles={{ marginBotton: "5rem" }}>
-      <div
-        className="w-full flex flex-col justify-start items-center mb-14 relative bg-contain bg-no-repeat bg-center "
-        style={{ backgroundImage: `url(${BgHero.src})` }}
-      >
-        <Image
-          src={BgTextleft}
-          alt="background"
-          className="absolute -z-10 -left-36 top-12"
-        />
-        <h2 className="text-hero-title leading-[68px] absolute left-0 top-[37%] -translate-y-1/2">
-          Impulsa tu <br /> negocio <br />
-          con
-        </h2>
-        <div className="h-[600px] w-full">
-          <CentralImg />
-          {/* <Image
-            src={HeroImg}
-            alt="Global S1"
-            width={570}
-            className="ml-[23.5%]"
-          /> */}
+      <div className="h-[100vh] w-full relative md:h-[700px] lg:h-[800px]">
+        <div className="absolute left-4 top-11 sm:top-24 md:top-[22%] lg:top-[31%] xl:top-[15rem] -translate-y-1/2 text-[1.5rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-[3.3rem] xl:text-[4rem] xl:leading-none lg:leading-tight md:leading-[2.9rem]">
+          <div className="relative">
+            <Image
+              src={BgTextleft}
+              alt="background"
+              className="hidden md:block  absolute h-[30rem] md:h-[20rem] md:w-[25rem] xl:w-[50rem] max-w-none md:-top-[80%] xl:-top-[62%]  md:-left-[35%] xl:-left-[50%] -z-10 "
+            />
+            <h2>
+              Impulsa tu <br /> negocio <br />
+              con
+            </h2>
+          </div>
         </div>
-        <h2 className="text-hero-title absolute leading-[68px] -bottom-10 -translate-y-1/2 right-0 text-right">
-          soluciones <br />
-          de software <br /> a medida
-        </h2>
         <Image
-          src={BgTextright}
-          alt="background title"
-          className="absolute -z-10 -right-28 -bottom-20"
+          src={logoHero}
+          alt="Global S1"
+          className="max-w-[320px] mx-auto md:hidden"
         />
-        <div className="flex flex-col items-center mt-24 font-futura text-2xl">
-          <p>Ver más</p>
-          <p className="mt-2">
-            <DonwRow />
-          </p>
+        <div className="hidden md:block">
+          <CentralImg />
+        </div>
+        <div className="absolute right-4 sm:bottom-5 md:bottom-28 lg:bottom-16 xl:bottom-5 text-right -translate-y-1/2 text-[1.5rem] md:text-[2.5rem] lg:text-[3.3rem] xl:text-[4rem] xl:leading-none lg:leading-tight md:leading-[2.9rem]">
+          <h2>
+            soluciones <br />
+            de software <br /> a medida
+          </h2>
         </div>
       </div>
+
       <WindowCard>
         <div className="h-[500px] flex flex-col justify-center items-center relative">
           <Leave
@@ -63,7 +56,7 @@ const Hero = () => {
             <h2 className="text-hero-subtitle text-center mb-10 leading-tight">
               TRABAJA CON PROFESIONALES <br />Y VE COMO TUS IDEAS SE DIGITALIZAN
             </h2>
-            <Insides h="8rem" fontSizeNumber="1.5rem" fontSizeTitle="1.25"/>
+            <Insides h="8rem" fontSizeNumber="1.5rem" fontSizeTitle="1.25" />
           </div>
         </div>
       </WindowCard>

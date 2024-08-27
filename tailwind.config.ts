@@ -46,7 +46,7 @@ const config: Config = {
         futura: ["var(--font-futura)"],
       },
       fontSize: {
-        "hero-title": "4rem",
+        // "hero-title": "4rem",
         "hero-subtitle": "2.4rem",
       },
       colors: {

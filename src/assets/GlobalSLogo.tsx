@@ -3,7 +3,7 @@ import { FC } from "react";
 interface Props {
   w?: string;
   h?: string;
-  style?: any;
+  style?: React.CSSProperties;
 }
 
 export const GlobalSLogo: FC<Props> = ({ w = "248", h = "51", style }) => {
