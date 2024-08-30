@@ -14,10 +14,10 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "custom-gradient-one":
-          "linear-gradient(0deg, rgba(108,110,240,1) 23%, rgba(25,219,202,1) 90%)",
-        "custom-gradient-two":
-          "linear-gradient(0deg, rgba(108,110,240,1) 46%, rgba(25,219,202,1) 114%)",
+        "gradient-purple":
+          "linear-gradient(180deg, rgba(14,3,42,1) 20%, rgba(14,3,42,0) 100%)",
+        "gradient-gray-blue":
+          "linear-gradient(180deg, rgba(40,45,69,1) 45%, rgba(40,45,69,0) 100%)",
         "custom-gradient-three":
           "linear-gradient(0deg, rgba(108,110,240,1) 86%, rgba(25,219,202,1) 106%)",
         "custom-gradient-four":
@@ -46,9 +46,26 @@ const config: Config = {
         futura: ["var(--font-futura)"],
       },
       fontSize: {
-        // "hero-title": "4rem",
-        "hero-subtitle": "2.4rem",
+        "title-1": "91px",
+        "title-2": "88px",
+        "title-3": "69px",
+        "title-4": "66px",
+        "title-5": "65px",
+        "title-6": "55px",
+        "title-7": "42px",
+        "title-8": "40px",
+
+        big: "30px",
+        large: "25px",
+        medium: "22px",
+        base: "20px",
+        small: "18px",
+        tiny: "16px",
+        petite: "14px",
+        micro: "12px",
+        nano: "10px",
       },
+  
       colors: {
         "inside-purple": "#AFB0FF",
         "inside-green": "#19DBCA",

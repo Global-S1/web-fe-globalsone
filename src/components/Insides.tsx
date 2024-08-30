@@ -1,4 +1,5 @@
 import { FC } from "react";
+import clsx from "clsx";
 
 interface Prop {
   h: string;
@@ -9,13 +10,12 @@ interface Prop {
 const Insides: FC<Prop> = ({ h, fontSizeNumber, fontSizeTitle }) => {
   return (
     <div
-      className="bg-hero-insides grid grid-cols-3  rounded-3xl text-center"
-      style={{ height: h }}
+      className="bg-hero-insides w-full h-[328px] grid grid-cols-2  rounded-3xl text-center px-[34px] pt-[25px] pb-[31px]"
     >
-      <div className="flex flex-col justify-center items-center">
+      <div className="w-full flex flex-col justify-center items-center">
         <div
-          className="text-inside-green w-full text-center leading-8 border-r border-r-white"
-          style={{ fontSize: fontSizeNumber }}
+          className="text-inside-green text-[25px] w-full text-center leading-8 border-r border-r-white"
+          // style={{ fontSize: fontSizeNumber }}
         >
           +20
         </div>
@@ -29,7 +29,7 @@ const Insides: FC<Prop> = ({ h, fontSizeNumber, fontSizeTitle }) => {
       <div className="flex flex-col justify-center items-center">
         <div
           className="text-inside-purple w-full text-center leading-8"
-          style={{ fontSize: fontSizeNumber }}
+          // style={{ fontSize: fontSizeNumber }}
         >
           +30
         </div>
@@ -40,15 +40,15 @@ const Insides: FC<Prop> = ({ h, fontSizeNumber, fontSizeTitle }) => {
           Proyectos
         </div>
       </div>
-      <div className=" flex flex-col justify-center items-center">
+      <div className="col-start-1 col-end-3 flex flex-col justify-center items-center">
         <div
-          className="text-inside-green w-full text-center leading-8 border-l border-white"
-          style={{ fontSize: fontSizeNumber }}
+          className="text-inside-green w-full text-center leading-8 border-t border-white"
+          // style={{ fontSize: fontSizeNumber }}
         >
           +6
         </div>
         <div
-          className="w-full font-futura  border-l border-white"
+          className="w-full font-futura  "
           style={{ fontSize: fontSizeTitle }}
         >
           Años de experiencia
