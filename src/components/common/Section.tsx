@@ -2,7 +2,7 @@ import { FC } from "react";
 
 interface Prop {
   children: React.ReactNode;
-  styles?: any;
+  styles?: React.CSSProperties;
 }
 
 const Section: FC<Prop> = ({ children, styles }) => {

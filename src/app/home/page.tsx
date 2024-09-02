@@ -12,8 +12,10 @@ export default function Home() {
     <>
       <BgLeave />
       <Hero />
-      {/* <Features />
+      <Features />
       <WhatWeBuild />
+
+      {/* 
       <Services />
       <Testimonials />
       <OurTeam />

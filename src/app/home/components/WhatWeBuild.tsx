@@ -14,14 +14,14 @@ const WhatWeBuild = () => {
     <Section styles={{marginBottom: "20rem"}}>
       <Image src={Foco} alt="nosotros lo desarrollamos" className="w-28" />
 
-      <h2 className="text-center text-[3.7rem] leading-tight mb-10">
+      <h2 className="xl:w-[200%] text-center text-large xl:text-title-5 leading-tight mb-10">
         ¿Tienes una idea? <br />
         NOSOTROS LO DESARROLLAMOS <br />
         POR TÍ
       </h2>
 
       <WindowCard active border="left">
-        <div className="w-full grid grid-cols-12 gap-6 pt-5 relative">
+        <div className="w-full grid grid-cols-1 xl:grid-cols-12 gap-6 pt-8 xl:pt-28 px-3 xl:px-5 pb-4 xl:pb-10 relative">
         <LeaveClear
             style={{
               position: "absolute",
@@ -29,8 +29,8 @@ const WhatWeBuild = () => {
               right: "-2.5%",
              
             }} />
-          <div className="col-start-1 col-end-5 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
-            <div className="w-full h-[300px]">
+          <div className="xl:col-start-1 xl:col-end-5 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
+            <div className="w-full h-[250px] xl:h-[300px]">
               <Image src={TradingPlataform} alt="Plataforma de Trading" />
             </div>
             <div className="p-5">
@@ -41,8 +41,8 @@ const WhatWeBuild = () => {
               </p>
             </div>
           </div>
-          <div className="col-start-5 col-end-9 rounded-2xl border border-[#f4f4f519] bg-cards-producs">
-            <div className="w-full h-[300px]">
+          <div className="xl:col-start-5 xl:col-end-9 rounded-2xl border border-[#f4f4f519] bg-cards-producs">
+            <div className="w-full h-[250px] xl:h-[300px]">
               <Image src={AppMobil} alt="Applicaciones mobiles" />
             </div>
             <div className="p-5">
@@ -53,8 +53,8 @@ const WhatWeBuild = () => {
               </p>
             </div>
           </div>
-          <div className="col-start-9 col-end-13 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
-            <div className="w-full h-[300px]">
+          <div className="xl:col-start-9 xl:col-end-13 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
+            <div className="w-full h-[250px] xl:h-[300px]">
               <Image src={CrmPlataform} alt="plataformas CRM" />
             </div>
             <div className="p-5">
@@ -67,8 +67,8 @@ const WhatWeBuild = () => {
               </p>
             </div>
           </div>
-          <div className="col-start-1 col-end-8 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
-            <div className="w-full h-[300px]">
+          <div className="xl:col-start-1 xl:col-end-8 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
+            <div className="w-full h-[250px] xl:h-[300px]">
               <Image src={ApiConnection} alt="Conexiones API" />
             </div>
             <div className="p-5">
@@ -81,8 +81,8 @@ const WhatWeBuild = () => {
               </p>
             </div>
           </div>
-          <div className="col-start-8 col-end-13 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
-            <div className="w-full h-[300px]">
+          <div className="xl:col-start-8 xl:col-end-13 rounded-2xl border border-[#f4f4f500] bg-cards-producs">
+            <div className="w-full h-[250px] xl:h-[300px]">
               <Image src={Ecommerce} alt="ecommerce" />
             </div>
             <div className="p-5">

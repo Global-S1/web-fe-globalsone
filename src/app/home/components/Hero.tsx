@@ -33,7 +33,7 @@ const Hero = () => {
           className="absolute top-0 max-w-[322px] h-[375px] left-[46.5%]  -translate-x-1/2  md:hidden"
         />
         <div className="hidden md:block">
-          <CentralImg />
+          {/* <CentralImg /> */}
         </div>
         <div className="absolute right-[18px] bottom-[3.5%] md:bottom-28 lg:bottom-16 xl:bottom-5 text-right -translate-y-1/2 x]">
           <div>
@@ -57,9 +57,7 @@ const Hero = () => {
       </div>
 
       <WindowCard active>
-        <div 
-        className=" flex flex-col justify-start items-center relative"
-        >
+        <div className=" flex flex-col justify-start items-center relative  py-10 xl:pt-28 px-10">
           <div className="hidden md:block">
             <Leave
               style={{
@@ -69,12 +67,13 @@ const Hero = () => {
               }}
             />
           </div>
-          <div className="h-[202px] flex justify-center items-center">
-            <h2 className="text-large text-center leading-[25.75px]">
+          <div className=" flex justify-center items-center mb-10">
+            <h2 className="text-large xl:text-title-7 text-center leading-[25.75px] xl:leading-[51.66px]">
               TRABAJA CON PROFESIONALES <br />Y VE COMO TUS IDEAS SE DIGITALIZAN
             </h2>
           </div>
-          {/* <Insides h="8rem" fontSizeNumber="1.5rem" fontSizeTitle="1.25" /> */}
+
+          <Insides h="20px" />
         </div>
       </WindowCard>
     </Section>

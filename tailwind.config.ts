@@ -18,6 +18,8 @@ const config: Config = {
           "linear-gradient(180deg, rgba(14,3,42,1) 20%, rgba(14,3,42,0) 100%)",
         "gradient-gray-blue":
           "linear-gradient(180deg, rgba(40,45,69,1) 45%, rgba(40,45,69,0) 100%)",
+        "gradiant-title-1": "linear-gradient(358deg, #6C6EF0 44.08%, #19DBCA 80.64%)",
+        "gradiant-title-2": " linear-gradient(2deg, #6C6EF0 73.64%, #19DBCA 98.04%)",
         "custom-gradient-three":
           "linear-gradient(0deg, rgba(108,110,240,1) 86%, rgba(25,219,202,1) 106%)",
         "custom-gradient-four":
@@ -31,7 +33,7 @@ const config: Config = {
         "custom-gradient-eight":
           "linear-gradient(0deg, rgba(108,110,240,1) 89%, rgba(25,219,202,1) 122%)",
         "hero-insides":
-          "radial-gradient(circle, rgba(118, 89, 194, 0.24) 35%, rgba(35, 0, 124, 0.22) 100%)",
+          "radial-gradient(circle, rgba(118,89,194,1) 22%, rgba(35,0,124,1) 100%)",
         "cards-producs":
           "linear-gradient(180deg, rgba(153,153,153,0) 0%, rgba(153,153,153,0.2049413515406162) 100%)",
         "card-service":
