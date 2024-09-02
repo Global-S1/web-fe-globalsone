@@ -57,7 +57,7 @@ const Hero = () => {
       </div>
 
       <WindowCard active>
-        <div className=" flex flex-col justify-start items-center relative  py-10 xl:pt-28 px-10">
+        <div className=" flex flex-col justify-start items-center relative  py-10 pt-14 sm:pt-20 lg:pt-28 px-10">
           <div className="hidden md:block">
             <Leave
               style={{
