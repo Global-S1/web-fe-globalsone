@@ -7,6 +7,7 @@ export const LeaveClear = ({ style }: any) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      className="hidden sm:absolute sm:block sm:top-10 sm:right10"
       style={style}
     >
       <rect

@@ -1,4 +1,10 @@
-export const Leave = ({ style }: any) => {
+import { FC } from "react";
+
+interface Prop {
+  style: React.CSSProperties
+}
+
+export const Leave:FC<Prop> = ({ style }) => {
   return (
     <svg
       width="134"
