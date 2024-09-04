@@ -43,14 +43,14 @@ export const ourService = [
     altContent: "Aplicación Móvil",
   },
   {
-    title: "Plataforma CRM",
+    title: "CRM para Negocios y Empresas",
     content:
       "Choose the alerts you need and receive them via email, mobile or Slack. Review and take action in one click.",
     image: CrmPlataform,
     altContent: "Plataforma CRM",
   },
   {
-    title: "APIs",
+    title: "Conección entre diferentes Apps",
     content:
       "Bring your data with our built-in integration for accounting, revenue tools and banking",
     image: ApiConnection,

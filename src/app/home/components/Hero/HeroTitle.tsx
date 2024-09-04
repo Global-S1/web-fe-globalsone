@@ -7,7 +7,7 @@ export const HeroTitle: FC<ITitleData> = ({ title, bg, direction }) => {
   const directionStyle = {
     left: {
       container:
-        " xl:left-0 top-12 sm:top-24 md:top-[22%] lg:top-[31%] xl:top-52",
+        " xl:left-0 top-12 sm:top-24 md:top-[22%] lg:top-[31%] xl:top-[34%]",
       bg: "hidden md:block absolute h-[30rem] md:h-[20rem] md:w-[25rem] xl:w-[50rem] max-w-none md:-top-[80%] xl:-top-[62%] md:-left-[35%] xl:-left-[50%] -z-10 ",
     },
     right: {
@@ -17,7 +17,7 @@ export const HeroTitle: FC<ITitleData> = ({ title, bg, direction }) => {
     },
   };
   const baseContainerStyle =
-    "absolute -translate-y-1/2 text-large sm:text-title-8 md:text-title-6 lg:text-title-5 xl:text-title-3 leading-[25.75px] sm:leading-[39.5px] md:leading-[53px] lg:leading-[67.4px] xl:leading-[71.07px]";
+    "absolute -translate-y-1/2 text-large sm:text-title-9 md:text-title-7 lg:text-title-6 xl:text-title-4 leading-[25.75px] sm:leading-[39.5px] md:leading-[53px] lg:leading-[67.4px] xl:leading-[71.07px]";
   const currentDirectionStyles =
     directionStyle[direction as "left" | "right"].container;
 

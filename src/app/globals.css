@@ -21,8 +21,14 @@ body {
 
 /*---------------carrucel---------------*/
 .swiper {
-  width: 1000px;
-  height: 550px;
+  /* width: 1000px; */
+  /* height: 550px; */
+  /* border: 1px solid white; */
+  @apply w-[250px] h-[233.67px] lg:w-[1000px] lg:h-[550px]
+}
+
+.swiper-wrapper{
+
 }
 
 .swiper-slide {
@@ -33,6 +39,8 @@ body {
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
+  /* border: 5px dashed orange; */
+  @apply !w-[130px] xl:!w-[300px]
 }
 
 .image-container {
@@ -41,11 +49,54 @@ body {
   height: 100%;
   overflow: hidden;
   border-radius: 18px;
+  /* border: 3px solid blue; */
 }
 
 .image-container img {
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  @apply w-[30px] h-[30px] xl:w-[60px] xl:h-[60px]
+}
+
+.swiper-button-next {
+  /* right: -65px; */
+  @apply -right-[40px] xl:-right-[65px] 
+}
+
+.swiper-button-prev {
+  @apply -left-[40px]  xl:-left-[65px]
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 0; 
+}
+
+.swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background-color: #dcdcdc37;
+  border: 2px solid rgba(255, 255, 255, 0.619);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet.active {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
 }
 /*---------------carrucel---------------*/
 

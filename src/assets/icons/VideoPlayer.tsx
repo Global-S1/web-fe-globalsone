@@ -9,7 +9,7 @@ const VideoPlayer: FC<Prop> = ({ style }) => {
     <svg
       // width="450"
       // height="auto"
-      viewBox="0 0 345 269"
+      viewBox="20 40 300 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={style}

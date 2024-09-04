@@ -17,18 +17,18 @@ export const FeatureItem: FC<IFeatures> = ({
     },
     right: {
       flow: "flex-row-reverse text-right",
-      img: "-left-10 sm:-left-20 md:-left-32 xl:-left-34 top-10",
+      img: "-left-10 sm:-left-20 md:-left-32 xl:-left-34 top-10 xl:-top-10",
     },
   };
 
   const currentStyleDirection = directionStyles[direction].flow;
   const currentStyleImg = directionStyles[direction].img;
   const SBaseContainer =
-    "relative flex justify-between w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]";
+    "relative flex justify-between w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]";
   const SBaseTitle =
-    "text-tiny sm:text-base md:text-big lg:text-title-8 xl:text-title-6 leading-[19.84px] sm:leading-[27px] md:leading-[35px] lg:leading-[43px] xl:leading-none mb-3 xl:mb-6";
+    "text-tiny sm:text-base md:text-big lg:text-title-9 xl:text-title-7 leading-[19.84px] sm:leading-[27px] md:leading-[35px] lg:leading-[43px] xl:leading-none mb-3 xl:mb-6";
   const SBaseContent =
-    "text-micro sm:text-petite md:text-small lg:text-base xl:text-medium leading-[18px] sm:leading-[22px] md:leading-[26px] lg:leading-[30px] xl:leading-[33px]";
+    "text-micro sm:text-petite md:text-small lg:text-base xl:text-medium leading-[18px] sm:leading-[22px] md:leading-[26px] lg:leading-[30px] xl:leading-[33px] font-futura";
 
   return (
     <div className={clsx(SBaseContainer, currentStyleDirection)}>

@@ -11,7 +11,7 @@ const ContactUs = () => {
         }}
       >
         <div className="flex flex-col justify-center items-center">
-          <h3 className="text-[4.2rem] leading-none text-center">
+          <h3 className="text-large xl:text-title-3 leading-none text-center">
             ¿Listo para <br />
             transformar <br />
             tu negocio?

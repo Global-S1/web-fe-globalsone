@@ -51,18 +51,18 @@ const CardService: FC<Prop> = ({
 }) => {
   const gridDefaultProperties = "col-span-12 sm:col-span-6 xl:col-span-4";
   const gridClass = columnSize[ColumSpan!] || gridDefaultProperties;
-  const styleConfig = "rounded-2xl border border-[#f4f4f500] bg-cards-producs";
+  const styleConfig = "rounded-2xl border border-[#f4f4f500] bg-cards-producs xl:h-[487.17px]";
   const lastItemClass = isLast ? "sm:col-span-12" : "";
   console.log
 
   return (
-    <div className={clsx(gridClass, styleConfig, lastItemClass)}>
+    <div className={clsx(gridClass, styleConfig, lastItemClass, " ")}>
       <div className="min-w-[157px] min-h-[138px] w-full h-auto sm:flex sm:justify-center xl:h-[300px]">
         <Image src={image} alt={altContent} />
       </div>
-      <div className="p-5">
-        <h3 className="mb-3 mt-4 text-lg">{title}</h3>
-        <p className="text-base font-futura">{content}</p>
+      <div className="p-5 text-center">
+        <h3 className="mb-3 mt-4 text-large xl:text-title-10 xl:leading-[40px]">{title}</h3>
+        {/* <p className="text-base font-futura sm:hidden">{content}</p> */}
       </div>
     </div>
   );

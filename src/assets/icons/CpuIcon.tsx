@@ -1,11 +1,12 @@
 const CpuIcon = () => {
   return (
     <svg
-      width="100%"
-      height="269"
-      viewBox="0 0 338 331"
+      // width="100%"
+      // height="269"
+      viewBox="15 65 300 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      // className="border border-white"
     >
       <g filter="url(#filter0_f_263_1662)">
         <path
