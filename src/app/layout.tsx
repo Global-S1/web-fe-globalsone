@@ -5,7 +5,7 @@ import Header from "@/components/common/Header";
 import "./globals.css";
 import Footer from "@/components/common/Footer";
 import Main from "@/components/common/Main";
-import HeaderMobile from "@/components/common/HeaderMobile/HeaderMobile";
+import HeaderMobile from "@/components/common/HeaderMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -1,9 +1,10 @@
 import bgContac from "@/assets/background/bgContact.png";
+import { Pice1 } from "@/assets/home/icons/Pice";
 import Section from "@/components/common/Section";
 
 const ContactUs = () => {
   return (
-    <Section styles={{marginTop: "5rem"}}>
+    <Section>
       <div
         className="w-full flex justify-center items-center h-[600px] bg-center bg-cover bg-no-repeat"
         style={{
