@@ -1,4 +1,4 @@
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import { values } from "@/moc/values.moc";
 import { FC } from "react";
 

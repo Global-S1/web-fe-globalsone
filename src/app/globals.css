@@ -2,33 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --body-gb-color: #0E032A;
+:root {
+  --body-gb-color: #0e032a;
+  --dumme-color: rgb(255, 255, 255);
+  --font-size-title-1: 91px;
+  --font-size-title-2: 88px;
+  --font-size-title-3: 84px;
+  --font-size-title-4: 69px;
+  --font-size-title-5: 66px;
+  --font-size-title-6: 65px;
+  --font-size-title-7: 55px;
+  --font-size-title-8: 42px;
+  --font-size-title-9: 40px;
+  --font-size-title-10: 36px;
+
+  --font-size-big: 30px;
+  --font-size-large: 25px;
+  --font-size-medium: 22px;
+  --font-size-base: 20px;
+  --font-size-small: 18px;
+  --font-size-tiny: 16px;
+  --font-size-petite: 14px;
+  --font-size-micro: 12px;
+  --font-size-nano: 10px;
 }
-html, body {
-  overflow-x: hidden;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 6.25%;
+  /* overflow-x: hidden; */
 }
 
 body {
   background-color: var(--body-gb-color);
   color: white;
   overflow-x: hidden;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.s_section_base{
+/* .s_section_base{
   @apply container flex flex-col mx-auto justify-center items-center  max-w-[1200px];
-}
+} */
 
 /*---------------carrucel---------------*/
 .swiper {
   /* width: 1000px; */
   /* height: 550px; */
   /* border: 1px solid white; */
-  @apply w-[250px] h-[233.67px] lg:w-[1000px] lg:h-[550px]
+  @apply w-[250px] h-[233.67px] lg:w-[1000px] lg:h-[550px];
 }
 
-.swiper-wrapper{
-
+.swiper-wrapper {
 }
 
 .swiper-slide {
@@ -40,7 +72,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   /* border: 5px dashed orange; */
-  @apply !w-[130px] xl:!w-[300px]
+  @apply !w-[130px] xl:!w-[300px];
 }
 
 .image-container {
@@ -65,22 +97,21 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  @apply w-[30px] h-[30px] xl:w-[60px] xl:h-[60px]
+  @apply w-[30px] h-[30px] xl:w-[60px] xl:h-[60px];
 }
 
 .swiper-button-next {
   /* right: -65px; */
-  @apply -right-[40px] xl:-right-[65px] 
+  @apply -right-[40px] xl:-right-[65px];
 }
 
 .swiper-button-prev {
-  @apply -left-[40px]  xl:-left-[65px]
-
+  @apply -left-[40px]  xl:-left-[65px];
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 0; 
+  font-size: 0;
 }
 
 .swiper-pagination-bullet {
@@ -111,72 +142,71 @@ body {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: fall cubic-bezier(0,0,1,1) infinite, fadeInOut linear infinite;
+  animation: fall cubic-bezier(0, 0, 1, 1) infinite, fadeInOut linear infinite;
 }
 
 .leaf4 {
-  background-image: url('../assets/leavesImg/leave2.png');
+  background-image: url("../assets/leavesImg/leave2.png");
   left: 1%;
   animation-duration: 21s;
   animation-delay: 2s;
 }
 
 .leaf1 {
-  background-image: url('../assets/leavesImg/leave2.png');
+  background-image: url("../assets/leavesImg/leave2.png");
   left: 5%;
   animation-duration: 18s;
   animation-delay: 20s;
 }
 
 .leaf7 {
-  background-image: url('../assets/leavesImg/leave1.png');
+  background-image: url("../assets/leavesImg/leave1.png");
   left: 15%;
   animation-duration: 15s;
   animation-delay: 7s;
 }
 
 .leaf2 {
-  background-image: url('../assets/leavesImg/leave3.png');
+  background-image: url("../assets/leavesImg/leave3.png");
   left: 30%;
   animation-duration: 20s;
   animation-delay: 3s;
 }
 
 .leaf8 {
-  background-image: url('../assets/leavesImg/leave1.png');
+  background-image: url("../assets/leavesImg/leave1.png");
   left: 45%;
   animation-duration: 24s;
   animation-delay: 6s;
 }
 
 .leaf5 {
-  background-image: url('../assets/leavesImg/leave3.png');
+  background-image: url("../assets/leavesImg/leave3.png");
   left: 50%;
   animation-duration: 22s;
   animation-delay: 4s;
 }
 
 .leaf3 {
-  background-image: url('../assets/leavesImg/leave3.png');
+  background-image: url("../assets/leavesImg/leave3.png");
   left: 60%;
   animation-duration: 16s;
   animation-delay: 5s;
 }
 
 .leaf9 {
-  background-image: url('../assets/leavesImg/leave3.png');
+  background-image: url("../assets/leavesImg/leave3.png");
   left: 75%;
   animation-duration: 26s; /* Aumentado para caer más lentamente */
   animation-delay: 9s;
 }
 
 .leaf6 {
-  background-image: url('../assets/leavesImg/leave2.png');
+  background-image: url("../assets/leavesImg/leave2.png");
   left: 89%;
   animation-duration: 21s; /* Aumentado para caer más lentamente */
   animation-delay: 1s;
 }
-
 
 @keyframes fall {
   0% {

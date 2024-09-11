@@ -41,7 +41,7 @@ const columnSize: Record<ColumSpan, string> = {
     [ColumSpan.Twelve]: "col-span-12 sm:col-span-6 xl:col-span-12",
 };
 
-const CardService: FC<Prop> = ({
+export const CardService: FC<Prop> = ({
   title,
   content,
   image,
@@ -68,4 +68,4 @@ const CardService: FC<Prop> = ({
   );
 };
 
-export default CardService;
+

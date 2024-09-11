@@ -1,4 +1,4 @@
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import { CSSProperties, FC } from "react";
 import { steps } from "@/moc/steps.moc";
 
@@ -9,7 +9,7 @@ interface Prop {
   index: string | number;
 }
 
-const Step: FC<Prop> = ({ title, content, style, index }) => {
+export const Step: FC<Prop> = ({ title, content, style, index }) => {
   return (
     <div
       className="flex justify-center items-center px-10 rounded-2xl h-[20rem]"
@@ -56,5 +56,3 @@ const Steps = () => {
     </Section>
   );
 };
-
-export default Steps;

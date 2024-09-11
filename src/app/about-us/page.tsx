@@ -1,5 +1,5 @@
 import { BgLeave } from "@/components/BgLeave";
-import OurTeam from "../../components/common/OurTeam";
+import { OurTeam } from "@/components/share/ourTeam";
 // import Testimonials from "../../components/common/TestimonialCard";
 import Hero from "./components/Hero";
 import Steps from "./components/Steps";
@@ -14,7 +14,7 @@ export default function About() {
       <Values />
       <Steps />
       <OurTeam />
-      <Testimonials /> 
+      <Testimonials />
     </>
   );
 }

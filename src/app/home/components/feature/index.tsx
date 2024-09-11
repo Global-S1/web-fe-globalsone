@@ -1,8 +1,8 @@
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import { FeatureItem } from "./FeatureItem";
 import { featureData } from "@/moc/features.moc";
 
-const Features = () => {
+export const Features = () => {
   return (
     <Section>
       {featureData.map((item, index) => (
@@ -11,5 +11,3 @@ const Features = () => {
     </Section>
   );
 };
-
-export default Features;

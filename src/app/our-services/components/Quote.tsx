@@ -1,4 +1,4 @@
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import VideoPlayer from "@/assets/icons/VideoPlayer";
 import Ticket from "@/assets/icons/Ticket";
 import CpuIcon from "@/assets/icons/CpuIcon";

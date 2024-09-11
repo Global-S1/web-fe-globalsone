@@ -1,0 +1,35 @@
+.container_hero {
+  width: 100%;
+  position: relative;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 64px;
+}
+
+.image {
+  position: absolute;
+  top: 0.75rem;
+  left: 46%;
+  transform: translateX(-50%);
+  width: 335px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 800px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .image {
+    width: 550px;
+  }
+}

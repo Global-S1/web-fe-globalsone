@@ -1,10 +1,10 @@
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import { services } from "@/moc/service.moc";
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import { CardService } from "./CardService";
 
-const Services = () => {
+export const Services = () => {
   return (
     <Section styles="mb-[90px] sm:mb-[200px]">
       <h2 className="text-large sm:text-title-8 md:text-title-7 lg:text-title-4 xl:text-title-1  text-center xl:mb-10 xl:w-[200%] mb-9">
@@ -31,5 +31,3 @@ const Services = () => {
     </Section>
   );
 };
-
-export default Services;

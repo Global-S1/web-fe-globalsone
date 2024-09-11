@@ -1,28 +1,24 @@
 import WindowCard from "@/components//WindowCard";
 import { Leave } from "@/assets/leavesComponents/Leave";
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import Insides from "@/components/Insides";
 import { HeroTitle } from "./HeroTitle";
 import { titles } from "@/moc/heroTitles.moc";
 import { HeroArrow } from "./HeroArrow";
 import Image from "next/image";
 import heroImg from "@/assets/heroImg.png";
+import s from "./hero.module.css";
 
-const Hero = () => {
+export const Hero = () => {
   return (
-    <Section styles="mb-[67px] xl:mb-[169px]">
-      <div className="w-full relative h-[500px] md:h-[700px] lg:h-[800px] flex flex-col justify-end mb-[64px]">
+    <Section>
+      <div className={s.container_hero}>
         <HeroTitle {...titles[0]} />
-        <></>
-        <Image
-          src={heroImg}
-          alt="Global S1"
-          className="absolute -top-3 left-[46%] transform -translate-x-1/2 w-[335px] xl:w-[550px]"
-        />
+        <Image src={heroImg} alt="Global S1" className={s.image} />
         <HeroTitle {...titles[1]} />
         <HeroArrow />
       </div>
-      <WindowCard active>
+      {/* <WindowCard active>
         <div className=" flex flex-col justify-start items-center relative  py-10 pt-14 sm:pt-20 lg:pt-28 px-10">
           <div className="hidden md:block">
             <Leave
@@ -41,9 +37,7 @@ const Hero = () => {
           </div>
           <Insides />
         </div>
-      </WindowCard>
+      </WindowCard> */}
     </Section>
   );
 };
-
-export default Hero;

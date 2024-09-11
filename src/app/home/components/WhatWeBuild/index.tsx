@@ -2,11 +2,11 @@ import Image from "next/image";
 import Foco from "@/assets/icons/foco.png";
 import WindowCard from "@/components/WindowCard";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import { ourService } from "@/moc/service.moc";
-import CardService from "./CardService";
+import { CardService } from "./CardService";
 
-const WhatWeBuild = () => {
+export const WhatWeBuild = () => {
   return (
     <Section styles="mb-[54px] xl:mb-[230px]">
       <Image src={Foco} alt="nosotros lo desarrollamos" className="w-28" />
@@ -27,5 +27,3 @@ const WhatWeBuild = () => {
     </Section>
   );
 };
-
-export default WhatWeBuild;

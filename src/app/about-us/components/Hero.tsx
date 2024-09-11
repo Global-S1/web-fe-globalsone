@@ -3,7 +3,7 @@ import { Instagram } from "@/assets/icons/aboutUs/Instagram";
 import { Linkedin } from "@/assets/icons/aboutUs/Linkedin";
 import { Man } from "@/assets/images/aboutUs/Man";
 import { Woman } from "@/assets/images/aboutUs/Woman";
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 import Insides from "@/components/Insides";
 import { FC, ReactNode } from "react";
 

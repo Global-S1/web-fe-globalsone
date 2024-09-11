@@ -1,8 +1,8 @@
 import bgContac from "@/assets/background/bgContact.png";
 import { Pice1 } from "@/assets/home/icons/Pice";
-import Section from "@/components/common/Section";
+import { Section } from "@/components/share/section";
 
-const ContactUs = () => {
+export const ContactUs = () => {
   return (
     <Section>
       <div
@@ -25,5 +25,3 @@ const ContactUs = () => {
     </Section>
   );
 };
-
-export default ContactUs;

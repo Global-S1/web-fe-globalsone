@@ -1,0 +1,52 @@
+.header {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  font-family: "Futura", sans-serif;
+  display: none;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 2, 88, 1) 0%,
+    rgba(87, 62, 151, 0) 100%
+  );
+  font-size: var(--font-size-petite);
+  color: var(--dumme-color);
+}
+
+.container_navbar {
+  height: 79rem;
+  max-width: 1220px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_left {
+  width: fit-content;
+  display: flex;
+  column-gap: 15rem;
+}
+.navbar_right {
+}
+
+.logo {
+  position: absolute;
+  top: 26%;
+  left: 52%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: inline-block;
+  }
+  .container_navbar {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

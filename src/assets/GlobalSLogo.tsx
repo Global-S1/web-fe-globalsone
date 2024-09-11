@@ -3,7 +3,7 @@ import { FC } from "react";
 interface Props {
   w?: string;
   h?: string;
-  style?: React.CSSProperties;
+  style?: string;
 }
 
 export const GlobalSLogo: FC<Props> = ({ w = "248", h = "51", style }) => {
@@ -15,7 +15,7 @@ export const GlobalSLogo: FC<Props> = ({ w = "248", h = "51", style }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      style={style}
+      className={style}
     >
       <rect width={w} height={h} fill="url(#pattern0_263_1118)" />
       <defs>
