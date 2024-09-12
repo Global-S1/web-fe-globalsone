@@ -1,24 +1,23 @@
 import { Hero } from "@/app/home/components/hero";
-import { Features } from "@/app/home/components/feature";
-import { WhatWeBuild } from "@/app/home/components/whatWeBuild";
-import { Services } from "@/app/home/components/services";
-import { OurTeam } from "@/components/share/our-team";
-import { ContactUs } from "./components/ContactUs";
+import { Features } from "./components/feature";
+import { WhatWeBuild } from "./components/what-we-build";
+import { Services } from "./components/our-services";
+import { Testimonials } from "./components/testimonials";
+import { OurTeam } from "@/components/share/our-team/Index";
+import { ContactUs } from "./components/contact-us";
 import { BgLeave } from "@/components/BgLeave";
-import { Testimonials } from "./components/Testimonials";
 
 export default function Home() {
   return (
     <>
-      {/* <BgLeave /> */}
+      <BgLeave />
       <Hero />
-      {/* <Features />
+      <Features />
       <WhatWeBuild />
       <Services />
       <Testimonials />
       <OurTeam />
-      <ContactUs /> */}
-
+      <ContactUs />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { FC } from "react";
 import s from "./section.module.css";
 

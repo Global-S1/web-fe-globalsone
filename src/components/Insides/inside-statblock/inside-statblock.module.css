@@ -1,0 +1,39 @@
+.statblock_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.statblock_container > p {
+  text-align: center;
+  font-size: var(--font-size-large);
+}
+
+.statblock_container > h3 {
+  text-align: center;
+  font-size: 15rem;
+}
+
+@media (640px <= width) {
+
+}
+
+@media (768px <= width) {
+}
+
+@media (1024px <= width) {
+}
+
+@media (1280px <= width) {
+  .statblock_container > p {
+    font-size: var(--font-size-big);
+  }
+
+  .statblock_container > h3 {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (1536px <= width) {
+}

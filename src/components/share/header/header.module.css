@@ -15,7 +15,7 @@
 
 .container_navbar {
   height: 79rem;
-  max-width: 1220px;
+  max-width: 1240px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -31,8 +31,6 @@
   display: flex;
   column-gap: 15rem;
 }
-.navbar_right {
-}
 
 .logo {
   position: absolute;
@@ -41,7 +39,7 @@
   transform: translateX(-50%);
 }
 
-@media (min-width: 768px) {
+@media (640px <= width) {
   .header {
     display: inline-block;
   }
@@ -50,3 +48,10 @@
     padding-right: 1.25rem;
   }
 }
+
+@media (768px <= width) {}
+
+@media (1024px <= width) {}
+
+@media (1280px <= width) {}
+

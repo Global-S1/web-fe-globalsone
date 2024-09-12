@@ -4,7 +4,6 @@ import { links } from "@/moc/routes.moc";
 import s from "./header.module.css";
 
 const Header = () => {
-  console.log(links);
   return (
     <header className={s.header}>
       <div className={s.container_navbar}>

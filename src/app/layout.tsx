@@ -5,7 +5,7 @@ import Header from "@/components/share/header";
 import "./globals.css";
 import Footer from "@/components/share/footer";
 import Main from "@/components/share/main";
-import HeaderMobile from "@/components/share/header-monbile";
+import { HeaderMobile } from "@/components/share/header-monbile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,7 +43,7 @@ export default function RootLayout({
         <Header />
         <HeaderMobile />
         <Main>{children}</Main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

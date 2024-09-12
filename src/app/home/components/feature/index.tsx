@@ -1,5 +1,5 @@
 import { Section } from "@/components/share/section";
-import { FeatureItem } from "./FeatureItem";
+import { FeatureItem } from "./feature-item";
 import { featureData } from "@/moc/features.moc";
 
 export const Features = () => {

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Foco from "@/assets/icons/foco.png";
-import WindowCard from "@/components/WindowCard";
+import WindowCard from "@/components/window";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { Section } from "@/components/share/section";
 import { ourService } from "@/moc/service.moc";
-import { CardService } from "./CardService";
+import { CardService } from "./we-build-card";
 
 export const WhatWeBuild = () => {
   return (

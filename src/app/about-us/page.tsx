@@ -4,7 +4,7 @@ import { OurTeam } from "@/components/share/ourTeam";
 import Hero from "./components/Hero";
 import Steps from "./components/Steps";
 import Values from "./components/Values";
-import { Testimonials } from "../home/components/Testimonials";
+import { Testimonials } from "../home/components/testimonials";
 
 export default function About() {
   return (

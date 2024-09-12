@@ -1,43 +1,33 @@
-import WindowCard from "@/components//WindowCard";
+import WindowCard from "@/components/window";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { Section } from "@/components/share/section";
-import Insides from "@/components/Insides";
-import { HeroTitle } from "./HeroTitle";
+import { Insides } from "@/components/Insides";
+import { HeroTitle } from "./hero-title";
 import { titles } from "@/moc/heroTitles.moc";
-import { HeroArrow } from "./HeroArrow";
+import { HeroArrow } from "./hero-arrow";
 import Image from "next/image";
 import heroImg from "@/assets/heroImg.png";
+import heroPictureMobile from "@/assets/home/pictures/hero-pinctue-mobile.png";
 import s from "./hero.module.css";
+import { HeroMetrics } from "./hero-metrics";
 
 export const Hero = () => {
   return (
     <Section>
-      <div className={s.container_hero}>
+      <div className={s.hero_container}>
         <HeroTitle {...titles[0]} />
-        <Image src={heroImg} alt="Global S1" className={s.image} />
+        <Image
+          src={heroPictureMobile}
+          alt="Global S1"
+          className={s.hero_picture_mobile}
+        />
+        <Image src={heroImg} alt="Global S1" className={s.hero_picture} />
         <HeroTitle {...titles[1]} />
         <HeroArrow />
       </div>
-      {/* <WindowCard active>
-        <div className=" flex flex-col justify-start items-center relative  py-10 pt-14 sm:pt-20 lg:pt-28 px-10">
-          <div className="hidden md:block">
-            <Leave
-              style={{
-                position: "absolute",
-                top: "0",
-                right: "-3%",
-                zIndex: 12,
-              }}
-            />
-          </div>
-          <div className=" flex justify-center items-center mb-10">
-            <h2 className="text-large xl:text-title-8 text-center leading-[25.75px] xl:leading-[51.66px]">
-              TRABAJA CON PROFESIONALES <br />Y VE COMO TUS IDEAS SE DIGITALIZAN
-            </h2>
-          </div>
-          <Insides />
-        </div>
-      </WindowCard> */}
+      <WindowCard active>
+        <HeroMetrics />
+      </WindowCard>
     </Section>
   );
 };

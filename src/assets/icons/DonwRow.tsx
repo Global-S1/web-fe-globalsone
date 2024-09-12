@@ -1,8 +1,8 @@
 const DonwRow = () => {
   return (
     <svg
-      width="14"
-      height="7"
+      width="18"
+      height="12"
       viewBox="0 0 12 7"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

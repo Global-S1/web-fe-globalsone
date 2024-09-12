@@ -27,7 +27,7 @@ const links = [
   },
 ];
 
-export const BurgerBtn = () => {
+export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {

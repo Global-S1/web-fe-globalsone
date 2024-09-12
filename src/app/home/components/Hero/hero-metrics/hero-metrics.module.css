@@ -1,0 +1,65 @@
+.heroMetrics_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroMetrics_title {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroMetrics_title > h2 {
+  width: 70%;
+  font-size: large;
+  text-align: center;
+  line-height: 25.75rem;
+  padding-bottom: 9rem;
+}
+
+@media (640px <= width) {
+  .heroMetrics_title {
+    width: 100%;
+  }
+  .heroMetrics_title > h2 {
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 34rem;
+    font-size: var(--font-size-big);
+    line-height: 38.66rem;
+  }
+}
+
+@media (768px <= width) {
+  .heroMetrics_title > h2 {
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 34rem;
+    font-size: var(--font-size-title-10);
+  }
+}
+
+@media (1024px <= width) {
+  .heroMetrics_title > h2 {
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 34rem;
+    font-size: var(--font-size-title-9);
+  }
+}
+
+@media (1280px <= width) {
+  .heroMetrics_title > h2 {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 64rem;
+    font-size: var(--font-size-title-8);
+    line-height: 51.66rem;
+  }
+}
+
+@media (1536px <= width) {
+}
