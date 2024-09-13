@@ -1,0 +1,10 @@
+.container_cards {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 31rem 31.37rem;
+  padding: 0 16rem;
+  padding-bottom: 30rem;
+ 
+}

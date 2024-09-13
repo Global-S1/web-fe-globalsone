@@ -1,15 +1,16 @@
 import { Section } from "@/components/share/section";
-import { TestimonialCard } from "@/components/share/TestimonialCard";
+import { TestimonialCard } from "@/components/share/testimonial-card";
 import { ClinetDaTA } from "@/moc/testimonial.moc";
+import s from "./testimonials.module.css"
 
 export const Testimonials = () => {
   return (
-    <Section styles="mb-[40px] sm:mb-[280px] ">
-      <div className="flex flex-col xl:flex-row justify-between items-center w-full mb-10">
-        <h2 className="text-center text-base xl:text-title-9 mb-5 xl:mb-0">
+    <Section>
+      <div className={s.title_container}>
+        <h2>
           LO QUE DICEN NUESTROS CLIENTES
         </h2>
-        <button className="bg-[#D9D9D95E] border border-white rounded-lg text-sm px-5 h-[40px]">
+        <button className={s.button}>
           Ver todos los testimonios
         </button>
       </div>

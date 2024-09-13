@@ -1,9 +1,9 @@
 import { Hero } from "@/app/home/components/hero";
 import { Features } from "./components/feature";
 import { WhatWeBuild } from "./components/what-we-build";
-import { Services } from "./components/our-services";
+import { OurServices } from "./components/our-services";
 import { Testimonials } from "./components/testimonials";
-import { OurTeam } from "@/components/share/our-team/Index";
+import { OurTeam } from "@/components/share/our-team";
 import { ContactUs } from "./components/contact-us";
 import { BgLeave } from "@/components/BgLeave";
 
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Features />
       <WhatWeBuild />
-      <Services />
+      <OurServices />
       <Testimonials />
       <OurTeam />
       <ContactUs />

@@ -1,26 +1,29 @@
 import bgContac from "@/assets/background/bgContact.png";
 import { Pice1 } from "@/assets/home/icons/Pice";
 import { Section } from "@/components/share/section";
+import ListOfFiles from "@/assets/home/pictures/ListOfFiles.svg";
+import Image from "next/image";
+import s from "./contact-us.module.css";
 
 export const ContactUs = () => {
   return (
     <Section>
       <div
-        className="w-full flex justify-center items-center h-[600px] bg-center bg-cover bg-no-repeat"
+        className={s.contactUs_container}
         style={{
           backgroundImage: `url(${bgContac.src})`,
         }}
       >
-        <div className="flex flex-col justify-center items-center">
-          <h3 className="text-large xl:text-title-3 leading-none text-center">
+        <div className={s.purple_circle}></div>
+        <div className={s.text_container}>
+          <h3>
             ¿Listo para <br />
             transformar <br />
             tu negocio?
           </h3>
-          <button className="bg-custom-gradian-btn-project py-2 px-14 rounded-xl font-futura mt-6">
-            Contáctanos Ahora
-          </button>
+          <button className={s.button}>Contáctanos Ahora</button>
         </div>
+        <div className={s.green_circle}></div>
       </div>
     </Section>
   );

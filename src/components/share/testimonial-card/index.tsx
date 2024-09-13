@@ -21,7 +21,7 @@ export const TestimonialCard: FC<ITestimonial> = ({
 }) => {
   return (
     <div
-      className="relative flex items-center bg-cover w-full rounded-[40px] h-[313px] sm:h-[400px] md:h-[500px] lg:h-[613.71px] overflow-hidden"
+      className="relative flex items-center bg-cover w-full rounded-[40px] h-[313px] sm:h-[400px] md:h-[500px] lg:h-[613.71px] overflow-hidden px-[20rem] sm:px-[30rem] md:px-[40rem] lg:px[50rem] pt-[20rem]"
       style={{ backgroundImage: `url(${BgTestimonial.src})` }}
     >
       <div className="pl-9 xl:pl-16 w-1/2 flex flex-col">
@@ -31,7 +31,7 @@ export const TestimonialCard: FC<ITestimonial> = ({
 
         <Stars numStars={stars} />
 
-        <button className="bg-custom-gradian-btn-project w-[117.03px] h-[22.84px] xl:w-[191px] xl:h-[44.8px] rounded-md mt-4 font-futura text-[13px] xl:text-[21px] mb-5 sm:order-last">
+        <button className="bg-custom-gradian-btn-project w-[117.03px] h-[22.84px] xl:w-[191px] xl:h-[44.8px] rounded-[6rem] mt-4 font-futura text-[13px] xl:text-[21px] mb-[10rem] sm:order-last md:mt-[15rem]">
           Ver Porjecto
         </button>
 

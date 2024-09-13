@@ -1,0 +1,90 @@
+.ourServices_title {
+  position: relative;
+  width: 100%;
+  height: 140rem;
+  margin-top: 54rem;
+}
+
+.ourServices_title > h2 {
+  font-size: var(--font-size-large);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 25.75px;
+  background: linear-gradient(to bottom right, #fff 0%, #999 50%) bottom right /
+      50% 50% no-repeat,
+    linear-gradient(to bottom left, #fff 0%, #999 50%) bottom left / 50% 50%
+      no-repeat,
+    linear-gradient(to top left, #fff 0%, #999 50%) top left / 50% 50% no-repeat,
+    linear-gradient(to top right, #fff 0%, #999 50%) top right / 50% 50%
+      no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100rem;
+  position: relative;
+  row-gap: 42rem;
+}
+.purple_circle {
+  position: absolute;
+  width: 198px;
+  height: 198px;
+  flex-shrink: 0;
+  /* z-index: -1; */
+  fill: rgb(101, 96, 255);
+  /* filter: blur(44.349998474121094px);purple_circle */
+  font-size: 80rem;
+  right: 0;
+}
+@media (640px <= width) {
+  .ourServices_title {
+    margin-top: 74rem;
+  }
+  .ourServices_title > h2 {
+    font-size: var(--font-size-title-8);
+    line-height: 39.75rem;
+  }
+}
+@media (768px <= width) {
+  .ourServices_title {
+    margin-top: 104rem;
+    height: 270rem;
+  }
+  .ourServices_title > h2 {
+    font-size: var(--font-size-title-7);
+    line-height: 65.75px;
+  }
+  .cards_container {
+    flex-direction: row;
+    column-gap: 20rem;
+  }
+}
+@media (1024px <= width) {
+  .ourServices_title {
+    margin-top: 180rem;
+  }
+  .ourServices_title > h2 {
+    font-size: var(--font-size-title-2);
+    line-height: 79.7rem;
+  }
+}
+@media (1280px <= width) {
+  .ourServices_title {
+    margin-top: 238rem;
+    height: 300rem;
+  }
+  .ourServices_title > h2 {
+    width: 110%;
+    font-size: var(--font-size-title-1);
+    line-height: 79.95rem;
+  }
+}

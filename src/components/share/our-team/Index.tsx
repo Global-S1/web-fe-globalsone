@@ -1,25 +1,27 @@
-import { GlobalSLogo } from "@/assets/GlobalSLogo";
 import Image from "next/image";
 import { Slices } from "@/components/Slices";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import { Section } from "@/components/share/section";
+import s from "./our-team.module.css";
+import { GlobalSLogo } from "./GlobalSLogo";
 
 export const OurTeam = () => {
   return (
-    <Section styles={{ marginTop: "10rem" }}>
-      <GlobalSLogo w="210" h="44" />
-      <h2 className="text-base sm:text-big md:text-title-9 lg:text-title-7 xl:text-title-5 text-inside-green mb-4 ">
-        ACERCA DE NOSOTROS
-      </h2>
-      <p className="text-[11px] sm:text-micro md:text-petite lg:text-base xl:text-medium text-center max-w-[970px] m-auto mb-10">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos,
-        exercitationem, ipsum enim id quibusdam dolor deleniti nobis voluptas
-        mollitia sint, ex officiis. Minima obcaecati adipisci officia fuga ullam
-        recusandae.
-      </p>
-      <div className="relative">
-        {/* <Leave
+    <Section
+    // styles={{ marginTop: "10rem" }}
+    >
+      <div className={s.ourTeam_container}>
+        <GlobalSLogo w="248" h="51" />
+        <h2>ACERCA DE NOSOTROS</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos,
+          exercitationem, ipsum enim id quibusdam dolor deleniti nobis voluptas
+          mollitia sint, ex officiis. Minima obcaecati adipisci officia fuga
+          ullam recusandae.
+        </p>
+        <div className="relative">
+          {/* <Leave
           style={{
             position: "absolute",
             top: "10%",
@@ -28,8 +30,8 @@ export const OurTeam = () => {
             zIndex: 10,
           }}
         /> */}
-        <Slices />
-        {/* <LeaveBig
+          <Slices />
+          {/* <LeaveBig
           style={{
             position: "absolute",
             bottom: "-7%",
@@ -37,10 +39,9 @@ export const OurTeam = () => {
             zIndex: 10,
           }}
         /> */}
+        </div>
+        <button className={s.buttom}>Quiero Conocerlos</button>
       </div>
-      <button className="bg-custom-gradian-btn-project mt-20 font-futura w-[279px] h-[58px] rounded-xl">
-        Quiero Conocerlos
-      </button>
     </Section>
   );
 };

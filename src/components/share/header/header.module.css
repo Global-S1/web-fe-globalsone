@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 50;
   width: 100%;
   font-family: "Futura", sans-serif;
@@ -40,18 +40,17 @@
 }
 
 @media (640px <= width) {
+}
+
+@media (768px <= width) {
   .header {
     display: inline-block;
-  }
-  .container_navbar {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 0 16rem;
   }
 }
 
-@media (768px <= width) {}
+@media (1024px <= width) {
+}
 
-@media (1024px <= width) {}
-
-@media (1280px <= width) {}
-
+@media (1280px <= width) {
+}

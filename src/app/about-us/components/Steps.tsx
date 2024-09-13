@@ -28,7 +28,9 @@ export const Step: FC<Prop> = ({ title, content, style, index }) => {
 
 const Steps = () => {
   return (
-    <Section styles={{ marginTop: "8rem" }}>
+    <Section 
+    // styles={{ marginTop: "8rem" }}
+    >
       <div className="flex justify-center items-center">
         {steps.map((item, index) => (
           <Step

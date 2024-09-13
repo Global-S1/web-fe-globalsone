@@ -2,58 +2,53 @@
   width: 100%;
   position: relative;
   height: calc(100vh - 79rem);
+  max-height: 600rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 40rem;
 }
 
-.hero_picture_mobile{
-  max-width: none;
-  object-fit: cover;
-  width: 380rem;
-  position: absolute;
-  top: -6%;
-  right: -5%;
+.widowCard_container {
+  position: relative;
 }
 
-.hero_picture {
-  display: none;
+.blue_bg {
   position: absolute;
-  top: 0.75rem;
-  left: 46%;
+  width: 1308px;
+  height: 460px;
+  background: linear-gradient(
+    180deg,
+    #0e1330 0%,
+    rgba(214, 43, 211, 0.32) 100%
+  );
+  background-blend-mode: color-dodge;
+  top: 17%;
+  left: 50%;
   transform: translateX(-50%);
-  width: 335px;
+  z-index: -10;
 }
+
 @media (425px <= width) {
-  .hero_picture_mobile{
-    width: 100%;
+  .hero_container {
+    max-height: 800rem;
   }
-  .hero_picture{
-    display: none;
-  }
+}
+
+@media (450px <= width) {
+}
+
+@media (530px <= width) {
 }
 
 @media (640px <= width) {
-  .hero_picture_mobile{
-    display: none;
-  }
-  .hero_container{
-    height: 100vh;;
-  }
-  .hero_picture{
-    display: block;
+  .hero_container {
+    max-height: 800rem;
+    height: 100vh;
   }
 }
 
 @media (768px <= width) {
-  .hero_picture {
-    position: absolute;
-    top: 0.75rem;
-    left: 46%;
-    transform: translateX(-50%);
-    width: 335px;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -63,7 +58,4 @@
 }
 
 @media (min-width: 1280px) {
-  .hero_picture {
-    width: 550px;
-  }
 }

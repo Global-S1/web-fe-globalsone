@@ -5,7 +5,7 @@ import CpuIcon from "@/assets/icons/CpuIcon";
 
 const Quote = () => {
   return (
-    <Section styles={{ marginTop: "6rem" }}>
+    <Section >
       <div className="w-4/5 h-[60rem] m-auto flex flex-col justify-between">
         <div className=" h-[21rem] flex justify-between">
           <div className=" h-full border-l border-t border-b border-white px-10 rounded-tl-[12.5rem] rounded-bl-[2rem] flex flex-col justify-end">

@@ -1,0 +1,107 @@
+.contactUs_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 40rem;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_container > h3 {
+  font-size: var(--font-size-large);
+  line-height: 25.75rem;
+  text-align: center;
+  background: linear-gradient(
+    270deg,
+    #8d8d8d -28.01%,
+    #fff 44.66%,
+    #8d8d8d 117.34%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  background: linear-gradient(
+    141deg,
+    rgba(153, 90, 240, 1) 0%,
+    rgba(109, 12, 188, 1) 100%
+  );
+  margin-top: 30rem;
+  font-family: "Futura";
+  font-size: 13rem;
+  padding: 5rem 20rem;
+  border-radius: 12rem;
+}
+
+.green_circle {
+  position: absolute;
+  z-index: -1;
+  width: 568px;
+  height: 568px;
+  flex-shrink: 0;
+  border-radius: 668px;
+  background: #2eea79;
+  filter: blur(200px);
+  border: 1px solid white;
+  right: -30%;
+}
+
+.purple_circle {
+  position: absolute;
+  z-index: -1;
+  width: 571px;
+  height: 571px;
+  flex-shrink: 0;
+  border-radius: 571px;
+  background: #5a2eea;
+  filter: blur(200px);
+  left: -30%;
+  bottom: -20%;
+}
+
+@media (640px <= width) {
+  .button {
+    font-size: var(--font-size-medium);
+    padding: 7.1rem 20rem;
+    border-radius: 12rem;
+  }
+}
+@media (768px <= width) {
+  .button {
+    font-size: var(--font-size-medium);
+    padding: 7.1rem 20rem;
+    border-radius: 12rem;
+  }
+}
+@media (1024px <= width) {
+  .button {
+    font-size: var(--font-size-medium);
+    padding: 7.1rem 20rem;
+    border-radius: 12rem;
+  }
+}
+@media (1280px <= width) {
+  .button {
+    font-size: var(--font-size-medium);
+    padding: 7.1rem 20rem;
+    border-radius: 12rem;
+  }
+
+  .text_container > h3 {
+    font-size: var(--font-size-title-3);
+    line-height: 86.52rem;
+  }
+}

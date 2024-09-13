@@ -31,7 +31,9 @@ const CardValues: FC<Prop> = ({ title, content, children, rotateColor }) => {
 
 const Values = () => {
   return (
-    <Section styles={{ marginTop: "10rem" }}>
+    <Section 
+    // styles={{ marginTop: "10rem" }}
+    >
       <div className="w-full flex justify-between">
         <div className="flex flex-col justify-center items-start">
           <h2 className="text-[3.5rem] mb-4">Our Values</h2>

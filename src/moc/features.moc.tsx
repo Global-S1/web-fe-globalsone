@@ -13,7 +13,7 @@ export const featureData: IFeatures[] = [
           software <br />
         </span>
         <span className="bg-gradiant-title-2 bg-clip-text text-transparent">
-          personalizado&nbsp;
+          personalizado &nbsp;
         </span>
         para las necesidades específicas <br />
         de{" "}
@@ -24,7 +24,7 @@ export const featureData: IFeatures[] = [
     ),
     content:
       "homeYour journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.Your journey to finding the perfect property begins here. ",
-    direction: "left",
+    left: true,
     img: groupOne,
   },
   {
@@ -44,7 +44,7 @@ export const featureData: IFeatures[] = [
     ),
     content:
       "homeYour journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.Your journey to finding the perfect property begins here. ",
-    direction: "right",
+    right: true,
     img: groupTwo
   },
   {
@@ -69,7 +69,7 @@ export const featureData: IFeatures[] = [
     ),
     content:
       "homeYour journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.Your journey to finding the perfect property begins here. ",
-    direction: "left",
+    left: true  ,
     img: groupThree
   },
 ];

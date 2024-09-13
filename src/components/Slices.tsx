@@ -91,7 +91,7 @@ export const Slices = () => {
         <ArrowLeft />
       </div>
 
-      <div className="swiper-pagination-custom items-center absolute z-40 -bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="swiper-pagination-custom items-center absolute z-40 -bottom-[15%] sm:-bottom-[7%] left-1/2 transform -translate-x-1/2 flex space-x-20">
         {people.map((_, index) => (
           <div
             key={index}

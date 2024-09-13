@@ -4,14 +4,14 @@ import { Linkedin } from "@/assets/icons/aboutUs/Linkedin";
 import { Man } from "@/assets/images/aboutUs/Man";
 import { Woman } from "@/assets/images/aboutUs/Woman";
 import { Section } from "@/components/share/section";
-import Insides from "@/components/Insides";
+import { Insides } from "@/components/Insides";
 import { FC, ReactNode } from "react";
 
-interface Prop{
-  children: ReactNode
+interface Prop {
+  children: ReactNode;
 }
 
-const Card:FC<Prop> = ({ children }) => {
+const Card: FC<Prop> = ({ children }) => {
   return (
     <div
       className="border border-[rgba(255,255,255,0.5)] h-[36rem] w-[22.5rem] rounded-2xl flex flex-col justify-between items-center px-5 py-6 relative"
@@ -32,7 +32,9 @@ const Card:FC<Prop> = ({ children }) => {
 
 const Hero = () => {
   return (
-    <Section styles={{ marginTop: "4rem", height: "56rem" }}>
+    <Section 
+    // styles={{ marginTop: "4rem", height: "56rem" }}
+    >
       <div className="absolute w-[65rem] h-[50rem] -top-10 -right-56 -z-10 rounded-[69.9895rem] bg-[#5a2eea5e] blur-[200px]"></div>
       <div className="flex mt-4 w-full h-full">
         <div className="w-[50%] h-full pr-8 flex flex-col justify-center">
@@ -43,7 +45,7 @@ const Hero = () => {
             Your journey to finding the perfect property begins here. Explore
             our listings to find the home that matches your dreams.
           </p>
-          <Insides h={"5.5rem"} />
+          <Insides/>
           <div className="text-center mt-20">
             <p className="mb-3">Conoce más de Nosotros:</p>
             <div className="flex justify-center space-x-3">

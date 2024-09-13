@@ -11,7 +11,7 @@
     rgba(87, 62, 151, 0) 100%
   );
 }
-.burger{
+.burger {
   position: absolute;
   top: 50%;
   right: 8%;
@@ -19,12 +19,12 @@
 }
 
 @media (640px <= width) {
-  .header_container {
-    display: none;
-  }
 }
 
 @media (768px <= width) {
+  .header_container {
+    display: none;
+  }
 }
 
 @media (1024px <= width) {
