@@ -1,4 +1,5 @@
 .whatWeBuild_container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -36,6 +37,18 @@
   -webkit-text-fill-color: transparent;
 }
 
+.picture_container {
+  position: relative;
+}
+
+.leave {
+  display: none;
+}
+
+.green_circle {
+}
+.purple_circle {
+}
 @media (640px <= width) {
   .foco {
     width: 80px;
@@ -44,6 +57,28 @@
   .whatWeBuild_title {
     height: 250px;
     font-size: var(--font-size-title-10);
+  }
+  .green_circle {
+    position: absolute;
+    width: 571px;
+    height: 571px;
+    flex-shrink: 0;
+    border-radius: 571px;
+    background: #2eea7988;
+    filter: blur(200px);
+    right: -30%;
+    top: -13%;
+  }
+  .purple_circle {
+    position: absolute;
+    width: 571px;
+    height: 571px;
+    flex-shrink: 0;
+    border-radius: 571px;
+    background: #5a2eea98;
+    filter: blur(200px);
+    left: -20%;
+    top: -25%;
   }
 }
 @media (768px <= width) {
@@ -63,6 +98,14 @@
   .whatWeBuild_title > h2 {
     width: 130%;
   }
+  .leave {
+    display: block;
+    position: absolute;
+    right: -4%;
+    top: -4%;
+    transform: rotate(-150deg);
+    z-index: -1;
+  }
 }
 @media (1280px <= width) {
   .whatWeBuild_title {
@@ -71,5 +114,8 @@
   }
   .whatWeBuild_title > h2 {
     width: 130%;
+  }
+  .leave {
+    top: -5%;
   }
 }

@@ -3,14 +3,14 @@ import { Section } from "@/components/share/section";
 import { HeroTitle } from "./hero-title";
 import { titles } from "@/moc/heroTitles.moc";
 import { HeroArrow } from "./hero-arrow";
-import Image from "next/image";
-import heroImg from "@/assets/heroImg.png";
-import heroPictureMobile from "@/assets/home/pictures/hero-pinctue-mobile.png";
 import { HeroMetrics } from "./hero-metrics";
-import s from "./hero.module.css";
 import { HeroCentralPricture } from "./hero-central-picture";
 import { HeroTitleBgLeft } from "./hero-title-bg-left";
 import { HeroTitleBgRight } from "./hero-title-bg-right";
+import s from "./hero.module.css";
+import { Leave } from "@/assets/leavesComponents/Leave";
+import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
+import clsx from "clsx";
 
 export const Hero = () => {
   return (
@@ -24,7 +24,12 @@ export const Hero = () => {
         <HeroTitleBgRight />
       </div>
       <div className={s.widowCard_container}>
-        {/* <div className={s.blue_bg}></div> */}
+        <div className={clsx(s.leave_base, s.leave_one)}>
+          <Leave style={{}} />
+        </div>
+        <div className={clsx(s.leave_base, s.leave_two)}>
+          <LeaveBig />
+        </div>
         <WindowCard active>
           <HeroMetrics />
         </WindowCard>

@@ -44,7 +44,6 @@ body {
   background-color: var(--body-gb-color);
   color: white;
   overflow-x: hidden;
-  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;

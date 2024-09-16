@@ -7,26 +7,15 @@
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 40rem;
+  margin-bottom: 100rem;
 }
 
 .widowCard_container {
   position: relative;
 }
 
-.blue_bg {
-  position: absolute;
-  width: 1308px;
-  height: 460px;
-  background: linear-gradient(
-    180deg,
-    #0e1330 0%,
-    rgba(214, 43, 211, 0.32) 100%
-  );
-  background-blend-mode: color-dodge;
-  top: 17%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -10;
+.leave_base {
+  display: none;
 }
 
 @media (425px <= width) {
@@ -51,11 +40,26 @@
 @media (768px <= width) {
 }
 
-@media (min-width: 1024px) {
+@media (1024px <= width) {
+  .leave_base{
+    display: inline-block;
+    position: absolute;
+  }
+  .leave_one{
+    right: -4%;
+    top: 2%;
+    z-index: 2;
+  }
+  .leave_two{
+    z-index: -1;
+    top: -20.5%;
+    right: -3%;
+    transform: rotate(-55deg);
+  }
   .container {
     height: 800px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (1280px <= width) {
 }
