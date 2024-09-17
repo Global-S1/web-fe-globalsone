@@ -2,8 +2,8 @@ import Image from "next/image";
 import Foco from "@/assets/icons/foco.png";
 import { Section } from "@/components/share/section";
 import { CardContainer } from "./we-build-card-container";
+import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import s from "./what-we-build.module.css";
-import { Leave } from "@/assets/leavesComponents/Leave";
 
 export const WhatWeBuild = () => {
   return (
@@ -20,7 +20,7 @@ export const WhatWeBuild = () => {
         </div>
         <div className={s.picture_container}>
           <div className={s.leave}>
-            <Leave style={{}} />
+            <LeaveHd />
           </div>
           <CardContainer />
           <div className={s.green_circle}></div>

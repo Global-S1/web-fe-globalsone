@@ -1,8 +1,8 @@
 export const ArrowLeft = () => {
   return (
     <svg
-      width="69"
-      height="70"
+      // width="69"
+      // height="70"
       viewBox="0 0 69 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

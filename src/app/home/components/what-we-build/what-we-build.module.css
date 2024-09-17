@@ -49,6 +49,7 @@
 }
 .purple_circle {
 }
+
 @media (640px <= width) {
   .foco {
     width: 80px;
@@ -64,10 +65,11 @@
     height: 571px;
     flex-shrink: 0;
     border-radius: 571px;
-    background: #2eea7988;
+    background: #2eea79;
     filter: blur(200px);
     right: -30%;
     top: -13%;
+    z-index: -1;
   }
   .purple_circle {
     position: absolute;
@@ -101,9 +103,8 @@
   .leave {
     display: block;
     position: absolute;
-    right: -4%;
-    top: -4%;
-    transform: rotate(-150deg);
+    right: -2.4%;
+    top: -3.5%;
     z-index: -1;
   }
 }

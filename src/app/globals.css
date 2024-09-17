@@ -72,7 +72,6 @@ body {
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
-  /* border: 5px dashed orange; */
   @apply !w-[130px] xl:!w-[300px];
 }
 

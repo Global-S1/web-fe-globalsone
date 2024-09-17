@@ -1,0 +1,24 @@
+
+.swiper{
+    width: 80%;
+    border: 1rem solid white;
+}
+.swiper-wrappe{
+    border: 2rem dashed red ;
+
+}
+.swiper-slide{
+    border: 1rem solid white;
+    width: 250rem !important;
+    margin: 0 20rem;
+}
+
+@media (425px <= width){}
+@media (640px <= width){}
+@media (768px <= width){}
+@media (1024px <= width){
+    .swiper{
+        width: 80%;
+    }
+}
+@media (1280px <= width){}
