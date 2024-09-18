@@ -1,4 +1,4 @@
-import WindowCard from "@/components/share/window";
+import { WindowCard } from "@/components/share/window";
 import { ourService } from "@/moc/service.moc";
 import { WeBuildCard } from "../we-build-card";
 import s from "./we-build-card-container.module.css";

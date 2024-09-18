@@ -1,11 +1,11 @@
 import { Section } from "@/components/share/section";
-import VideoPlayer from "@/assets/icons/VideoPlayer";
-import Ticket from "@/assets/icons/Ticket";
-import CpuIcon from "@/assets/icons/CpuIcon";
+import { VideoPlayer } from "@/assets/icons/VideoPlayer";
+import { Ticket } from "@/assets/icons/Ticket";
+import { CpuIcon } from "@/assets/icons/CpuIcon";
 
 const Quote = () => {
   return (
-    <Section >
+    <Section>
       <div className="w-4/5 h-[60rem] m-auto flex flex-col justify-between">
         <div className=" h-[21rem] flex justify-between">
           <div className=" h-full border-l border-t border-b border-white px-10 rounded-tl-[12.5rem] rounded-bl-[2rem] flex flex-col justify-end">

@@ -5,8 +5,7 @@ interface Prop {
   children: React.ReactNode;
 }
 
-const Main: FC<Prop> = ({ children }) => {
+export const Main: FC<Prop> = ({ children }) => {
   return <main className={s.main}>{children}</main>;
 };
 
-export default Main;

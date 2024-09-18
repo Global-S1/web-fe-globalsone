@@ -1,10 +1,10 @@
-import Image from "next/image";
-import { CarrucelImg } from "@/components/share/carrucel-image-two";
-import { Leave } from "@/assets/leavesComponents/Leave";
-import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
+import { CarrucelImg } from "@/components/share/carrucel-image";
 import { Section } from "@/components/share/section";
-import s from "./our-team.module.css";
 import { GlobalSLogo } from "./GlobalSLogo";
+import s from "./our-team.module.css";
+import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
+import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
+import { ActionButton } from "../action-button";
 
 export const OurTeam = () => {
   return (
@@ -18,11 +18,19 @@ export const OurTeam = () => {
           mollitia sint, ex officiis. Minima obcaecati adipisci officia fuga
           ullam recusandae.
         </p>
-        {/* <div className="relative"> */}
-          {/* <Slices /> */}
-          <CarrucelImg />
-        {/* </div> */}
-        <button className={s.buttom}>Quiero Conocerlos</button>
+        <div className={s.ourTeam__leave__one}>
+          <LeaveClear />
+        </div>
+        <CarrucelImg />
+        {/* <button className={s.buttom}>Quiero Conocerlos</button> */}
+        <ActionButton text="Quiero Conocerlos" />
+
+        <div className={s.ourTeam__leave__two}>
+          <LeaveClear />
+        </div>
+        <div className={s.ourTeam__leave__three}>
+          <LeaveBig />
+        </div>
       </div>
     </Section>
   );

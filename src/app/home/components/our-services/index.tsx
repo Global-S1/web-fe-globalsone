@@ -25,12 +25,14 @@ export const OurServices = () => {
             title={service.title}
             content={service.content}
           >
-            <service.icon />
+            <div className={s.icon}>
+              <service.icon />
+            </div>
           </CardOurService>
         ))}
         <div className={s.purple_dot}></div>
         <div className={s.leave_two}>
-          <LeaveBig />
+          <LeaveBig />  
         </div>
       </div>
     </Section>

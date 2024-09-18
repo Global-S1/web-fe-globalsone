@@ -1,4 +1,4 @@
-import WindowCard from "@/components/share/window";
+import { WindowCard } from "@/components/share/window";
 import { Section } from "@/components/share/section";
 import { HeroTitle } from "./hero-title";
 import { titles } from "@/moc/heroTitles.moc";

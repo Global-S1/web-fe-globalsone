@@ -5,13 +5,13 @@ import s from "./hero-central-picture.module.css"
 
 export const HeroCentralPricture = () => {
   return (
-    <>
+    <div className={s.heroCenterPricture__bg}>
       <Image
         src={heroPictureMobile}
         alt="Global S1"
         className={s.hero_picture_mobile}
       />
       <Image src={heroImg} alt="Global S1" className={s.hero_picture} />
-    </>
+    </div>
   );
 };

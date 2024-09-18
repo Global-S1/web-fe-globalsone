@@ -1,69 +1,90 @@
 "use client";
+import { A11y, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import clsx from "clsx";
+import React, { useRef, useState } from "react";
+import s from "./carrucel-image.module.css";
+import "./swiper-custom-styles.css";
 import { people } from "@/moc/people.moc";
-import { Slice } from "./carrucel-slice";
+import { Slice } from "./slice";
 import { ArrowLeft } from "@/assets/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/icons/ArrowRight";
-import { useState, useRef, useEffect } from "react";
-import s from "./carrucel-image.module.css";
-import next from "next";
+import "swiper/css/effect-fade";
+import { Swiper as SwiperType } from "swiper";
 
 export const CarrucelImg = () => {
-  const [selectedIndex, setSelectedIndex] = useState(
-    Math.floor(people.length / 2)
-  ); // Comenzar desde el medio
-  const [translateX, setTranslateX] = useState(0);
-  const sliceRefs = useRef<(HTMLDivElement | null)[]>([]); // Array de referencias
-
-  useEffect(() => {
-    if (sliceRefs) {
-      // console.log(sliceRefs.current[0].offsetWidth)
-      const computedStyle = window.getComputedStyle(sliceRefs.current[0]);
-      const marginRight = computedStyle.marginRight;
-      const marginLeft = computedStyle.marginLeft;
-      // console.log(computedStyle, marginRight, marginLeft)
-    }
-  }, [selectedIndex]);
+  const swiperRef = useRef<SwiperType | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
-    console.log("next");
-    setTranslateX((prev) => {
-      const newIndex = prev + 280;
-      return newIndex;
-    });
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
   };
 
   const handlePrev = () => {
-    // setSelectedIndex((prev) => Math.max(prev - 1, 0));
-    setTranslateX((prev) => {
-      const newIndex = prev - 280;
-      return newIndex;
-    });
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
   };
-
-  useEffect(() => {}, []);
-
   return (
     <div className={s.carrucel}>
-      <button className={s.left} onClick={handlePrev}>
-        <ArrowLeft />
-      </button>
-      <div className={s.carrucel_list}>
-        <div
-          className={s.carrucel_track}
-          style={{ transform: `translateX(-${translateX}px)` }}
+      <div className={s.view_slices}>
+        <button className={s.button} onClick={handlePrev}>
+          <ArrowLeft />
+        </button>
+        <Swiper
+          modules={[EffectFade, A11y]}
+          pagination={{ clickable: true }}
+          centeredSlides
+          initialSlide={3}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.activeIndex);
+          }}
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 5,
+              slidesOffsetBefore: 0,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+              slidesOffsetAfter: -100,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 42,
+              slidesOffsetBefore: -200,
+              slidesOffsetAfter: -200,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              slidesOffsetBefore: -300,
+              slidesOffsetAfter: -100,
+            },
+          }}
         >
           {people.map((person, index) => (
-            <Slice
-              key={index}
-              {...person}
-              isCentral={index === selectedIndex}
-            />
+            <SwiperSlide key={index}>
+              <Slice {...person} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+        <button className={s.button} onClick={handleNext}>
+          <ArrowRight />
+        </button>
       </div>
-      <button className={s.right} onClick={handleNext}>
-        <ArrowRight />
-      </button>
     </div>
   );
 };

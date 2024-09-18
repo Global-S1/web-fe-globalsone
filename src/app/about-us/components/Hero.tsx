@@ -30,7 +30,7 @@ const Card: FC<Prop> = ({ children }) => {
   );
 };
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <Section 
     // styles={{ marginTop: "4rem", height: "56rem" }}
@@ -89,4 +89,3 @@ const Hero = () => {
   );
 };
 
-export default Hero;

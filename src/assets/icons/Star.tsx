@@ -1,4 +1,4 @@
-const Star = () => {
+export const Star = () => {
   return (
     <svg
       // width="40"
@@ -15,4 +15,4 @@ const Star = () => {
   );
 };
 
-export default Star;
+

@@ -1,8 +1,8 @@
 export const LeaveBig = ({ style }: any) => {
   return (
     <svg
-      width="225"
-      height="207"
+      // width="225"
+      // height="207"
       viewBox="0 0 225 207"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

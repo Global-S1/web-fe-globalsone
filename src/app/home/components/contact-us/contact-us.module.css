@@ -8,7 +8,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 40rem;
 }
 
 .text_container {
@@ -49,12 +48,12 @@
 .green_circle {
   position: absolute;
   z-index: -1;
-  width: 568px;
-  height: 568px;
+  width: 268px;
+  height: 268px;
   flex-shrink: 0;
   border-radius: 668px;
   background: #2eea79;
-  filter: blur(200px);
+  filter: blur(100px);
   border: 1px solid white;
   right: -30%;
 }
@@ -62,12 +61,12 @@
 .purple_circle {
   position: absolute;
   z-index: -1;
-  width: 571px;
-  height: 571px;
+  width: 371px;
+  height: 371px;
   flex-shrink: 0;
   border-radius: 571px;
   background: #5a2eea;
-  filter: blur(200px);
+  filter: blur(100px);
   left: -30%;
   bottom: -20%;
 }
@@ -91,6 +90,31 @@
     font-size: var(--font-size-medium);
     padding: 7.1rem 20rem;
     border-radius: 12rem;
+  }
+  .green_circle {
+    position: absolute;
+    z-index: -1;
+    width: 568px;
+    height: 568px;
+    flex-shrink: 0;
+    border-radius: 668px;
+    background: #2eea79;
+    filter: blur(200px);
+    border: 1px solid white;
+    right: -30%;
+  }
+
+  .purple_circle {
+    position: absolute;
+    z-index: -1;
+    width: 571px;
+    height: 571px;
+    flex-shrink: 0;
+    border-radius: 571px;
+    background: #5a2eea;
+    filter: blur(200px);
+    left: -30%;
+    bottom: -20%;
   }
 }
 @media (1280px <= width) {

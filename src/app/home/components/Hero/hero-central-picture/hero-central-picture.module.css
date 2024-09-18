@@ -1,10 +1,10 @@
 .hero_picture_mobile {
   max-width: none;
   object-fit: cover;
-  width: 380rem;
+  width: 350rem;
   position: absolute;
-  top: -6%;
-  right: -5%;
+  top: -3%;
+  right: -10%;
 }
 
 .hero_picture {
@@ -13,6 +13,28 @@
   left: 46%;
   transform: translateX(-50%);
   width: 335px;
+}
+
+@media (340px <= width) {
+  .hero_picture_mobile {
+    width: 360rem;
+    top: -7%;
+    right: -10%;
+  }
+}
+@media (340px <= width) {
+  .hero_picture_mobile {
+    top: -3%;
+    right: -5%;
+  }
+}
+
+@media (375px <= width) {
+  .hero_picture_mobile {
+    width: 380rem;
+    top: -5%;
+    right: -7%;
+  }
 }
 
 @media (425px <= width) {
@@ -48,6 +70,13 @@
     width: 500px;
     transform: translateX(-45%);
   }
+  .heroCenterPricture__bg {
+    height: 100%;
+    background-image: url(../../../../../assets/home/background/centralImgBg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (768px <= width) {
@@ -60,10 +89,9 @@
 }
 
 @media (min-width: 1024px) {
-    .hero_picture {
-
-        width: 520px;
-      }
+  .hero_picture {
+    width: 520px;
+  }
 }
 
 @media (min-width: 1280px) {

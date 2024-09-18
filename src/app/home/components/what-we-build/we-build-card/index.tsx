@@ -27,18 +27,18 @@ interface Prop {
 }
 
 const columnSize: Record<ColumSpan, string> = {
-  [ColumSpan.One]: "col-span-12 sm:col-span-6 xl:col-span-1",
-  [ColumSpan.Two]: "col-span-12 sm:col-span-6 xl:col-span-2",
-  [ColumSpan.Three]: "col-span-12 sm:col-span-6 xl:col-span-3",
-  [ColumSpan.Four]: "col-span-12 sm:col-span-6 xl:col-span-4",
-  [ColumSpan.Five]: "col-span-12 sm:col-span-6 xl:col-span-5",
-  [ColumSpan.Six]: "col-span-12 sm:col-span-6 xl:col-span-6",
-  [ColumSpan.Seven]: "col-span-12 sm:col-span-6 xl:col-span-7",
-  [ColumSpan.Eight]: "col-span-12 sm:col-span-6 xl:col-span-8",
-  [ColumSpan.Nine]: "col-span-12 sm:col-span-6 xl:col-span-9",
-  [ColumSpan.Ten]: "col-span-12 sm:col-span-6 xl:col-span-10",
-  [ColumSpan.Eleven]: "col-span-12 sm:col-span-6 xl:col-span-11",
-  [ColumSpan.Twelve]: "col-span-12 sm:col-span-6 xl:col-span-12",
+  [ColumSpan.One]: "col-span-12 sm:col-span-6 lg:col-span-1",
+  [ColumSpan.Two]: "col-span-12 sm:col-span-6 lg:col-span-2",
+  [ColumSpan.Three]: "col-span-12 sm:col-span-6 lg:col-span-3",
+  [ColumSpan.Four]: "col-span-12 sm:col-span-6 lg:col-span-4",
+  [ColumSpan.Five]: "col-span-12 sm:col-span-6 lg:col-span-5",
+  [ColumSpan.Six]: "col-span-12 sm:col-span-6 lg:col-span-6",
+  [ColumSpan.Seven]: "col-span-12 sm:col-span-6 lg:col-span-7",
+  [ColumSpan.Eight]: "col-span-12 sm:col-span-6 lg:col-span-8",
+  [ColumSpan.Nine]: "col-span-12 sm:col-span-6 lg:col-span-9",
+  [ColumSpan.Ten]: "col-span-12 sm:col-span-6 lg:col-span-10",
+  [ColumSpan.Eleven]: "col-span-12 sm:col-span-6 lg:col-span-11",
+  [ColumSpan.Twelve]: "col-span-12 sm:col-span-6 lg:col-span-12",
 };
 
 export const WeBuildCard: FC<Prop> = ({
@@ -48,12 +48,12 @@ export const WeBuildCard: FC<Prop> = ({
   ColumSpan,
   isLast,
 }) => {
-  const gridDefaultProperties = "col-span-12 sm:col-span-6 xl:col-span-4";
+  const gridDefaultProperties = "col-span-12 sm:col-span-6 xl:col-span-6";
   const gridClass = columnSize[ColumSpan!] || gridDefaultProperties;
-  const lastItemClass = isLast ? "sm:col-span-12" : "";
+  const lastItemClass = isLast ? "col-span-12 sm:col-span-12 lg:col-span-12 xl:col-span-12" : "";
 
   return (
-    <div className={clsx(gridClass, s.card_container, lastItemClass, " ")}>
+    <div className={clsx(isLast ? lastItemClass : gridClass, s.card_container)}>
       <div className={s.img_container}>
         <Image src={image} alt={altContent} />
       </div>

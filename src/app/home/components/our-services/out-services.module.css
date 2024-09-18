@@ -34,18 +34,17 @@
   margin-bottom: 100rem;
   row-gap: 42rem;
 }
+
+.icon {
+  width: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .purple_circle {
-  position: absolute;
-  width: 571px;
-  height: 571px;
-  flex-shrink: 0;
-  border-radius: 571px;
-  background: #5a2eea;
-  filter: blur(200px);
-  border: 1rem solid white;
-  top: -180%;
-  left: -20%;
-  z-index: -1;
+  display: none;
 }
 
 .leave_one {
@@ -66,6 +65,30 @@
   .ourServices_title > h2 {
     font-size: var(--font-size-title-8);
     line-height: 39.75rem;
+  }
+  .cards_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    max-width: 800rem;
+    margin: 0 auto;
+  }
+  .icon {
+    width: 200rem;
+  }
+  .purple_circle {
+    display: block;
+    position: absolute;
+    width: 571px;
+    height: 571px;
+    flex-shrink: 0;
+    border-radius: 571px;
+    background: #5a2eea;
+    filter: blur(200px);
+    border: 1rem solid white;
+    top: -180%;
+    left: -20%;
+    z-index: -1;
   }
 }
 @media (768px <= width) {
@@ -105,14 +128,18 @@
   .leave_one {
     position: absolute;
     display: inline-block;
-    right: -2.5%;
-    top: -5%;
+
+    right: 39%;
+    top: 51%;
+    z-index: 10;
   }
   .leave_two {
     position: absolute;
     display: inline-block;
-    bottom: -29%;
-    left: -4%;
+    width: 312.502px;
+    height: 147.697px;
+    bottom: 50%;
+    left: -7%;
   }
 }
 @media (1280px <= width) {

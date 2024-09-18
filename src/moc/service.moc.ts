@@ -1,13 +1,12 @@
-import VideoPlayer from "@/assets/icons/VideoPlayer";
-import Ticket from "@/assets/icons/Ticket";
-import CpuIcon from "@/assets/icons/CpuIcon";
+import { VideoPlayer } from "@/assets/icons/VideoPlayer";
+import {Ticket} from "@/assets/icons/Ticket";
+import { CpuIcon } from "@/assets/icons/CpuIcon";
 import TradingPlataform from "@/assets/images/trading-plataform.png";
 import AppMobil from "@/assets/images/app-mobil.png";
 import CrmPlataform from "@/assets/images/crm-plataform.png";
 import ApiConnection from "@/assets/home/pictures/apps-group.png";
 import Ecommerce from "@/assets/images/ecommerce.png";
-
-
+import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 
 export const services = [
   {
@@ -24,6 +23,11 @@ export const services = [
     title: "Desarrollo de Software",
     content: "Your journey to finding the perfect prop",
     icon: CpuIcon,
+  },
+  {
+    title: "Consultoría",
+    content: "Your journey to finding the perfect prop",
+    icon: PeopleAvatars,
   },
 ];
 
@@ -55,7 +59,7 @@ export const ourService = [
       "Bring your data with our built-in integration for accounting, revenue tools and banking",
     image: ApiConnection,
     altContent: "APIs",
-    ColumSpan: 7,
+    // ColumSpan: 7,
   },
   {
     title: "Ecommerce",
@@ -63,6 +67,6 @@ export const ourService = [
       "All your data and finances in one place to provide quick answers and make decisions instantly.",
     image: Ecommerce,
     altContent: "Ecommerce",
-    ColumSpan: 5,
+    // ColumSpan: 5,
   },
 ];

@@ -1,26 +1,28 @@
 import Link from "next/link";
 import { GlobalSLogo } from "@/assets/GlobalSLogo";
 import { links } from "@/moc/routes.moc";
+import { Phone } from "@/assets/header/icon/Phone";
 import s from "./header.module.css";
+import { ContactUsBtn } from "../contact-us-btn";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className={s.header}>
-      <div className={s.container_navbar}>
+      <div className={s.header__navbar}>
         <nav>
-          <ul className={s.navbar_left}>
+          <ul className={s.header__navbarLeft}>
             {links.map((link, index) => (
-              <li key={index}>
+              <li key={index} className={s.header__item}>
                 <Link href={link.path}>{link.label}</Link>
               </li>
             ))}
           </ul>
         </nav>
-        <GlobalSLogo w="192" h="40" style={s.logo} />
+        <GlobalSLogo w="192" h="40" style={s.header__logo} />
         <nav>
           <ul>
-            <li className={s.navbar_right}>
-              <Link href="/contact">Contact Us</Link>
+            <li>
+              <ContactUsBtn />
             </li>
           </ul>
         </nav>
@@ -28,5 +30,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

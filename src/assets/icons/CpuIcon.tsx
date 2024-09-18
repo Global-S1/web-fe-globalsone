@@ -1,13 +1,6 @@
-const CpuIcon = () => {
+export const CpuIcon = () => {
   return (
-    <svg
-      // width="100%"
-      // height="269"
-      viewBox="15 65 300 200"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      // className="border border-white"
-    >
+    <svg viewBox="15 65 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_f_263_1662)">
         <path
           d="M147.771 88C153.763 88 158.619 92.6621 158.619 98.4154V139.581H136.923V98.4154C136.923 92.6621 141.779 88 147.771 88Z"
@@ -363,5 +356,3 @@ const CpuIcon = () => {
     </svg>
   );
 };
-
-export default CpuIcon

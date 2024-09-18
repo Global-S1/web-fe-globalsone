@@ -29,9 +29,9 @@ const CardValues: FC<Prop> = ({ title, content, children, rotateColor }) => {
   );
 };
 
-const Values = () => {
+export const Values = () => {
   return (
-    <Section 
+    <Section
     // styles={{ marginTop: "10rem" }}
     >
       <div className="w-full flex justify-between">
@@ -59,5 +59,3 @@ const Values = () => {
     </Section>
   );
 };
-
-export default Values;

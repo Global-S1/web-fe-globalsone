@@ -1,0 +1,28 @@
+.button {
+  margin-top: 30rem;
+  background: #544dd2;
+  font-size: 13rem;
+  padding: 5rem 19rem;
+  font-family: "Futura";
+  border-radius: 5rem;
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+  .button {
+    width: 234.479rem;
+    height: 49.829rem;
+    font-size: var(--font-size-small);
+    border-radius: 20rem;
+  }
+}
+@media (1024px <= width) {
+  .button {
+    width: 254.479rem;
+    height: 59.829rem;
+    font-size: 24rem;
+  }
+}
+@media (1280px <= width) {
+}

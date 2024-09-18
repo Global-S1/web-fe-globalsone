@@ -7,7 +7,7 @@ interface Prop {
   active?: boolean;
 }
 
-const WindowCard: FC<Prop> = ({ children }) => {
+export const WindowCard: FC<Prop> = ({ children }) => {
   return (
     <div className={s.windowCard_container}>
       <div className="relative">
@@ -18,4 +18,3 @@ const WindowCard: FC<Prop> = ({ children }) => {
   );
 };
 
-export default WindowCard;

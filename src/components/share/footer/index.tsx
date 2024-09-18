@@ -49,7 +49,7 @@ const DataColIndex: IColIndex[] = [
 
 const socialmedia = [ButtonFacebook, BtnLinkedin, Instagram];
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className={s.footer}>
       <div className={s.footer_menu_container}>
@@ -102,5 +102,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

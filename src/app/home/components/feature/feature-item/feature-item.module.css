@@ -45,10 +45,45 @@
   right: -50%;
 }
 
+.title_style_one {
+  background: linear-gradient(0deg, #6c6ef0 23%, #19dbca 84.81%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title_style_two {
+  background: linear-gradient(358deg, #6c6ef0 44.08%, #19dbca 80.64%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title_style_three {
+  background: linear-gradient(2deg, #6c6ef0 51.64%, #19dbca 140%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title_style_four {
+  background: linear-gradient(0deg, #5557d9 -23.11%, #19dbca 73.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title_style_five {
+  background: linear-gradient(0deg, #5557d9 48.89%, #19dbca 127.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (min-width: 330px) {
   .left {
     top: 40% !important;
-    left: -25% ;
+    left: -25%;
   }
 
   .right {

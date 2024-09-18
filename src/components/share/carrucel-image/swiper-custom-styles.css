@@ -1,6 +1,8 @@
 .swiper {
   width: 70%;
-  height: 400rem;
+  height: 100%;
+}
+.swiper-wrapper {
 }
 
 .swiper-slide {
@@ -11,7 +13,8 @@
 }
 @media (640px <= width) {
   .swiper {
-    width: 80%;
+    width: 100%;
+    height: 300rem;
   }
   .swiper-slide {
     width: 47% !important;
@@ -27,31 +30,40 @@
   .swiper-slide {
     width: 47% !important;
   }
+  .swiper::before {
+    left: -2%;
+  }
+  .swiper-slide {
+    min-width: 250rem !important;
+    max-width: 250rem !important;
+  }
 }
 @media (1024px <= width) {
   .swiper {
     width: 100%;
     max-width: 905rem;
- 
   }
   .swiper-wrapper {
- 
   }
   .swiper-slide {
-    display: flex;
+    min-width: 269.66rem !important;
   }
 }
 @media (1280px <= width) {
   .swiper {
-    width: 100%;
+    width: 80%;
     max-width: 1210rem;
     margin: 0 auto;
+    height: 400rem;
   }
   .swiper-wrapper {
-    width: 150% !important;
-    transform: translate3d(64px, 0px, 0px);
   }
   .swiper-slide {
-    width: 47% !important;
+    width: 60% !important;
+    min-width: 342.8rem;
+    height: 100% !important;
+  }
+  .swiper::before {
+    left: -1.9%;
   }
 }

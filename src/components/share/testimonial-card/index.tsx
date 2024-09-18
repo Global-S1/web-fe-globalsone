@@ -3,6 +3,7 @@ import BgTestimonial from "@/assets/background/bg-testimonial.png";
 import { Stars } from "./Stars";
 import { MosaicImg } from "./MosaicImg";
 import { FC } from "react";
+import { ActionButton } from "../action-button";
 
 interface ITestimonial {
   name: string;
@@ -31,9 +32,9 @@ export const TestimonialCard: FC<ITestimonial> = ({
 
         <Stars numStars={stars} />
 
-        <button className="bg-custom-gradian-btn-project w-[117.03px] h-[22.84px] xl:w-[191px] xl:h-[44.8px] rounded-[6rem] mt-4 font-futura text-[13px] xl:text-[21px] mb-[10rem] sm:order-last md:mt-[15rem]">
-          Ver Porjecto
-        </button>
+        <div className="w-[117.03px] xl:w-[191px] xl:h-[44.8px] rounded-[6rem]  font-futura text-[13px] xl:text-[21px] mb-[10rem] sm:order-last ">
+          <ActionButton text="Ver Poryecto" />
+        </div>
 
         <p className="text-nano sm:text-micro md:text-tiny lg:text-base xl:text-medium leading-[15px] sm:leading-[18px] md:leading-[22px] lg:leading-[28px] xl:leading-[33px] max-w-[470px] font-futura">
           {content}

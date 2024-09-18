@@ -13,7 +13,7 @@
   color: var(--dumme-color);
 }
 
-.container_navbar {
+.header__navbar {
   height: 79rem;
   max-width: 1240px;
   position: relative;
@@ -26,13 +26,13 @@
   align-items: center;
 }
 
-.navbar_left {
+.header__navbarLeft {
   width: fit-content;
   display: flex;
   column-gap: 15rem;
 }
 
-.logo {
+.header__logo {
   position: absolute;
   top: 26%;
   left: 52%;

@@ -1,12 +1,9 @@
-const Ticket = () => {
+export const Ticket = () => {
   return (
     <svg
-      // width="100%"
-      // height="269"
       viewBox="-40 50 300 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      // className="border border-white"
     >
       <g filter="url(#filter0_f_263_1687)">
         <path
@@ -125,4 +122,4 @@ const Ticket = () => {
   );
 };
 
-export default Ticket;
+

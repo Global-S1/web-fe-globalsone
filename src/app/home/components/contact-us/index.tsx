@@ -1,9 +1,7 @@
 import bgContac from "@/assets/background/bgContact.png";
-import { Pice1 } from "@/assets/home/icons/Pice";
 import { Section } from "@/components/share/section";
-import ListOfFiles from "@/assets/home/pictures/ListOfFiles.svg";
-import Image from "next/image";
 import s from "./contact-us.module.css";
+import { ActionButton } from "@/components/share/action-button";
 
 export const ContactUs = () => {
   return (
@@ -21,7 +19,8 @@ export const ContactUs = () => {
             transformar <br />
             tu negocio?
           </h3>
-          <button className={s.button}>Contáctanos Ahora</button>
+         
+          <ActionButton text="Contáctanos Ahora"/>
         </div>
         <div className={s.green_circle}></div>
       </div>

@@ -1,8 +1,8 @@
 export const LeaveClear = ({ style }: any) => {
   return (
     <svg
-      width="93"
-      height="106"
+      // width="93"
+      // height="106"
       viewBox="0 0 93 106"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

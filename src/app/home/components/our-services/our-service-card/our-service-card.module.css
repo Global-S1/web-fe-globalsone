@@ -1,9 +1,7 @@
 .cardOurService_container {
-  background: linear-gradient(
-    180deg,
-    rgba(153, 153, 153, 0) 0%,
-    rgba(255, 255, 255, 0.51) 100%
-  );
+  background-image: url(../../../../../assets/home/background/bgcolors-services.png);
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   border-top: 0.5px solid #999999;
   height: 200.3px;
@@ -17,54 +15,29 @@
   padding-right: 0.75rem;
   position: relative;
 }
-.purple_circle {
-  position: absolute;
-  width: 198px;
-  height: 198px;
-  flex-shrink: 0;
-  background-color: #6660ff;
-  border-radius: 50%;
-  filter: blur(66px);
-  bottom: -0%;
-  right: -14%;
-  z-index: -1;
-}
-.green_circle {
-  position: absolute;
-  width: 198px;
-  height: 198px;
-  flex-shrink: 0;
-  background-color: #60ffdc;
-  border-radius: 50%;
-  filter: blur(66px);
-
-  top: -20%;
-  left: -20%;
-  z-index: -1;
-}
-
 .children_container {
   width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .title_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 10rem;
 }
-
 .title_container > h3 {
   color: var(--custom-color-green);
   font-size: 15rem;
 }
-
 .title_container > p {
   font-size: 11rem;
   font-family: "Futura";
+  margin: 0 15rem;
 }
-
 @media (640px <= width) {
   .cardOurService_container {
     height: 350px;

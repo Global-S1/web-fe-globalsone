@@ -1,40 +1,18 @@
 .carrucel {
-  position: relative;
-  width: 70%;
-  /* border: 1rem solid white; */
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: fit-content;
 }
 
-.carrucel > button {
-  position: absolute;
+.view_slices {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  height: fit-content;
   width: 40rem;
-  z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.left {
-  left: -20%;
-}
-
-.right {
-  right: -20%;
-}
-
-.carrucel_list {
-  overflow: hidden;
-  flex-grow: 1;
-  /* border: 1rem solid green; */
-}
-
-.carrucel_track {
-  position: relative;
-  display: flex;
-  border: 1px solid white;
-  /* column-gap: 10rem; */
-  /* transform: translateX(-248.09rem); */
-  /* transform: translate(-496.18rem); */
-  /* transform: translateX(-744.27rem); */
 }
 
 @media (425px <= width) {
@@ -44,21 +22,21 @@
 @media (768px <= width) {
 }
 @media (1024px <= width) {
-  .carrucel_track {
-    column-gap: 31rem;
-  }
   .carrucel {
-    width: 80%;
+    width: 98%;
   }
-  .carrucel > button {
-    width: 80rem;
-  }
-  .left {
-    left: -10%;
-  }
-  .right {
-    right: -10%;
+  .view_slices {
+    width: 100%;
   }
 }
 @media (1280px <= width) {
+  .carrucel {
+    width: 108%;
+  }
+  .view_slices {
+    width: 90%;
+  }
+  .button {
+    width: 80rem;
+  }
 }

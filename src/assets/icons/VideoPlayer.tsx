@@ -4,11 +4,9 @@ interface Prop {
   style?: CSSProperties;
 }
 
-const VideoPlayer: FC<Prop> = ({ style }) => {
+export const VideoPlayer: FC<Prop> = ({ style }) => {
   return (
     <svg
-      // width="450"
-      // height="auto"
       viewBox="20 40 300 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -193,5 +191,3 @@ const VideoPlayer: FC<Prop> = ({ style }) => {
     </svg>
   );
 };
-
-export default VideoPlayer;

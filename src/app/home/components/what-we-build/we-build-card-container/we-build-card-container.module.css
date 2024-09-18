@@ -3,8 +3,28 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 31rem 31.37rem;
+  gap: 31rem 0;
   padding: 0 16rem;
   padding-bottom: 30rem;
- 
+}
+
+@media (640px <= width) {
+  .container_cards {
+    gap: 31rem 31.37rem;
+  }
+}
+@media (768px <= width) {
+  .container_cards{
+    padding-right: 60rem;
+    padding-left: 60rem;
+  }
+}
+@media (1024px <= width) {
+  .container_cards{
+    padding-right: 110rem;
+    padding-left: 110rem;
+    gap: 31rem 66rem;
+  }
+}
+@media (1280px <= width) {
 }
