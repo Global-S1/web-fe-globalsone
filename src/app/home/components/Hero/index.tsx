@@ -14,20 +14,21 @@ import { getCentralTitle } from "@/services/titles";
 import axios from "axios";
 
 export const Hero = async () => {
+  let res = await axios.get("http://test.local/wp-json/api/v1/get-text");
+  let title = res;
+  let data = title.data;
 
-  let res = await axios.get('http://test.local/wp-json/api/v1/get-text')
-  let title = res
-  let data = title.data
-
-  console.log(data.data.right)
+  console.log(data.data.right);
   return (
     <Section>
       <div className={s.hero_container}>
+        <div className={s.light_line}></div>
         <HeroTitleBgLeft />
-        <HeroTitle title={data.data.left || "undefined"}  />
+        <HeroTitle title={data.data.left || "undefined"} />
         <HeroCentralPricture />
-        <HeroTitle title={data.data.right || "undefined"} direction={'right'} />
+        <HeroTitle title={data.data.right || "undefined"} direction={"right"} />
         <HeroArrow />
+        <div className={s.light_line_blue}></div>
         <HeroTitleBgRight />
       </div>
       <div className={s.widowCard_container}>

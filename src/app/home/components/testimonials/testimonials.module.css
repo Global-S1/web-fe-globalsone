@@ -17,7 +17,7 @@
   border: 1rem solid white;
   font-size: var(--font-size-micro);
   padding: 6rem 15rem;
-  border-radius: 4rem;
+  border-radius: 50rem;
   margin-top: 14rem;
   font-family: "Futura";
 }
@@ -53,6 +53,4 @@
   .title_container > h2 {
     font-size: var(--font-size-title-9);
   }
-}
-@media (1536px <= width) {
 }

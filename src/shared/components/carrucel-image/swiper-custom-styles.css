@@ -1,4 +1,4 @@
-.swiper {
+/* .swiper {
   width: 70%;
   height: 100%;
 }
@@ -44,11 +44,12 @@
     max-width: 905rem;
   }
   .swiper-wrapper {
+    
   }
   .swiper-slide {
     min-width: 269.66rem !important;
   }
-}
+} */
 @media (1280px <= width) {
   .swiper {
     width: 80%;
@@ -59,9 +60,9 @@
   .swiper-wrapper {
   }
   .swiper-slide {
-    width: 60% !important;
-    min-width: 342.8rem;
+    width: 400rem !important;
     height: 100% !important;
+    border: 1rem solid white;
   }
   .swiper::before {
     left: -1.9%;

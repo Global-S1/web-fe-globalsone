@@ -1,5 +1,6 @@
 import { Star } from "@/assets/icons/Star";
 import { FC } from "react";
+import s from "./stars.module.css";
 
 interface Prop {
   numStars: number;
@@ -9,12 +10,9 @@ export const Stars: FC<Prop> = ({ numStars }) => {
   const starsArray = Array(numStars).fill(0);
 
   return (
-    <div className="flex space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5 my-[10rem] xl:mt-3 md:my-[30rem]">
+    <div className={s.stars__container}>
       {starsArray.map((_, index) => (
-        <div
-          key={index}
-          className="w-[11.33px] sm:w-[15px] md:w-[25px] lg:w-[32px] xl:w-[40px]"
-        >
+        <div key={index} className={s.star}>
           <Star />
         </div>
       ))}

@@ -40,11 +40,6 @@
   margin: 0 15rem;
 }
 @media (640px <= width) {
-  /* .cardOurService_container {
-    height: 350px;
-    width: 100%;
-    max-width: 343px;
-  } */
 }
 @media (768px <= width) {
 }

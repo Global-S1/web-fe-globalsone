@@ -1,0 +1,41 @@
+.stars__container {
+  display: flex;
+  column-gap: 5rem;
+}
+
+.star {
+  width: 11rem;
+}
+
+@media (640px <= width) {
+  .stars__container {
+    column-gap: 7rem;
+  }
+  .star {
+    width: 18rem;
+  }
+}
+@media (768px <= width) {
+  .stars__container {
+    column-gap: 9rem;
+  }
+  .star {
+    width: 25rem;
+  }
+}
+@media (1024px <= width) {
+  .stars__container {
+    column-gap: 12rem;
+  }
+  .star {
+    width: 36rem;
+  }
+}
+@media (1280px <= width) {
+  .stars__container {
+    column-gap: 15rem;
+  }
+  .star {
+    width: 43rem;
+  }
+}
