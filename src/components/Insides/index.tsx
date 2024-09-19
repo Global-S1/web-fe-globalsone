@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { InsideData } from "@/moc/insides.moc";
+import { InsideData } from "@/data-mock/insides.moc";
 import { StatBlock } from "./inside-statblock";
 import s from "./insides.module.css";
 

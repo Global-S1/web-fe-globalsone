@@ -1,6 +1,6 @@
-import { Section } from "@/components/share/section";
+import { Section } from "@/shared/components/section";
 import { CSSProperties, FC } from "react";
-import { steps } from "@/moc/steps.moc";
+import { steps } from "@/data-mock/steps.moc";
 
 interface Prop {
   title: string;

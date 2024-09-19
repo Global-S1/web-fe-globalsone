@@ -1,7 +1,6 @@
-import { WindowCard } from "@/components/share/window";
-import { Section } from "@/components/share/section";
+import { WindowCard } from "@/shared/components/window";
+import { Section } from "@/shared/components/section";
 import { HeroTitle } from "./hero-title";
-import { titles } from "@/moc/heroTitles.moc";
 import { HeroArrow } from "./hero-arrow";
 import { HeroMetrics } from "./hero-metrics";
 import { HeroCentralPricture } from "./hero-central-picture";
@@ -11,15 +10,23 @@ import s from "./hero.module.css";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import clsx from "clsx";
+import { getCentralTitle } from "@/services/titles";
+import axios from "axios";
 
-export const Hero = () => {
+export const Hero = async () => {
+
+  let res = await axios.get('http://test.local/wp-json/api/v1/get-text')
+  let title = res
+  let data = title.data
+
+  console.log(data.data.right)
   return (
     <Section>
       <div className={s.hero_container}>
         <HeroTitleBgLeft />
-        <HeroTitle {...titles[0]} />
+        <HeroTitle title={data.data.left || "undefined"}  />
         <HeroCentralPricture />
-        <HeroTitle {...titles[1]} />
+        <HeroTitle title={data.data.right || "undefined"} direction={'right'} />
         <HeroArrow />
         <HeroTitleBgRight />
       </div>

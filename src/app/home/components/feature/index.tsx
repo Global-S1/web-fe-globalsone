@@ -1,6 +1,6 @@
-import { Section } from "@/components/share/section";
+import { Section } from "@/shared/components/section";
 import { FeatureItem } from "./feature-item";
-import { featureData } from "@/moc/features.moc";
+import { featureData } from "@/data-mock/features.moc";
 import s from "./feature.module.css";
 
 export const Features = () => {

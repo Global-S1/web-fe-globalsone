@@ -1,6 +1,7 @@
 .hero_title {
   position: absolute;
-  width: fit-content;
+  width: 62.5%;
+  max-width: 178rem;
   top: 50%;
 }
 
@@ -21,6 +22,9 @@
 }
 
 @media (425px <= width) {
+  .hero_title {
+    max-width: 210rem;
+  }
   .hero_title > h2 {
     font-size: var(--font-size-big);
     line-height: 38rem;
@@ -46,6 +50,9 @@
 }
 
 @media (640px <= width) {
+  .hero_title {
+    max-width: 258rem;
+  }
   .hero_title > h2 {
     font-size: var(--font-size-title-10);
     line-height: 38rem;
@@ -63,6 +70,9 @@
 }
 
 @media (768px <=width) {
+  .hero_title {
+    max-width: 300rem;
+  }
   .hero_title > h2 {
     font-size: var(--font-size-title-8);
     line-height: 45rem;
@@ -80,6 +90,12 @@
 }
 
 @media (1024px <=width) {
+  .hero_title {
+    max-width: 390rem;
+  }
+  .hero_title {
+    width: 40%;
+  }
   .hero_title > h2 {
     font-size: var(--font-size-title-7);
     line-height: 57.4rem;
@@ -97,6 +113,9 @@
 }
 
 @media (1280px <=width) {
+  .hero_title {
+    max-width: 500rem;
+  }
   .hero_title > h2 {
     font-size: var(--font-size-title-4);
     line-height: 71.07rem;

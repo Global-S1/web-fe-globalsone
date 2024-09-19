@@ -67,8 +67,8 @@
   .leave_two {
     width: 220.748px;
     height: 214.556px;
-    z-index: -1;
-    top: -22%;
+    z-index: 1;
+    top: -28%;
     right: -3%;
     transform: rotate(-55deg);
   }

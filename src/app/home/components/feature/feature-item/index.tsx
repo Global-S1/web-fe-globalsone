@@ -1,7 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { FC } from "react";
-import { IFeatures } from "@/interfaces/IFeatures";
+import { IFeatures } from "@/shared/interfaces/IFeatures";
 import s from "./feature-item.module.css";
 
 export const FeatureItem: FC<IFeatures> = ({

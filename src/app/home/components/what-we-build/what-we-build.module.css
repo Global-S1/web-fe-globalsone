@@ -58,6 +58,7 @@
   .whatWeBuild_title {
     height: 250px;
     font-size: var(--font-size-title-10);
+    line-height: 48.55rem;
   }
   .green_circle {
     position: absolute;
@@ -87,6 +88,7 @@
   .whatWeBuild_title {
     height: 300px;
     font-size: var(--font-size-title-8);
+    line-height: 53.55rem;
   }
 }
 @media (1024px <= width) {
@@ -96,6 +98,7 @@
   }
   .whatWeBuild_title {
     height: 280px;
+    font-size: var(--font-size-title-8);
   }
   .whatWeBuild_title > h2 {
     width: 130%;
@@ -111,7 +114,8 @@
 @media (1280px <= width) {
   .whatWeBuild_title {
     height: 320px;
-    font-size: var(--font-size-title-6);
+    font-size: 62rem;
+    line-height: 76.26rem;
   }
   .whatWeBuild_title > h2 {
     width: 130%;

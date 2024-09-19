@@ -1,5 +1,5 @@
-import { Section } from "@/components/share/section";
-import { values } from "@/moc/values.moc";
+import { Section } from "@/shared/components/section";
+import { values } from "@/data-mock/values.moc";
 import { FC } from "react";
 
 interface Prop {

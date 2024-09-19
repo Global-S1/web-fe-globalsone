@@ -1,0 +1,26 @@
+.windowCard_container {
+  position: relative;
+  border-radius: 17rem;
+  height: fit-content;
+}
+
+@media (640px <= width) {
+  .windowCard_container {
+    border-radius: 20rem;
+  }
+}
+
+@media (768px <= width) {
+}
+
+@media (1024px <= width) {
+}
+
+@media (1280px <= width) {
+  .windowCard_container {
+    border-radius: 40rem;
+  }
+}
+
+@media (1536px <= width) {
+}

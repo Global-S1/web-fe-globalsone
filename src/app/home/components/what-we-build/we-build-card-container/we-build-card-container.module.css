@@ -4,26 +4,32 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 31rem 0;
-  padding: 0 16rem;
-  padding-bottom: 30rem;
+  background-color: #6b63d646;
+  padding: 30rem 9rem 9rem 12rem;
+  border-radius: 17rem;
 }
 
 @media (640px <= width) {
   .container_cards {
     gap: 31rem 31.37rem;
+    padding-top: 50rem;
   }
+
 }
 @media (768px <= width) {
-  .container_cards{
+  .container_cards {
     padding-right: 60rem;
     padding-left: 60rem;
   }
 }
 @media (1024px <= width) {
-  .container_cards{
-    padding-right: 110rem;
-    padding-left: 110rem;
+  .container_cards {
+    padding-right: 96rem;
+    padding-left: 96rem;
     gap: 31rem 66rem;
+    border-radius: 38rem;
+    padding-top: 100rem;
+    padding-bottom: 38rem;
   }
 }
 @media (1280px <= width) {

@@ -1,7 +1,7 @@
 import bgContac from "@/assets/background/bgContact.png";
-import { Section } from "@/components/share/section";
+import { Section } from "@/shared/components/section";
 import s from "./contact-us.module.css";
-import { ActionButton } from "@/components/share/action-button";
+import { ActionButton } from "@/shared/components/action-button";
 
 export const ContactUs = () => {
   return (

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IInsidesData } from "@/interfaces/IInsidesData";
+import { IInsidesData } from "@/shared/interfaces/IInsidesData";
 import s from "./inside-statblock.module.css";
 
 export const StatBlock: FC<IInsidesData> = ({ number, label }) => {

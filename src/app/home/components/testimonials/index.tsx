@@ -1,6 +1,6 @@
-import { Section } from "@/components/share/section";
-import { TestimonialCard } from "@/components/share/testimonial-card";
-import { ClinetDaTA } from "@/moc/testimonial.moc";
+import { Section } from "@/shared/components/section";
+import { TestimonialCard } from "@/shared/components/testimonial-card";
+import { ClinetDaTA } from "@/data-mock/testimonial.moc";
 import s from "./testimonials.module.css"
 
 export const Testimonials = () => {

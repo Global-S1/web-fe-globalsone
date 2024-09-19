@@ -3,12 +3,7 @@
   width: 75%;
   height: fit-content;
   border-radius: 28rem;
-  margin-bottom: 14rem;
-  background-image: radial-gradient(
-    circle,
-    rgba(118, 89, 194, 1) 22%,
-    rgba(35, 0, 124, 1) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgba(118, 89, 194, 0.24) 22%, rgba(35, 0, 124, 0.22) 100%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
@@ -55,7 +50,6 @@
 
 @media (640px <= width) {
   .insides_container {
-    margin-bottom: 83rem;
     grid-template-columns: repeat(3, 1fr);
   }
   .third {

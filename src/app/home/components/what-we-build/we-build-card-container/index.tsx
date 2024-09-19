@@ -1,5 +1,5 @@
-import { WindowCard } from "@/components/share/window";
-import { ourService } from "@/moc/service.moc";
+import { WindowCard } from "@/shared/components/window";
+import { ourService } from "@/data-mock/service.moc";
 import { WeBuildCard } from "../we-build-card";
 import s from "./we-build-card-container.module.css";
 

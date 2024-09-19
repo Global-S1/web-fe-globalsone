@@ -1,6 +1,6 @@
 import { FC } from "react";
 import clsx from "clsx";
-import { ITitleData } from "@/interfaces/ITitleData";
+import { ITitleData } from "@/shared/interfaces/ITitleData";
 import s from "./hero-title.module.css";
 
 export const HeroTitle: FC<ITitleData> = ({ title, direction = "left" }) => {

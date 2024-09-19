@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Foco from "@/assets/icons/foco.png";
-import { Section } from "@/components/share/section";
+import { Section } from "@/shared/components/section";
 import { CardContainer } from "./we-build-card-container";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import s from "./what-we-build.module.css";

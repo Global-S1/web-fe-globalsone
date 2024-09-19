@@ -1,4 +1,4 @@
-import { OurTeam } from "@/components/share/our-team";
+import { OurTeam } from "@/shared/components/our-team";
 import { Testimonials } from "../home/components/testimonials";
 import Quote from "./components/Quote";
 

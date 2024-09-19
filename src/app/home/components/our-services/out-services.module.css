@@ -1,15 +1,15 @@
+.ourService__container {
+  height: fit-content;
+}
+
 .ourServices_title {
   position: relative;
   width: 100%;
-  height: 140rem;
-  margin-top: 54rem;
+  margin: 51rem 0;
 }
 
 .ourServices_title > h2 {
   font-size: var(--font-size-large);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
   line-height: 25.75px;
   background: linear-gradient(to bottom right, #fff 0%, #999 50%) bottom right /
@@ -25,7 +25,6 @@
 }
 
 .cards_container {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,6 +32,7 @@
   width: 100%;
   margin-bottom: 100rem;
   row-gap: 42rem;
+  overflow: hidden;
 }
 
 .icon {
@@ -63,7 +63,7 @@
     margin-top: 74rem;
   }
   .ourServices_title > h2 {
-    font-size: var(--font-size-title-8);
+    font-size: var(--font-size-title-10);
     line-height: 39.75rem;
   }
   .cards_container {
@@ -85,24 +85,20 @@
     border-radius: 571px;
     background: #5a2eea;
     filter: blur(200px);
-    border: 1rem solid white;
     top: -180%;
     left: -20%;
     z-index: -1;
   }
 }
 @media (768px <= width) {
-  .ourServices_title {
-    margin-top: 104rem;
-    height: 270rem;
-  }
-  .ourServices_title > h2 {
-    font-size: var(--font-size-title-7);
-    line-height: 65.75px;
-  }
   .cards_container {
     flex-direction: row;
     column-gap: 20rem;
+    row-gap: 55rem;
+  }
+  .ourServices_title > h2 {
+    font-size: var(--font-size-title-8);
+    line-height: 55.75px;
   }
   .purple_dot {
     position: absolute;
@@ -118,17 +114,17 @@
   }
 }
 @media (1024px <= width) {
-  .ourServices_title {
-    margin-top: 180rem;
+  .cards_container {
+    width: 80%;
+    max-width: none;
   }
   .ourServices_title > h2 {
-    font-size: var(--font-size-title-2);
-    line-height: 79.7rem;
+    font-size: var(--font-size-title-7);
+    line-height: 69.7rem;
   }
   .leave_one {
     position: absolute;
     display: inline-block;
-
     right: 39%;
     top: 51%;
     z-index: 10;
@@ -143,13 +139,14 @@
   }
 }
 @media (1280px <= width) {
+  .cards_container {
+    width: 100%;
+  }
   .ourServices_title {
     margin-top: 238rem;
-    height: 300rem;
   }
   .ourServices_title > h2 {
-    width: 110%;
-    font-size: var(--font-size-title-1);
+    font-size: 62rem;
     line-height: 79.95rem;
   }
 }
