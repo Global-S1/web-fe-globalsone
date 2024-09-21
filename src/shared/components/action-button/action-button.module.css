@@ -1,10 +1,9 @@
 .button {
-  margin-top: 30rem;
   background: #544dd2;
   font-size: 13rem;
   padding: 5rem 19rem;
   font-family: "Futura";
-  border-radius: 5rem;
+  border-radius: 20rem;
 }
 
 @media (640px <= width) {
@@ -19,9 +18,10 @@
 }
 @media (1024px <= width) {
   .button {
-    width: 254.479rem;
-    height: 59.829rem;
-    font-size: 24rem;
+    width: 254.479px;
+    height: 59.829px;
+    font-size: 20rem;
+    border-radius: 50rem;
   }
 }
 @media (1280px <= width) {

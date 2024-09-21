@@ -1,42 +1,110 @@
-.carrucel {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: fit-content;
-}
-
-.view_slices {
-  display: flex;
-  align-items: center;
-}
-
-.button {
-  height: fit-content;
-  width: 40rem;
+.carrucel__container {
+  display: none;
 }
 
 @media (425px <= width) {
 }
 @media (640px <= width) {
+  .carrucel__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carrucel__viewport {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  .arrow_left {
+    position: absolute;
+    width: 35rem;
+    height: 35rem;
+    left: 1%;
+  }
+  .arrow_right {
+    position: absolute;
+    width: 35rem;
+    height: 35rem;
+    right: 1%;
+  }
 }
 @media (768px <= width) {
+  .carrucel__viewport {
+    width: 85%;
+  }
+  .arrow_left {
+    width: 40rem;
+    height: 40rem;
+    left: 0%;
+  }
+  .arrow_right {
+    width: 40rem;
+    height: 40rem;
+    right: 0%;
+  }
 }
 @media (1024px <= width) {
-  .carrucel {
-    width: 98%;
+  .arrow_left {
+    width: 50rem;
+    height: 50rem;
+    left: 1%;
   }
-  .view_slices {
-    width: 100%;
+  .arrow_right {
+    width: 50rem;
+    height: 50rem;
+    right: 1%;
   }
 }
 @media (1280px <= width) {
-  .carrucel {
-    width: 108%;
+  .carrucel__container {
+    justify-content: center;
+    align-items: center;
   }
-  .view_slices {
-    width: 90%;
+  .carrucel__viewport {
+    justify-content: center;
+    align-items: center;
+    border-radius: 40rem;
   }
-  .button {
-    width: 80rem;
+  .opacity__left {
+    position: absolute;
+    height: 100%;
+    background: rgb(14, 3, 42);
+    background: linear-gradient(
+      90deg,
+      rgba(14, 3, 42, 1) 7%,
+      rgba(40, 45, 69, 0) 100%
+    );
+    z-index: 5;
+    left: -1.5%;
+    width: 120rem;
+  }
+  .opacity__right {
+    position: absolute;
+    height: 100%;
+    background: rgb(14, 3, 42);
+    background: linear-gradient(
+      270deg,
+      rgba(14, 3, 42, 1) 7%,
+      rgba(40, 45, 69, 0) 100%
+    );
+    z-index: 5;
+    width: 120rem;
+    right: -1rem;
+  }
+  .arrow_left {
+    position: absolute;
+    width: 70rem;
+    height: 70rem;
+    left: 0%;
+  }
+  .arrow_right {
+    position: absolute;
+    width: 70rem;
+    height: 70rem;
+    right: 0%;
   }
 }

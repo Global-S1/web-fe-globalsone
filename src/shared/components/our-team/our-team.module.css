@@ -17,13 +17,8 @@
   margin-bottom: 20rem;
 }
 
-.buttom {
-  margin-top: 30rem;
-  background: #544dd2;
-  font-size: 13rem;
-  padding: 5rem 19rem;
-  font-family: "Futura";
-  border-radius: 50rem;
+.button {
+
 }
 
 .ourTeam__leave__one {
@@ -49,13 +44,8 @@
     font-size: var(--font-size-tiny);
     margin-bottom: 50rem;
   }
-  .buttom {
-    width: 234.479rem;
-    height: 49.829rem;
-    font-size: var(--font-size-small);
-    left: 50%;
-    bottom: -15%;
-    transform: translateX(5%);
+  .button {
+    margin-top: 40rem;
   }
 }
 @media (768px <= width) {
@@ -69,13 +59,8 @@
     font-size: var(--font-size-small);
     margin-bottom: 50rem;
   }
-  /* .buttom {
-    width: 234.479rem;
-    height: 49.829rem;
-    font-size: var(--font-size-small);
-    left: 50%;
-    bottom: -15%;
-    transform: translateX(5%);
+  /* .button {
+
   } */
 }
 @media (1024px <= width) {
@@ -89,13 +74,8 @@
     font-size: var(--font-size-base);
     margin-bottom: 50rem;
   }
-  /* .buttom {
-    width: 254.479rem;
-    height: 59.829rem;
-    font-size: 24rem;
-    left: 50%;
-    bottom: -15%;
-    transform: translateX(0%);
+  /* .button {
+
   } */
   .ourTeam__leave__one {
     display: block;
@@ -138,12 +118,9 @@
     font-size: var(--font-size-medium);
     margin-bottom: 50rem;
   }
-  /* .buttom {
-    font-size: var(--font-size-medium);
-    right: 50%;
-    bottom: -10%;
-    transform: translateX(5%);
-  } */
+  .button {
+    margin-top: 40rem;
+  }
   .ourTeam__leave__one {
     left: -3%;
     top: 50%;

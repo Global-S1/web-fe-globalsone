@@ -18,7 +18,6 @@ export const Hero = async () => {
   let title = res;
   let data = title.data;
 
-  console.log(data.data.right);
   return (
     <Section>
       <div className={s.hero_container}>

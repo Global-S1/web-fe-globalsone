@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { GlobalSLogo } from "@/assets/GlobalSLogo";
 import s from "./header.module.css";
-import { ContactUsBtn } from "../contact-us-btn";
 import data from "@/data-mock/link-pages.json";
 import { ContactBtn } from "../contact-btn";
 

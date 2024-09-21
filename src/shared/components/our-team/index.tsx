@@ -5,6 +5,7 @@ import s from "./our-team.module.css";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import { ActionButton } from "../action-button";
+import { CarrucelImageMobil } from "../carrucel-image-mobile";
 
 export const OurTeam = () => {
   return (
@@ -21,9 +22,12 @@ export const OurTeam = () => {
         <div className={s.ourTeam__leave__one}>
           <LeaveClear />
         </div>
-        <CarrucelImg />
-        {/* <button className={s.buttom}>Quiero Conocerlos</button> */}
-        <ActionButton text="Quiero Conocerlos" />
+
+        {/* <CarrucelImg /> */}
+        <CarrucelImageMobil />
+        <div className={s.button}>
+          <ActionButton text="Quiero Conocerlos" />
+        </div>
 
         <div className={s.ourTeam__leave__two}>
           <LeaveClear />
