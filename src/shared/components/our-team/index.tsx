@@ -1,4 +1,4 @@
-import { CarrucelImg } from "@/shared/components/carrucel-image";
+// import { CarrucelImg } from "@/shared/components/carrucel-image";
 import { Section } from "@/shared/components/section";
 import { GlobalSLogo } from "./GlobalSLogo";
 import s from "./our-team.module.css";
@@ -6,6 +6,7 @@ import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import { ActionButton } from "../action-button";
 import { CarrucelImageMobil } from "../carrucel-image-mobile";
+import { CarrucelImg } from "../carrucel-image";
 
 export const OurTeam = () => {
   return (
@@ -23,7 +24,7 @@ export const OurTeam = () => {
           <LeaveClear />
         </div>
 
-        {/* <CarrucelImg /> */}
+        <CarrucelImg />
         <CarrucelImageMobil />
         <div className={s.button}>
           <ActionButton text="Quiero Conocerlos" />

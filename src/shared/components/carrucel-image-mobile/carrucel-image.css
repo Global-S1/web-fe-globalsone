@@ -1,12 +1,13 @@
 .swiper {
-  border: 1rem solid red;
   height: 100%;
-  width: 100%;
+}
+.swiper-wrapper {
 }
 
 .swiper-slide {
   font-size: 20rem;
   border-radius: 20rem;
+  max-height: 100%;
 }
 
 .slice__container__custom {
@@ -17,23 +18,36 @@
   position: absolute;
   width: 53.38rem;
   height: 95.95rem;
-  border: 1.5rem dotted salmon;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 8rem;
 }
 
+.slice__body__title {
+  display: none;
+}
+
 .swiper-slide-active {
 }
 
 .swiper-slide-active .slice__float__container {
-  background-color: rebeccapurple;
   width: 130rem;
   height: 233.67rem;
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(0);
+}
+.swiper-slide-active .slice__body__title {
+  display: block !important;
+  position: absolute;
+  font-size: 16rem;
+  width: 85%;
+  text-align: center;
+  line-height: 18.5rem;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .swiper-button-prev {

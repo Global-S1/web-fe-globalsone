@@ -2,8 +2,6 @@
   display: none;
 }
 
-@media (425px <= width) {
-}
 @media (640px <= width) {
   .carrucel__container {
     position: relative;

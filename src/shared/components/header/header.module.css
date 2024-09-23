@@ -29,7 +29,7 @@
 .header__navbarLeft {
   width: fit-content;
   display: flex;
-  column-gap: 15rem;
+  column-gap: 24rem;
 }
 
 .header__logo {

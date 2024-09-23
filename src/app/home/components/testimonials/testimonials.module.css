@@ -35,6 +35,9 @@
   }
 }
 @media (640px <= width) {
+  .title_container{
+    margin-top: 180rem;
+  }
   .title_container > h2 {
     font-size: var(--font-size-big);
   }

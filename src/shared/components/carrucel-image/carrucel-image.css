@@ -1,25 +1,19 @@
-.swiper {
-  width: 100%;
-  height: 401rem;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #ffffff00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40rem;
-}
 
 @media (640px <= width) {
   .swiper {
     height: 200rem;
+    height: 401rem;
+    margin-right: 0;
+    margin-left: 0;
   }
   .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40rem;
     width: 200rem !important;
   }
 }

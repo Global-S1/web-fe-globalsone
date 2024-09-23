@@ -7,9 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Slice } from "./slice";
 import "swiper/css";
 import "swiper/css/pagination";
-import "./styles.css";
 import { people } from "@/data-mock/people.moc";
 import s from "./carrucel-image.module.css";
+import "./carrucel-image.css";
 
 export const CarrucelImg = () => {
   return (

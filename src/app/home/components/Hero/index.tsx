@@ -10,22 +10,19 @@ import s from "./hero.module.css";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import clsx from "clsx";
-import { getCentralTitle } from "@/services/titles";
-import axios from "axios";
+import { getCentralTitle } from "../../service/home.service";
 
 export const Hero = async () => {
-  let res = await axios.get("http://test.local/wp-json/api/v1/get-text");
-  let title = res;
-  let data = title.data;
+  const data = await getCentralTitle();
 
   return (
     <Section>
       <div className={s.hero_container}>
         <div className={s.light_line}></div>
         <HeroTitleBgLeft />
-        <HeroTitle title={data.data.left || "undefined"} />
+        <HeroTitle title={data.left || "undefined"} />
         <HeroCentralPricture />
-        <HeroTitle title={data.data.right || "undefined"} direction={"right"} />
+        <HeroTitle title={data.right || "undefined"} direction={"right"} />
         <HeroArrow />
         <div className={s.light_line_blue}></div>
         <HeroTitleBgRight />
