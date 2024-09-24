@@ -1,6 +1,6 @@
 .button {
   background: #544dd2;
-  font-size: 13rem;
+  /* font-size: 13rem; */
   padding: 5rem 19rem;
   font-family: "Futura";
   border-radius: 20rem;
@@ -26,3 +26,4 @@
 }
 @media (1280px <= width) {
 }
+

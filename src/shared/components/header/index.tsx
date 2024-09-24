@@ -18,7 +18,9 @@ export const Header = () => {
             ))}
           </ul>
         </nav>
-        <GlobalSLogo w="192" h="40" style={s.header__logo} />
+        <div className={s.header__logo}>
+          <GlobalSLogo />
+        </div>
         <ContactBtn />
       </div>
     </header>

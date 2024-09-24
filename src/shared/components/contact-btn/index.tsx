@@ -5,7 +5,7 @@ import s from "./contact-btn.module.css"
 export const ContactBtn = () => {
   return (
     <button className={s.button}>
-      <Link href="/contact">
+      <Link href="/contact-us">
         <div className={s.phoneIcon}>
           <Phone />
         </div>

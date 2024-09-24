@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  height: 382rem;
+  height: 344rem;
   background: #0e032a89;
   display: flex;
   flex-direction: column;
@@ -20,9 +20,9 @@
 
 .footer_search_container {
   width: 100%;
+  max-width: 335rem;
   display: flex;
   flex-direction: column;
-  margin-top: 20rem;
 }
 
 .input_container {
@@ -43,7 +43,6 @@
 }
 
 .footer_linklist_container {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -109,29 +108,45 @@
 }
 
 @media (640px <= width) {
+  .footer_search_container {
+    max-width: 400rem;
+    row-gap: 4rem;
+  }
 }
 
 @media (768px <= width) {
   .footer {
-    height: 482rem;
+    height: 342rem;
   }
   .footer_menu_container {
-    padding: 0 30rem;
+    column-gap: 86rem;
   }
   .mobile_menu {
     display: none;
   }
   .desk_menu {
-    width: 100%;
     font-family: "Futura";
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    column-gap: 30rem;
   }
   .footer_search_container {
-    margin: 35rem 0;
+    row-gap: 10rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25rem;
   }
+
+  .input_container {
+    width: 100%;
+  }
+
   .logo_desk {
-    display: inline-block;
+    width: 196rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .logo_mobile {
     display: none;
@@ -143,33 +158,44 @@
   .social_media_icon {
     width: 40rem;
   }
+  .footer_terms_container {
+    height: 64rem;
+  }
 }
 
 @media (1024px <= width) {
   .footer_menu_container {
     flex-direction: row;
+    justify-content: center;
     padding: 0 16rem;
-    column-gap: 26rem;
+    column-gap: 86rem;
   }
   .footer_search_container {
-    height: 100%;
-    max-width: 300rem;
-    padding-top: 100rem;
+    flex-direction: row-reverse;
+    justify-content: center;
+    column-gap: 25rem;
+    margin: 0;
   }
   .footer_linklist_container {
     justify-content: center;
     align-items: center;
   }
-  .desk_menu {
-    column-gap: 0rem;
+  .logo_desk {
+    width: 196rem;
+    height: 50rem;
+    flex-shrink: 0;
   }
 }
 
 @media (1280px <= width) {
-  .input_container > input {
+  .footer_menu_container{
+    column-gap: 130rem;
+  }
+  .footer_search_container{
+    column-gap: 59rem;
+  }
+  .desk_menu{
+    column-gap: 90rem;
   }
 
-  .desk_menu {
-    column-gap: 85rem;
-  }
 }

@@ -1,0 +1,77 @@
+.ourValues__card__container {
+  min-width: 318px;
+  min-height: 117px;
+  background: linear-gradient(
+    270deg,
+    rgba(145, 145, 145, 1) -100%,
+    rgba(14, 3, 42, 1) 76%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14rem 22rem;
+  border-radius: 18rem;
+  position: relative;
+  row-gap: 10rem;
+}
+.ourValues__card__container::after {
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 101%;
+  border-radius: 18rem;
+  background: linear-gradient(
+    270deg,
+    rgba(145, 145, 145, 0) 0%,
+    rgba(145, 145, 145, 1) 100%
+  );
+  z-index: -1;
+}
+
+.ourValues__title__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 9rem;
+}
+
+.ourValues__title__icon {
+  width: 45rem;
+  height: 41rem;
+  background-color: red;
+}
+
+.ourValues__title__container > h3 {
+  font-size: 13rem;
+}
+
+.ourValues__content__container > p {
+  font-size: 11rem;
+  font-family: "Futura";
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+}
+@media (1024px <= width) {
+  .ourValues__card__container {
+    height: 164px;
+  }
+}
+@media (1280px <= width) {
+  .ourValues__card__container {
+    width: 763px;
+    padding: 5rem 26rem;
+  }
+  .ourValues__title__container > h3 {
+    font-size: 26rem;
+  }
+  
+  .ourValues__content__container > p {
+    font-size: 22rem;
+    font-family: "Futura";
+    color: #999;
+  }
+}

@@ -1,0 +1,123 @@
+.overview__container {
+  /* border: 1rem solid white; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 60rem;
+}
+
+.overview__card__base {
+  padding: 23rem;
+  height: 190rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__one {
+  border: 0.5px solid rgba(251, 251, 251, 0.83);
+  border-top-left-radius: 15rem;
+  background: linear-gradient(
+    270deg,
+    rgba(25, 219, 202, 0.27) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+}
+
+.card__two {
+  border-radius: 0px 15px 0px 0px;
+  background: #19dbca;
+  color: black;
+}
+
+.card__three {
+  border-radius: 0px 15px 15px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(25, 219, 202, 0.27) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+}
+
+@media (640px <= width) {
+  .overview__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    margin-top: 150rem;
+  }
+  .overview__card__base {
+    height: 270rem;
+  }
+  .card__one,
+  .card__two {
+    width: 49.69%;
+  }
+  .card__three {
+    padding-top: 50rem;
+    padding-left: 40rem;
+    padding-right: 40rem;
+  }
+}
+@media (768px <= width) {
+  .overview__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+  }
+  .overview__card__base {
+    height: 300rem;
+  }
+  .card__one,
+  .card__two {
+    width: 49.69%;
+    padding-top: 35rem;
+    padding-left: 38rem;
+    padding-left: 38rem;
+  }
+  .card__three {
+    padding-top: 50rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
+  }
+}
+@media (1024px <= width) {
+  .overview__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+  }
+  .overview__card__base {
+    height: 310rem;
+  }
+  .card__one,
+  .card__two {
+    width: 49.69%;
+    padding-top: 30rem;
+    padding-right: 35rem;
+    padding-left: 35rem;
+  }
+  .card__three {
+    padding-top: 50rem;
+    padding-right: 50rem;
+    padding-left: 50rem;
+  }
+}
+@media (1280px <= width) {
+  .overview__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+  }
+  .overview__card__base {
+    height: 330rem;
+  }
+  .card__one,
+  .card__two {
+    width: 49.69%;
+    padding: 50rem 50rem 10rem 50rem;
+  }
+  .card__three {
+    padding: 75rem 100rem 50rem 100rem;
+  }
+}

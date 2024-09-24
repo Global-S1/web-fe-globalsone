@@ -6,56 +6,18 @@ import { Instagram } from "@/assets/footer/icons/instagram";
 import s from "./footer.module.css";
 import { ColIndex } from "./footer-col-index";
 import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
-
-interface IColIndex {
-  title: string;
-  links: string[];
-}
-
-const DataColIndex: IColIndex[] = [
-  {
-    title: "Home",
-    links: ["Hero Section", "Features", "Properties", "Testimonials", "FAQ’s"],
-  },
-  {
-    title: "About Us",
-    links: [
-      "Our Story",
-      "Our Works",
-      "How It Works",
-      "Our Team",
-      "Our Clients",
-    ],
-  },
-  {
-    title: "Properties",
-    links: ["Portfolio", "Categories"],
-  },
-  {
-    title: "Service",
-    links: [
-      "Valuation Mastery",
-      "Strategic Marketing",
-      "Negotiation Wizardry",
-      "Closing Success",
-      "Property Management",
-    ],
-  },
-  {
-    title: "Contact Us",
-    links: ["Address", "Phone", "Email"],
-  },
-];
+import res from "@/data-mock/footerRoutes.json"
 
 const socialmedia = [ButtonFacebook, BtnLinkedin, Instagram];
 
 export const Footer = () => {
+  console.log(res)
   return (
     <footer className={s.footer}>
       <div className={s.footer_menu_container}>
         <div className={s.footer_search_container}>
           <div className={s.logo_desk}>
-            <GlobalSLogo w="190" h="42" />
+            <GlobalSLogo  />
           </div>
           <div className={s.logo_mobile}>
             <LogoMobile />
@@ -77,8 +39,8 @@ export const Footer = () => {
             <p>Contactanos</p>
           </div>
           <div className={s.desk_menu}>
-            {DataColIndex.map((col, index) => (
-              <ColIndex key={index} title={col.title} links={col.links} />
+            {res.data.map((col, index) => (
+              <ColIndex key={index} title={col.title}/>
             ))}
           </div>
         </div>

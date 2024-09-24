@@ -1,6 +1,6 @@
 .insides_container {
   max-width: 940rem;
-  width: 75%;
+  /* width: 75%; */
   height: fit-content;
   border-radius: 28rem;
   background: radial-gradient(50% 50% at 50% 50%, rgba(118, 89, 194, 0.24) 22%, rgba(35, 0, 124, 0.22) 100%);
@@ -76,6 +76,7 @@
 
 @media (1280px <= width) {
   .insides_container {
+    width: 100%;
     border-radius: 20rem;
   }
 }

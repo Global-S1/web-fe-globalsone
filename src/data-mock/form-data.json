@@ -1,0 +1,18 @@
+{
+  "data": {
+    "title": "Platícanos de tu proyecto",
+    "content": "Nos entusiasma comunicarnos con usted y conocer más sobre sus objetivos. Utilice el formulario a continuación para ponerse en contacto con nuestro equipo. Ya sea que sea un dueño de negocio, un socio o simplemente sienta curiosidad por nuestros servicios, estamos aquí para responder sus preguntas y brindarle la asistencia que necesita.",
+    "services": [
+      "Plataforma de CRM",
+      "Plataformas de educación",
+      "Plataforma de Traiding (LMS)",
+      "Plataformas de gestión empresarial (ERP)",
+      "Aplicaciones Móviles",
+      "e-Commerce",
+      "Integración con apps",
+      "Restaurantes",
+      "Hotelería",
+      "Inteligencia artificial"
+    ]
+  }
+}

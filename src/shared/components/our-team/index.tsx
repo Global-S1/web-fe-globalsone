@@ -12,7 +12,6 @@ export const OurTeam = () => {
   return (
     <Section>
       <div className={s.ourTeam_container}>
-        <GlobalSLogo w="248" h="51" />
         <h2>ACERCA DE NOSOTROS</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos,

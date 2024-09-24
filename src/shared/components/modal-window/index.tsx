@@ -1,13 +1,13 @@
 import { FC, ReactNode } from "react";
 import { WindowHead } from "./window-head";
-import s from "./window.module.css";
+import s from "./modal-window.module.css";
 
 interface Prop {
   children: ReactNode;
   active?: boolean;
 }
 
-export const WindowCard: FC<Prop> = ({ children }) => {
+export const ModalWindow: FC<Prop> = ({ children }) => {
   return (
     <div className={s.windowCard_container}>
       <div className="relative">

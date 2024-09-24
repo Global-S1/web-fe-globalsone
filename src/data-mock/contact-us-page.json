@@ -1,0 +1,12 @@
+{
+  "addressSecction": {
+    "addres": "456 Urban Avenue, Downtown District, Metropolis",
+    "description": "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
+    "email": "info@estatein.com",
+    "phone": "+1 (123) 456-7890",
+    "city": {
+      "link": "xxxxxxxxxxxx",
+      "name": "Metropolis"
+    }
+  }
+}

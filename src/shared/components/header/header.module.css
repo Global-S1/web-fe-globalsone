@@ -35,8 +35,9 @@
 .header__logo {
   position: absolute;
   top: 26%;
-  left: 52%;
+  left: 50%;
   transform: translateX(-50%);
+  width: 186rem;
 }
 
 @media (640px <= width) {
@@ -51,7 +52,7 @@
 
 @media (1024px <= width) {
   .header__item{
-    font-size: 24rem;
+    font-size: 20rem;
   }
 }
 

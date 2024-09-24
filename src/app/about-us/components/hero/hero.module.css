@@ -1,0 +1,352 @@
+.hero__container {
+  display: grid;
+  height: 600rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.hero__text__title > h2 {
+  font-size: var(--font-size-large);
+  line-height: 25.75rem;
+  width: 158px;
+  margin-bottom: 20rem;
+}
+
+.hero__text__title > p {
+  font-size: 11rem;
+  line-height: 16.5rem;
+  width: 177px;
+  font-family: "Futura";
+  text-align: justify;
+}
+
+/* -------avatar card--------- */
+
+.hero__avatarCards {
+  position: relative;
+  height: 223rem;
+  grid-column: 4 / 13;
+  align-self: center;
+}
+
+.avatarCards__float__container_woman {
+  position: absolute;
+  top: 9%;
+  left: 53%;
+  transform: translateX(-50%);
+}
+.avatarCards__float__container_man {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  transform: rotate(-12deg) translate(-50%);
+}
+
+.avatar__woman__card {
+  position: absolute;
+  width: 78rem;
+  height: 120rem;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.avatar__man__card {
+  position: absolute;
+  width: 82.84rem;
+  height: 114.361rem;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* -----..insides -------- */
+
+.hero__insides__container {
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+}
+
+/* -------social media--------- */
+
+.hero__socialMedia__container {
+  grid-column: 1 / 13;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20rem 0;
+}
+
+.socialMedia__icons__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.hero__socialMedia__container > p {
+  font-size: 15rem;
+}
+
+.socialMedia__icons__container > div {
+  width: 22px;
+  height: 22px;
+}
+
+@media (400px <= width) {
+  .hero__text__title > h2 {
+    width: 189.6rem;
+  }
+
+  .hero__text__title > p {
+    width: 212.4rem;
+  }
+
+  .avatar__woman__card {
+    width: 87.36rem;
+    height: 134.4rem;
+  }
+  .avatar__man__card {
+    width: 92.78px;
+    height: 128.09px;
+  }
+}
+@media (450px <= width) {
+  .hero__text__title > h2 {
+    width: 226.35rem;
+    font-size: 27rem;
+  }
+
+  .hero__text__title > p {
+    width: 237.88rem;
+    font-size: 12rem;
+  }
+  .avatar__woman__card {
+    width: 96.096rem;
+    height: 147.84rem;
+  }
+
+  .avatar__man__card {
+    width: 102.058px;
+    height: 140.899px;
+  }
+}
+@media (500px <= width) {
+  .hero__text__title {
+    width: 100%;
+    grid-column: 1 / 7;
+  }
+  .hero__text__title > h2 {
+    width: 100%;
+    font-size: 29rem;
+    line-height: 32.89rem;
+  }
+
+  .hero__text__title > p {
+    width: 100%;
+    font-size: 14rem;
+    line-height: 18.5rem;
+  }
+  .hero__avatarCards {
+    height: 100%;
+    grid-column: 7 / 13;
+  }
+  .avatarCards__float__container_woman {
+    top: 9%;
+    left: 58%;
+    transform: translateX(-50%);
+  }
+  .avatarCards__float__container_man {
+    top: 5%;
+    left: 32%;
+    transform: rotate(-12deg) translate(-50%);
+  }
+
+  .avatar__woman__card {
+    width: 115.3152rem;
+    height: 177.408rem;
+  }
+
+  .avatar__man__card {
+    width: 122.4696px;
+    height: 169.0788px;
+  }
+  .avatar__woman__card {
+    width: 138.38rem;
+    height: 212.89rem;
+  }
+
+  .avatar__man__card {
+    width: 146.96px;
+    height: 202.89px;
+  }
+  .hero__socialMedia__container {
+    margin: 40rem 0;
+  }
+}
+
+@media (640px <= width) {
+  .hero__text__title {
+    grid-column: 1 / 7;
+    height: 330rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero__avatarCards {
+    grid-column: 7 / 13;
+  }
+  .hero__text__title > h2 {
+    font-size: var(--font-size-title-10);
+    line-height: 37.89rem;
+  }
+  .hero__text__title > p {
+    font-size: var(--font-size-tiny);
+    line-height: 21.5rem;
+  }
+  .avatarCards__float__container_woman {
+    top: 9%;
+    right: 0%;
+    transform: translateX(-50%);
+  }
+  .avatarCards__float__container_man {
+    top: 5%;
+    left: 42%;
+    transform: rotate(-12deg) translate(-50%);
+  }
+  .avatar__woman__card {
+    width: 138.38rem;
+    height: 212.89rem;
+  }
+
+  .avatar__man__card {
+    width: 146.96rem;
+    height: 202.89rem;
+  }
+}
+@media (768px <= width) {
+  .hero__container {
+    margin-top: 80rem;
+    height: 650rem;
+  }
+  .hero__avatarCards {
+    grid-row: 1 / -1;
+  }
+  .hero__text__title {
+    height: auto;
+    grid-row: 2 /6;
+  }
+  .hero__socialMedia__container {
+    margin: 0;
+    grid-row: 8 / 9;
+    grid-column: 1/7;
+  }
+  .hero__insides__container {
+    grid-row: 7 / 8;
+    grid-column: 1 / 7;
+  }
+  .hero__text__title > h2 {
+    font-size: 55rem;
+    line-height: 53rem;
+  }
+  .hero__text__title > p {
+    font-size: var(--font-size-small);
+    line-height: 24.5rem;
+  }
+  .avatarCards__float__container_woman {
+    top: 40%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .avatarCards__float__container_man {
+    top: 38%;
+    left: 49%;
+    transform: rotate(-12deg) translateX(-50%) translateY(-50%);
+  }
+  .avatar__woman__card {
+    width: 173rem;
+    height: 266.11rem;
+  }
+
+  .avatar__man__card {
+    width: 183.7rem;
+    height: 253.61rem;
+  }
+}
+@media (1024px <= width) {
+  .avatar__woman__card {
+    width: 207.6rem;
+    height: 319.34rem;
+  }
+
+  .avatar__man__card {
+    width: 220.44rem;
+    height: 304.34rem;
+  }
+  .hero__text__title > h2 {
+    font-size: 58rem;
+    line-height: 54.65rem;
+  }
+  .hero__text__title > p {
+    font-size: var(--font-size-base);
+    line-height: 26.78rem;
+  }
+}
+@media (1280px <= width) {
+  .hero__container {
+    height: 800rem;
+    margin-top: 30rem;
+  }
+  .hero__text__title {
+    height: auto;
+    grid-row: 2 /7;
+  }
+  .hero__text__title > h2 {
+    font-size: 60rem;
+    line-height: 69rem;
+  }
+  .hero__text__title > p {
+    font-size: var(--font-size-medium);
+    line-height: 33rem;
+  }
+
+  .hero__avatarCards {
+    grid-row: 1 / -1;
+  }
+  .avatar__woman__card {
+    width: 259.5rem;
+    height: 399.17rem;
+  }
+
+  .avatar__man__card {
+    width: 275.55rem;
+    height: 380.42rem;
+  }
+  .avatarCards__float__container_woman {
+    top: 50%;
+    right: 0%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .avatarCards__float__container_man {
+    top: 46%;
+    left: 55%;
+    transform: rotate(-12deg) translateX(-50%) translateY(-50%);
+  }
+
+  .hero__insides__container {
+    grid-row: 7 / 8;
+  }
+  .hero__socialMedia__container {
+    margin-top: 30rem;
+    grid-row: 8 / 9;
+  }
+  .socialMedia__icons__container {
+    column-gap: 11rem;
+  }
+  .socialMedia__icons__container > div {
+    width: 40rem;
+    height: 40rem;
+  }
+}

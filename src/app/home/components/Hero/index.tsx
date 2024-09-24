@@ -1,4 +1,4 @@
-import { WindowCard } from "@/shared/components/window";
+import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
 import { HeroTitle } from "./hero-title";
 import { HeroArrow } from "./hero-arrow";
@@ -34,9 +34,9 @@ export const Hero = async () => {
         <div className={clsx(s.leave_base, s.leave_two)}>
           <LeaveBig />
         </div>
-        <WindowCard active>
+        <ModalWindow active>
           <HeroMetrics />
-        </WindowCard>
+        </ModalWindow>
       </div>
     </Section>
   );

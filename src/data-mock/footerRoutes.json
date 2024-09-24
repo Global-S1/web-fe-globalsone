@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "title": "Home",
+            "links": [
+                {
+                    "label": "About",
+                    "link": "/about"
+                },
+                {
+                    "label": "Contact",
+                    "link": "/contact"
+                }
+            ]
+        },
+        {
+            "title": "About Us",
+            "links": [
+                {
+                    "label": "Home",
+                    "link": "/"
+                },
+                {
+                    "label": "Contact",
+                    "link": "/contact"
+                }
+            ]
+        },
+        {
+            "title": "Services",
+            "links": [
+                {
+                    "label": "Home",
+                    "link": "/"
+                },
+                {
+                    "label": "About",
+                    "link": "/about"
+                }
+            ]
+        },
+        {
+            "title": "Contact Us",
+            "links": [
+                {
+                    "label": "Home",
+                    "link": "/"
+                },
+                {
+                    "label": "About",
+                    "link": "/about"
+                }
+            ]
+        }
+    ]
+}

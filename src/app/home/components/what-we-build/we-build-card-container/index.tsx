@@ -1,11 +1,11 @@
-import { WindowCard } from "@/shared/components/window";
+import { ModalWindow } from "@/shared/components/modal-window";
 import { ourService } from "@/data-mock/service.moc";
 import { WeBuildCard } from "../we-build-card";
 import s from "./we-build-card-container.module.css";
 
 export const CardContainer = () => {
   return (
-    <WindowCard active>
+    <ModalWindow active>
       <div className={s.container_cards}>
         {ourService.map((item, index) => {
           const isLast =
@@ -13,6 +13,6 @@ export const CardContainer = () => {
           return <WeBuildCard key={index} {...item} isLast={isLast} />;
         })}
       </div>
-    </WindowCard>
+    </ModalWindow>
   );
 };

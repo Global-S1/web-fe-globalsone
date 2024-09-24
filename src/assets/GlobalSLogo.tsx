@@ -1,21 +1,21 @@
 import { FC } from "react";
 
-interface Props {
-  w?: string;
-  h?: string;
-  style?: string;
-}
+// interface Props {
+//   w?: string;
+//   h?: string;
+//   style?: string;
+// }
 
-export const GlobalSLogo: FC<Props> = ({ w = "248", h = "51", style }) => {
+export const GlobalSLogo = ({ w = "248", h = "51"}) => {
   return (
     <svg
-      width={w}
-      height={h}
+      // width={w}
+      // height={h}
       viewBox="0 0 248 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className={style}
+      // className={style}
     >
       <rect width={w} height={h} fill="url(#pattern0_263_1118)" />
       <defs>
