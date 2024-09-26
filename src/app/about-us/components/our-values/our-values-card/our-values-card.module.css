@@ -37,9 +37,10 @@
 }
 
 .ourValues__title__icon {
-  width: 45rem;
-  height: 41rem;
-  background-color: red;
+  width: 58rem;
+  height: 55rem;
+  object-fit: contain;
+  /* background-color: red; */
 }
 
 .ourValues__title__container > h3 {
@@ -68,7 +69,7 @@
   .ourValues__title__container > h3 {
     font-size: 26rem;
   }
-  
+
   .ourValues__content__container > p {
     font-size: 22rem;
     font-family: "Futura";

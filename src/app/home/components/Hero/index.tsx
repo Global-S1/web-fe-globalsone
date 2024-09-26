@@ -10,19 +10,17 @@ import s from "./hero.module.css";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import clsx from "clsx";
-import { getCentralTitle } from "../../service/home.service";
 
-export const Hero = async () => {
-  const data = await getCentralTitle();
-
+export const Hero = ({ heroData }) => {
+  console.log("soy heroData", heroData);
   return (
     <Section>
       <div className={s.hero_container}>
         <div className={s.light_line}></div>
         <HeroTitleBgLeft />
-        <HeroTitle title={data.left || "undefined"} />
+        <HeroTitle title={heroData.left || "undefined"} />
         <HeroCentralPricture />
-        <HeroTitle title={data.right || "undefined"} direction={"right"} />
+        <HeroTitle title={heroData.right || "undefined"} direction={"right"} />
         <HeroArrow />
         <div className={s.light_line_blue}></div>
         <HeroTitleBgRight />

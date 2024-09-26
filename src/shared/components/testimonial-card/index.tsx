@@ -5,6 +5,7 @@ import { MosaicImages } from "./stars/mosaic-images";
 import { FC } from "react";
 import { ActionButton } from "../action-button";
 import s from "./testimonial-card.module.css";
+import gian from "@/assets/images/giancarlos.png"
 
 interface ITestimonial {
   name: string;
@@ -33,6 +34,7 @@ export const TestimonialCard: FC<ITestimonial> = ({
         </div>
         <p>{content}</p>
       </div>
+      <Image src={gian} alt="gian" className={s.client__img}/>
       <MosaicImages />
     </div>
   );

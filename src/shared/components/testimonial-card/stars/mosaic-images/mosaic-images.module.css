@@ -1,10 +1,14 @@
 .mmosaic__container {
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   row-gap: 13rem;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .mmosaic__container > img {
+  object-fit: cover;
   width: 81.915px;
   height: 55.417px;
   border-radius: 21rem;
@@ -25,6 +29,8 @@
 }
 @media (768px <= width) {
   .mmosaic__container {
+    width: 45%;
+    max-width: 450rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     direction: rtl;

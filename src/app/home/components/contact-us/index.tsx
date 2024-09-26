@@ -20,7 +20,7 @@ export const ContactUs = () => {
             tu negocio?
           </h3>
          
-          <ActionButton text="Contáctanos Ahora"/>
+          <ActionButton text="Contáctanos Ahora" extendStyle={s.contact__button}/>
         </div>
         <div className={s.green_circle}></div>
       </div>

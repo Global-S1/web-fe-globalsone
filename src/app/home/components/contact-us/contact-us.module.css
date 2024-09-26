@@ -19,7 +19,7 @@
 
 .text_container > h3 {
   font-size: var(--font-size-large);
-  line-height: 25.75rem;
+  line-height: 26.75rem;
   text-align: center;
   background: linear-gradient(
     270deg,
@@ -30,19 +30,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.button {
-  background: linear-gradient(
-    141deg,
-    rgba(153, 90, 240, 1) 0%,
-    rgba(109, 12, 188, 1) 100%
-  );
-  margin-top: 30rem;
-  font-family: "Futura";
-  font-size: 13rem;
-  padding: 5rem 20rem;
-  border-radius: 12rem;
 }
 
 .green_circle {
@@ -70,6 +57,12 @@
   left: -30%;
   bottom: -20%;
 }
+.contact__button {
+  margin-top: 30rem;
+  width: 100%;
+  height: 40rem;
+  font-size: 12rem;
+}
 
 @media (640px <= width) {
   .button {
@@ -77,12 +70,20 @@
     padding: 7.1rem 20rem;
     border-radius: 12rem;
   }
+  .text_container > h3 {
+    font-size: 45rem;
+    line-height: 54.52rem;
+  }
 }
 @media (768px <= width) {
   .button {
     font-size: var(--font-size-medium);
     padding: 7.1rem 20rem;
     border-radius: 12rem;
+  }
+  .text_container > h3 {
+    font-size: 55rem;
+    line-height: 64.52rem;
   }
 }
 @media (1024px <= width) {
@@ -115,6 +116,10 @@
     filter: blur(200px);
     left: -30%;
     bottom: -20%;
+  }
+  .text_container > h3 {
+    font-size: 70rem;
+    line-height: 76.52rem;
   }
 }
 @media (1280px <= width) {

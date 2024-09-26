@@ -6,6 +6,8 @@
   height: 313rem;
   padding: 9rem 13rem;
   border-radius: 40rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimonialCard__text__container {
@@ -28,9 +30,23 @@
   font-size: var(--font-size-nano);
   width: 60%;
 }
+
+.client__img {
+  position: absolute;
+  object-fit: cover;
+  object-position: right center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (390px <= width) {
   .testimonialCard__text__name {
     width: 70%;
+  }
+  .client__img {
+    left: 60%;
+    transform: translateX(-50%);
   }
 }
 @media (490px <= width) {
@@ -59,6 +75,10 @@
     width: 60%;
     font-size: var(--font-size-petite);
   }
+  .client__img {
+    width: 70%;
+    left: 65%;
+  }
 }
 @media (768px <= width) {
   .testimonialCard__container {
@@ -73,6 +93,11 @@
     width: 75%;
     max-width: 391rem;
   }
+  .client__img {
+    width: 70%;
+    max-width: 559rem;
+    left: 60%;
+  }
 }
 @media (1024px <= width) {
   .testimonialCard__container {
@@ -86,6 +111,11 @@
     width: 70%;
     max-width: 484rem;
     font-size: var(--font-size-base);
+  }
+  .client__img {
+    width: 68%;
+    max-width: 673rem;
+    left: 60%;
   }
 }
 @media (1280px <= width) {
@@ -113,5 +143,10 @@
   .testimonialCard__text__container > p {
     font-size: var(--font-size-medium);
     width: 90%;
+  }
+  .client__img {
+    height: 100%;
+    width: 60%;
+    left: 55%;
   }
 }

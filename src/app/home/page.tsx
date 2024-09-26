@@ -6,17 +6,21 @@ import { Testimonials } from "./components/testimonials";
 import { OurTeam } from "@/shared/components/our-team";
 import { ContactUs } from "./components/contact-us";
 import { BgLeave } from "@/shared/components/leaves-background-animation";
+import { getHomeDataService } from "./service/home.service";
+import { IFeatures } from "@/shared/interfaces/IFeatures";
 
-export default function Home() {
+export default async function Home() {
+  const res = await getHomeDataService();
+  console.log("soy la respuesta", res);
   return (
     <>
       <BgLeave />
-      <Hero />
-      <Features />
+      <Hero heroData={res.heroTitle} />
+      <Features featureData={res.features} />
       <WhatWeBuild />
-      <OurServices />
+      <OurServices ourServiceData={res.ourService}/>
       <Testimonials />
-      <OurTeam />
+      <OurTeam outTeamData={res.ourTeam} />
       <ContactUs />
     </>
   );

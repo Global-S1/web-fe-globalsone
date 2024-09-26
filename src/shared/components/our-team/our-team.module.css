@@ -1,9 +1,11 @@
+.ourTeam__section{
+  margin-top: 60rem;
+}
 .ourTeam_container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 200rem; */
 }
 .ourTeam_container > h2 {
   font-size: var(--font-size-base);
@@ -34,8 +36,9 @@
 }
 
 @media (640px <= width) {
-  .ourTeam_container {
-    margin-top: 286rem;
+  .ourTeam__section {
+    margin-top: 150rem;
+    margin-bottom: 120rem;
   }
   .ourTeam_container > h2 {
     font-size: var(--font-size-title-8);
@@ -49,9 +52,9 @@
   }
 }
 @media (768px <= width) {
-  .ourTeam_container {
+  .ourTeam__section {
     margin-top: 286rem;
-    margin-bottom: 150rem;
+    margin-bottom: 260rem;
   }
   .ourTeam_container > h2 {
     font-size: var(--font-size-title-7);
@@ -66,7 +69,7 @@
 }
 @media (1024px <= width) {
   .ourTeam_container {
-    margin-top: 166rem;
+    /* margin-top: 166rem; */
   }
   .ourTeam_container > h2 {
     font-size: var(--font-size-title-6);
@@ -110,7 +113,7 @@
 }
 @media (1280px <= width) {
   .ourTeam_container {
-    margin-top: 220rem;
+    /* margin-top: 220rem; */
 
   }
   .ourTeam_container > h2 {

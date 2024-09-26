@@ -11,7 +11,7 @@
       },
       {
         "label": "Services",
-        "path": "/services"
+        "path": "/"
       }
     ]
   }

@@ -3,9 +3,13 @@ import { values } from "@/data-mock/values.moc";
 import { FC } from "react";
 import { CarOurdValues } from "./our-values-card";
 import s from "./our-values.module.css";
+import family from "@/assets/about-us/pictures/family.png"
+import avatar from "@/assets/about-us/pictures/avatar.png"
+import talk from "@/assets/about-us/pictures/talk.png"
+import plus from "@/assets/about-us/pictures/plus.png"
 
 export const OurValues = ({ ourValuesData }) => {
-  console.log("ourValuesData =>", ourValuesData.values);
+  const listImg = [family, plus, avatar, talk]
   return (
     <Section>
       <div className={s.ourValues__container}>
@@ -19,6 +23,7 @@ export const OurValues = ({ ourValuesData }) => {
                 key={index}
                 title={item.label}
                 content={item.description}
+                img={listImg[index]}
               >
                 {/* <item.img /> */}
               </CarOurdValues>

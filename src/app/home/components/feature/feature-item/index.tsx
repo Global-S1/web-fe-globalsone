@@ -37,6 +37,8 @@ export const FeatureItem: FC<IFeatures> = ({
           src={img || "/default-image.png"}
           alt="trabajando en equipo"
           className={clsx(right ?? s.right, left ?? s.left)}
+          width={300}
+          height={300}
         />
       </div>
     </div>

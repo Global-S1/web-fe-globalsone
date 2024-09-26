@@ -4,8 +4,13 @@ import { CardOurService } from "./our-service-card";
 import s from "./out-services.module.css";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
+import { VideoPlayer } from "@/assets/icons/VideoPlayer";
+import { Ticket } from "@/assets/icons/Ticket";
+import { CpuIcon } from "@/assets/icons/CpuIcon";
+import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 
-export const OurServices = () => {
+export const OurServices = ({ ourServiceData }) => {
+  const listImg = [VideoPlayer, Ticket, CpuIcon, PeopleAvatars];
   return (
     <Section>
       <div className={s.ourService__container}>
@@ -18,24 +23,21 @@ export const OurServices = () => {
           </h2>
         </div>
         <div className={s.cards_container}>
-          <div className={s.leave_one}>
-            <LeaveHd />
-          </div>
-          {services.map((service, index) => (
-            <CardOurService
-              key={index}
-              title={service.title}
-              content={service.content}
-            >
-              <div className={s.icon}>
-                <service.icon />
-              </div>
-            </CardOurService>
-          ))}
+          {ourServiceData.map((service, index) => {
+            const IconComponent = listImg[index];
+            return (
+              <CardOurService
+                key={index}
+                title={service.title}
+                content={service.content}
+              >
+                <div className={s.icon}>
+                  {IconComponent && <IconComponent />}
+                </div>
+              </CardOurService>
+            );
+          })}
           <div className={s.purple_dot}></div>
-          <div className={s.leave_two}>
-            <LeaveBig />
-          </div>
         </div>
       </div>
     </Section>

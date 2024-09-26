@@ -8,26 +8,18 @@ import { ActionButton } from "../action-button";
 import { CarrucelImageMobil } from "../carrucel-image-mobile";
 import { CarrucelImg } from "../carrucel-image";
 
-export const OurTeam = () => {
+export const OurTeam = ({ outTeamData }) => {
   return (
-    <Section>
+    <Section extendStyle={s.ourTeam__section}>
       <div className={s.ourTeam_container}>
         <h2>ACERCA DE NOSOTROS</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos,
-          exercitationem, ipsum enim id quibusdam dolor deleniti nobis voluptas
-          mollitia sint, ex officiis. Minima obcaecati adipisci officia fuga
-          ullam recusandae.
-        </p>
+        <p>{outTeamData.description}</p>
         <div className={s.ourTeam__leave__one}>
           <LeaveClear />
         </div>
 
         <CarrucelImg />
         <CarrucelImageMobil />
-        <div className={s.button}>
-          <ActionButton text="Quiero Conocerlos" />
-        </div>
 
         <div className={s.ourTeam__leave__two}>
           <LeaveClear />

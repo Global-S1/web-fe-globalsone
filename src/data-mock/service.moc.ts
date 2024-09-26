@@ -1,12 +1,12 @@
 import { VideoPlayer } from "@/assets/icons/VideoPlayer";
-import {Ticket} from "@/assets/icons/Ticket";
+import { Ticket } from "@/assets/icons/Ticket";
 import { CpuIcon } from "@/assets/icons/CpuIcon";
+import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 import TradingPlataform from "@/assets/images/trading-plataform.png";
 import AppMobil from "@/assets/images/app-mobil.png";
 import CrmPlataform from "@/assets/images/crm-plataform.png";
 import ApiConnection from "@/assets/home/pictures/apps-group.png";
 import Ecommerce from "@/assets/images/ecommerce.png";
-import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 
 export const services = [
   {
