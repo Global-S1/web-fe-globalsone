@@ -1,68 +1,87 @@
-.button {
+.contactBtn {
   background-color: white;
-  width: 75rem;
-  height: 20rem;
-  border-radius: 50rem;
+  width: 80px;
+  height: 20px;
+  border-radius: 50px;
   color: black;
   font-family: "Futura";
 }
 
-.button > a {
+.contactBtn > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1px;
 }
 
-.text {
-  font-size: var(--font-size-nano);
+.contactBtn__text {
+  font-size: 10px;
 }
 
-.phoneIcon {
-  width: 11rem;
-  height: 13rem;
+.contactBtn__icon {
+  width: 11px;
+  height: 13px;
 }
-@media (490px <= width) {
-  .button {
-    width: 100rem;
-    height: 30rem;
+
+/* @media (490px <= width) {
+  .contactBtn {
+    width: 100px;
+    height: 30px;
   }
-  .phoneIcon {
-    width: 17rem;
-    height: 20rem;
+  .contactBtn__icon {
+    width: 17px;
+    height: 20px;
   }
-  .text {
+  .contactBtn__text {
     font-size: var(--font-size-micro);
   }
-}
+} */
 
 @media (640px <= width) {
-  .button {
-    width: 120rem;
-    height: 30rem;
+  .contactBtn {
+    width: 120px;
+    height: 30px;
+  }
+  .contactBtn__text {
+    font-size: 13px;
+  }
+  .contactBtn > a {
+    column-gap: 5px;
   }
 }
 
 @media (768px <= width) {
-  .button {
-    width: 150rem;
-    height: 35rem;
+  .contactBtn {
+    width: 150px;
+    height: 35px;
+  }
+  .contactBtn__text {
+    font-size: 17px;
+  }
+  .contactBtn > a {
+    column-gap: 6px;
   }
 }
 
 @media (1024px <= width) {
-  .button {
+  .contactBtn {
     width: 191.405px;
     height: 44.859px;
   }
-  .phoneIcon {
+  .contactBtn__icon {
     width: 22px;
     height: 22px;
   }
-  .text {
-    font-size: 21rem;
+  .contactBtn__text {
+    font-size: 21px;
+  }
+  .contactBtn > a {
+    column-gap: 10px;
   }
 }
 
 @media (1280px <= width) {
+  /* .contactBtn > a {
+    column-gap: 10px;
+  } */
 }

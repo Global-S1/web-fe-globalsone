@@ -52,7 +52,6 @@ export const CarrucelImageMobil = () => {
             slideShadows: true,
           }}
           scrollbar={{ draggable: true }}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
           {people.map((person, index) => (
             <SwiperSlide key={index}>

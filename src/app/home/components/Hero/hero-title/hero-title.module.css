@@ -3,6 +3,7 @@
   width: 62.5%;
   max-width: 178rem;
   top: 50%;
+  border: 1rem solid white;
 }
 
 .hero_title > h2 {
@@ -21,7 +22,7 @@
   transform: translateY(140%);
 }
 
-@media (425px <= width) {
+/* @media (425px <= width) {
   .hero_title {
     max-width: 210rem;
   }
@@ -47,7 +48,7 @@
     text-align: right;
     transform: translateY(140%);
   }
-}
+} */
 
 @media (640px <= width) {
   .hero_title {

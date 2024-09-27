@@ -5,23 +5,24 @@ import { OurServices } from "./components/our-services";
 import { Testimonials } from "./components/testimonials";
 import { OurTeam } from "@/shared/components/our-team";
 import { ContactUs } from "./components/contact-us";
-import { BgLeave } from "@/shared/components/leaves-background-animation";
+import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getHomeDataService } from "./service/home.service";
 import { IFeatures } from "@/shared/interfaces/IFeatures";
 
 export default async function Home() {
   const res = await getHomeDataService();
-  console.log("soy la respuesta", res);
   return (
     <>
       <BgLeave />
+
       <Hero heroData={res.heroTitle} />
+      {/* 
       <Features featureData={res.features} />
       <WhatWeBuild />
-      <OurServices ourServiceData={res.ourService}/>
+      <OurServices ourServiceData={res.ourService} />
       <Testimonials />
       <OurTeam outTeamData={res.ourTeam} />
-      <ContactUs />
+      <ContactUs /> */}
     </>
   );
 }

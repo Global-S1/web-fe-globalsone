@@ -21,7 +21,7 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => data;
 
   return (
     <Section extendStyle={s.section__from}>

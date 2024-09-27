@@ -10,20 +10,25 @@ import s from "./hero.module.css";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import clsx from "clsx";
+import { HomeLights } from "@/shared/animations/home-lights";
+import { HeroTitleLeft } from "./hero-title-left";
+import { HeroTitleRight } from "./hero-title-right";
 
 export const Hero = ({ heroData }) => {
-  console.log("soy heroData", heroData);
   return (
-    <Section>
-      <div className={s.hero_container}>
-        <div className={s.light_line}></div>
-        <HeroTitleBgLeft />
-        <HeroTitle title={heroData.left || "undefined"} />
+    <Section extendStyle={s.hero__section}>
+      <div className={s.hero__container}>
+        <HomeLights />
+        {/* <HeroTitleBgLeft /> */}
+        {/* <HeroTitle title={heroData.left || "undefined"} /> */}
+
+        <HeroTitleLeft title={heroData.left || ""} />
         <HeroCentralPricture />
+        {/* 
         <HeroTitle title={heroData.right || "undefined"} direction={"right"} />
+        <HeroTitleBgRight /> */}
+        <HeroTitleRight title={heroData.right || "undefined"} />
         <HeroArrow />
-        <div className={s.light_line_blue}></div>
-        <HeroTitleBgRight />
       </div>
       <div className={s.widowCard_container}>
         <div className={clsx(s.leave_base, s.leave_one)}>

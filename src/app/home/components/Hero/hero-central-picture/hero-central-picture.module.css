@@ -1,31 +1,23 @@
 .hero_picture_mobile {
   max-width: none;
   object-fit: cover;
-  width: 350rem;
+  width: 105%;
+  max-width: 358px;
   position: absolute;
-  top: -3%;
-  right: -10%;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero_picture {
   display: none;
-  top: 0.75rem;
-  left: 46%;
-  transform: translateX(-50%);
-  width: 335px;
 }
 
-@media (340px <= width) {
+/* @media (340px <= width) {
   .hero_picture_mobile {
     width: 360rem;
     top: -7%;
     right: -10%;
-  }
-}
-@media (340px <= width) {
-  .hero_picture_mobile {
-    top: -3%;
-    right: -5%;
   }
 }
 
@@ -37,16 +29,7 @@
   }
 }
 
-@media (425px <= width) {
-  .hero_picture_mobile {
-    width: 100%;
-    top: 3%;
-    right: -5%;
-  }
-  .hero_picture {
-    display: none;
-  }
-}
+
 
 @media (450px <= width) {
   .hero_picture_mobile {
@@ -54,22 +37,38 @@
   }
 }
 
-@media (530px <= width) {
-  .hero_picture_mobile {
-    top: -6.5%;
-  }
-}
 
-@media (640px <= width) {
+  */
+
+@media (425px <= width) {
   .hero_picture_mobile {
     display: none;
   }
   .hero_picture {
     display: block;
     position: absolute;
-    width: 500px;
-    transform: translateX(-45%);
+    width: 94%;
+    top: -4%;
+    left: 50%;
+    max-width: 366px;
+    transform: translate(-50%);
   }
+}
+
+@media (530px <= width) {
+}
+
+@media (640px <= width) {
+  .hero_picture {
+    display: block;
+    position: absolute;
+    width: 94%;
+    top: -4%;
+    left: 50%;
+    max-width: 366px;
+    transform: translate(-55%);
+  }
+
   .heroCenterPricture__bg {
     height: 100%;
     background-image: url(../../../../../assets/home/background/centralImgBg.png);
@@ -81,23 +80,27 @@
 
 @media (768px <= width) {
   .hero_picture {
-    top: 1%;
-    left: 46%;
-    transform: translateX(-45%);
-    width: 480px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -12%;
+    left: 50%;
+    max-width: 486px;
+    transform: translate(-50%);
   }
 }
 
 @media (min-width: 1024px) {
   .hero_picture {
-    width: 520px;
+    top: -13%;
+    max-width: 570px;
   }
 }
 
 @media (min-width: 1280px) {
   .hero_picture {
-    width: 550px;
-    transform: translateX(-47%);
-    top: -1.5%;
+    width: 600px;
+    transform: translateX(-55%);
+    top: -12%;
   }
 }

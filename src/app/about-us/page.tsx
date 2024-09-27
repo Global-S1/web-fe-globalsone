@@ -4,7 +4,7 @@ import { Testimonials } from "../home/components/testimonials";
 import { OurTeam } from "@/shared/components/our-team";
 import { getContentDataAboutUsPage } from "./services/about-us.service";
 import { Overview } from "./components/overview";
-import { BgLeave } from "@/shared/components/leaves-background-animation";
+import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getHomeDataService } from "../home/service/home.service";
 
 export default async function AboutUs() {

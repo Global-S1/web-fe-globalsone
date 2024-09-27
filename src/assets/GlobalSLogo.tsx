@@ -6,11 +6,11 @@ import { FC } from "react";
 //   style?: string;
 // }
 
-export const GlobalSLogo = ({ w = "248", h = "51"}) => {
+export const GlobalSLogo = ({ w = "196", h = "40"}) => {
   return (
     <svg
-      // width={w}
-      // height={h}
+      width={w}
+      height={h}
       viewBox="0 0 248 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

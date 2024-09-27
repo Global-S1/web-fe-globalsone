@@ -1,9 +1,13 @@
 .hero_arrow {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Futura", sans-serif;
   font-size: var(--font-size-tiny);
+  border: 1px solid whites;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media (640px <= width) {}
 

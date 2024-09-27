@@ -1,8 +1,8 @@
 export const LogoMobile = () => {
   return (
     <svg
-      width="141"
-      height="29"
+      width="113"
+      height="23.241"
       viewBox="0 0 141 29"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

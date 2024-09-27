@@ -14,7 +14,7 @@
 }
 
 .header__navbar {
-  height: 79rem;
+  height: 79px;
   max-width: 1240px;
   position: relative;
   margin-left: auto;
@@ -29,7 +29,7 @@
 .header__navbarLeft {
   width: fit-content;
   display: flex;
-  column-gap: 24rem;
+  column-gap: 24px;
 }
 
 .header__logo {
@@ -37,7 +37,6 @@
   top: 26%;
   left: 50%;
   transform: translateX(-50%);
-  width: 186rem;
 }
 
 @media (640px <= width) {
@@ -46,15 +45,21 @@
 @media (768px <= width) {
   .header {
     display: inline-block;
-    padding: 0 16rem;
+    padding: 0 16px;
+  }
+  .header__item {
+    font-size: 16px;
   }
 }
 
 @media (1024px <= width) {
-  .header__item{
-    font-size: 20rem;
+  .header__item {
+    font-size: 18px;
   }
 }
 
 @media (1280px <= width) {
+  .header__item {
+    font-size: 20px;
+  }
 }

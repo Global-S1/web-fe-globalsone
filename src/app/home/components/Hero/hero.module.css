@@ -1,13 +1,16 @@
-.hero_container {
+s.hero__section{
+}
+
+.hero__container {
   width: 100%;
   position: relative;
-  height: calc(100vh - 79rem);
-  max-height: 600rem;
+  min-height: 500px;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 40rem;
-  margin-bottom: 100rem;
+  border: 1px dashed tomato;
+  margin-bottom: 49px;
 }
 
 .widowCard_container {
@@ -18,84 +21,26 @@
   display: none;
 }
 
-.light_line {
-  position: absolute;
-  width: 3rem;
-  height: 20vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 0, 255, 0),
-    rgba(255, 0, 255, 1)
-  );
-  animation: moveDown 5s infinite;
-  z-index: 30;
-}
-
-.light_line_blue {
-  position: absolute;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 255, 1),
-    rgba(0, 0, 255, 0)
-  );
-  width: 2.5rem;
-  height: 40vh;
-  animation: moveUp 4s infinite;
-  right: 0;
-  z-index: 30;
-}
-
-@keyframes moveDown {
-  0% {
-    top: -100px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    top: 80vh;
-    opacity: 0;
-  }
-}
-
-@keyframes moveUp {
-  0% {
-    top: 100vh;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    top: -10vh;
-    opacity: 0;
-  }
-}
-
-@media (425px <= width) {
-  .hero_container {
-    max-height: 800rem;
-  }
-}
-
-@media (450px <= width) {
-}
-
-@media (530px <= width) {
-}
-
 @media (640px <= width) {
-  .hero_container {
-    max-height: 800rem;
-    height: 100vh;
-  }
 }
 
 @media (768px <= width) {
+  .hero__container {
+    min-height: 600px;
+    max-height: 600px;
+  }
+
+  .hero__section {
+    margin-top: 70px;
+  }
 }
 
 @media (1024px <= width) {
+  .hero__container {
+    min-height: 700px;
+    max-height: 700px;
+  }
+
   .leave_base {
     display: inline-block;
     position: absolute;

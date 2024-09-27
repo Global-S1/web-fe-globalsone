@@ -43,7 +43,7 @@ export default function RootLayout({
         <Header />
         <HeaderMobile />
         <Main>{children}</Main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
