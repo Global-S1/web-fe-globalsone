@@ -1,5 +1,5 @@
 .feature_container {
-  margin-top: 186rem;
+  margin-top: 186px;
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   filter: blur(70px);
   left: -10%;
   top: 7%;
-  border: 1rem solid white;
+  border: 1px solid white;
 }
 
 .green_circle_two {

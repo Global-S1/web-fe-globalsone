@@ -1,45 +1,49 @@
 import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
-import { HeroTitle } from "./hero-title";
 import { HeroArrow } from "./hero-arrow";
 import { HeroMetrics } from "./hero-metrics";
 import { HeroCentralPricture } from "./hero-central-picture";
-import { HeroTitleBgLeft } from "./hero-title-bg-left";
-import { HeroTitleBgRight } from "./hero-title-bg-right";
-import s from "./hero.module.css";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import clsx from "clsx";
 import { HomeLights } from "@/shared/animations/home-lights";
 import { HeroTitleLeft } from "./hero-title-left";
 import { HeroTitleRight } from "./hero-title-right";
+import s from "./hero.module.css";
+import { FC } from "react";
+import { IInside } from "@/shared/interfaces/IInside";
 
-export const Hero = ({ heroData }) => {
+interface Props {
+  title: {
+    left: string;
+    right: string;
+  };
+  insides: {
+    title: string;
+    metrics: IInside[];
+  };
+}
+
+export const Hero: FC<Props> = ({ title, insides }) => {
   return (
     <Section extendStyle={s.hero__section}>
       <div className={s.hero__container}>
         <HomeLights />
-        {/* <HeroTitleBgLeft /> */}
-        {/* <HeroTitle title={heroData.left || "undefined"} /> */}
-
-        <HeroTitleLeft title={heroData.left || ""} />
+        <HeroTitleLeft title={title.left} />
         <HeroCentralPricture />
-        {/* 
-        <HeroTitle title={heroData.right || "undefined"} direction={"right"} />
-        <HeroTitleBgRight /> */}
-        <HeroTitleRight title={heroData.right || "undefined"} />
+        <HeroTitleRight title={title.right} />
         <HeroArrow />
       </div>
       <div className={s.widowCard_container}>
         <div className={clsx(s.leave_base, s.leave_one)}>
           <Leave style={{}} />
         </div>
+        <ModalWindow active>
+          <HeroMetrics {...insides} />
+        </ModalWindow>
         <div className={clsx(s.leave_base, s.leave_two)}>
           <LeaveBig />
         </div>
-        <ModalWindow active>
-          <HeroMetrics />
-        </ModalWindow>
       </div>
     </Section>
   );

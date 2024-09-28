@@ -1,16 +1,22 @@
-import { Leave } from "@/assets/leavesComponents/Leave";
-import { Insides } from "@/components/Insides";
+import { Insides } from "@/shared/components/Insides";
 import s from "./hero-metrics.module.css";
+import { FC } from "react";
+import { IInside } from "@/shared/interfaces/IInside";
 
-export const HeroMetrics = () => {
+interface Props {
+ title: string;
+ metrics: IInside[];
+}
+
+export const HeroMetrics:FC<Props> = ({title, metrics}) => {
   return (
     <div className={s.heroMetrics_container}>
       <div className={s.heroMetrics_title}>
         <h2>
-          TRABAJA CON PROFESIONALES <br />Y VE COMO TUS IDEAS SE DIGITALIZAN
+          {title}
         </h2>
       </div>
-      <Insides />
+      <Insides metrics={metrics}/>
     </div>
   );
 };

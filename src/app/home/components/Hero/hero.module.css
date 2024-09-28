@@ -1,15 +1,11 @@
-s.hero__section{
-}
-
 .hero__container {
   width: 100%;
   position: relative;
-  min-height: 500px;
+  margin-bottom: 257px;
   max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border: 1px dashed tomato;
   margin-bottom: 49px;
 }
 
@@ -28,6 +24,7 @@ s.hero__section{
   .hero__container {
     min-height: 600px;
     max-height: 600px;
+    height: 600px;
   }
 
   .hero__section {
@@ -36,9 +33,11 @@ s.hero__section{
 }
 
 @media (1024px <= width) {
+
   .hero__container {
     min-height: 700px;
     max-height: 700px;
+    height: 700px;
   }
 
   .leave_base {
@@ -64,6 +63,9 @@ s.hero__section{
 }
 
 @media (1280px <= width) {
+  .hero__container{
+    margin-bottom: 257px;
+  }
   .leave_two {
     width: 220.748px;
     height: 214.556px;

@@ -1,10 +1,10 @@
-import { Facebook } from "@/assets/icons/aboutUs/Facebook";
-import { Instagram } from "@/assets/icons/aboutUs/Instagram";
-import { Linkedin } from "@/assets/icons/aboutUs/Linkedin";
-import { Man } from "@/assets/images/aboutUs/Man";
-import { Woman } from "@/assets/images/aboutUs/Woman";
+import { Facebook } from "@/assets/about-us/hero/icons/Facebook";
+import { Instagram } from "@/assets/about-us/hero/icons/Instagram";
+import { Linkedin } from "@/assets/about-us/hero/icons/Linkedin";
+import { Man } from "@/assets/about-us/hero/icons/Man";
+import { Woman } from "@/assets/about-us/hero/icons/Woman";
 import { Section } from "@/shared/components/section";
-import { Insides } from "@/components/Insides";
+import { Insides } from "@/shared/components/Insides";
 import s from "./hero.module.css";
 import { getContentDataAboutUsPage } from "../../services/about-us.service";
 import { HeroAvatarCard } from "./hero-avatar-card";

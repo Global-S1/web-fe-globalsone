@@ -14,11 +14,11 @@ export default async function Home() {
   return (
     <>
       <BgLeave />
+      <Hero {...res.hero} />
 
-      <Hero heroData={res.heroTitle} />
-      {/* 
       <Features featureData={res.features} />
       <WhatWeBuild />
+      {/* 
       <OurServices ourServiceData={res.ourService} />
       <Testimonials />
       <OurTeam outTeamData={res.ourTeam} />

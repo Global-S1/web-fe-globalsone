@@ -20,8 +20,8 @@ import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
 import { useEffect, useRef, useState } from "react";
 import { people } from "@/data-mock/people.moc";
-import { ArrowLeft } from "@/assets/icons/ArrowLeft";
-import { ArrowRight } from "@/assets/icons/ArrowRight";
+import { ArrowRight } from "@/assets/home/ourTeam/icons/ArrowRight";
+import { ArrowLeft } from "@/assets/home/ourTeam/icons/ArrowLeft";
 
 export const CarrucelImageMobil = () => {
   return (

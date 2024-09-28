@@ -1,4 +1,5 @@
 import s from "./home-lights.module.css";
+
 export const HomeLights = () => {
   return (
     <div className={s.light__container}>

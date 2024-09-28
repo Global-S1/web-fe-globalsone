@@ -7,23 +7,23 @@ import s from "./feature-item.module.css";
 export const FeatureItem: FC<IFeatures> = ({
   title,
   content,
+  reverse,
   img,
-  right,
-  left,
 }) => {
   return (
     <div
       className={clsx(s.feature_container, {
-        "flex-row": left,
-        "flex-row-reverse": right,
-        "text-right": right,
+        [s.reverse]: reverse,
       })}
     >
       <div className={s.feature_text_container}>
         <h3>
           {title.map((chunch, index) => {
             return (
-              <span key={index} className={clsx(chunch.style ? s[chunch.style] : "")}>
+              <span
+                key={index}
+                className={clsx(chunch.style ? s[chunch.style] : "")}
+              >
                 {chunch.text}
                 {index < title.length - 1 && " "}
               </span>
@@ -36,7 +36,7 @@ export const FeatureItem: FC<IFeatures> = ({
         <Image
           src={img || "/default-image.png"}
           alt="trabajando en equipo"
-          className={clsx(right ?? s.right, left ?? s.left)}
+          className={clsx(s.right, {[s.left]: reverse})}
           width={300}
           height={300}
         />

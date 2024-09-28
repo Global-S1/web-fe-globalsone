@@ -4,9 +4,9 @@ import { CardOurService } from "./our-service-card";
 import s from "./out-services.module.css";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
-import { VideoPlayer } from "@/assets/icons/VideoPlayer";
-import { Ticket } from "@/assets/icons/Ticket";
-import { CpuIcon } from "@/assets/icons/CpuIcon";
+import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
+import { Ticket } from "@/assets/home/our-services/icons/Ticket";
+import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
 import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 
 export const OurServices = ({ ourServiceData }) => {

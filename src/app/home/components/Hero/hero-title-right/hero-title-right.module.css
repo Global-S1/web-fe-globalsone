@@ -65,6 +65,7 @@
   .hero__title {
     position: absolute;
     width: 490px;
+    bottom: 2%;
   }
 
   .hero__text__container > h2 {

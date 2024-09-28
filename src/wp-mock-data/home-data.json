@@ -1,7 +1,26 @@
 {
-  "heroTitle": {
-    "left": "Impulsa tu negocio con",
-    "right": "soluciones de software a medida"
+  "hero": {
+    "title": {
+      "left": "Impulsa tu negocio con",
+      "right": "soluciones de software a medida"
+    },
+    "insides": {
+      "title": "TRABAJA CON PROFESIONALES \n Y VE COMO TUS IDEAS SE DIGITALIZAN",
+      "metrics": [
+        {
+          "quantity": "+20",
+          "label": "Clientes"
+        },
+        {
+          "quantity": "+30",
+          "label": "Proyectos"
+        },
+        {
+          "quantity": "+6",
+          "label": "Años de experiencia"
+        }
+      ]
+    }
   },
   "features": [
     {
@@ -13,7 +32,7 @@
         { "text": "tu industria.", "style": "title_style_three" }
       ],
       "content": "Pensamos en tus necesidades y creamos software a tu medida, adaptado a los desafíos únicos de tu industria para ayudarte a alcanzar tus metas.",
-      "left": true
+      "reverse": false
     },
     {
       "title": [
@@ -22,7 +41,7 @@
         { "text": "robustas y seguras.", "style": "title_style_five" }
       ],
       "content": "Nos enfocamos en ofrecerte plataformas confiables y seguras que potencien tu negocio, ayudándote a optimizar cada venta y mejorar la experiencia de tus clientes online.",
-      "right": true
+      "reverse": true
     },
     {
       "title": [
@@ -35,31 +54,39 @@
         { "text": "de tu empresa.", "style": null }
       ],
       "content": "Te ayudamos a implementar tecnología que optimiza la atención al cliente y agiliza la gestión interna, mejorando la eficiencia y el rendimiento de tu empresa.",
-      "left": true
+      "reverse": false
     }
   ],
-  "whatWeBuild": [
-    {
-      "title": "Plataforma de Traiding",
-      "img": "trading"
-    },
-    {
-      "title": "Aplicaciones Móviles",
-      "img": "mobile"
-    },
-    {
-      "title": "Ecommerce",
-      "img": "ecommerce"
-    },
-    {
-      "title": "CRM para Negocios y Empresas",
-      "img": "crm"
-    },
-    {
-      "title": "Conexión entre diferentes Apps",
-      "img": "integration"
-    }
-  ],
+  "whatWeBuild": {
+    "title": " ¿Tienes una idea? \n NOSOTROS LO DESARROLLAMOS\n POR TÍ",
+    "services": [
+      {
+        "title": "Plataforma de Traiding",
+        "img": "trading",
+        "alt": "Desarrollamos Plataforma de Traiding"
+      },
+      {
+        "title": "Aplicaciones Móviles",
+        "img": "mobile",
+        "alt": "Desarrollamos Aplicaciones Móviles"
+      },
+      {
+        "title": "Ecommerce",
+        "img": "ecommerce",
+        "alt": "Desarrollamos Ecommerce"
+      },
+      {
+        "title": "CRM para Negocios y Empresas",
+        "img": "crm",
+        "alt": "Desarrollamos Plataformas CRM"
+      },
+      {
+        "title": "Conexión entre diferentes Apps",
+        "img": "integration",
+        "alt": "Desarrollamos Integración de Apps"
+      }
+    ]
+  },
   "ourService": [
     {
       "title": "Diseño web",

@@ -35,7 +35,7 @@
     z-index: -1;
     bottom: 16%;
     right: -30%;
-    height: 100rem;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -46,22 +46,20 @@
   .bg_container {
     bottom: 18%;
     right: -20%;
-    height: 150rem;
+    height: 150px;
   }
 }
 @media (1024px <= width) {
   .bg_container {
     bottom: 15%;
     right: -10%;
-    height: 200rem;
+    height: 200px;
   }
 }
 @media (1280px <= width) {
   .bg_container {
     bottom: 7%;
-    right: -3%;
-    height: 300rem;
+    right: 5%;
+    height: 300px;
   }
-}
-@media (1536px <= width) {
 }

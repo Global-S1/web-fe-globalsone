@@ -3,7 +3,7 @@ import Palette from "@/assets/images/palette.png";
 import Desk from "@/assets/images/desk.png";
 import Planing from "@/assets/images/planing.png";
 import Meeting from "@/assets/images/meeting.png";
-import Gian from "@/assets/images/giancarlos.png";
+import Gian from "@/assets/home/testimonials/pictures/gianvictor.png";
 
 export const ClinetDaTA = {
   name: "Gianvictor Cueva",

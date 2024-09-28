@@ -1,11 +1,11 @@
 import Image from "next/image";
-import BgTestimonial from "@/assets/background/bg-testimonial.png";
+import BgTestimonial from "@/assets/home/testimonials/background/bg-testimonial.png";
 import { Stars } from "./stars/Stars";
 import { MosaicImages } from "./stars/mosaic-images";
 import { FC } from "react";
 import { ActionButton } from "../action-button";
 import s from "./testimonial-card.module.css";
-import gian from "@/assets/images/giancarlos.png"
+import gian from "@/assets/home/testimonials/pictures/gianvictor.png"
 
 interface ITestimonial {
   name: string;

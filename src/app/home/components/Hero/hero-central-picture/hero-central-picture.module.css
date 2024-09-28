@@ -13,33 +13,6 @@
   display: none;
 }
 
-/* @media (340px <= width) {
-  .hero_picture_mobile {
-    width: 360rem;
-    top: -7%;
-    right: -10%;
-  }
-}
-
-@media (375px <= width) {
-  .hero_picture_mobile {
-    width: 380rem;
-    top: -5%;
-    right: -7%;
-  }
-}
-
-
-
-@media (450px <= width) {
-  .hero_picture_mobile {
-    top: -1%;
-  }
-}
-
-
-  */
-
 @media (425px <= width) {
   .hero_picture_mobile {
     display: none;
@@ -69,9 +42,8 @@
     transform: translate(-55%);
   }
 
-  .heroCenterPricture__bg {
+  .heroCenterPricture__container {
     height: 100%;
-    background-image: url(../../../../../assets/home/background/centralImgBg.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -99,7 +71,8 @@
 
 @media (min-width: 1280px) {
   .hero_picture {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     transform: translateX(-55%);
     top: -12%;
   }

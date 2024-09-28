@@ -17,3 +17,4 @@ export const ModalWindow: FC<Prop> = ({ children }) => {
     </div>
   );
 };
+  

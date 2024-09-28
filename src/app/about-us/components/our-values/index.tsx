@@ -3,10 +3,10 @@ import { values } from "@/data-mock/values.moc";
 import { FC } from "react";
 import { CarOurdValues } from "./our-values-card";
 import s from "./our-values.module.css";
-import family from "@/assets/about-us/pictures/family.png"
-import avatar from "@/assets/about-us/pictures/avatar.png"
-import talk from "@/assets/about-us/pictures/talk.png"
-import plus from "@/assets/about-us/pictures/plus.png"
+import family from "@/assets/about-us/our-values/pictures/family.png"
+import avatar from "@/assets/about-us/our-values/pictures/avatar.png"
+import talk from "@/assets/about-us/our-values/pictures/talk.png"
+import plus from "@/assets/about-us/our-values/pictures/plus.png"
 
 export const OurValues = ({ ourValuesData }) => {
   const listImg = [family, plus, avatar, talk]

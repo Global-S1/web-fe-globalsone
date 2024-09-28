@@ -1,14 +1,14 @@
 import { GlobalSLogo } from "@/assets/GlobalSLogo";
-import { ButtonFacebook } from "@/assets/icons/BtnFacebook";
-import { BtnLinkedin } from "@/assets/icons/BtnLinkedin";
-import { SendIcon } from "@/assets/icons/SendIcon";
-import { Instagram } from "@/assets/footer/icons/instagram";
+import { BtnFacebook } from "@/assets/social-media/icons/BtnFacebook";
+import { BtnLinkedin } from "@/assets/social-media/icons/BtnLinkedin";
+import { SendIcon } from "@/assets/footer/icons/SendIcon";
+import { BtnInstagram } from "@/assets/social-media/icons/instagram";
 import s from "./footer.module.css";
 import { ColIndex } from "./footer-col-index";
 import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
 import res from "@/data-mock/footerRoutes.json";
 
-const socialmedia = [ButtonFacebook, BtnLinkedin, Instagram];
+const socialmedia = [BtnFacebook, BtnLinkedin, BtnInstagram];
 
 export const Footer = () => {
   return (

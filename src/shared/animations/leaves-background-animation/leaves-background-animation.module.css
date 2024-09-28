@@ -85,43 +85,43 @@
 }
 
 .size1 {
-  width: 250rem;
-  height: 250rem;
+  width: 250px;
+  height: 250px;
 }
 
 .size2 {
-  width: 220rem;
-  height: 220rem;
+  width: 220px;
+  height: 220px;
 }
 
 .size3 {
-  width: 150rem;
-  height: 150rem;
+  width: 150px;
+  height: 150px;
 }
 
 .size4{
-    width: 90rem;
-    height: 90rem;
+    width: 90px;
+    height: 90px;
 }
 
 .size5{
-    width: 180rem;
-    height: 180rem;
+    width: 180px;
+    height: 180px;
 }
 
 .size6{
-    width: 250rem;
-    height: 250rem;
+    width: 250px;
+    height: 250px;
 }
 
 .size7{
-    width: 190rem;
-    height: 190rem;
+    width: 190px;
+    height: 190px;
 }
 
 .size8{
-    width: 200rem;
-    height: 200rem;
+    width: 200px;
+    height: 200px;
 }
 
 @keyframes fall {
@@ -162,8 +162,8 @@
 
 .someClass {
   position: absolute;
-  border: solid 1rem white;
-  width: 400rem;
-  height: 400rem;
+  border: solid 1px white;
+  width: 400px;
+  height: 400px;
   z-index: 100;
 }

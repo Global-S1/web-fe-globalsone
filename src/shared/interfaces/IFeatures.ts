@@ -1,11 +1,6 @@
-import { StaticImageData } from "next/image";
-
 export interface IFeatures {
-  title: { text: string; style: string | null }[];
+  title: { text: string; style?: string }[];
   content: string;
-  direction?: "left" | "right";
-  img?: string | StaticImageData;
-  bg?: string | StaticImageData;
-  right?: boolean;
-  left?: boolean;
+  reverse?: boolean;
+  img?: string;
 }

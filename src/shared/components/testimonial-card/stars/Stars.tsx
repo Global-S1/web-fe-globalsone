@@ -1,4 +1,4 @@
-import { Star } from "@/assets/icons/Star";
+import { Star } from "@/assets/home/testimonials/icons/Star";
 import { FC } from "react";
 import s from "./stars.module.css";
 

@@ -3,13 +3,16 @@
   width: 170px;
   top: 5%;
 }
+
 .hero__title > div {
   position: relative;
 }
+
 .hero__text__container > h2 {
   font-size: var(--font-size-large);
   line-height: 25.75px;
 }
+
 @media (500px <= width) {
   .hero__title {
     width: 200px;
@@ -59,7 +62,7 @@
 @media (1280px <= width) {
   .hero__title {
     width: 415px;
-    top: 13%;
+    top: 10%;
   }
 
   .hero__text__container > h2 {

@@ -9,8 +9,9 @@
     rgba(214, 43, 211, 0.061) 100%
   );
   background-blend-mode: color-dodge;
-  border-radius: 16rem;
-  height: 436rem;
+  border-radius: 16px;
+  height: 436px;
+  
 }
 
 .heroMetrics_title {
@@ -24,13 +25,14 @@
   width: 70%;
   font-size: large;
   text-align: center;
-  line-height: 25.75rem;
-  padding-bottom: 9rem;
+  line-height: 25.75px;
+  padding-bottom: 9px;
+  white-space: pre-line;
 }
 
 @media (640px <= width) {
   .heroMetrics_container{
-    height: 500rem;
+    height: 500px;
   }
   .heroMetrics_title {
     width: 100%;
@@ -38,9 +40,9 @@
   .heroMetrics_title > h2 {
     width: 90%;
     margin-top: 30px;
-    margin-bottom: 34rem;
+    margin-bottom: 34px;
     font-size: var(--font-size-big);
-    line-height: 38.66rem;
+    line-height: 38.66px;
   }
 }
 
@@ -48,7 +50,7 @@
   .heroMetrics_title > h2 {
     width: 80%;
     margin-top: 30px;
-    margin-bottom: 34rem;
+    margin-bottom: 34px;
     font-size: var(--font-size-title-10);
   }
 }
@@ -57,22 +59,22 @@
   .heroMetrics_title > h2 {
     width: 80%;
     margin-top: 30px;
-    margin-bottom: 34rem;
+    margin-bottom: 34px;
     font-size: var(--font-size-title-9);
   }
 }
 
 @media (1280px <= width) {
   .heroMetrics_container {
-    height: 523rem;
-    border-radius: 40rem;
+    height: 523px;
+    border-radius: 40px;
   }
   .heroMetrics_title > h2 {
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 40rem;
+    margin-bottom: 40px;
     font-size: var(--font-size-title-8);
-    line-height: 51.66rem;
+    line-height: 51.66px;
   }
 }
 

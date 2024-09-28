@@ -12,12 +12,12 @@
   width: fit-content;
   display: flex;
   transform: translateY(-150%);
-  column-gap: 2.1rem;
+  column-gap: 2.1px;
 }
 
 .controls > div {
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.8px;
+  height: 3.8px;
   border-radius: 50%;
 }
 
@@ -30,23 +30,23 @@
 
 @media (640px <= width) {
   .controls {
-    column-gap: 4rem;
+    column-gap: 4px;
     transform: translateY(-150%);
   }
   .controls > div {
-    width: 10rem;
-    height: 10rem;
+    width: 10px;
+    height: 10px;
   }
 }
 
 @media (768px <= width) {
   .controls {
-    column-gap: 5rem;
+    column-gap: 5px;
     transform: translateY(-150%);
   }
   .controls > div {
-    width: 11rem;
-    height: 11rem;
+    width: 11px;
+    height: 11px;
   }
 }
 
@@ -55,19 +55,19 @@
     transform: translateY(-150%);
   }
   .controls > div {
-    width: 12rem;
-    height: 12rem;
+    width: 12px;
+    height: 12px;
   }
 }
 
 @media (1280px <= width) {
   .controls {
-    column-gap: 7rem;
+    column-gap: 7px;
     transform: translateY(-150%);
   }
   .controls > div {
-    width: 15rem;
-    height: 15rem;
+    width: 15px;
+    height: 15px;
   }
 }
 

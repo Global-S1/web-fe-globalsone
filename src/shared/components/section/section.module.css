@@ -1,10 +1,8 @@
 .section_container{
     width: 100%;
-    /* min-width: 360px; */
     max-width: 1240px;
     display: flex;
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
-    height: fit-content;
 }

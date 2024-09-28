@@ -1,12 +1,12 @@
 .windowCard_container {
   position: relative;
-  border-radius: 17rem;
+  border-radius: 17px;
   height: fit-content;
 }
 
 @media (640px <= width) {
   .windowCard_container {
-    border-radius: 20rem;
+    border-radius: 20px;
   }
 }
 
@@ -18,7 +18,7 @@
 
 @media (1280px <= width) {
   .windowCard_container {
-    border-radius: 40rem;
+    border-radius: 40px;
   }
 }
 

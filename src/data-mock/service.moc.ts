@@ -1,6 +1,6 @@
-import { VideoPlayer } from "@/assets/icons/VideoPlayer";
-import { Ticket } from "@/assets/icons/Ticket";
-import { CpuIcon } from "@/assets/icons/CpuIcon";
+import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
+import { Ticket } from "@/assets/home/our-services/icons/Ticket";
+import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
 import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 import TradingPlataform from "@/assets/images/trading-plataform.png";
 import AppMobil from "@/assets/images/app-mobil.png";

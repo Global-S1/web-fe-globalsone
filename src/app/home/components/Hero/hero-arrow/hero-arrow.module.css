@@ -1,23 +1,43 @@
-.hero_arrow {
+.hero__arrow {
   position: absolute;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  column-gap: 15px;
   font-family: "Futura", sans-serif;
   font-size: var(--font-size-tiny);
   border: 1px solid whites;
   left: 50%;
   transform: translateX(-50%);
 }
-@media (640px <= width) {}
 
-@media (768px <= width) {}
+.arrow__container {
+  animation: moveArrow 1.5s ease-in infinite;
+}
 
-@media (1024px <= width) {}
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (640px <= width) {
+}
+
+@media (768px <= width) {
+}
+
+@media (1024px <= width) {
+}
 
 @media (1280px <= width) {
-  .hero_arrow {
-    /* margin-bottom: 25.29px; */
+  .hero__arrow {
     font-size: var(--font-size-big);
   }
 }

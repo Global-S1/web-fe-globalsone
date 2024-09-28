@@ -26,15 +26,13 @@
   filter: blur(52.95000076293945px);
 }
 
-@media (425px <= width) {
-}
 @media (640px <= width) {
   .bg_container {
     display: block;
     position: absolute;
     top: 9%;
     left: -20%;
-    height: 100rem;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -44,24 +42,22 @@
 }
 @media (768px <= width) {
   .bg_container {
-    height: 150rem;
-    top: 20%;
-    left: -16%;
+    height: 150px;
+    top: -20%;
+    left: -28%;
   }
 }
 @media (1024px <= width) {
   .bg_container {
-    height: 200rem;
-    top: 16%;
-    left: -5%;
+    height: 200px;
+    top: -12%;
+    left: -12%;
   }
 }
 @media (1280px <= width) {
   .bg_container {
-    height: 250rem;
-    top: 18%;
+    height: 250px;
+    top: -12%;
     left: -3%;
   }
-}
-@media (1536px <= width) {
 }

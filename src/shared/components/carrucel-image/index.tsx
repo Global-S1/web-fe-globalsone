@@ -1,8 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
-import { ArrowLeft } from "@/assets/icons/ArrowLeft";
-import { ArrowRight } from "@/assets/icons/ArrowRight";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Slice } from "./slice";
 import "swiper/css";
@@ -10,6 +8,8 @@ import "swiper/css/pagination";
 import { people } from "@/data-mock/people.moc";
 import s from "./carrucel-image.module.css";
 import "./carrucel-image.css";
+import { ArrowLeft } from "@/assets/home/ourTeam/icons/ArrowLeft";
+import { ArrowRight } from "@/assets/home/ourTeam/icons/ArrowRight";
 
 export const CarrucelImg = () => {
   return (
