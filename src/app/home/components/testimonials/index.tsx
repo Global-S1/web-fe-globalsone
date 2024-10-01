@@ -5,7 +5,7 @@ import s from "./testimonials.module.css";
 
 export const Testimonials = () => {
   return (
-    <Section>
+    <Section extendStyle={s.testimonial__section}>
       <div className={s.title_container}>
         <h2>LO QUE DICEN NUESTROS CLIENTES</h2>
         <button className={s.button}>Ver todos los testimonios</button>

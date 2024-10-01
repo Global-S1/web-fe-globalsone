@@ -4,12 +4,12 @@ import Image from "next/image";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 
-import boss from "@/assets/contact-us/pictures/boss.png";
-import counter from "@/assets/contact-us/pictures/counter.png";
-import lobbies from "@/assets/contact-us/pictures/lobbies.png";
-import peter from "@/assets/contact-us/pictures/peter.png";
-import room from "@/assets/contact-us/pictures/room.png";
-import team from "@/assets/contact-us/pictures/team.png";
+import boss from "@/assets/contact-us/mosaic/pictures/boss.png";
+import counter from "@/assets/contact-us/mosaic/pictures/counter.png";
+import lobbies from "@/assets/contact-us/mosaic/pictures/lobbies.png";
+import peter from "@/assets/contact-us/mosaic/pictures/peter.png";
+import room from "@/assets/contact-us/mosaic/pictures/room.png";
+import team from "@/assets/contact-us/mosaic/pictures/team.png";
 
 export const ContactMosaic = ({ title, description }) => {
   return (

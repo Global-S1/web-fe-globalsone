@@ -10,7 +10,7 @@ interface Prop {
   img?: string;
 }
 
-export const CarOurdValues: FC<Prop> = ({ title, content, img }) => {
+export const CardOurdValues: FC<Prop> = ({ title, content, img }) => {
   return (
     <div className={s.ourValues__card__container}>
       <div className={s.ourValues__title__container}>

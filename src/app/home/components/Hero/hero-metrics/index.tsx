@@ -4,19 +4,16 @@ import { FC } from "react";
 import { IInside } from "@/shared/interfaces/IInside";
 
 interface Props {
- title: string;
- metrics: IInside[];
+  title: string;
 }
 
-export const HeroMetrics:FC<Props> = ({title, metrics}) => {
+export const HeroMetrics: FC<Props> = ({ title }) => {
   return (
     <div className={s.heroMetrics_container}>
       <div className={s.heroMetrics_title}>
-        <h2>
-          {title}
-        </h2>
+        <h2>{title}</h2>
       </div>
-      <Insides metrics={metrics}/>
+      <Insides size={"large"} />
     </div>
   );
 };

@@ -1,13 +1,13 @@
-import Roma from "@/assets/home/ourTeam/images/romario.png"
-import Arles from "@/assets/home/ourTeam/images/arles.png"
-import Andres from "@/assets/home/ourTeam/images/andres.png"
-import Daniel from "@/assets/home/ourTeam/images/daniel.png"
-import Eva from "@/assets/home/ourTeam/images/eva.png"
-import Bruno from "@/assets/home/ourTeam/images/bruno.png"
-import Haru from "@/assets/home/ourTeam/images/haru.png"
-import Julian from "@/assets/home/ourTeam/images/julian.png"
-import Patricia from "@/assets/home/ourTeam/images/paricia.png"
-import Peter from "@/assets/home/ourTeam/images/peter.png"
+import Roma from "@/assets/home/our-team/images/romario.png"
+import Arles from "@/assets/home/our-team/images/arles.png"
+import Andres from "@/assets/home/our-team/images/andres.png"
+import Daniel from "@/assets/home/our-team/images/daniel.png"
+import Eva from "@/assets/home/our-team/images/eva.png"
+import Bruno from "@/assets/home/our-team/images/bruno.png"
+import Haru from "@/assets/home/our-team/images/haru.png"
+import Julian from "@/assets/home/our-team/images/julian.png"
+import Patricia from "@/assets/home/our-team/images/paricia.png"
+import Peter from "@/assets/home/our-team/images/peter.png"
 
 export const people = [
   {

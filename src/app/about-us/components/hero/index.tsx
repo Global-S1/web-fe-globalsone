@@ -12,7 +12,7 @@ import { HeroAvatarCard } from "./hero-avatar-card";
 export const Hero = async ({heroData}) => {
  
   return (
-    <Section>
+    <Section extendStyle={s.hero__section}>
       <div className={s.hero__container}>
         <div className={s.hero__text__title}>
           <h2>{heroData.title}</h2>
@@ -35,7 +35,7 @@ export const Hero = async ({heroData}) => {
           </div>
         </div>
         <div className={s.hero__insides__container}>
-          <Insides />
+          <Insides size="small"/>
         </div>
         <div className={s.hero__socialMedia__container}>
           <p>Conoce más de Nosotros:</p>

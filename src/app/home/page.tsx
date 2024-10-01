@@ -8,6 +8,7 @@ import { ContactUs } from "./components/contact-us";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getHomeDataService } from "./service/home.service";
 import { IFeatures } from "@/shared/interfaces/IFeatures";
+import { OurTeamSection } from "./components/our-team";
 
 export default async function Home() {
   const res = await getHomeDataService();
@@ -15,14 +16,12 @@ export default async function Home() {
     <>
       <BgLeave />
       <Hero {...res.hero} />
-
       <Features featureData={res.features} />
-      <WhatWeBuild />
-      {/* 
+      <WhatWeBuild whatWeBildData={res.whatWeBuild} />
       <OurServices ourServiceData={res.ourService} />
       <Testimonials />
-      <OurTeam outTeamData={res.ourTeam} />
-      <ContactUs /> */}
+      <OurTeamSection ourTeamData={res.ourTeam} />
+      <ContactUs /> 
     </>
   );
 }

@@ -1,0 +1,44 @@
+.alert {
+  position: absolute;
+  top: -2%;
+  z-index: 10;
+  background-color: rgba(253, 12, 12, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  animation: slideInOut 5s ease-in-out forwards;
+}
+.alert > p {
+  margin: 0 20px;
+}
+@keyframes slideInOut {
+  0% {
+    transform: translateX(
+      200%
+    ); /* Comienza fuera de la pantalla, a la derecha */
+  }
+  10% {
+    transform: translateX(90%); /* Entra y se queda visible en el centro */
+  }
+  80% {
+    transform: translateX(90%); /* Permanece visible por más tiempo */
+  }
+  100% {
+    transform: translateX(
+      300%
+    ); /* Sale nuevamente hacia la derecha, fuera de la pantalla */
+  }
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+  .alert {
+    height: 52px;
+  }
+}
+@media (1024px <= width) {
+}
+@media (1280px <= width) {
+}

@@ -6,12 +6,12 @@ import { HeroCentralPricture } from "./hero-central-picture";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
 import clsx from "clsx";
-import { HomeLights } from "@/shared/animations/home-lights";
+import { HomeLights } from "@/shared/animations/home-lights-animation";
 import { HeroTitleLeft } from "./hero-title-left";
 import { HeroTitleRight } from "./hero-title-right";
-import s from "./hero.module.css";
 import { FC } from "react";
 import { IInside } from "@/shared/interfaces/IInside";
+import s from "./hero.module.css";
 
 interface Props {
   title: {

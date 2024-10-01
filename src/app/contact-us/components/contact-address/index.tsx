@@ -1,26 +1,30 @@
 import { Section } from "@/shared/components/section";
-import s from "./contact-address.module.css";
-
-import mountains from "@/assets/contact-us/background/mountains.png";
+import mountains from "@/assets/contact-us/adress/background/mountains.png";
 import { ActionButton } from "@/shared/components/action-button";
 import { Building1 } from "@/assets/contact-us/adress/icons/Building1";
 import { Building2 } from "@/assets/contact-us/adress/icons/Building2";
 import { Building3 } from "@/assets/contact-us/adress/icons/Building3";
+import s from "./contact-address.module.css";
 
-export const ContactAddress = ({ addres, description, email, phone, city }) => {
+export const ContactAddress = ({
+  city,
+  description,
+  email,
+  phone,
+  address,
+}) => {
   return (
     <Section extendStyle={s.address__section}>
       <div className={s.address__container}>
         <div className={s.address__text__container}>
           <div className={s.title__container}>
-            {/* <span>Regional Offices</span> */}
-            <h2>{addres}</h2>
+            <h2>{city}</h2>
             <p>{description}</p>
           </div>
           <div className={s.buttons__container}>
             <ActionButton text={email} />
             <ActionButton text={phone} />
-            <ActionButton text={city?.name} />
+            <ActionButton text={address} />
           </div>
         </div>
         <div

@@ -1,8 +1,8 @@
 
 @media (640px <= width) {
   .swiper {
-    height: 200rem;
-    height: 401rem;
+    height: 200px;
+    height: 401px;
     margin-right: 0;
     margin-left: 0;
   }
@@ -13,32 +13,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 40rem;
-    width: 200rem !important;
+    /* border-radius: 40px; */
+    width: 200px !important;
   }
 }
 @media (768px <= width) {
   .swiper {
-    height: 300rem;
+    height: 300px;
   }
   .swiper-slide {
-    width: 300rem !important;
+    width: 300px !important;
   }
 }
 @media (1024px <= width) {
   .swiper {
-    height: 350rem;
+    height: 350px;
   }
   .swiper-slide {
-    width: 350rem !important;
+    width: 350px !important;
   }
 }
 @media (1280px <= width) {
   .swiper {
-    height: 401rem;
-    border-radius: 40rem;
+    height: 401px;
+    border-radius: 40px;
   }
   .swiper-slide {
-    width: 400rem !important;
+    width: 400px !important;
   }
 }

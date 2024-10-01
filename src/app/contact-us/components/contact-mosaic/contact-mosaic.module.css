@@ -1,36 +1,36 @@
 .contactMosaic__section {
   position: relative;
-  margin-top: 140rem;
-  margin-bottom: 110rem;
+  margin-top: 140px;
+  margin-bottom: 110px;
 }
 .contactMosaic__container {
-  height: 292rem;
+  height: 292px;
   display: flex;
   justify-content: flex-end;
 }
 .contactMosaic__text__container {
-  width: 156rem;
+  width: 156px;
   position: absolute;
   top: -2.5%;
 }
 
 .contactMosaic__text__container > h2 {
-  font-size: 18rem;
-  line-height: 20rem;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .contactMosaic__description__container {
   position: absolute;
-  font-size: 11rem;
-  line-height: 15.5rem;
-  width: 140rem;
+  font-size: 11px;
+  line-height: 15.5px;
+  width: 140px;
   left: 76%;
   bottom: -45%;
   transform: translateX(-50%);
 }
 .contactMosaic__description__container > p {
   font-family: "Futura";
-  line-height: 13.8rem;
+  line-height: 13.8px;
 }
 
 .grid_template {
@@ -43,7 +43,7 @@
 
   width: 95%;
   height: 100%;
-  gap: 5rem;
+  gap: 5px;
 }
 
 .grid_template > img {
@@ -96,8 +96,8 @@
 
 .leave__top {
   position: absolute;
-  width: 34.732rem;
-  height: 40.607rem;
+  width: 34.732px;
+  height: 40.607px;
   left: -2%;
   top: 40%;
   transform: translateY(-50%);
@@ -105,8 +105,8 @@
 
 .leave__bottom {
   position: absolute;
-  width: 36.422rem;
-  height: 42.583rem;
+  width: 36.422px;
+  height: 42.583px;
   right: -4%;
   bottom: 24.5%;
   transform: rotate(85deg);
@@ -114,22 +114,22 @@
 
 .leave__center {
   position: absolute;
-  width: 21.53rem;
-  height: 25.172rem;
+  width: 21.53px;
+  height: 25.172px;
   top: 72%;
   left: 20%;
   transform: translateY(-50%);
 }
 @media (390px <= width) {
   .contactMosaic__description__container {
-    width: 150rem;
+    width: 150px;
     left: 79%;
     bottom: -38%;
   }
 }
 @media (400px <= width) {
   .contactMosaic__description__container {
-    width: 150rem;
+    width: 150px;
     left: 79%;
     bottom: -48%;
   }
@@ -137,50 +137,50 @@
 
 @media (450px <= width) {
   .contactMosaic__container {
-    height: 420rem;
+    height: 420px;
   }
   .contactMosaic__text__container {
     top: 5%;
-    width: 200rem;
+    width: 200px;
   }
   .contactMosaic__text__container > h2 {
   }
   .contactMosaic__description__container {
-    width: 188rem;
+    width: 188px;
     left: 77%;
     bottom: -12%;
   }
   .contactMosaic__description__container > p {
-    line-height: 17rem;
-    font-size: 12rem;
+    line-height: 17px;
+    font-size: 12px;
   }
 }
 @media (500px <= width) {
   .contactMosaic__container {
-    height: 490rem;
+    height: 490px;
   }
   .contactMosaic__text__container {
     top: 12%;
-    width: 300rem;
+    width: 300px;
   }
   .contactMosaic__text__container > h2 {
-    font-size: 20rem;
-    line-height: 32rem;
+    font-size: 20px;
+    line-height: 32px;
   }
   .contactMosaic__description__container {
-    width: 200rem;
+    width: 200px;
     left: 75.8%;
     bottom: -12%;
   }
   .contactMosaic__description__container > p {
-    line-height: 19.8rem;
-    font-size: 13rem;
+    line-height: 19.8px;
+    font-size: 13px;
   }
 }
 
 @media (640px <= width) {
   .contactMosaic__container {
-    height: 700rem;
+    height: 700px;
   }
   .grid_template {
     width: 95%;
@@ -188,25 +188,25 @@
   }
   .contactMosaic__text__container {
     top: 12%;
-    width: 300rem;
+    width: 300px;
   }
   .contactMosaic__text__container > h2 {
-    font-size: 25rem;
-    line-height: 42.5rem;
+    font-size: 25px;
+    line-height: 42.5px;
   }
   .contactMosaic__description__container {
-    width: 235rem;
+    width: 235px;
     left: 77%;
     bottom: 2%;
   }
   .contactMosaic__description__container > p {
-    font-size: 16rem;
-    line-height: 21rem;
+    font-size: 16px;
+    line-height: 21px;
   }
 }
 @media (768px <= width) {
   .contactMosaic__container {
-    height: 1000rem;
+    height: 1000px;
   }
   .grid_template {
     width: 95%;
@@ -214,73 +214,73 @@
   }
   .contactMosaic__text__container {
     top: 10.9%;
-    width: 380rem;
+    width: 380px;
   }
   .contactMosaic__text__container > h2 {
-    font-size: 30rem;
-    line-height: 50rem;
+    font-size: 30px;
+    line-height: 50px;
   }
   .contactMosaic__description__container {
-    width: 268rem;
+    width: 268px;
     left: 72.5%;
     bottom: 9%;
   }
   .contactMosaic__description__container > p {
-    font-size: 17rem;
-    line-height: 23rem;
+    font-size: 17px;
+    line-height: 23px;
   }
 }
 @media (1024px <= width) {
   .contactMosaic__container {
-    height: 1200rem;
+    height: 1200px;
   }
   .grid_template {
     width: 95%;
     height: 90%;
   }
   .contactMosaic__text__container {
-    width: 550rem;
+    width: 550px;
     top: 11%;
   }
   .contactMosaic__text__container > h2 {
-    font-size: 42rem;
-    line-height: 68rem;
+    font-size: 42px;
+    line-height: 68px;
   }
   .contactMosaic__description__container {
-    width: 320rem;
+    width: 320px;
     bottom: 6%;
     left: 70%;
   }
   .contactMosaic__description__container > p {
-    font-size: 20rem;
-    line-height: 30rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 @media (1280px <= width) {
   .contactMosaic__container {
-    height: 1200rem;
+    height: 1200px;
   }
   .contactMosaic__text__container {
     top: 12%;
     width: 633px;
   }
   .contactMosaic__text__container > h2 {
-    font-size: 50rem;
-    line-height: 75rem;
+    font-size: 50px;
+    line-height: 75px;
   }
   .contactMosaic__description__container {
     left: 69.7%;
     bottom: -0.5%;
-    width: 363rem;
+    width: 363px;
   }
   .contactMosaic__description__container > p {
-    font-size: 22rem;
-    line-height: 33rem;
+    font-size: 22px;
+    line-height: 33px;
     text-align: justify;
   }
   .leave__top {
-    width: 139.305rem;
-    height: 162.869rem;
+    width: 139.305px;
+    height: 162.869px;
     position: absolute;
     top: 33%;
     left: -1%;
@@ -291,13 +291,13 @@
     position: absolute;
     right: -5%;
     bottom: 4%;
-    width: 201rem;
-    height: 235rem;
+    width: 201px;
+    height: 235px;
     transform: rotate(95deg);
   }
   .grid_template {
     height: 90%;
     width: 95%;
-    gap: 10rem;
+    gap: 10px;
   }
 }

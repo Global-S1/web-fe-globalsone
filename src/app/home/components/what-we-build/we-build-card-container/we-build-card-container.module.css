@@ -1,35 +1,36 @@
 .container_cards {
   position: relative;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 31rem 0;
   background-color: #6b63d646;
-  padding: 30rem 9rem 9rem 12rem;
-  border-radius: 17rem;
+  padding: 30px 9px 9px 12px;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
 }
 
 @media (640px <= width) {
   .container_cards {
-    gap: 31rem 31.37rem;
-    padding-top: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 31px 31.37px;
+    padding-top: 50px;
   }
-
 }
 @media (768px <= width) {
   .container_cards {
-    padding-right: 60rem;
-    padding-left: 60rem;
+    padding-right: 60px;
+    padding-left: 60px;
   }
 }
 @media (1024px <= width) {
   .container_cards {
-    padding-right: 96rem;
-    padding-left: 96rem;
-    gap: 31rem 66rem;
-    border-radius: 38rem;
-    padding-top: 100rem;
-    padding-bottom: 38rem;
+    padding-right: 96px;
+    padding-left: 96px;
+    gap: 38px 66px;
+    border-radius: 38px;
+    padding-top: 100px;
+    padding-bottom: 38px;
   }
 }
 @media (1280px <= width) {

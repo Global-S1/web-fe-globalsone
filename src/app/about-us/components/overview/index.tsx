@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 export const Overview = ({ overviewData }) => {
   return (
-    <Section>
+    <Section extendStyle={s.overview__section}>
       <div className={s.overview__container}>
         <div className={clsx(s.overview__card__base, s.card__one)}>
           <OverviewCard
@@ -30,30 +30,6 @@ export const Overview = ({ overviewData }) => {
           />
         </div>
       </div>
-      {/* <div className="flex justify-center items-center">
-        {steps.map((item, index) => (
-          <Step
-            key={index}
-            title={item.title}
-            content={item.content}
-            style={
-              index === 1
-                ? {
-                    background: "#19DBCA",
-                    borderBottomLeftRadius: 0,
-                    borderBottomRightRadius: 0,
-                    color: "black",
-                  }
-                : {
-                    border: "1px solid rgba(251, 251, 251, 0.3)",
-                    background:
-                      "linear-gradient(180deg, rgba(25,219,202,0.27) 7%, rgba(115,115,115,0) 100%)",
-                  }
-            }
-            index={index + 1}
-          />
-        ))} */}
-      {/* </div> */}
     </Section>
   );
 };

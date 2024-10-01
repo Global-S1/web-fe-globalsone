@@ -20,13 +20,17 @@ import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
 import { useEffect, useRef, useState } from "react";
 import { people } from "@/data-mock/people.moc";
-import { ArrowRight } from "@/assets/home/ourTeam/icons/ArrowRight";
-import { ArrowLeft } from "@/assets/home/ourTeam/icons/ArrowLeft";
+import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
+import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 
 export const CarrucelImageMobil = () => {
+  const swiperRef = useRef(null);
   return (
     <div className={s.carrucel__container}>
-      <div className={s.arrow_left}>
+      <div
+        className={s.arrow_left}
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
         <ArrowLeft />
       </div>
       <div className={s.carrucel__viewport}>
@@ -52,6 +56,7 @@ export const CarrucelImageMobil = () => {
             slideShadows: true,
           }}
           scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {people.map((person, index) => (
             <SwiperSlide key={index}>
@@ -60,7 +65,10 @@ export const CarrucelImageMobil = () => {
           ))}
         </Swiper>
       </div>
-      <div className={s.arrow_right}>
+      <div
+        className={s.arrow_right}
+        onClick={() => swiperRef.current?.slideNext()}
+      >
         <ArrowRight />
       </div>
     </div>

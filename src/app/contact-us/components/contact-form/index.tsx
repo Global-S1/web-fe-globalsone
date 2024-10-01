@@ -3,8 +3,9 @@ import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
 import { useForm, SubmitHandler } from "react-hook-form";
 import s from "./contact-form.module.css";
-import formData from "@/data-mock/form-data.json";
 import { ActionButton } from "@/shared/components/action-button";
+import { useEffect, useState } from "react";
+import { AlertForm } from "@/shared/animations/alert-form-animation";
 
 interface IFormInputs {
   firstname: string;
@@ -15,21 +16,26 @@ interface IFormInputs {
   message: string;
 }
 
-export const ContactForm = () => {
+export const ContactForm = ({ title, content, services, terms }) => {
+  const [alertActive, setAlertActive] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => data;
-
+  useEffect(() => {
+    console.log("error", errors);
+    setAlertActive(Object.values(errors).length > 0);
+  }, [errors]);
   return (
     <Section extendStyle={s.section__from}>
+      {alertActive && <AlertForm />}
       <ModalWindow active>
         <div className={s.form__container}>
           <div className={s.form__text__container}>
-            <h2>{formData.data.title}</h2>
-            <p>{formData.data.content}</p>
+            <h2>{title}</h2>
+            <p>{content}</p>
           </div>
 
           <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
@@ -37,25 +43,29 @@ export const ContactForm = () => {
               <input
                 type="text"
                 placeholder="Nombre"
-                {...register("firsname")}
+                {...register("firstname", { required: true })}
               />
               <input
                 type="text"
                 placeholder="Apellido"
-                {...register("lastname")}
+                {...register("lastname", { required: true })}
               />
-              <input type="text" placeholder="Email" {...register("email")} />
+              <input
+                type="text"
+                placeholder="Email"
+                {...register("email", { required: true })}
+              />
               <input
                 type="text"
                 placeholder="Numero de Telefono"
-                {...register("phone")}
+                {...register("phone", { required: true })}
               />
               <select
                 id=""
                 className={s.select__container}
-                {...register("service")}
+                {...register("service", { required: true })}
               >
-                {formData.data.services.map((item, index) => (
+                {services.map((item, index) => (
                   <option value={item} key={index}>
                     {item}
                   </option>
@@ -69,10 +79,11 @@ export const ContactForm = () => {
 
             <div className={s.submit__container}>
               <div className={s.terms_container}>
-                <input type="checkbox" />
-                <label htmlFor="">
-                  I agree with Terms of Use and Privacy Policy
-                </label>
+                <input
+                  type="checkbox"
+                  {...register("terms", { required: true })}
+                />
+                <label htmlFor="">{terms}</label>
               </div>
 
               <ActionButton

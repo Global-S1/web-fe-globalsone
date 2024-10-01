@@ -67,7 +67,7 @@
   display: none;
 }
 
-.logo_mobile {
+.logo__mobile {
   display: inline-block;
   margin-bottom: 15px;
 }
@@ -108,7 +108,7 @@
 }
 
 @media (640px <= width) {
-  .footer_search_container {
+  .footer__search__container {
     max-width: 400px;
     row-gap: 4px;
   }
@@ -118,11 +118,12 @@
   .footer {
     height: 342px;
   }
-  .footer_menu_container {
-    column-gap: 86px;
-  }
   .mobile__menu {
     display: none;
+  }
+  .footer__menu__container {
+    column-gap: 86px;
+    flex-direction: row;
   }
   .desk__menu {
     font-family: "Futura";
@@ -131,7 +132,7 @@
     align-items: center;
     column-gap: 30px;
   }
-  .footer_search_container {
+  .footer__search__container {
     row-gap: 10px;
     justify-content: center;
     align-items: center;
@@ -148,7 +149,7 @@
     justify-content: center;
     align-items: center;
   }
-  .logo_mobile {
+  .logo__mobile {
     display: none;
   }
   .social__text__container {
@@ -164,13 +165,13 @@
 }
 
 @media (1024px <= width) {
-  .footer_menu_container {
+  .footer__menu__container {
     flex-direction: row;
     justify-content: center;
     padding: 0 16px;
     column-gap: 86px;
   }
-  .footer_search_container {
+  .footer__search__container {
     flex-direction: row-reverse;
     justify-content: center;
     column-gap: 25px;
@@ -188,10 +189,10 @@
 }
 
 @media (1280px <= width) {
-  .footer_menu_container {
+  .footer__menu__container {
     column-gap: 130px;
   }
-  .footer_search_container {
+  .footer__search__container {
     column-gap: 59px;
   }
   .desk__menu {

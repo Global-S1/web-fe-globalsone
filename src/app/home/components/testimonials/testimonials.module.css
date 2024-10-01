@@ -1,3 +1,6 @@
+.testimonial__section{
+  margin-bottom: 205px;
+}
 .title_container {
   display: flex;
   flex-direction: column;
@@ -14,11 +17,11 @@
 
 .button {
   background-color: #d9d9d95e;
-  border: 1rem solid white;
+  border: 1px solid white;
   font-size: var(--font-size-micro);
-  padding: 6rem 15rem;
-  border-radius: 50rem;
-  margin-top: 14rem;
+  padding: 6px 15px;
+  border-radius: 50px;
+  margin-top: 14px;
   font-family: "Futura";
 }
 
@@ -27,8 +30,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70rem;
-    margin-bottom: 40rem;
+    margin-top: 70px;
+    margin-bottom: 40px;
   }
   .button {
     margin-top: 0;
@@ -36,7 +39,7 @@
 }
 @media (640px <= width) {
   .title_container{
-    margin-top: 180rem;
+    /* margin-top: 180px; */
   }
   .title_container > h2 {
     font-size: var(--font-size-big);

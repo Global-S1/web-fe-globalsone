@@ -1,15 +1,15 @@
 .avatarCard__container {
   position: relative;
-  border: 1rem solid rgba(255, 255, 255, 0.5);
-  border-radius: 5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
   background: linear-gradient(
     180deg,
     rgba(14, 6, 43, 1) 7%,
     rgba(101, 42, 198, 1) 100%
   );
-  width: 100rem;
-  height: 161rem;
-  padding: 5rem;
+  width: 100px;
+  height: 161px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,7 +17,7 @@
 
 .avatarCard__bullets__container {
   display: flex;
-  column-gap: 1rem;
+  column-gap: 1px;
 }
 .avatarCard__bullets__container > div {
   width: 1.912px;
@@ -28,8 +28,8 @@
 
 .avatarCard__text__container > h3 {
   text-align: center;
-  font-size: 9rem;
-  line-height: 13.5rem;
+  font-size: 9px;
+  line-height: 13.5px;
   margin-bottom: 10%;
 }
 
@@ -41,62 +41,62 @@
 }
 @media (450px <= width) {
   .avatarCard__container {
-    width: 122rem;
-    height: 196.42rem;
+    width: 122px;
+    height: 196.42px;
   }
 }
 @media (500px <= width) {
   .avatarCard__container {
-    width: 146.4rem;
-    height: 235.704rem;
+    width: 146.4px;
+    height: 235.704px;
   }
 }
 @media (640px <= width) {
   .avatarCard__container {
-    width: 175.68rem;
-    height: 282.84rem;
+    width: 175.68px;
+    height: 282.84px;
   }
 }
 @media (768px <= width) {
   .avatarCard__container {
-    width: 219.6rem;
-    height: 353.55rem;
-    padding: 10rem;
+    width: 219.6px;
+    height: 353.55px;
+    padding: 10px;
   }
   .avatarCard__bullets__container {
-    column-gap: 3rem;
+    column-gap: 3px;
   }
   .avatarCard__bullets__container > div {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.5px;
+    height: 3.5px;
   }
   .avatarCard__text__container > h3 {
-    font-size: 18rem;
+    font-size: 18px;
   }
 }
 @media (1024px <= width) {
   .avatarCard__container {
     width: 291.2px;
     height: 471.2px;
-    border-radius: 15rem;
+    border-radius: 15px;
   }
 }
 @media (1280px <= width) {
   .avatarCard__container {
     width: 364px;
     height: 589px;
-    padding: 10rem;
-    border-radius: 17rem;
+    padding: 10px;
+    border-radius: 17px;
   }
   .avatarCard__bullets__container {
-    column-gap: 5rem;
-    padding: 25rem 19rem;
+    column-gap: 5px;
+    padding: 25px 19px;
   }
   .avatarCard__bullets__container > div {
-    width: 7rem;
-    height: 7rem;
+    width: 7px;
+    height: 7px;
   }
   .avatarCard__text__container > h3 {
-    font-size: 27rem;
+    font-size: 27px;
   }
 }

@@ -1,3 +1,9 @@
+.heroCenterPricture__container {
+  height: 600px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .hero_picture_mobile {
   max-width: none;
   object-fit: cover;
@@ -28,9 +34,6 @@
   }
 }
 
-@media (530px <= width) {
-}
-
 @media (640px <= width) {
   .hero_picture {
     display: block;
@@ -41,16 +44,12 @@
     max-width: 366px;
     transform: translate(-55%);
   }
-
-  .heroCenterPricture__container {
-    height: 100%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
 }
 
 @media (768px <= width) {
+  .heroCenterPricture__container {
+    height: 700px;
+  }
   .hero_picture {
     display: block;
     position: absolute;

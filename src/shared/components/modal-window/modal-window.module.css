@@ -1,7 +1,6 @@
 .windowCard_container {
   position: relative;
   border-radius: 17px;
-  height: fit-content;
 }
 
 @media (640px <= width) {

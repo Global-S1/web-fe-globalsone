@@ -2,71 +2,71 @@
   width: 100%;
   height: 100%;
   display: flex;
-  column-gap: 5rem;
+  column-gap: 5px;
 }
 
 .number > p {
-  font-size: 12rem;
+  font-size: 12px;
 }
 .overviewCard__text_container {
   display: flex;
   flex-direction: column;
-  row-gap: 15rem;
+  row-gap: 15px;
 }
 .overviewCard__text_container > h3 {
-  font-size: 12rem;
+  font-size: 12px;
 }
 .overviewCard__text_container > p {
-  font-size: 11rem;
+  font-size: 11px;
   font-family: "Futura";
 }
 
 @media (640px <= width) {
   .number > p {
-    font-size: 22rem;
+    font-size: 22px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 22rem;
-    line-height: 25.78rem;
+    font-size: 22px;
+    line-height: 25.78px;
   }
   .overviewCard__text_container > p {
-    font-size: 14rem;
+    font-size: 14px;
   }
 }
 @media (768px <= width) {
   .number > p {
-    font-size: 27rem;
+    font-size: 27px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 27rem;
-    line-height: 29.78rem;
+    font-size: 27px;
+    line-height: 29.78px;
   }
   .overviewCard__text_container > p {
-    font-size: 17rem;
+    font-size: 17px;
   }
 }
 @media (1024px <= width) {
   .number > p {
-    font-size: 30rem;
-    line-height: 28.43rem;
+    font-size: 30px;
+    line-height: 28.43px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 30rem;
-    line-height: 32.43rem;
+    font-size: 30px;
+    line-height: 32.43px;
   }
   .overviewCard__text_container > p {
-    font-size: 20rem;
+    font-size: 20px;
   }
 }
 @media (1280px <= width) {
   .number > p {
-    font-size: 32rem;
+    font-size: 32px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 32rem;
+    font-size: 32px;
   }
   .overviewCard__text_container > p {
-    font-size: 22rem;
-    line-height: 33rem;
+    font-size: 22px;
+    line-height: 33px;
   }
 }

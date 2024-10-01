@@ -1,36 +1,36 @@
 .address__section {
-  margin-top: 70rem;
+  margin-top: 70px;
 }
 
 .address__container {
   position: relative;
-  height: 364rem;
+  height: 364px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 .address__text__container {
-  margin-top: 16rem;
+  margin-top: 16px;
   order: 2;
 }
 .title__container > h2 {
   font-family: "Futura";
-  font-size: 15rem;
-  line-height: 22.5rem;
-  margin-top: 5rem;
+  font-size: 15px;
+  line-height: 22.5px;
+  margin-top: 5px;
 }
 
 .title__container > p {
   color: #999;
   font-family: "Futura";
-  font-size: 11rem;
-  line-height: 16.5rem;
+  font-size: 11px;
+  line-height: 16.5px;
 }
 
 .bg__img__container {
   display: flex;
   align-items: flex-end;
-  background-position: center 25rem;
+  background-position: center 25px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -42,16 +42,16 @@
 .buttons__container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 6rem;
-  row-gap: 10rem;
+  column-gap: 6px;
+  row-gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 20rem;
+  margin-top: 20px;
 }
 .buttons__container > button {
   height: 40px;
-  font-size: 13rem;
-  border-radius: 14rem;
+  font-size: 13px;
+  border-radius: 14px;
 }
 .address__container button:nth-child(1) {
   width: 49%;
@@ -64,15 +64,15 @@
 }
 @media (425px <= width) {
   .address__section {
-    margin-top: 100rem;
+    margin-top: 100px;
   }
   .address__container {
-    height: 420rem;
+    height: 420px;
   }
 }
 @media (640px <= width) {
   .address__container {
-    height: 500rem;
+    height: 500px;
   }
   .address__text__container {
     position: absolute;
@@ -80,14 +80,14 @@
     top: 0;
   }
   .title__container > span {
-    font-size: 8rem;
+    font-size: 8px;
   }
   .title__container > h2 {
-    font-size: 15rem;
-    margin: 4rem 0;
+    font-size: 15px;
+    margin: 4px 0;
   }
   .title__container > p {
-    font-size: 14rem;
+    font-size: 14px;
     text-align: justify;
   }
   .buttons__container {
@@ -106,74 +106,74 @@
 }
 @media (768px <= width) {
   .address__section {
-    margin: 120rem 0 150rem 0;
+    margin: 120px 0 150px 0;
   }
   .address__container {
-    height: 600rem;
+    height: 600px;
   }
   .address__text__container {
-    max-width: 500rem;
+    max-width: 500px;
   }
   .buttons__container {
     display: flex;
     flex-direction: column;
   }
   .title__container > span {
-    font-size: 10rem;
+    font-size: 10px;
   }
   .title__container > h2 {
-    font-size: 19rem;
-    margin: 6rem 0;
+    font-size: 19px;
+    margin: 6px 0;
   }
   .title__container > p {
-    font-size: 16rem;
+    font-size: 16px;
     text-align: justify;
-    line-height: 32rem;
+    line-height: 32px;
   }
 }
 @media (1024px <= width) {
   .title__container > span {
-    font-size: 12rem;
+    font-size: 12px;
   }
   .title__container > h2 {
-    font-size: 20rem;
-    margin: 8rem 0;
+    font-size: 20px;
+    margin: 8px 0;
   }
   .title__container > p {
-    font-size: 18rem;
+    font-size: 18px;
     text-align: justify;
   }
 }
 @media (1280px <= width) {
   .address__container {
-    height: 694rem;
+    height: 694px;
   }
   .address__text__container {
-    width: 620rem;
+    width: 620px;
     max-width: none;
-    padding-right: 40rem;
-    padding-left: 40rem;
+    padding-right: 40px;
+    padding-left: 40px;
   }
   .title__container > span {
-    font-size: 14rem;
+    font-size: 14px;
   }
   .title__container > h2 {
-    font-size: 24rem;
-    margin: 10rem 0;
+    font-size: 24px;
+    margin: 10px 0;
   }
   .title__container > p {
-    font-size: 22rem;
+    font-size: 22px;
     text-align: justify;
   }
   .buttons__container {
-    row-gap: 17rem;
+    row-gap: 17px;
   }
   .buttons__container > button {
     width: 100%;
-    height: 40rem;
-    font-size: 19rem !important;
+    height: 40px;
+    font-size: 19px !important;
   }
   .bg__img__container {
-    height: 468rem;
+    height: 468px;
   }
 }

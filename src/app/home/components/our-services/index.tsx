@@ -12,33 +12,28 @@ import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
 export const OurServices = ({ ourServiceData }) => {
   const listImg = [VideoPlayer, Ticket, CpuIcon, PeopleAvatars];
   return (
-    <Section>
-      <div className={s.ourService__container}>
-        <div className={s.ourServices_title}>
-          <div className={s.purple_circle}></div>
-
-          <h2>
-            NUESTROS <br />
-            PRINCIPALES SERVICIOS{" "}
-          </h2>
-        </div>
-        <div className={s.cards_container}>
-          {ourServiceData.map((service, index) => {
-            const IconComponent = listImg[index];
-            return (
-              <CardOurService
-                key={index}
-                title={service.title}
-                content={service.content}
-              >
-                <div className={s.icon}>
-                  {IconComponent && <IconComponent />}
-                </div>
-              </CardOurService>
-            );
-          })}
-          <div className={s.purple_dot}></div>
-        </div>
+    <Section extendStyle={s.ourService__section}>
+      <div className={s.ourServices_title}>
+        <div className={s.purple_circle}></div>
+        <h2>
+          NUESTROS <br />
+          PRINCIPALES SERVICIOS{" "}
+        </h2>
+      </div>
+      <div className={s.cards_container}>
+        {ourServiceData.map((service, index) => {
+          const IconComponent = listImg[index];
+          return (
+            <CardOurService
+              key={index}
+              title={service.title}
+              content={service.content}
+            >
+              <div className={s.icon}>{IconComponent && <IconComponent />}</div>
+            </CardOurService>
+          );
+        })}
+        <div className={s.purple_dot}></div>
       </div>
     </Section>
   );

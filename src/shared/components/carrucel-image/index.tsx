@@ -1,20 +1,25 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Slice } from "./slice";
 import "swiper/css";
 import "swiper/css/pagination";
 import { people } from "@/data-mock/people.moc";
 import s from "./carrucel-image.module.css";
 import "./carrucel-image.css";
-import { ArrowLeft } from "@/assets/home/ourTeam/icons/ArrowLeft";
-import { ArrowRight } from "@/assets/home/ourTeam/icons/ArrowRight";
+import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
+import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 
 export const CarrucelImg = () => {
+  const swiperRef = useRef(null);
+
   return (
     <div className={s.carrucel__container}>
-      <div className={s.arrow_left}>
+      <div
+        className={s.arrow_left}
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
         <ArrowLeft />
       </div>
       <div className={s.carrucel__viewport}>
@@ -44,11 +49,9 @@ export const CarrucelImg = () => {
               spaceBetween: 31,
             },
           }}
-          modules={[
-            Autoplay, 
-            A11y
-          ]}
+          modules={[Autoplay, A11y]}
           className="mySwiper"
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {people.map((person, index) => (
             <SwiperSlide key={index}>
@@ -58,7 +61,10 @@ export const CarrucelImg = () => {
         </Swiper>
         <div className={s.opacity__right}></div>
       </div>
-      <div className={s.arrow_right}>
+      <div
+        className={s.arrow_right}
+        onClick={() => swiperRef.current?.slideNext()}
+      >
         <ArrowRight />
       </div>
     </div>

@@ -1,33 +1,26 @@
-// import { CarrucelImg } from "@/shared/components/carrucel-image";
-import { Section } from "@/shared/components/section";
-import { GlobalSLogo } from "./GlobalSLogo";
-import s from "./our-team.module.css";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
-import { ActionButton } from "../action-button";
 import { CarrucelImageMobil } from "../carrucel-image-mobile";
 import { CarrucelImg } from "../carrucel-image";
+import s from "./our-team.module.css";
 
-export const OurTeam = ({ outTeamData }) => {
+export const OurTeam = ({ ourTeamData }) => {
+  console.log(ourTeamData.description);
   return (
-    <Section extendStyle={s.ourTeam__section}>
-      <div className={s.ourTeam_container}>
-        <h2>ACERCA DE NOSOTROS</h2>
-        <p>{outTeamData.description}</p>
-        <div className={s.ourTeam__leave__one}>
-          <LeaveClear />
-        </div>
-
-        <CarrucelImg />
-        <CarrucelImageMobil />
-
-        <div className={s.ourTeam__leave__two}>
-          <LeaveClear />
-        </div>
-        <div className={s.ourTeam__leave__three}>
-          <LeaveBig />
-        </div>
+    <div className={s.ourTeam_container}>
+      <h2>ACERCA DE NOSOTROS</h2>
+      <p>{ourTeamData.description}</p>
+      <div className={s.ourTeam__leave__one}>
+        <LeaveClear />
       </div>
-    </Section>
+      <CarrucelImg />
+      <CarrucelImageMobil />
+      <div className={s.ourTeam__leave__two}>
+        <LeaveClear />
+      </div>
+      <div className={s.ourTeam__leave__three}>
+        <LeaveBig />
+      </div>
+    </div>
   );
 };

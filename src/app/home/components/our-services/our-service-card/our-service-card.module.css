@@ -1,5 +1,4 @@
 .cardOurService_container {
-  background-image: url(../../../../../assets/home/background/bgcolors-services.png);
   background-size: cover;
   background-position: center;
   border-top: 0.5px solid #999999;
@@ -10,8 +9,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0.75px;
+  padding-right: 0.75px;
   position: relative;
 }
 .children_container {
@@ -26,18 +25,18 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 10px;
 }
 .title {
   text-align: center;
   color: var(--custom-color-green);
-  font-size: 15rem;
+  font-size: 15px;
 }
 .description {
   text-align: center;
-  font-size: 11rem;
+  font-size: 11px;
   font-family: "Futura";
-  margin: 0 15rem;
+  margin: 0 15px;
 }
 @media (640px <= width) {
 }
@@ -46,24 +45,24 @@
 @media (1024px <= width) {
   .cardOurService_container {
     width: 100%;
-    height: 320rem;
+    height: 320px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    padding: 28rem;
+    padding: 28px;
   }
   .children_container {
     width: 40%;
   }
   .title {
     text-align: center;
-    font-size: 24rem;
+    font-size: 24px;
     order: -1;
     width: 100%;
     flex-shrink: 0;
-    font-size: 30rem;
-    line-height: 53.5rem;
+    font-size: 30px;
+    line-height: 53.5px;
   }
   .description {
     text-align: left;
@@ -73,27 +72,26 @@
 }
 @media (1280px <= width) {
   .cardOurService_container {
-    height: 363rem;
-    width: 587rem;
+    height: 363px;
+    width: 587px;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    padding: 32rem;
+    padding: 32px;
   }
   .children_container {
     width: 40%;
   }
   .title {
     text-align: center;
-    font-size: 24rem;
     order: -1;
     width: 100%;
     flex-shrink: 0;
-    font-size: 50rem;
-    line-height: 53.5rem;
+    font-size: 50px;
+    line-height: 53.5px;
   }
   .description {
-    text-align: left;
+    text-align: justify;
     font-size: 32px;
     width: 50%;
   }

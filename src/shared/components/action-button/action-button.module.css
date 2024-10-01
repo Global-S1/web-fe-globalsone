@@ -1,26 +1,26 @@
 .button {
   background: #544dd2;
-  padding: 5rem 19rem;
+  padding: 5px 19px;
   font-family: "Futura";
-  border-radius: 20rem;
+  border-radius: 20px;
 }
 
 @media (640px <= width) {
 }
 @media (768px <= width) {
   .button {
-    width: 234.479rem;
-    height: 49.829rem;
+    width: 234.479px;
+    height: 49.829px;
     font-size: var(--font-size-small);
-    border-radius: 20rem;
+    border-radius: 20px;
   }
 }
 @media (1024px <= width) {
   .button {
     width: 254.479px;
     height: 59.829px;
-    font-size: 20rem;
-    border-radius: 50rem;
+    font-size: 20px;
+    border-radius: 50px;
   }
 }
 @media (1280px <= width) {

@@ -2,11 +2,11 @@ import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
 import { Ticket } from "@/assets/home/our-services/icons/Ticket";
 import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
 import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
-import TradingPlataform from "@/assets/images/trading-plataform.png";
-import AppMobil from "@/assets/images/app-mobil.png";
-import CrmPlataform from "@/assets/images/crm-plataform.png";
-import ApiConnection from "@/assets/home/pictures/apps-group.png";
-import Ecommerce from "@/assets/images/ecommerce.png";
+import TradingPlataform from "@/assets/home/what-we-build/pictures/trading-plataform.png";
+import AppMobil from "@/assets/home/what-we-build/pictures/app-mobil.png";
+import CrmPlataform from "@/assets/home/what-we-build/pictures/crm-plataform.png";
+import ApiConnection from "@/assets/home/what-we-build/pictures/apis.png";
+import Ecommerce from "@/assets/home/what-we-build/pictures/ecommerce.png";
 
 export const services = [
   {

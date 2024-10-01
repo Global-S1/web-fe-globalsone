@@ -1,13 +1,14 @@
+.overview__section{
+  margin-bottom: 140px;
+}
 .overview__container {
-  /* border: 1rem solid white; */
   display: flex;
   flex-direction: column;
-  margin-top: 60rem;
 }
 
 .overview__card__base {
-  padding: 23rem;
-  height: 190rem;
+  padding: 23px;
+  height: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +16,7 @@
 
 .card__one {
   border: 0.5px solid rgba(251, 251, 251, 0.83);
-  border-top-left-radius: 15rem;
+  border-top-left-radius: 15px;
   background: linear-gradient(
     270deg,
     rgba(25, 219, 202, 0.27) 0%,
@@ -41,83 +42,62 @@
 
 @media (640px <= width) {
   .overview__container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 3rem;
-    margin-top: 150rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7px;
   }
   .overview__card__base {
-    height: 270rem;
+    height: 270px;
   }
-  .card__one,
-  .card__two {
-    width: 49.69%;
-  }
+
   .card__three {
-    padding-top: 50rem;
-    padding-left: 40rem;
-    padding-right: 40rem;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    grid-column: 1 / -1;
   }
 }
 @media (768px <= width) {
-  .overview__container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 3rem;
-  }
   .overview__card__base {
-    height: 300rem;
+    height: 300px;
   }
   .card__one,
   .card__two {
-    width: 49.69%;
-    padding-top: 35rem;
-    padding-left: 38rem;
-    padding-left: 38rem;
+    padding-top: 35px;
+    padding-left: 38px;
+    padding-left: 38px;
   }
   .card__three {
-    padding-top: 50rem;
-    padding-left: 50rem;
-    padding-right: 50rem;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 @media (1024px <= width) {
-  .overview__container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 5rem;
-  }
   .overview__card__base {
-    height: 310rem;
+    height: 310px;
   }
   .card__one,
   .card__two {
-    width: 49.69%;
-    padding-top: 30rem;
-    padding-right: 35rem;
-    padding-left: 35rem;
+    padding-top: 30px;
+    padding-right: 35px;
+    padding-left: 35px;
   }
   .card__three {
-    padding-top: 50rem;
-    padding-right: 50rem;
-    padding-left: 50rem;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 @media (1280px <= width) {
-  .overview__container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 5rem;
-  }
   .overview__card__base {
-    height: 330rem;
+    height: 330px;
   }
   .card__one,
   .card__two {
-    width: 49.69%;
-    padding: 50rem 50rem 10rem 50rem;
+    padding: 50px 50px 10px 50px;
   }
   .card__three {
-    padding: 75rem 100rem 50rem 100rem;
+    padding: 75px 100px 50px 100px;
   }
 }

@@ -6,6 +6,7 @@ import { getContentDataAboutUsPage } from "./services/about-us.service";
 import { Overview } from "./components/overview";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getHomeDataService } from "../home/service/home.service";
+import { AboutUsOurTeam } from "./components/our-team";
 
 export default async function AboutUs() {
   const res = await getContentDataAboutUsPage();
@@ -17,7 +18,7 @@ export default async function AboutUs() {
       <Hero heroData={data.hero} />
       <OurValues ourValuesData={data.ourValues} />
       <Overview overviewData={data.overview} />
-      <OurTeam outTeamData={ourTeamData.ourTeam}/>
+      <AboutUsOurTeam ourTeamData={ourTeamData.ourTeam}/>
       <Testimonials />
     </>
   );

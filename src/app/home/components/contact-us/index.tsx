@@ -1,4 +1,4 @@
-import bgContac from "@/assets/background/bgContact.png";
+import bgContac from "@/assets/home/contact-us/background/bgContact.png";
 import { Section } from "@/shared/components/section";
 import s from "./contact-us.module.css";
 import { ActionButton } from "@/shared/components/action-button";
