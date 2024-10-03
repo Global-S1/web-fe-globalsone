@@ -1,2 +1,2 @@
 
-export const URL_SERVER = "http://test.local/wp-json/api/v1/get-text";
+export const URL_SERVER = "http://test.local/wp-json/api/v2";

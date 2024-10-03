@@ -4,15 +4,15 @@ import { CardOurService } from "./our-service-card";
 import s from "./out-services.module.css";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
-import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
-import { Ticket } from "@/assets/home/our-services/icons/Ticket";
-import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
-import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
+import VideoPlayer from "@/assets/home/our-services/pictures/videoPlayer.png";
+import Tags from "@/assets/home/our-services/pictures/tags.png";
+import Cpu from "@/assets/home/our-services/pictures/cpu.png";
+import Users from "@/assets/home/our-services/pictures/users.png";
 
 export const OurServices = ({ ourServiceData }) => {
-  const listImg = [VideoPlayer, Ticket, CpuIcon, PeopleAvatars];
+  const listImg = [VideoPlayer, Tags, Cpu, Users];
   return (
-    <Section extendStyle={s.ourService__section}>
+    <Section extendStyle={s.ourService__section} id="services-section">
       <div className={s.ourServices_title}>
         <div className={s.purple_circle}></div>
         <h2>
@@ -22,15 +22,13 @@ export const OurServices = ({ ourServiceData }) => {
       </div>
       <div className={s.cards_container}>
         {ourServiceData.map((service, index) => {
-          const IconComponent = listImg[index];
           return (
             <CardOurService
               key={index}
               title={service.title}
               content={service.content}
-            >
-              <div className={s.icon}>{IconComponent && <IconComponent />}</div>
-            </CardOurService>
+              img={listImg[index]}
+            />
           );
         })}
         <div className={s.purple_dot}></div>

@@ -19,7 +19,7 @@ import "swiper/css/scrollbar";
 import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
 import { useEffect, useRef, useState } from "react";
-import { people } from "@/data-mock/people.moc";
+import { peopleMobile } from "@/wp-mock-data/carrucel-mobile";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 
@@ -36,7 +36,7 @@ export const CarrucelImageMobil = () => {
       <div className={s.carrucel__viewport}>
         <Swiper
           effect={"coverflow"}
-          modules={[EffectCoverflow, Autoplay]}
+          modules={[Autoplay]}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
@@ -45,7 +45,7 @@ export const CarrucelImageMobil = () => {
           breakpoints={{
             375: {},
           }}
-          spaceBetween={50}
+          spaceBetween={-60}
           centeredSlides
           slidesPerView={2}
           coverflowEffect={{
@@ -58,7 +58,7 @@ export const CarrucelImageMobil = () => {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {people.map((person, index) => (
+          {peopleMobile.map((person, index) => (
             <SwiperSlide key={index}>
               <Slice {...person} />
             </SwiperSlide>

@@ -65,8 +65,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    max-width: 800px;
     margin: 0 auto;
+    column-gap: 20px;
   }
   .icon {
     width: 200px;
@@ -113,10 +113,10 @@
     margin-bottom: 228px;
   }
   .cards_container {
-    width: 80%;
+    column-gap: 40px;
     max-width: none;
   }
-  .ourServices_title{
+  .ourServices_title {
     margin-bottom: 43px;
   }
   .ourServices_title > h2 {
@@ -141,7 +141,6 @@
 }
 @media (1280px <= width) {
   .cards_container {
-    width: 100%;
   }
   .ourServices_title {
   }

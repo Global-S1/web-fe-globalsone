@@ -36,7 +36,7 @@ export const Hero: FC<Props> = ({ title, insides }) => {
       </div>
       <div className={s.widowCard_container}>
         <div className={clsx(s.leave_base, s.leave_one)}>
-          <Leave style={{}} />
+          <Leave />
         </div>
         <ModalWindow active>
           <HeroMetrics {...insides} />

@@ -5,8 +5,8 @@ import data from "@/wp-mock-data/home-data.json"
 
 export const getHomeDataService = async () => {
   try {
-    const response = await axios.get(URL_SERVER);
-    return response.data;
+    const response = await axios.get(`${URL_SERVER}/http://globals.local/wp-json/wp/v2/home_page/28?acf_format=standard`);
+    return response.acf;
   } catch (error) {
     return data;
   }

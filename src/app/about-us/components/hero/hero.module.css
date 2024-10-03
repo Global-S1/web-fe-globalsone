@@ -5,10 +5,12 @@
   display: grid;
   height: auto;
   grid-template-columns: repeat(12, 1fr);
+  /* border: 1px solid tomato; */
 }
 
 .hero__text__title {
   margin-top: 30px;
+  position: relative;
 }
 
 .hero__text__title > h2 {
@@ -33,6 +35,20 @@
   height: 223px;
   grid-column: 4 / 13;
   align-self: center;
+}
+
+.hero__avatarCards__bg {
+  position: absolute;
+  top: -10%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.17) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  left: 45%;
+  transform: translateX(-50%);
 }
 
 .avatarCards__float__container_woman {
@@ -69,8 +85,17 @@
 /* -----..insides -------- */
 
 .hero__insides__container {
+  position: relative;
   grid-column: 1 / 13;
   grid-row: 3 / 4;
+  justify-self: center;
+  /* border: 1px solid white; */
+}
+.hero__inside__leave {
+  position: absolute;
+  width: 50px;
+  top: -10%;
+  right: 2%;
 }
 
 /* -------social media--------- */
@@ -99,6 +124,32 @@
 .socialMedia__icons__container > div {
   width: 22px;
   height: 22px;
+}
+
+.hero__avatarCards__bg__purple {
+  position: absolute;
+  width: 800.832px;
+  height: 550.12px;
+  border-radius: 1119.832px;
+  background: #5a2eea;
+  filter: blur(6000px);
+  border: 1px solid white;
+  opacity: 0.7;
+  z-index: -20;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+.hero__avatarCards__bg__green {
+  position: absolute;
+  width: 371px;
+  height: 271px;
+  border-radius: 571px;
+  background: #2eea79;
+  filter: blur(200px);
+  opacity: 0.8;
+  z-index: -10;
+  left: -90%;
 }
 
 @media (400px <= width) {
@@ -148,6 +199,11 @@
     flex-direction: column;
     justify-content: center;
   }
+  .hero__avatarCards__bg {
+    top: -30%;
+    width: 110%;
+    left: 55%;
+  }
   .hero__avatarCards {
     grid-column: 7 / 13;
   }
@@ -189,6 +245,35 @@
   .hero__insides__container {
     grid-row: 7 / 8;
     grid-column: 1 / 7;
+  }
+  .hero__inside__leave {
+    width: 70px;
+    top: -30%;
+    right: -5%;
+  }
+  .hero__avatarCards__bg__purple {
+    position: absolute;
+    width: 1119.832px;
+    height: 850.12px;
+    border-radius: 1119.832px;
+    background: #5a2eea;
+    filter: blur(6000px);
+    border: 1px solid white;
+    opacity: 0.7;
+    z-index: -20;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero__avatarCards__bg__green {
+    position: absolute;
+    width: 571px;
+    height: 571px;
+    border-radius: 571px;
+    background: #2eea79;
+    filter: blur(200px);
+    opacity: 0.8;
+    z-index: -10;
+    left: -150%;
   }
 }
 @media (768px <= width) {
@@ -243,6 +328,12 @@
     width: 183.7px;
     height: 253.61px;
   }
+  .hero__inside__leave {
+    width: 70px;
+  }
+  .hero__avatarCards__bg__green {
+    left: -90%;
+  }
 }
 @media (1024px <= width) {
   .avatar__woman__card {
@@ -263,6 +354,15 @@
     font-size: var(--font-size-base);
     width: 540px;
     line-height: 26.78px;
+  }
+  .hero__inside__leave {
+    position: absolute;
+    width: 90px;
+    top: -50%;
+    right: -10%;
+  }
+  .hero__avatarCards__bg__green {
+    left: -60%;
   }
 }
 @media (1280px <= width) {
