@@ -4,108 +4,148 @@
       "left": "Impulsa tu negocio con",
       "right": "soluciones de software a medida"
     },
-    "insides": {
-      "title": "TRABAJA CON PROFESIONALES \n Y VE COMO TUS IDEAS SE DIGITALIZAN"
-    }
+    "insides": "TRABAJA CON PROFESIONALES Y VE COMO TUS IDEAS SE DIGITALIZAN"
   },
-  "features": [
-    {
+  "features": [{
       "title": [
-        { "text": "Desarrollamos", "style": null },
+        { "text": "Desarrollamos", "style": "" },
         { "text": "software", "style": "title_style_one" },
         { "text": "personalizado", "style": "title_style_two" },
-        { "text": "para las necesidades específicas de", "style": null },
-        { "text": "tu industria.", "style": "title_style_three" }
+        { "text": "para las necesidades específicas de", "style": "" },
+        { "text": "tu industria.", "style": "title_style_three" },
+        { "text": "", "style": "" },
+        { "text": "", "style": "" }
       ],
       "content": "Pensamos en tus necesidades y creamos software a tu medida, adaptado a los desafíos únicos de tu industria para ayudarte a alcanzar tus metas.",
+      "img": false,
       "reverse": false
     },
     {
       "title": [
-        { "text": "Optimiza tus ventas online con", "style": null },
-        { "text": "plataformas", "style": "title_style_four" },
-        { "text": "robustas y seguras.", "style": "title_style_five" }
+        {
+          "text": "Optimiza tus ventas online con",
+          "style": ""
+        },
+        {
+          "text": "plataformas",
+          "style": "title_style_four"
+        },
+        {
+          "text": "robustas y seguras.",
+          "style": "title_style_five"
+        },
+        {
+          "text": "",
+          "style": ""
+        },
+        {
+          "text": "",
+          "style": ""
+        },
+        {
+          "text": "",
+          "style": ""
+        },
+        {
+          "text": "",
+          "style": ""
+        }
       ],
       "content": "Nos enfocamos en ofrecerte plataformas confiables y seguras que potencien tu negocio, ayudándote a optimizar cada venta y mejorar la experiencia de tus clientes online.",
+      "img": "https://localhost:8000/wp-content/uploads/2024/10/Group-48096346.png",
       "reverse": true
-    },
-    {
+    }, {
       "title": [
-        { "text": "Implementa", "style": null },
-        { "text": "tecnología", "style": "title_style_one" },
-        { "text": "que mejora la", "style": null },
-        { "text": "atención", "style": "title_style_two" },
-        { "text": "y", "style": null },
-        { "text": "gestión", "style": "title_style_three" },
-        { "text": "de tu empresa.", "style": null }
+        {
+          "text": "Implementa",
+          "style": ""
+        },
+        {
+          "text": "tecnología",
+          "style": "title_style_one"
+        },
+        {
+          "text": "que mejora la",
+          "style": ""
+        },
+        {
+          "text": "atención",
+          "style": "title_style_two"
+        },
+        {
+          "text": "y",
+          "style": ""
+        },
+        {
+          "text": "gestión",
+          "style": "title_style_three"
+        },
+        {
+          "text": "de tu empresa.",
+          "style": ""
+        }
       ],
       "content": "Te ayudamos a implementar tecnología que optimiza la atención al cliente y agiliza la gestión interna, mejorando la eficiencia y el rendimiento de tu empresa.",
+      "img": false,
       "reverse": false
     }
   ],
-  "whatWeBuild": {
-    "title": " ¿Tienes una idea? \n NOSOTROS LO DESARROLLAMOS\n POR TÍ",
+  "whatwebuild": {
+    "title": "¿Tienes una idea? NOSOTROS LO DESARROLLAMOS POR TÍ",
     "services": [
       {
         "title": "Plataforma de Traiding",
-        "img": "trading",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/trading-plataform.png",
         "alt": "Desarrollamos Plataforma de Traiding"
       },
       {
         "title": "Aplicaciones Móviles",
-        "img": "mobile",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/app-mobil.png",
         "alt": "Desarrollamos Aplicaciones Móviles"
       },
       {
         "title": "Ecommerce",
-        "img": "ecommerce",
-        "alt": "Desarrollamos Ecommerce"
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/ecommerce.png",
+        "alt": "Desarrollamos plataformas Ecommerce"
       },
       {
         "title": "CRM para Negocios y Empresas",
-        "img": "crm",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/crm-plataform.png",
         "alt": "Desarrollamos Plataformas CRM"
       },
       {
         "title": "Conexión entre diferentes Apps",
-        "img": "integration",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/apis.png",
         "alt": "Desarrollamos Integración de Apps"
       }
     ]
   },
-  "ourService": [
+  "ourservice":[
     {
       "title": "Diseño web",
+      "img": "https://localhost:8000/wp-content/uploads/2024/10/videoPlayer.png",
       "content": "Creamos sitios web atractivos que reflejan tu marca."
     },
     {
       "title": "UX/UI",
+      "img": "https://localhost:8000/wp-content/uploads/2024/10/tags.png",
       "content": "Diseñamos experiencias intuitivas para una navegación fluida."
     },
     {
       "title": "Desarrollo de Software",
+      "img": "https://localhost:8000/wp-content/uploads/2024/10/cpu.png",
       "content": "Soluciones de software personalizadas para tu negocio."
     },
     {
       "title": "Consultoria",
+      "img": "https://localhost:8000/wp-content/uploads/2024/10/users.png",
       "content": "Asesoramos en estrategias tecnológicas."
     }
   ],
-  "ourTeam": {
-    "title": "",
-    "description": "Nuestro equipo dedicado combina innovación y sostenibilidad. Descubre a las personas detrás de Global S1.",
-    "deskImg": [
-      { "src": "", "alt": "" },
-      { "src": "", "alt": "" },
-      { "src": "", "alt": "" }
-    ],
-    "mobileImg": [
-      { "src": "", "alt": "" },
-      { "src": "", "alt": "" },
-      { "src": "", "alt": "" }
-    ]
-  },
-  "contactUs": {
-    "title": "¿Listo para transformar tu negocio?"
+  "contactus": "¿Listo para transformar tu negocio?",
+  "ourteam": {
+    "title": "Este es el título",
+    "description": "Esta es la descripción"
   }
+
 }

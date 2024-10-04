@@ -1,13 +1,22 @@
-import axios from "axios";
-// import { data } from "@/data-mock/heroTitle.json";
-import { URL_SERVER } from "@/shared/constants/url";
-import data from "@/wp-mock-data/home-data.json"
+import { wordpressService } from "@/shared/services/wordpress.service";
+import data from "@/wp-mock-data/home-data.json";
+import { homeAdapter } from "../adapter/home.adapter";
+import { IHomeContentInput } from "../interfaces/input.interface";
 
 export const getHomeDataService = async () => {
   try {
-    const response = await axios.get(URL_SERVER);
-    return response.data;
+    const response = await wordpressService<IHomeContentInput>({
+      id: "64",
+      page: "home_page",
+    });
+
+    console.log("success");
+
+    const formated = homeAdapter(response.data.acf);
+
+    return formated;
   } catch (error) {
+    console.log("error");
     return data;
   }
 };

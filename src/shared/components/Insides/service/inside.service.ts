@@ -1,13 +1,15 @@
-
-import axios from "axios"
-import { URL_SERVER } from "@/shared/constants/url"
-import data from "@/wp-mock-data/metrics-data.json"
+import { IInside } from "@/app/home/interfaces/content.interface";
+import { wordpressService } from "@/shared/services/wordpress.service";
+import data from "@/wp-mock-data/metrics-data.json";
 
 export const getMetricsDataService = async () => {
-    try {
-        const response = await axios.get(URL_SERVER)
-        return response.data
-    } catch (error) {
-        return data
-    }
-}
+  try {
+    const response = await wordpressService<IInside>({
+      id: "",
+      page: "insides",
+    });
+    return response.data;
+  } catch (error) {
+    return data;
+  }
+};

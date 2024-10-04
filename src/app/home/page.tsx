@@ -1,27 +1,25 @@
 import { Hero } from "@/app/home/components/hero";
-import { Features } from "./components/feature";
-import { WhatWeBuild } from "./components/what-we-build";
-import { OurServices } from "./components/our-services";
-import { Testimonials } from "./components/testimonials";
-import { OurTeam } from "@/shared/components/our-team";
-import { ContactUs } from "./components/contact-us";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
-import { getHomeDataService } from "./service/home.service";
-import { IFeatures } from "@/shared/interfaces/IFeatures";
+import { ContactUs } from "./components/contact-us";
+import { Features } from "./components/feature";
+import { OurServices } from "./components/our-services";
 import { OurTeamSection } from "./components/our-team";
+import { Testimonials } from "./components/testimonials";
+import { WhatWeBuild } from "./components/what-we-build";
+import { getHomeDataService } from "./service/home.service";
 
 export default async function Home() {
   const res = await getHomeDataService();
   return (
     <>
       <BgLeave />
-      <Hero {...res.hero} />
-      <Features featureData={res.features} />
-      <WhatWeBuild whatWeBildData={res.whatWeBuild} />
-      <OurServices ourServiceData={res.ourService} />
+      <Hero content={res.hero} />
+      <Features content={res.features} />
+      <WhatWeBuild content={res.whatwebuild} />
+      <OurServices content={res.ourservice} />
       <Testimonials />
-      <OurTeamSection ourTeamData={res.ourTeam} />
-      <ContactUs /> 
+      <OurTeamSection content={res.ourteam} />
+      <ContactUs />
     </>
   );
 }

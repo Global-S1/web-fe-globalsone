@@ -4,9 +4,14 @@ import { Section } from "@/shared/components/section";
 import { WhatWeBuildCardContainer } from "./we-build-card-container";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import s from "./what-we-build.module.css";
+import { IWhathWeBuildContent } from "../../interfaces/content.interface";
 
-export const WhatWeBuild = ({ whatWeBildData }) => {
-  const { title, services } = whatWeBildData;
+interface Props {
+  content: IWhathWeBuildContent;
+}
+
+export const WhatWeBuild = ({ content }: Props) => {
+  const { title, services } = content;
   return (
     <Section extendStyle={s.whatWeBuild__section}>
       <div className={s.purple__circle}></div>

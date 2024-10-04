@@ -7,14 +7,27 @@ import apis from "@/assets/home/what-we-build/pictures/apis.png";
 import crm from "@/assets/home/what-we-build/pictures/crm-plataform.png";
 import ecommerce from "@/assets/home/what-we-build/pictures/ecommerce.png";
 import trading from "@/assets/home/what-we-build/pictures/trading-plataform.png";
+import { IService } from "@/app/home/interfaces/content.interface";
 
-export const WhatWeBuildCardContainer = ({ services }) => {
+interface Props {
+  services: IService[];
+}
+
+export const WhatWeBuildCardContainer = ({ services }: Props) => {
   const listImg = [trading, appMobil, ecommerce, crm, apis];
   return (
     <ModalWindow active>
       <div className={s.container_cards}>
         {services.map((item, index) => {
-          return <WeBuildCard key={index} {...item} image={listImg[index]} />;
+          const { content, img, title, alt } = item;
+          return (
+            <WeBuildCard
+              key={index}
+              altContent={alt ?? title}
+              title={title}
+              image={listImg[index]}
+            />
+          );
         })}
       </div>
     </ModalWindow>

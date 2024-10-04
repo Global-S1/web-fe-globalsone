@@ -4,16 +4,15 @@
 .hero__container {
   width: 100%;
   position: relative;
-  margin-bottom: 257px;
   max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 49px;
 }
 
 .widowCard_container {
   position: relative;
+  padding-top: 70px;
 }
 
 .leave_base {
@@ -72,6 +71,7 @@
   .leave_two {
     width: 220.748px;
     height: 214.556px;
+    max-height: calc(100vh - 100px);
     z-index: 1;
     top: -28%;
     right: -3%;

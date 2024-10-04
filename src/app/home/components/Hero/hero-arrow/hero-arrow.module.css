@@ -9,6 +9,7 @@
   border: 1px solid whites;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 70px;
 }
 
 .arrow__container {
@@ -39,5 +40,6 @@
 @media (1280px <= width) {
   .hero__arrow {
     font-size: var(--font-size-big);
+    bottom: 50px;
   }
 }

@@ -8,8 +8,13 @@ import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
 import { Ticket } from "@/assets/home/our-services/icons/Ticket";
 import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
 import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
+import { IService } from "../../interfaces/content.interface";
 
-export const OurServices = ({ ourServiceData }) => {
+interface Props {
+  content: IService[];
+}
+
+export const OurServices = ({ content }: Props) => {
   const listImg = [VideoPlayer, Ticket, CpuIcon, PeopleAvatars];
   return (
     <Section extendStyle={s.ourService__section}>
@@ -21,7 +26,7 @@ export const OurServices = ({ ourServiceData }) => {
         </h2>
       </div>
       <div className={s.cards_container}>
-        {ourServiceData.map((service, index) => {
+        {content.map((service, index) => {
           const IconComponent = listImg[index];
           return (
             <CardOurService

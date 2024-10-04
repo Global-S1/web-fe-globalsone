@@ -5,7 +5,7 @@ import s from "./we-build-card.module.css";
 
 interface Prop {
   title: string;
-  image: string | StaticImageData;
+  image: StaticImageData;
   altContent: string;
 }
 

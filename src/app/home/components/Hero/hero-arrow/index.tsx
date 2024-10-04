@@ -3,7 +3,7 @@ import s from "./hero-arrow.module.css";
 
 export const HeroArrow = () => {
   return (
-    <div className={s.hero__arrow}>
+    <a href="#metrics" className={s.hero__arrow}>
       <div className={s.arrow__container}>
         <DobleDonwArrow />
       </div>
@@ -11,6 +11,6 @@ export const HeroArrow = () => {
       <div className={s.arrow__container}>
         <DobleDonwArrow />
       </div>
-    </div>
+    </a>
   );
 };
