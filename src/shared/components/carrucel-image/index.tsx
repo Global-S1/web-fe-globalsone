@@ -1,18 +1,23 @@
 "use client";
-import React, { useRef, useState } from "react";
-import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Slice } from "./slice";
-import "swiper/css";
-import "swiper/css/pagination";
-import { people } from "@/data-mock/people.moc";
-import s from "./carrucel-image.module.css";
-import "./carrucel-image.css";
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
+import { IAnny } from "@/shared/interfaces/any.interface";
+import { IPeople } from "@/shared/interfaces/IPeople";
+import { useRef } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { A11y, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./carrucel-image.css";
+import s from "./carrucel-image.module.css";
+import { Slice } from "./slice";
 
-export const CarrucelImg = () => {
-  const swiperRef = useRef(null);
+interface Props {
+  content: IPeople[];
+}
+
+export const CarrucelImg = ({ content }: Props) => {
+  const swiperRef = useRef<IAnny>(null);
 
   return (
     <div className={s.carrucel__container}>
@@ -53,7 +58,7 @@ export const CarrucelImg = () => {
           className="mySwiper"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {people.map((person, index) => (
+          {content.map((person, index) => (
             <SwiperSlide key={index}>
               <Slice {...person} />
             </SwiperSlide>

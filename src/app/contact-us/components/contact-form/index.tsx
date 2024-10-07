@@ -1,29 +1,28 @@
 "use client";
+import { AlertForm } from "@/shared/animations/alert-form-animation";
+import { ActionButton } from "@/shared/components/action-button";
 import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
-import { useForm, SubmitHandler } from "react-hook-form";
-import s from "./contact-form.module.css";
-import { ActionButton } from "@/shared/components/action-button";
 import { useEffect, useState } from "react";
-import { AlertForm } from "@/shared/animations/alert-form-animation";
+import { FieldValues, useForm } from "react-hook-form";
+import { IContactUsFormContent } from "../../interfaces/content.interface";
+import s from "./contact-form.module.css";
 
-interface IFormInputs {
-  firstname: string;
-  lastname: string;
-  email: string;
-  phone: string;
-  service: string;
-  message: string;
-}
-
-export const ContactForm = ({ title, content, services, terms }) => {
+export const ContactForm = ({
+  title,
+  content,
+  services,
+  terms,
+}: IContactUsFormContent) => {
   const [alertActive, setAlertActive] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => data;
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
+  };
   useEffect(() => {
     console.log("error", errors);
     setAlertActive(Object.values(errors).length > 0);

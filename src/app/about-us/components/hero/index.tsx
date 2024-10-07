@@ -8,15 +8,19 @@ import { Insides } from "@/shared/components/Insides";
 import s from "./hero.module.css";
 import { getContentDataAboutUsPage } from "../../services/about-us.service";
 import { HeroAvatarCard } from "./hero-avatar-card";
+import { IAboutUsHeroContent } from "../../interfaces/content.interface";
 
-export const Hero = async ({heroData}) => {
- 
+interface Props {
+  content: IAboutUsHeroContent;
+}
+
+export const Hero = async ({ content }: Props) => {
   return (
     <Section extendStyle={s.hero__section}>
       <div className={s.hero__container}>
         <div className={s.hero__text__title}>
-          <h2>{heroData.title}</h2>
-          <p>{heroData.description}</p>
+          <h2>{content.title}</h2>
+          <p>{content.description}</p>
         </div>
         <div className={s.hero__avatarCards}>
           <div className={s.avatarCards__float__container_man}>
@@ -35,7 +39,7 @@ export const Hero = async ({heroData}) => {
           </div>
         </div>
         <div className={s.hero__insides__container}>
-          <Insides size="small"/>
+          <Insides size="small" />
         </div>
         <div className={s.hero__socialMedia__container}>
           <p>Conoce más de Nosotros:</p>

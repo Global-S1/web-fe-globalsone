@@ -1,31 +1,35 @@
 import { Section } from "@/shared/components/section";
-import { CSSProperties, FC } from "react";
-import s from "./overciew.module.css";
-import { OverviewCard } from "./overciew-card";
 import clsx from "clsx";
+import { IAboutUsOverviewContent } from "../../interfaces/content.interface";
+import { OverviewCard } from "./overciew-card";
+import s from "./overciew.module.css";
 
-export const Overview = ({ overviewData }) => {
+interface Props {
+  content: IAboutUsOverviewContent[];
+}
+
+export const Overview = ({ content }: Props) => {
   return (
     <Section extendStyle={s.overview__section}>
       <div className={s.overview__container}>
         <div className={clsx(s.overview__card__base, s.card__one)}>
           <OverviewCard
-            title={overviewData[0].title}
-            content={overviewData[0].description}
+            title={content[0].title}
+            content={content[0].description}
             index={1}
           />
         </div>
         <div className={clsx(s.overview__card__base, s.card__two)}>
           <OverviewCard
-            title={overviewData[1].title}
-            content={overviewData[1].description}
+            title={content[1].title}
+            content={content[1].description}
             index={2}
           />
         </div>
         <div className={clsx(s.overview__card__base, s.card__three)}>
           <OverviewCard
-            title={overviewData[2].title}
-            content={overviewData[2].description}
+            title={content[2].title}
+            content={content[2].description}
             index={3}
           />
         </div>

@@ -8,8 +8,8 @@ export const getMetricsDataService = async () => {
       id: "",
       page: "insides",
     });
-    return response.data;
+    return response.data.acf;
   } catch (error) {
-    return data;
+    return data as IInside;
   }
 };

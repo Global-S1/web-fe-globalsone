@@ -1,30 +1,28 @@
 "use client";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./carrucel-image.css";
 
 // Import Swiper styles
+import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
+import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
+import { IAnny } from "@/shared/interfaces/any.interface";
+import { IPeople } from "@/shared/interfaces/IPeople";
+import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
-import { useEffect, useRef, useState } from "react";
-import { people } from "@/data-mock/people.moc";
-import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
-import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 
-export const CarrucelImageMobil = () => {
-  const swiperRef = useRef(null);
+interface Props {
+  content: IPeople[];
+}
+
+export const CarrucelImageMobil = ({ content }: Props) => {
+  const swiperRef = useRef<IAnny>(null);
   return (
     <div className={s.carrucel__container}>
       <div
@@ -58,7 +56,7 @@ export const CarrucelImageMobil = () => {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {people.map((person, index) => (
+          {content.map((person, index) => (
             <SwiperSlide key={index}>
               <Slice {...person} />
             </SwiperSlide>

@@ -5,6 +5,7 @@ import { Building1 } from "@/assets/contact-us/adress/icons/Building1";
 import { Building2 } from "@/assets/contact-us/adress/icons/Building2";
 import { Building3 } from "@/assets/contact-us/adress/icons/Building3";
 import s from "./contact-address.module.css";
+import { IContactUsContactDataContent } from "../../interfaces/content.interface";
 
 export const ContactAddress = ({
   city,
@@ -12,7 +13,7 @@ export const ContactAddress = ({
   email,
   phone,
   address,
-}) => {
+}: IContactUsContactDataContent) => {
   return (
     <Section extendStyle={s.address__section}>
       <div className={s.address__container}>
