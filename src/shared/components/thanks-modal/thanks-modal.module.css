@@ -1,0 +1,52 @@
+.message__container {
+  height: 90vh;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid rgba(145, 145, 145, 0.68);
+  background: linear-gradient(
+    270deg,
+    rgba(217, 217, 217, 0.29) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+}
+
+.message__container > h2 {
+  font-size: 120px;
+}
+
+.message__container > p {
+  font-size: 22px;
+  text-align: center;
+  line-height: 33px;
+  width: 80%;
+  margin-bottom: 39px;
+}
+
+.message__container > button {
+  width: 353px;
+  height: 51px;
+  border-radius: 12px;
+  margin-bottom: 69px;
+}
+
+.message__container > span {
+  font-size: 22px;
+}
+
+.icons__container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.icons__container > div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+}
