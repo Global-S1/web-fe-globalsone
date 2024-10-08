@@ -20,7 +20,7 @@ interface Props {
 export const OurServices = ({ content }: Props) => {
   const listImg = [VideoPlayer, Ticket, CpuIcon, PeopleAvatars];
   const servicesArray = Object.values(content.services);
-  console.log("im a var content", content)
+  
   return (
     <Section extendStyle={s.ourService__section} id="services-section">
       <div className={s.ourServices_title}>

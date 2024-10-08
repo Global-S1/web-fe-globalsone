@@ -9,27 +9,28 @@ interface Props {
 }
 
 export const Overview = ({ content }: Props) => {
+  const descriptionList = Object.values(content);
   return (
     <Section extendStyle={s.overview__section}>
       <div className={s.overview__container}>
         <div className={clsx(s.overview__card__base, s.card__one)}>
           <OverviewCard
-            title={content[0].title}
-            content={content[0].description}
+            title={descriptionList[0].title}
+            content={descriptionList[0].content}
             index={1}
           />
         </div>
         <div className={clsx(s.overview__card__base, s.card__two)}>
           <OverviewCard
-            title={content[1].title}
-            content={content[1].description}
+            title={descriptionList[1].title}
+            content={descriptionList[1].content}
             index={2}
           />
         </div>
         <div className={clsx(s.overview__card__base, s.card__three)}>
           <OverviewCard
-            title={content[2].title}
-            content={content[2].description}
+            title={descriptionList[2].title}
+            content={descriptionList[2].content}
             index={3}
           />
         </div>

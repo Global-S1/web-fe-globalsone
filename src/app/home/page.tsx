@@ -10,7 +10,6 @@ import { getHomeDataService } from "./service/home.service";
 
 export default async function Home() {
   const res  = await getHomeDataService();
-  console.log("resultado de getHomeDataService",res);
   const { hero, features, whatwebuild, ourservice, ourteam } = res;
 
   return (

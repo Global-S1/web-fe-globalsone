@@ -6,20 +6,29 @@ export type IAboutUsHeroContent = {
 export type IAboutUsOurValuesContent = {
   title: string;
   values: {
-    label: string;
-    description: string;
+    title: string;
+    content: string;
+    img?: string;
   }[];
 };
 
 export type IAboutUsOverviewContent = {
   title: string;
-  description: string;
+  content: string;
 };
 
 export type IAboutUsContent = {
-  data: {
-    hero: IAboutUsHeroContent;
-    ourValues: IAboutUsOurValuesContent;
-    overview: IAboutUsOverviewContent[];
-  };
+  hero: IAboutUsHeroContent;
+  ourValues: IAboutUsOurValuesContent;
+  overview: IAboutUsOverviewContent[];
 };
+
+export interface IAboutUs {
+  hero: IAboutUsHeroContent;
+  ourValues: IAboutUsOurValuesContent;
+  businessDescription: {
+    desacription_1: IAboutUsOverviewContent;
+    desacription_2: IAboutUsOverviewContent;
+    desacription_3: IAboutUsOverviewContent;
+  };
+}

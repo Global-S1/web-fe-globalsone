@@ -13,7 +13,6 @@ interface Props {
 }
 
 export const OurValues = ({ content }: Props) => {
-  const listImg = [family, plus, avatar, talk];
   return (
     <Section extendStyle={s.ourValues__section}>
       <div className={s.ourValues__container}>
@@ -24,16 +23,14 @@ export const OurValues = ({ content }: Props) => {
           <h2>{content.title}</h2>
         </div>
         <div className={s.ourValues__cards_container}>
-          {content.values.map((item, index) => {
-            return (
-              <CardOurdValues
-                key={index}
-                title={item.label}
-                content={item.description}
-                img={listImg[index]}
-              ></CardOurdValues>
-            );
-          })}
+          {content.values.map((item, index) => (
+            <CardOurdValues
+              key={index}
+              title={item.title}
+              content={item.content}
+              img={item.img}
+            ></CardOurdValues>
+          ))}
         </div>
       </div>
     </Section>

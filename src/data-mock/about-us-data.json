@@ -1,43 +1,45 @@
 {
-  "data": {
-    "hero": {
-      "title": "Tecnología Innovadora en Armonía con la Naturaleza",
-      "description": "Fundada en 2020, Global S1 ha sido un actor clave en el desarrollo de soluciones tecnológicas que transforman la forma en que las empresas operan y se conectan con sus clientes. "
-    },
-    "ourValues": {
-      "title": "Nuestros Valores",
-      "values": [
-        {
-          "label": "Confianza",
-          "description": "La confianza es la piedra angular de toda transacción inmobiliaria exitosa."
-        },
-        {
-          "label": "Sostenibilidad",
-          "description": "Valoramos y promovemos prácticas que respetan y protegen el medio ambiente."
-        },
-        {
-          "label": "Excelencia",
-          "description": "Nos esforzamos por superar las expectativas en cada proyecto, entregando productos y servicios de alta calidad."
-        },
-        {
-          "label": "Colaboración",
-          "description": "Fomentamos un entorno de trabajo en equipo, valorando la diversidad de ideas y perspectivas."
-        }
-      ]
-    },
-    "overview": [
+  "hero": {
+    "title": "Tecnología Innovadora en Armonía con la Naturaleza",
+    "description": "Fundada en 2020, Global S1 ha sido un actor clave en el desarrollo de soluciones tecnológicas que transforman la forma en que las empresas operan y se conectan con sus clientes."
+  },
+  "ourValues": {
+    "title": "Nuestros Valores",
+    "values": [
       {
-        "title": "¿Somós la mejor opción para tu negocio? ",
-        "description": "¡Claro! Creamos plataformas robustas, escalables y personalizadas que impulsan el crecimiento y la eficiencia de nuestros clientes."
+        "title": "Confianza",
+        "img": "https://content.globals.one/wp-content/uploads/2024/10/familyIcon.png",
+        "content": "La confianza es la piedra angular de toda transacción inmobiliaria exitosa."
       },
       {
-        "title": "¿Cuál es su misión?",
-        "description": "Nuestra misión es desarrollar soluciones tecnológicas innovadoras que impulsan el crecimiento empresarial, mientras mantenemos un compromiso firme con la sostenibilidad y el respeto por la naturaleza."
+        "title": "Sostenibilidad",
+        "img": "https://content.globals.one/wp-content/uploads/2024/10/plusIcon.png",
+        "content": "Valoramos y promovemos prácticas que respetan y protegen el medio ambiente."
       },
       {
-        "title": "¿Cuál es su visión?",
-        "description": "Nuestra visión es ser líderes en el desarrollo de tecnologías que integren armoniosamente la innovación con la sostenibilidad, creando soluciones que no solo transformen industrias, sino que también preserven el medio ambiente para las futuras generaciones."
+        "title": "Excelencia",
+        "img": "https://content.globals.one/wp-content/uploads/2024/10/avatarIcon.png",
+        "content": "Nos esforzamos por superar las expectativas en cada proyecto, entregando productos y servicios de alta calidad."
+      },
+      {
+        "title": "Colaboración",
+        "img": "https://content.globals.one/wp-content/uploads/2024/10/msgIcon.png",
+        "content": "Fomentamos un entorno de trabajo en equipo, valorando la diversidad de ideas y perspectivas."
       }
     ]
-  }
+  },
+  "overview": [
+    {
+      "title": "¿Somós la mejor opción para tu negocio? ",
+      "content": "¡Claro! Creamos plataformas robustas, escalables y personalizadas que impulsan el crecimiento y la eficiencia de nuestros clientes."
+    },
+    {
+      "title": "¿Cuál es su misión?",
+      "content": "Nuestra misión es desarrollar soluciones tecnológicas innovadoras que impulsan el crecimiento empresarial, mientras mantenemos un compromiso firme con la sostenibilidad y el respeto por la naturaleza."
+    },
+    {
+      "title": "¿Cuál es su visión?",
+      "content": "Nuestra visión es ser líderes en innovación tecnológica, creando soluciones de software que impulsen el crecimiento mientras cuidamos el medio ambiente, promoviendo prácticas sostenibles y un futuro más responsable."
+    }
+  ]
 }

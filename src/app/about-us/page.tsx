@@ -13,9 +13,9 @@ export default async function AboutUs() {
   return (
     <>
       <BgLeave />
-      <Hero content={data.data.hero} />
-      <OurValues content={data.data.ourValues} />
-      <Overview content={data.data.overview} />
+      <Hero content={data.hero} />
+      <OurValues content={data.ourValues} />
+      <Overview content={data.overview} />
       <AboutUsOurTeam content={ourTeamData.ourteam} />
       <Testimonials />
     </>

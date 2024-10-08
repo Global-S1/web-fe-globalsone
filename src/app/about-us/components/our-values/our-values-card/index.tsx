@@ -1,5 +1,3 @@
-import { Section } from "@/shared/components/section";
-import { values } from "@/data-mock/values.moc";
 import { FC } from "react";
 import s from "./our-values-card.module.css";
 import Image, { StaticImageData } from "next/image";
@@ -7,7 +5,7 @@ import Image, { StaticImageData } from "next/image";
 interface Prop {
   title?: string;
   content?: string;
-  img: string | StaticImageData;
+  img?: string | StaticImageData;
 }
 
 export const CardOurdValues: FC<Prop> = ({ title, content, img }) => {
@@ -18,6 +16,8 @@ export const CardOurdValues: FC<Prop> = ({ title, content, img }) => {
           src={img}
           alt={title ?? "img"}
           className={s.ourValues__title__icon}
+          width={100}
+          height={100}
         />
         <h3>{title}</h3>
       </div>

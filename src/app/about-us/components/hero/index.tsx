@@ -6,7 +6,6 @@ import { Woman } from "@/assets/about-us/hero/icons/Woman";
 import { Section } from "@/shared/components/section";
 import { Insides } from "@/shared/components/Insides";
 import s from "./hero.module.css";
-import { getContentDataAboutUsPage } from "../../services/about-us.service";
 import { HeroAvatarCard } from "./hero-avatar-card";
 import { IAboutUsHeroContent } from "../../interfaces/content.interface";
 
