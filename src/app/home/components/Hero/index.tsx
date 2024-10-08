@@ -6,7 +6,7 @@ import { Section } from "@/shared/components/section";
 import clsx from "clsx";
 import { IHomeHeroContent } from "../../interfaces/content.interface";
 import { HeroArrow } from "./hero-arrow";
-import { HeroCentralPricture } from "./hero-central-picture";
+import { HeroCentralPicture } from "./hero-central-picture/hero-central-picture.component";
 import { HeroMetrics } from "./hero-metrics";
 import { HeroTitleLeft } from "./hero-title-left";
 import { HeroTitleRight } from "./hero-title-right";
@@ -23,7 +23,7 @@ export const Hero = ({ content }: Props) => {
       <div className={s.hero__container}>
         <HomeLights />
         <HeroTitleLeft title={title.left} />
-        <HeroCentralPricture />
+        <HeroCentralPicture />
         <HeroTitleRight title={title.right} />
         <HeroArrow />
       </div>

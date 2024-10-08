@@ -17,7 +17,7 @@
         { "text": "", "style": "" }
       ],
       "content": "Pensamos en tus necesidades y creamos software a tu medida, adaptado a los desafíos únicos de tu industria para ayudarte a alcanzar tus metas.",
-      "img": false,
+      "img": "",
       "reverse": false
     },
     {
@@ -86,7 +86,7 @@
         }
       ],
       "content": "Te ayudamos a implementar tecnología que optimiza la atención al cliente y agiliza la gestión interna, mejorando la eficiencia y el rendimiento de tu empresa.",
-      "img": false,
+      "img": "",
       "reverse": false
     }
   ],
@@ -120,28 +120,31 @@
       }
     ]
   },
-  "ourservice":[
-    {
-      "title": "Diseño web",
-      "img": "https://localhost:8000/wp-content/uploads/2024/10/videoPlayer.png",
-      "content": "Creamos sitios web atractivos que reflejan tu marca."
-    },
-    {
-      "title": "UX/UI",
-      "img": "https://localhost:8000/wp-content/uploads/2024/10/tags.png",
-      "content": "Diseñamos experiencias intuitivas para una navegación fluida."
-    },
-    {
-      "title": "Desarrollo de Software",
-      "img": "https://localhost:8000/wp-content/uploads/2024/10/cpu.png",
-      "content": "Soluciones de software personalizadas para tu negocio."
-    },
-    {
-      "title": "Consultoria",
-      "img": "https://localhost:8000/wp-content/uploads/2024/10/users.png",
-      "content": "Asesoramos en estrategias tecnológicas."
-    }
-  ],
+  "ourservice":{
+    "title": "NUESTROS PRINCIPALES SERVICIOS",
+    "services": [
+      {
+        "title": "Diseño web",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/videoPlayer.png",
+        "content": "Creamos sitios web atractivos que reflejan tu marca."
+      },
+      {
+        "title": "UX/UI",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/tags.png",
+        "content": "Diseñamos experiencias intuitivas para una navegación fluida."
+      },
+      {
+        "title": "Desarrollo de Software",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/cpu.png",
+        "content": "Soluciones de software personalizadas para tu negocio."
+      },
+      {
+        "title": "Consultoria",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/users.png",
+        "content": "Asesoramos en estrategias tecnológicas."
+      }
+    ]
+  },
   "contactus": "¿Listo para transformar tu negocio?",
   "ourteam": {
     "title": "Este es el título",

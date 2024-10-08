@@ -6,17 +6,11 @@ import { IHomeContentInput } from "../interfaces/input.interface";
 export const getHomeDataService = async () => {
   try {
     const response = await wordpressService<IHomeContentInput>({
-      id: "64",
+      id: "327",
       page: "home_page",
     });
-
-    console.log("success");
-
-    const formated = homeAdapter(response.data.acf);
-
-    return formated;
+    return homeAdapter(response.data.acf);
   } catch (error) {
-    console.log("error");
     return data;
   }
 };

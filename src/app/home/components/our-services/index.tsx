@@ -1,17 +1,14 @@
-import { services } from "@/data-mock/service.moc";
+import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
+import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
+import { Ticket } from "@/assets/home/our-services/icons/Ticket";
+import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
 import { Section } from "@/shared/components/section";
+import { IOurServices } from "../../interfaces/content.interface";
 import { CardOurService } from "./our-service-card";
 import s from "./out-services.module.css";
-import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
-import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
-import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
-import { Ticket } from "@/assets/home/our-services/icons/Ticket";
-import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
-import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
-import { IService } from "../../interfaces/content.interface";
 
 interface Props {
-  content: IService[];
+  content: IOurServices;
 }
 
 export const OurServices = ({ content }: Props) => {
@@ -20,20 +17,13 @@ export const OurServices = ({ content }: Props) => {
     <Section extendStyle={s.ourService__section}>
       <div className={s.ourServices_title}>
         <div className={s.purple_circle}></div>
-        <h2>
-          NUESTROS <br />
-          PRINCIPALES SERVICIOS{" "}
-        </h2>
+        <h2>{content.title}</h2>
       </div>
       <div className={s.cards_container}>
-        {content.map((service, index) => {
+        {content.services.map((service, index) => {
           const IconComponent = listImg[index];
           return (
-            <CardOurService
-              key={index}
-              title={service.title}
-              content={service.content}
-            >
+            <CardOurService key={index} service={service}>
               <div className={s.icon}>{IconComponent && <IconComponent />}</div>
             </CardOurService>
           );

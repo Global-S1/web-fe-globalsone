@@ -1,26 +1,21 @@
-import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
-import { CarrucelImageMobil } from "../carrucel-image-mobile";
+import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { CarrucelImg } from "../carrucel-image";
+import { CarrucelImageMobil } from "../carrucel-image-mobile";
 import s from "./our-team.module.css";
-import { IOurTeam } from "@/app/home/interfaces/content.interface";
 import { getOurTeam } from "./service/our-team.service";
 
-interface Props {
-  content: IOurTeam;
-}
-
-export const OurTeam = async ({ content }: Props) => {
-  const people = await getOurTeam();
+export const OurTeam = async () => {
+  const ourTeam = await getOurTeam();
   return (
     <div className={s.ourTeam_container}>
-      <h2>{content.title}</h2>
-      <p>{content.description}</p>
+      <h2>{ourTeam.title}</h2>
+      <p>{ourTeam.description}</p>
       <div className={s.ourTeam__leave__one}>
         <LeaveClear />
       </div>
-      <CarrucelImg content={people} />
-      <CarrucelImageMobil content={people} />
+      <CarrucelImg content={ourTeam.desktopImg} />
+      <CarrucelImageMobil content={ourTeam.mobileImg} />
       <div className={s.ourTeam__leave__two}>
         <LeaveClear />
       </div>

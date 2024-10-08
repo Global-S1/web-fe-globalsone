@@ -15,7 +15,7 @@ export type IService = {
   title: string;
   img: string;
   alt?: string;
-  content: string;
+  content?: string;
 };
 
 export interface IInside {
@@ -43,11 +43,16 @@ export interface IOurTeam {
   description: string;
 }
 
+export interface IOurServices {
+  title: string;
+  services: IService[];
+}
+
 export interface IHomeContent {
   hero: IHomeHeroContent;
   features: IFeature[];
   whatwebuild: IWhathWeBuildContent;
-  ourservice: IService[];
+  ourservice: IOurServices;
   contactus: string;
   ourteam: IOurTeam;
 }

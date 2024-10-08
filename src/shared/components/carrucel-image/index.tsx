@@ -2,18 +2,18 @@
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 import { IAnny } from "@/shared/interfaces/any.interface";
-import { IPeople } from "@/shared/interfaces/IPeople";
 import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { IOurTeamPersonContent } from "../our-team/interfaces/our-team.interface";
 import "./carrucel-image.css";
 import s from "./carrucel-image.module.css";
 import { Slice } from "./slice";
 
 interface Props {
-  content: IPeople[];
+  content: IOurTeamPersonContent[];
 }
 
 export const CarrucelImg = ({ content }: Props) => {
@@ -58,11 +58,13 @@ export const CarrucelImg = ({ content }: Props) => {
           className="mySwiper"
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {content.map((person, index) => (
-            <SwiperSlide key={index}>
-              <Slice {...person} />
-            </SwiperSlide>
-          ))}
+          {content.map((person, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Slice {...person} />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
         <div className={s.opacity__right}></div>
       </div>

@@ -2,7 +2,11 @@ import { ActionButton } from "../action-button";
 import { ModalWindow } from "../modal-window";
 import s from "./thanks-modal.module.css";
 
-export const ThanksModal = ({ title, description, socialMedia }) => {
+export const ThanksModal = ({
+  title,
+  description,
+  socialMedia,
+}: ISuccessContent) => {
   return (
     <ModalWindow>
       <div className={s.message__container}>

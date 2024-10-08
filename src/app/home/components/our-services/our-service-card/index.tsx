@@ -1,9 +1,15 @@
-import { IService } from "@/shared/interfaces/IService";
 import { FC } from "react";
 import s from "./our-service-card.module.css";
 import bgCard from "@/assets/home/our-services/background/bgcolors-services.png";
+import { IService } from "@/app/home/interfaces/content.interface";
 
-export const CardOurService: FC<IService> = ({ title, content, children }) => {
+interface Props {
+  service: IService;
+  children: React.ReactNode;
+}
+
+export const CardOurService: FC<Props> = ({ service, children }) => {
+  const { title, content } = service;
   return (
     <div
       className={s.cardOurService_container}

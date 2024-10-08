@@ -18,7 +18,7 @@ export default async function Home() {
       <WhatWeBuild content={res.whatwebuild} />
       <OurServices content={res.ourservice} />
       <Testimonials />
-      <OurTeamSection content={res.ourteam} />
+      <OurTeamSection />
       <ContactUs />
     </>
   );

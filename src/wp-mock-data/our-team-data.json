@@ -1,0 +1,104 @@
+{
+    "title": "ACERCA DE NOSOTROS",
+    "description": "Nuestro equipo dedicado combina innovación y sostenibilidad. Descubre a las personas detrás de Global S1.",
+    "desktopImg": [
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096342.png",
+          "name": "Daniel Boggiano",
+          "jobposition": "CTO"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096350.png",
+          "name": "Romario Diaz",
+          "jobposition": "Consultor"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096351.png",
+          "name": "Bruno Guerra",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096349.png",
+          "name": "Peter Castillo",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096348.png",
+          "name": "Julian Agama",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096347.png",
+          "name": "Eva Cordova",
+          "jobposition": "Diseñadora"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096346.png",
+          "name": "Humberto Tejada",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096345.png",
+          "name": "Andres Huanca",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096344.png",
+          "name": "Arles Yha",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096343.png",
+          "name": "Guillermo Valencia",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096330.png",
+          "name": "Jesus Sanchez",
+          "jobposition": "Manage UX/UI"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/Group-48096329.png",
+          "name": "Patricia Rioja",
+          "jobposition": "CEO"
+        }
+      ],
+    "mobileImg": [
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_2990-1.jpg",
+          "name": "Daniel Boggiano",
+          "jobposition": "CTO"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_3705.jpg",
+          "name": "Andres Huanca",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_3174-1.jpg",
+          "name": "Arles Yha",
+          "jobposition": "Develop"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_3143-1.jpg",
+          "name": "Romario Diaz",
+          "jobposition": "Consultor"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_3102.jpg",
+          "name": "Guillermo Valencia",
+          "jobposition": "Developer"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_3081-1.png",
+          "name": "Bruno Guerra",
+          "jobposition": "Developer"
+        },
+        {
+          "img": "https://content.globals.one/wp-content/uploads/2024/10/IMG_3008-1.jpg",
+          "name": "Julian Agama",
+          "jobposition": "Developer"
+        }
+      ]
+      
+  }

@@ -8,17 +8,17 @@ import "./carrucel-image.css";
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 import { IAnny } from "@/shared/interfaces/any.interface";
-import { IPeople } from "@/shared/interfaces/IPeople";
 import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { IOurTeamPersonContent } from "../our-team/interfaces/our-team.interface";
 import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
 
 interface Props {
-  content: IPeople[];
+  content: IOurTeamPersonContent[];
 }
 
 export const CarrucelImageMobil = ({ content }: Props) => {
