@@ -8,20 +8,20 @@ interface Props {
 }
 
 export const Insides: FC<Props> = async ({ size }) => {
-  const { metrics } = await getMetricsDataService();
+  const {clients, projects, yearsExperience } = await getMetricsDataService();
   return (
     <div className={clsx(s.insides__container, s[`${size}__size`])}>
       <div className={clsx(s.statblock_container, s[`${size}__text`])}>
-        <p>{metrics[0].quantity}</p>
-        <h3>{metrics[0].label}</h3>
+        <p>{clients.quantity}</p>
+        <h3>{clients.label}</h3>
       </div>
       <div className={clsx(s.statblock_container, s[`${size}__text`])}>
-        <p>{metrics[1].quantity}</p>
-        <h3>{metrics[1].label}</h3>
+        <p>{projects.quantity}</p>
+        <h3>{projects.label}</h3>
       </div>
       <div className={clsx(s.statblock_container, s[`${size}__text`])}>
-        <p>{metrics[2].quantity}</p>
-        <h3>{metrics[2].label}</h3>
+        <p>{yearsExperience.quantity}</p>
+        <h3>{yearsExperience.label}</h3>
       </div>
     </div>
   );

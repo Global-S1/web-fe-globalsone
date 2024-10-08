@@ -9,16 +9,19 @@ import { WhatWeBuild } from "./components/what-we-build";
 import { getHomeDataService } from "./service/home.service";
 
 export default async function Home() {
-  const res = await getHomeDataService();
+  const res  = await getHomeDataService();
+  console.log("resultado de getHomeDataService",res);
+  const { hero, features, whatwebuild, ourservice, ourteam } = res;
+
   return (
     <>
       <BgLeave />
-      <Hero content={res.hero} />
-      <Features content={res.features} />
-      <WhatWeBuild content={res.whatwebuild} />
-      <OurServices content={res.ourservice} />
+      <Hero content={hero} />
+      <Features content={features} />
+      <WhatWeBuild content={whatwebuild} />
+      <OurServices content={ourservice} />
       <Testimonials />
-      <OurTeamSection content={res.ourteam} />
+      {/* <OurTeamSection content={ourteam} /> */}
       <ContactUs />
     </>
   );

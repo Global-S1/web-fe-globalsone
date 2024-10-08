@@ -19,10 +19,18 @@ export type IService = {
 };
 
 export interface IInside {
-  metrics: {
-    quantity: string;
+  clients: {
     label: string;
-  }[];
+    quantity: string;
+  };
+  projects: {
+    label: string;
+    quantity: string;
+  };
+  yearsExperience: {
+    label: string;
+    quantity: string;
+  };
 }
 
 export interface IHomeHeroContent {
@@ -47,7 +55,12 @@ export interface IHomeContent {
   hero: IHomeHeroContent;
   features: IFeature[];
   whatwebuild: IWhathWeBuildContent;
-  ourservice: IService[];
+  ourservice: {
+    title: string;
+    services: {
+      [key: string]: IService;
+    };
+  };
   contactus: string;
   ourteam: IOurTeam;
 }

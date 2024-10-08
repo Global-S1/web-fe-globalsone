@@ -1,16 +1,14 @@
 {
-  "metrics": [
-    {
-      "quantity": "+20",
-      "label": "Clientes"
-    },
-    {
-      "quantity": "+30",
-      "label": "Proyectos"
-    },
-    {
-      "quantity": "+6",
-      "label": "Años de experiencia"
-    }
-  ]
+  "clients": {
+    "label": "Clientes",
+    "quantity": "+20"
+  },
+  "projects": {
+    "label": "Proyectos",
+    "quantity": "+30 "
+  },
+  "yearsExperience": {
+    "label": "Años de experiencia",
+    "quantity": "+6"
+  }
 }

@@ -53,7 +53,7 @@ export interface IHomeContentInput {
       service_5: Service;
     };
   };
-  ourservice: {
+  ourService: {
     service_1: Service;
     service_2: Service;
     service_3: Service;

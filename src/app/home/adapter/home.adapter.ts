@@ -12,7 +12,7 @@ export const homeAdapter = (data: IHomeContentInput): IHomeContent => {
       title: data.whatwebuild.title,
       services: Object.values(data.whatwebuild.services),
     },
-    ourservice: Object.values(data.ourservice),
+    ourservice: data.ourService,
     contactus: data.contactus,
     ourteam: {
       title: "Aún no hay",
