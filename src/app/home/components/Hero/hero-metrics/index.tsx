@@ -1,7 +1,6 @@
 import { Insides } from "@/shared/components/Insides";
-import s from "./hero-metrics.module.css";
 import { FC } from "react";
-import { IInside } from "@/shared/interfaces/IInside";
+import s from "./hero-metrics.module.css";
 
 interface Props {
   title: string;

@@ -4,13 +4,18 @@ import { CardOurService } from "./our-service-card";
 import s from "./out-services.module.css";
 import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import { LeaveBig } from "@/assets/leavesComponents/LeaveBig";
-import VideoPlayer from "@/assets/home/our-services/pictures/videoPlayer.png";
-import Tags from "@/assets/home/our-services/pictures/tags.png";
-import Cpu from "@/assets/home/our-services/pictures/cpu.png";
-import Users from "@/assets/home/our-services/pictures/users.png";
+import { VideoPlayer } from "@/assets/home/our-services/icons/VideoPlayer";
+import { Ticket } from "@/assets/home/our-services/icons/Ticket";
+import { CpuIcon } from "@/assets/home/our-services/icons/CpuIcon";
+import { PeopleAvatars } from "@/assets/home/icons/PeopleAvatars";
+import { IService } from "../../interfaces/content.interface";
 
-export const OurServices = ({ ourServiceData }) => {
-  const listImg = [VideoPlayer, Tags, Cpu, Users];
+interface Props {
+  content: IService[];
+}
+
+export const OurServices = ({ content }: Props) => {
+  const listImg = [VideoPlayer, Ticket, CpuIcon, PeopleAvatars];
   return (
     <Section extendStyle={s.ourService__section} id="services-section">
       <div className={s.ourServices_title}>
@@ -21,7 +26,8 @@ export const OurServices = ({ ourServiceData }) => {
         </h2>
       </div>
       <div className={s.cards_container}>
-        {ourServiceData.map((service, index) => {
+        {content.map((service, index) => {
+          const IconComponent = listImg[index];
           return (
             <CardOurService
               key={index}

@@ -10,8 +10,12 @@ import lobbies from "@/assets/contact-us/mosaic/pictures/lobbies.png";
 import peter from "@/assets/contact-us/mosaic/pictures/peter.png";
 import room from "@/assets/contact-us/mosaic/pictures/room.png";
 import team from "@/assets/contact-us/mosaic/pictures/team.png";
+import { IContactUsOurTeamContent } from "../../interfaces/content.interface";
 
-export const ContactMosaic = ({ title, description }) => {
+export const ContactMosaic = ({
+  title,
+  description,
+}: IContactUsOurTeamContent) => {
   return (
     <Section extendStyle={s.contactMosaic__section}>
       <div className={s.leave__top}>

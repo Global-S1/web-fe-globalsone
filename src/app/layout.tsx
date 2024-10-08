@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import localfont from "next/font/local";
 import { Header } from "@/shared/components/header";
 import "./globals.css";
-import {Footer} from "@/shared/components/footer";
+import { Footer } from "@/shared/components/footer";
 import { Main } from "@/shared/components/main";
 import { HeaderMobile } from "@/shared/components/header-mobile";
 
@@ -38,7 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${grandis.variable} ${futuraMedium.variable}`}>
+    <html
+      lang="en"
+      className={`${grandis.variable} ${futuraMedium.variable} scroll-smooth`}
+    >
       <body className="font-grandis">
         <Header />
         <HeaderMobile />

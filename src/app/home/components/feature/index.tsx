@@ -1,23 +1,23 @@
+import groupOne from "@/assets/home/features/pictures/groupOne.png";
+import groupThree from "@/assets/home/features/pictures/groupThree.png";
+import groupTwo from "@/assets/home/features/pictures/groupTwo.png";
 import { Section } from "@/shared/components/section";
+import { FC } from "react";
+import { IFeature } from "../../interfaces/content.interface";
 import { FeatureItem } from "./feature-item";
 import s from "./feature.module.css";
-import groupOne from "@/assets/home/features/pictures/groupOne.png";
-import groupTwo from "@/assets/home/features/pictures/groupTwo.png";
-import groupThree from "@/assets/home/features/pictures/groupThree.png";
-import { FC } from "react";
-import { IFeatures } from "@/shared/interfaces/IFeatures";
 
 interface IProps {
-  featureData: IFeatures[];
+  content: IFeature[];
 }
 
-export const Features: FC<IProps> = ({ featureData }) => {
+export const Features: FC<IProps> = ({ content }) => {
   const listImg = [groupOne, groupTwo, groupThree];
   return (
     <Section>
-      <div className={s.feature_container}>
+      <div className={s.feature_container} id="features">
         <div className={s.green_circle_one}></div>
-        {featureData.map((item, index) => (
+        {content.map((item, index) => (
           <FeatureItem key={index} {...item} img={listImg[index].src} />
         ))}
         <div className={s.green_circle_two}></div>

@@ -1,15 +1,10 @@
-import Image from "next/image";
+import { IFeature } from "@/app/home/interfaces/content.interface";
 import clsx from "clsx";
+import Image from "next/image";
 import { FC } from "react";
-import { IFeatures } from "@/shared/interfaces/IFeatures";
 import s from "./feature-item.module.css";
 
-export const FeatureItem: FC<IFeatures> = ({
-  title,
-  content,
-  reverse,
-  img,
-}) => {
+export const FeatureItem: FC<IFeature> = ({ title, content, reverse, img }) => {
   return (
     <div
       className={clsx(s.feature_container, {
@@ -36,7 +31,7 @@ export const FeatureItem: FC<IFeatures> = ({
         <Image
           src={img || "/default-image.png"}
           alt="trabajando en equipo"
-          className={clsx(s.right, {[s.left]: reverse})}
+          className={clsx(s.right, { [s.left]: reverse })}
           width={300}
           height={300}
         />
