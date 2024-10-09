@@ -35,6 +35,7 @@ export const ContactForm = ({
       )}
       <ModalWindow active>
         <div className={s.form__container}>
+          <div className={s.magenta__circle}></div>
           <div className={s.form__text__container}>
             <h2>{title}</h2>
             <p>{content}</p>

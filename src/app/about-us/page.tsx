@@ -16,7 +16,7 @@ export default async function AboutUs() {
       <Hero content={data.hero} />
       <OurValues content={data.ourValues} />
       <Overview content={data.overview} />
-      <AboutUsOurTeam content={ourTeamData.ourteam} />
+      {/* <AboutUsOurTeam content={ourTeamData.ourteam} /> */}
       <Testimonials />
     </>
   );

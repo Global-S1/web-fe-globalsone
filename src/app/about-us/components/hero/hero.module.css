@@ -5,7 +5,6 @@
   display: grid;
   height: auto;
   grid-template-columns: repeat(12, 1fr);
-  /* border: 1px solid tomato; */
 }
 
 .hero__text__title {
@@ -332,7 +331,7 @@
     width: 70px;
   }
   .hero__avatarCards__bg__green {
-    left: -90%;
+    left: -160%;
   }
 }
 @media (1024px <= width) {
@@ -361,9 +360,11 @@
     top: -50%;
     right: -10%;
   }
-  .hero__avatarCards__bg__green {
-    left: -60%;
+  .hero__avatarCards__bg__purple {
+    right: -100%;
+    opacity: 1;
   }
+
 }
 @media (1280px <= width) {
   .hero__container {
@@ -393,6 +394,9 @@
     width: 275.55px;
     height: 380.42px;
   }
+
+  
+
   .avatarCards__float__container_woman {
     top: 50%;
     right: 0%;

@@ -1,7 +1,6 @@
 import { Section } from "@/shared/components/section";
 import s from "./contact-mosaic.module.css";
 import Image from "next/image";
-import { LeaveHd } from "@/assets/leavesComponents/LeaveHd";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 
 import boss from "@/assets/contact-us/mosaic/pictures/boss.png";
@@ -28,6 +27,8 @@ export const ContactMosaic = ({
         <LeaveClear />
       </div>
       <div className={s.contactMosaic__container}>
+        <div className={s.purple__circle}></div>
+        <div className={s.green__circle} ></div>
         <div className={s.grid_template}>
           <Image src={counter} alt="recepcion del equipo globals en colombia" />
           <Image

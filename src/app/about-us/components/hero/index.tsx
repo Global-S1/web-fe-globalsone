@@ -23,6 +23,7 @@ export const Hero = async ({ content }: Props) => {
         </div>
         <div className={s.hero__avatarCards}>
           <div className={s.hero__avatarCards__bg}></div>
+          <div className={s.hero__avatarCards__bg__green}></div>
           <div className={s.hero__avatarCards__bg__purple}></div>
           <div className={s.avatarCards__float__container_man}>
             <HeroAvatarCard>
@@ -38,6 +39,7 @@ export const Hero = async ({ content }: Props) => {
               </div>
             </HeroAvatarCard>
           </div>
+          
         </div>
         <div className={s.hero__insides__container}>
           <Insides size="small" />

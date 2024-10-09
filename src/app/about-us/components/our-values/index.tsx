@@ -1,12 +1,9 @@
-import avatar from "@/assets/about-us/our-values/pictures/avatar.png";
-import family from "@/assets/about-us/our-values/pictures/family.png";
-import plus from "@/assets/about-us/our-values/pictures/plus.png";
-import talk from "@/assets/about-us/our-values/pictures/talk.png";
 import { Section } from "@/shared/components/section";
 import { IAboutUsOurValuesContent } from "../../interfaces/content.interface";
 import { CardOurdValues } from "./our-values-card";
 import s from "./our-values.module.css";
 import { Leave } from "@/assets/leavesComponents/Leave";
+import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 
 interface Props {
   content: IAboutUsOurValuesContent;
@@ -31,6 +28,9 @@ export const OurValues = ({ content }: Props) => {
               img={item.img}
             ></CardOurdValues>
           ))}
+          <div className={s.leave}>
+            <LeaveClear />
+          </div>
         </div>
       </div>
     </Section>
