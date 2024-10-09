@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Urbanist } from "next/font/google";
 import localfont from "next/font/local";
 import { Header } from "@/shared/components/header";
 import "./globals.css";
@@ -26,6 +26,10 @@ const futuraMedium = localfont({
   ],
   variable: "--font-futura",
 });
+const urbanistFont = Urbanist({
+  subsets: ["latin"],
+  variable: "--font-urbanist",
+});
 
 export const metadata: Metadata = {
   title: "Global S1",
@@ -40,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${grandis.variable} ${futuraMedium.variable} scroll-smooth`}
+      className={`${grandis.variable} ${futuraMedium.variable} ${urbanistFont.variable} scroll-smooth`}
     >
       <body className="font-grandis">
         <Header />

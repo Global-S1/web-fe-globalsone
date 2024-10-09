@@ -53,6 +53,10 @@ export interface IHomeContent {
   features: IFeature[];
   whatwebuild: IWhathWeBuildContent;
   ourservice: IOurServices;
-  contactus: string;
-  ourteam: IOurTeam;
+  testimonials: {
+    title: string;
+  };
+  contactus: {
+    title: string;
+  };
 }

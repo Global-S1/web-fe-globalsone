@@ -16,10 +16,7 @@ export const homeAdapter = (data: IHomeContentInput): IHomeContent => {
       title: data.ourService.title,
       services: Object.values(data.ourService.services),
     },
+    testimonials: data.testimonials,
     contactus: data.contactus,
-    ourteam: {
-      title: "Aún no hay",
-      description: "asdasdas",
-    },
   };
 };

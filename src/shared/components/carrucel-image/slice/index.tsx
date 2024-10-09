@@ -18,6 +18,7 @@ export const Slice: FC<IOurTeamPersonContent> = ({
       />
       <div className={s.label_image}>
         <h3>{name}</h3>
+        <p>{jobposition}</p>
       </div>
     </div>
   );

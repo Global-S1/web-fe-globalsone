@@ -149,6 +149,9 @@
   "ourteam": {
     "title": "Este es el título",
     "description": "Esta es la descripción"
+  },
+  "testimonials":{
+    "title": "LO QUE DICEN NUESTROS CLIENTES"
   }
 
 }

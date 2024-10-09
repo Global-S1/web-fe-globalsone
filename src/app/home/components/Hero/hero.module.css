@@ -37,8 +37,7 @@
 @media (1024px <= width) {
 
   .hero__container {
-    min-height: calc(100vh - 75px);
-    max-height: calc(100vh - 75px);
+    max-height: 900px;
     height: calc(100vh - 80px);
   }
 

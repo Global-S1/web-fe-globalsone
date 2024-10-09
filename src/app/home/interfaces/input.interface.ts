@@ -62,5 +62,10 @@ export interface IHomeContentInput {
       service_4: Service;
     };
   };
-  contactus: string;
+  contactus: {
+    title: string;
+  };
+  testimonials: {
+    title: string;
+  };
 }

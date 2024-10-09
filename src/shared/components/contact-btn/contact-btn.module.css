@@ -16,6 +16,7 @@
 
 .contactBtn__text {
   font-size: 10px;
+  font-family: var(--font-urbanist);
 }
 
 .contactBtn__icon {
@@ -74,6 +75,7 @@
   }
   .contactBtn__text {
     font-size: 21px;
+    font-weight: 500;
   }
   .contactBtn > a {
     column-gap: 10px;
