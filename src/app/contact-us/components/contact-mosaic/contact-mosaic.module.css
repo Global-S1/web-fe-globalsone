@@ -4,10 +4,35 @@
   margin-bottom: 110px;
 }
 .contactMosaic__container {
+  position: relative;
   height: 292px;
   display: flex;
   justify-content: flex-end;
 }
+.purple__circle {
+  position: absolute;
+  width: 1119.832px;
+  height: 850.12px;
+  border-radius: 1119.832px;
+  background: #5a2eea8b;
+  filter: blur(200px);
+  z-index: -10;
+  right: -50%;
+}
+
+.green__circle {
+  position: absolute;
+  width: 571px;
+  height: 571px;
+  border-radius: 571px;
+  background: #2eea79c0;
+  filter: blur(200px);
+  z-index: -10;
+  left: -15%;
+  top: 65%;
+  transform: translateY(-50%);
+}
+
 .contactMosaic__text__container {
   width: 156px;
   position: absolute;

@@ -10,7 +10,7 @@ interface Props {
 export const AboutUsOurTeam = ({ content }: Props) => {
   return (
     <Section extendStyle={s.ourTeam__section}>
-      <OurTeam content={content} />
+      <OurTeam />
     </Section>
   );
 };

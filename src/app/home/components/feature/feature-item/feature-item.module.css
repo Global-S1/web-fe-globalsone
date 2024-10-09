@@ -16,6 +16,7 @@
 }
 
 .feature_text_container > p {
+  width: 80%;
   font-size: var(--font-size-micro);
   line-height: 18px;
   font-family: "Futura", sans-serif;
@@ -83,6 +84,15 @@
 .reverse {
   flex-direction: row-reverse;
   text-align: right;
+}
+
+.reverse > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.reverse .feature_text_container > p {
+  margin-right: 0;
 }
 
 @media (min-width: 330px) {

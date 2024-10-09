@@ -2,6 +2,7 @@ import { Section } from "@/shared/components/section";
 import { TestimonialCard } from "@/shared/components/testimonial-card";
 import { ClinetDaTA } from "@/data-mock/testimonial.moc";
 import s from "./testimonials.module.css";
+import { getTestimonials } from "@/shared/components/testimonial-card/services/testimonials.service";
 
 interface Props {
   content: {
@@ -9,13 +10,14 @@ interface Props {
   };
 }
 
-export const Testimonials = ({ content }: Props) => {
+export const Testimonials = async ({ content }: Props) => {
+  const testimonial = await getTestimonials();
   return (
     <Section extendStyle={s.testimonial__section}>
       <div className={s.title_container}>
         <h2>{content.title}</h2>
       </div>
-      <TestimonialCard {...ClinetDaTA} />
+      <TestimonialCard content={testimonial} />
     </Section>
   );
 };

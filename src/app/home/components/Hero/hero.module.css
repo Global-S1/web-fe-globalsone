@@ -1,4 +1,4 @@
-.hero__section{
+.hero__section {
   /* border: 1px solid white; */
 }
 .hero__container {
@@ -35,7 +35,6 @@
 }
 
 @media (1024px <= width) {
-
   .hero__container {
     max-height: 900px;
     height: calc(100vh - 80px);
@@ -46,8 +45,9 @@
     position: absolute;
   }
   .leave_one {
+    width: 160px;
     right: -4%;
-    top: 2%;
+    top: -5%;
     z-index: 2;
   }
   .leave_two {
@@ -64,15 +64,21 @@
 }
 
 @media (1280px <= width) {
-  .hero__container{
+  .hero__container {
     margin-bottom: 257px;
+  }
+  .leave_one {
+    width: 160px;
+    right: -4%;
+    top: -10%;
+    z-index: 2;
   }
   .leave_two {
     width: 220.748px;
     height: 214.556px;
     max-height: calc(100vh - 100px);
     z-index: 1;
-    top: -28%;
+    top: -35%;
     right: -3%;
     transform: rotate(-55deg);
   }

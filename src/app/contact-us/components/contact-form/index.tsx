@@ -25,13 +25,17 @@ export const ContactForm = ({
   };
   useEffect(() => {
     console.log("error", errors);
-    setAlertActive(Object.values(errors).length > 0);
   }, [errors]);
   return (
     <Section extendStyle={s.section__from}>
-      {alertActive && <AlertForm />}
+      {Object.values(errors).length > 0 && (
+        <div className={s.alert}>
+          <p>{`Hay un error en el campo “” . Por favor, de revisar y llenar el campo.`}</p>
+        </div>
+      )}
       <ModalWindow active>
         <div className={s.form__container}>
+          <div className={s.magenta__circle}></div>
           <div className={s.form__text__container}>
             <h2>{title}</h2>
             <p>{content}</p>

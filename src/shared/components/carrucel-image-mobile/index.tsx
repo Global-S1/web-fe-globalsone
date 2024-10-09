@@ -1,10 +1,11 @@
 "use client";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./carrucel-image.css";
 
 // Import Swiper styles
+
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 import { IAnny } from "@/shared/interfaces/any.interface";
@@ -34,7 +35,7 @@ export const CarrucelImageMobil = ({ content }: Props) => {
       <div className={s.carrucel__viewport}>
         <Swiper
           effect={"coverflow"}
-          modules={[EffectCoverflow, Autoplay]}
+          modules={[Autoplay]}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
@@ -43,7 +44,7 @@ export const CarrucelImageMobil = ({ content }: Props) => {
           breakpoints={{
             375: {},
           }}
-          spaceBetween={50}
+          spaceBetween={-60}
           centeredSlides
           slidesPerView={2}
           coverflowEffect={{

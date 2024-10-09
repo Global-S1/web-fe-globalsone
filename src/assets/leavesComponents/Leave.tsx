@@ -1,14 +1,14 @@
 import { FC } from "react";
 
 interface Prop {
-  style: React.CSSProperties
+  style?: React.CSSProperties
 }
 
 export const Leave:FC<Prop> = ({ style }) => {
   return (
     <svg
-      width="134"
-      height="139"
+      // width="134"
+      // height="139"
       viewBox="0 0 134 139"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

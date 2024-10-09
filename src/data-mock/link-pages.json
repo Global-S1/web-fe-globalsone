@@ -2,16 +2,16 @@
   "data": {
     "links": [
       {
-        "label": "Home",
+        "label": "Inicio",
         "path": "/"
       },
       {
-        "label": "About Us",
+        "label": "Acerca de Nosotros",
         "path": "/about-us"
       },
       {
-        "label": "Services",
-        "path": "/"
+        "label": "Servicios",
+        "path": "#services-section"
       }
     ]
   }

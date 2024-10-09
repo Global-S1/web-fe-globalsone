@@ -35,6 +35,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: pre-wrap;
 }
 
 .picture_container {
@@ -51,7 +52,7 @@
 }
 
 @media (640px <= width) {
-  .whatWeBuild__title__container{
+  .whatWeBuild__title__container {
     margin-bottom: 42px;
   }
   .foco {
@@ -88,7 +89,7 @@
   .whatWeBuild__section {
     margin-bottom: 296px;
   }
-  
+
   .foco {
     width: 150px;
     height: 150px;
@@ -105,7 +106,7 @@
 }
 @media (1280px <= width) {
   .whatWeBuild__title__container > h2 {
-    font-size: 62px;
+    font-size: 60px;
     line-height: 76.26px;
   }
   .leave {

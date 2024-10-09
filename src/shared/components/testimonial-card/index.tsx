@@ -6,13 +6,14 @@ import { FC } from "react";
 import { ActionButton } from "../action-button";
 import s from "./testimonial-card.module.css";
 import gian from "@/assets/home/testimonials/pictures/gianvictor.png";
+import { ITestimonialsContent } from "./interfaces/content.interface";
 
 interface ITestimonial {
-  name: string;
-  content: string;
+  content: ITestimonialsContent;
 }
 
-export const TestimonialCard: FC<ITestimonial> = ({ name, content }) => {
+export const TestimonialCard: FC<ITestimonial> = ({ content }) => {
+  const { bgImg, clientImage, description, name } = content;
   return (
     <div
       className={s.testimonialCard__container}
@@ -23,7 +24,7 @@ export const TestimonialCard: FC<ITestimonial> = ({ name, content }) => {
           <h2>{name}</h2>
           <Stars numStars={5} />
         </div>
-        <p>{content}</p>
+        <p>{description}</p>
       </div>
       <Image src={gian} alt="gian" className={s.client__img} />
       <MosaicImages />

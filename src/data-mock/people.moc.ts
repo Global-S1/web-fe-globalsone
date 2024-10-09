@@ -1,17 +1,19 @@
-import Roma from "@/assets/home/our-team/images/romario.png"
-import Arles from "@/assets/home/our-team/images/arles.png"
-import Andres from "@/assets/home/our-team/images/andres.png"
-import Daniel from "@/assets/home/our-team/images/daniel.png"
-import Eva from "@/assets/home/our-team/images/eva.png"
-import Bruno from "@/assets/home/our-team/images/bruno.png"
-import Haru from "@/assets/home/our-team/images/haru.png"
-import Julian from "@/assets/home/our-team/images/julian.png"
-import Patricia from "@/assets/home/our-team/images/paricia.png"
-import Peter from "@/assets/home/our-team/images/peter.png"
+import Roma from "@/assets/our-team/desktop/romario.png"
+import Arles from "@/assets/our-team/desktop/arles.png"
+import Andres from "@/assets/our-team/desktop/andres.png"
+import Daniel from "@/assets/our-team/desktop/daniel.png"
+import Eva from "@/assets/our-team/desktop/eva.png"
+import Bruno from "@/assets/our-team/desktop/bruno.png"
+import Haru from "@/assets/our-team/desktop/haru.png"
+import Julian from "@/assets/our-team/desktop/julian.png"
+import Patricia from "@/assets/our-team/desktop/patricia.png"
+import Peter from "@/assets/our-team/desktop/peter.png"
+import Guillermo from "@/assets/our-team/desktop/guillermo.png"
+import Jesus from "@/assets/our-team/desktop/jesus.png"
 
 export const people = [
   {
-    name: "Romario",
+    name: "Romario Dias",
     jobTitle: "Consultor",
     src: Roma.src,
   },
@@ -51,14 +53,24 @@ export const people = [
     src: Julian.src,
   },
   {
-    name: "Patrica",
+    name: "Patrica Rioja",
     jobTitle: "Ceo",
     src: Patricia.src
   },
   {
-    name: "Peter",
+    name: "Peter Castillo",
     jobTitle: "Ful-Stack Dev",
     src: Peter.src
+  },
+  {
+    name: "Guillermo Valencia",
+    jobTitle: "Full-Stack Dev",
+    src: Guillermo.src
+  },
+  {
+    name: "Jesus Sanchez",
+    jobTitle: "Manager UX/UI",
+    src: Jesus.src
   }
 
 ];

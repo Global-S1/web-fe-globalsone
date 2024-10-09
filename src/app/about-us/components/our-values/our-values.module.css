@@ -1,5 +1,6 @@
 .ourValues__section {
   margin-bottom: 111px;
+  position: relative;
 }
 .ourValues__container {
   display: flex;
@@ -9,17 +10,44 @@
 
 .ourValues__title__container > h2 {
   font-size: 25px;
+  margin-bottom: 35px;
 }
 
 .ourValues__cards_container {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
 }
+
+.ourValues__container .leave{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -2%;
+  bottom: 18%;
+}
+
 @media (480px <= width) {
 }
 
 @media (640px <= width) {
+  .ourValues__container{
+    flex-direction: row;
+  }
+
+  .ourValues__title__container > h2 {
+    font-size: 32px;
+    line-height: 52.5px;
+  }
+
+  .ourValues__container .leave{
+    width: 50px;
+    height: 50px;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 @media (768px <= width) {
 }
@@ -32,5 +60,12 @@
   .ourValues__title__container > h2 {
     font-size: 55px;
     line-height: 82.5px;
+  }
+  .ourValues__leave {
+    position: absolute;
+    width: 290px;
+    transform: rotate(140deg);
+    bottom: -15%;
+    z-index: -2;
   }
 }

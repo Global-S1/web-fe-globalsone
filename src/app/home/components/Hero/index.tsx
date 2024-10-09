@@ -29,7 +29,7 @@ export const Hero = ({ content }: Props) => {
       </div>
       <div className={s.widowCard_container} id="metrics">
         <div className={clsx(s.leave_base, s.leave_one)}>
-          <Leave style={{}} />
+          <Leave />
         </div>
         <ModalWindow active>
           <HeroMetrics title={insides} />

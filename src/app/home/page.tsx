@@ -10,6 +10,7 @@ import { getHomeDataService } from "./service/home.service";
 
 export default async function Home() {
   const res = await getHomeDataService();
+
   return (
     <>
       <BgLeave />
