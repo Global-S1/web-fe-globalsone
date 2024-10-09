@@ -6,6 +6,7 @@
 
 .col_index_container > h3 {
   font-size: var(--font-size-small);
+  font-family: var(--font-urbanist);
   color: #999;
 }
 .col_index_container > div {

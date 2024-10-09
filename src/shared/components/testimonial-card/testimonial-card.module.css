@@ -26,7 +26,7 @@
 }
 
 .testimonialCard__text__container > p {
-  font-family: "Futura";
+  font-family: var(--font-futura);
   font-size: var(--font-size-nano);
   width: 60%;
 }
