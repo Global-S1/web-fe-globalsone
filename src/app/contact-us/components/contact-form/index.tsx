@@ -1,9 +1,7 @@
 "use client";
-import { AlertForm } from "@/shared/animations/alert-form-animation";
 import { ActionButton } from "@/shared/components/action-button";
 import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
-import { useEffect, useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { IContactUsFormContent } from "../../interfaces/content.interface";
 import s from "./contact-form.module.css";
@@ -14,7 +12,6 @@ export const ContactForm = ({
   services,
   terms,
 }: IContactUsFormContent) => {
-  const [alertActive, setAlertActive] = useState(false);
   const {
     register,
     handleSubmit,
@@ -23,9 +20,6 @@ export const ContactForm = ({
   const onSubmit = (data: FieldValues) => {
     console.log(data);
   };
-  useEffect(() => {
-    console.log("error", errors);
-  }, [errors]);
   return (
     <Section extendStyle={s.section__from}>
       {Object.values(errors).length > 0 && (

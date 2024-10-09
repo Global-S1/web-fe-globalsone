@@ -25,9 +25,10 @@
   align-items: center;
 }
 .form__text__container {
-  font-family: "Futura";
+  font-family: var(--font-futura);
 }
 .form__text__container > h2 {
+  font-family: var(--font-urbanist);
   font-size: 25px;
 }
 .form__text__container > p {
@@ -50,7 +51,7 @@
   background: rgba(217, 217, 217, 0.162);
   color: rgba(255, 255, 255, 0.43);
   font-size: 15px;
-  font-family: "Futura";
+  font-family: var(--font-futura);
 }
 
 .inputs__grid input:nth-child(1),
@@ -83,7 +84,7 @@
   background-color: transparent;
 }
 .terms_container > label {
-  font-family: "Futura";
+  font-family: var(--font-futura);
   font-size: 11px;
 }
 .submit__container > button {

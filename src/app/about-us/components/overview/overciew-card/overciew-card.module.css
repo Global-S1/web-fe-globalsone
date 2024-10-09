@@ -18,7 +18,8 @@
 }
 .overviewCard__text_container > p {
   font-size: 11px;
-  font-family: "Futura";
+  font-family: var(--font-futura);
+  font-weight: 500;
 }
 
 @media (640px <= width) {

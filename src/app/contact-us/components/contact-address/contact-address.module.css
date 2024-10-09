@@ -24,7 +24,7 @@
   /* filter: blur(27.100000381469727px); */
 }
 .title__container > h2 {
-  font-family: "Futura";
+  font-family: var(--font-urbanist);
   font-size: 15px;
   line-height: 22.5px;
   margin-top: 5px;
@@ -32,7 +32,7 @@
 
 .title__container > p {
   color: #999;
-  font-family: "Futura";
+  font-family: var(--font-futura);
   font-size: 11px;
   line-height: 16.5px;
 }

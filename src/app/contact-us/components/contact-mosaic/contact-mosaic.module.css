@@ -54,7 +54,7 @@
   transform: translateX(-50%);
 }
 .contactMosaic__description__container > p {
-  font-family: "Futura";
+  font-family: var(--font-futura);
   line-height: 13.8px;
 }
 

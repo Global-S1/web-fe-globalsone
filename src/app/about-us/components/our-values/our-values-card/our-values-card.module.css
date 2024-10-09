@@ -49,7 +49,7 @@
 
 .ourValues__content__container > p {
   font-size: 11px;
-  font-family: "Futura";
+  font-family: var(--font-futura);
   color: #999;
 }
 
