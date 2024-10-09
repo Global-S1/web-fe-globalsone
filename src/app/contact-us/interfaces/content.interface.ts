@@ -16,6 +16,7 @@ export type IContactUsContactDataContent = {
 export type IContactUsOurTeamContent = {
   title: string;
   description: string;
+  groupImages: string[];
 };
 
 export type IContactUsContent = {
