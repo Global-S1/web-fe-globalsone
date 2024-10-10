@@ -2,6 +2,7 @@ import bgContac from "@/assets/home/contact-us/background/bgContact.png";
 import { Section } from "@/shared/components/section";
 import s from "./contact-us.module.css";
 import { ActionButton } from "@/shared/components/action-button";
+import Link from "next/link";
 
 export const ContactUs = () => {
   return (
@@ -19,8 +20,13 @@ export const ContactUs = () => {
             transformar <br />
             tu negocio?
           </h3>
-         
-          <ActionButton text="Contáctanos Ahora" extendStyle={s.contact__button}/>
+
+          <Link href={"/contact-us"}>
+            <ActionButton
+              text="Contáctanos Ahora"
+              extendStyle={s.contact__button}
+            />
+          </Link>
         </div>
         <div className={s.green_circle}></div>
       </div>

@@ -1,56 +1,20 @@
 {
     "data": [
         {
-            "title": "Home",
-            "links": [
-                {
-                    "label": "About",
-                    "link": "/about"
-                },
-                {
-                    "label": "Contact",
-                    "link": "/contact"
-                }
-            ]
+            "title": "Inicio",
+            "link": "/"
         },
         {
-            "title": "About Us",
-            "links": [
-                {
-                    "label": "Home",
-                    "link": "/"
-                },
-                {
-                    "label": "Contact",
-                    "link": "/contact"
-                }
-            ]
+            "title": "Acerca de Nosotros",
+            "link": "/about-us"
         },
         {
-            "title": "Services",
-            "links": [
-                {
-                    "label": "Home",
-                    "link": "/"
-                },
-                {
-                    "label": "About",
-                    "link": "/about"
-                }
-            ]
+            "title": "Servicios",
+            "link": "/services-section"
         },
         {
-            "title": "Contact Us",
-            "links": [
-                {
-                    "label": "Home",
-                    "link": "/"
-                },
-                {
-                    "label": "About",
-                    "link": "/about"
-                }
-            ]
+            "title": "Contactanos",
+            "link": "/contact-us"
         }
     ]
 }

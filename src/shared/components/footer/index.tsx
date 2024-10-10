@@ -40,7 +40,7 @@ export const Footer = () => {
           </div>
           <div className={s.desk__menu}>
             {res.data.map((col, index) => (
-              <ColIndex key={index} title={col.title} />
+              <ColIndex key={index} title={col.title} link={col.link}/>
             ))}
           </div>
         </div>

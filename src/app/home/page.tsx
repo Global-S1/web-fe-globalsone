@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <>
-      <Hero content={res.hero} />z
+      <Hero content={res.hero} />
       <Features content={res.features} />
       <WhatWeBuild content={res.whatwebuild} />
       <OurServices content={res.ourservice} />
