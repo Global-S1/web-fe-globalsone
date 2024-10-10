@@ -113,6 +113,17 @@
 .address__container a:nth-child(3) {
   flex-grow: 1;
 }
+
+.achor{
+  display: flex;
+}
+.achor > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 7px;
+}
+
 @media (425px <= width) {
   .address__section {
     margin-top: 100px;
