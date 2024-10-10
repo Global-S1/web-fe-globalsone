@@ -52,11 +52,11 @@
 
   .terms__section p {
     font-size: 25px !important;
-    font-family: "Futura";
+    font-family: var(--font-futura);
     text-align: left !important;
   }
   .terms__section h2 {
-    font-family: "Futura";
+    font-family: var(--font-futura);
   }
 
   .terms__section > hr {
@@ -96,11 +96,11 @@
 
   .terms__section p {
     font-size: 25px !important;
-    font-family: "Futura";
+    font-family: var(--font-futura);
     text-align: left !important;
   }
   .terms__section h2 {
-    font-family: "Futura";
+    font-family: var(--font-futura);
   }
 
   .terms__section > hr {
