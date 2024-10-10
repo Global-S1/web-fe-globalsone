@@ -11,7 +11,7 @@ export const HeroMetrics: FC<Props> = ({ title }) => {
     <div className={s.heroMetrics_container}>
       <div className={s.bg_deg}></div>
       <div className={s.heroMetrics_title}>
-        <h2 style={{ whiteSpace: "pre-line" }}>{title}</h2>
+        <h2 dangerouslySetInnerHTML={{__html:title}}></h2>
       </div>
       <Insides size={"large"} />
     </div>
