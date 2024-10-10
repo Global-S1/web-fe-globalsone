@@ -17,7 +17,7 @@ export const WhatWeBuild = ({ content }: Props) => {
       <div className={s.purple__circle}></div>
       <div className={s.whatWeBuild__title__container}>
         <Image src={Foco} alt="nosotros lo desarrollamos" className={s.foco} />
-        <h2>{title}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
       </div>
       <div className={s.picture_container}>
         <div className={s.leave}>
