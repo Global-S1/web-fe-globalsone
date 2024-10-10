@@ -1,11 +1,11 @@
 "use client";
 
 import { GlobalSLogo } from "@/assets/GlobalSLogo";
+import { NavigationLinks } from "@/shared/interfaces/layout.interface";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { ContactBtn } from "../contact-btn";
 import s from "./header.module.css";
-import { NavigationLinks } from "@/shared/interfaces/layout.interface";
+import { useRouter } from "next/navigation";
 
 interface Props {
   content: NavigationLinks;
@@ -40,7 +40,9 @@ export const Header = ({ content }: Props) => {
           </ul>
         </nav>
         <div className={s.header__logo}>
-          <GlobalSLogo />
+          <Link href={"/"}>
+            <GlobalSLogo />
+          </Link>
         </div>
         <ContactBtn
           route={content["contact-us"].route}

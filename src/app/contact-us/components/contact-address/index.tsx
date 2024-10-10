@@ -6,6 +6,9 @@ import building2 from "@/assets/contact-us/address/background/building2.png";
 import building3 from "@/assets/contact-us/address/background/building3.png";
 import s from "./contact-address.module.css";
 import { IContactUsContactDataContent } from "../../interfaces/content.interface";
+import { MailIcon } from "@/assets/contact-us/address/icons/MailIcon";
+import { PhoneIcon } from "@/assets/contact-us/address/icons/PhoneIcon";
+import { AddressIcon } from "@/assets/contact-us/address/icons/AddressIcon";
 
 export const ContactAddress = ({
   city,
@@ -24,16 +27,26 @@ export const ContactAddress = ({
           </div>
           <div className={s.buttons__container}>
             <a href="mailto:contacto@globals.one" className={s.achor}>
-              <ActionButton text={email} extendStyle={s.button__extendStyle} />
+              <ActionButton text={email} extendStyle={s.button__extendStyle}>
+                <MailIcon />
+              </ActionButton>
             </a>
-            <a href="tel:+51902594035">
-              <ActionButton text={phone} extendStyle={s.button__extendStyle} />
+            <a href="tel:+51902594035" className={s.achor}>
+              <ActionButton text={phone} extendStyle={s.button__extendStyle}>
+                <PhoneIcon />
+              </ActionButton>
             </a>
-            <a href="https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9" target="_blank">
+            <a
+              href="https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9"
+              target="_blank"
+              className={s.achor}
+            >
               <ActionButton
                 text={address}
                 extendStyle={s.button__extendStyle}
-              />
+              >
+                <AddressIcon />
+              </ActionButton>
             </a>
           </div>
         </div>
