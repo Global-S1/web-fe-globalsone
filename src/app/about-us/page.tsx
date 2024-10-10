@@ -1,3 +1,4 @@
+import { MosaicTeam } from "@/shared/components/mosaic-team";
 import { Testimonials } from "../home/components/testimonials";
 import { Hero } from "./components/hero";
 import { AboutUsOurTeam } from "./components/our-team";
@@ -13,6 +14,7 @@ export default async function AboutUs() {
       <OurValues content={data.ourValues} />
       <Overview content={data.overview} />
       <AboutUsOurTeam />
+      <MosaicTeam />
       <Testimonials content={data.testimonial} />
     </>
   );

@@ -1,3 +1,4 @@
+import { MosaicTeam } from "@/shared/components/mosaic-team";
 import { ContactAddress } from "./components/contact-address";
 import { ContactForm } from "./components/contact-form";
 import { ContactMosaic } from "./components/contact-mosaic";
@@ -9,7 +10,7 @@ export default async function ContactUs() {
     <>
       <ContactForm {...res.formData} />
       <ContactAddress {...res.contactData} />
-      <ContactMosaic {...res.ourTeam} />
+      <MosaicTeam />
     </>
   );
 }

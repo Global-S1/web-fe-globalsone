@@ -28,7 +28,7 @@ export const ContactMosaic = ({
       </div>
       <div className={s.contactMosaic__container}>
         <div className={s.purple__circle}></div>
-        <div className={s.green__circle} ></div>
+        <div className={s.green__circle}></div>
         <div className={s.grid_template}>
           <Image src={counter} alt="recepcion del equipo globals en colombia" />
           <Image

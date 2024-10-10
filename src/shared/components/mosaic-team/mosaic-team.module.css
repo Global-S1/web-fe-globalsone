@@ -1,0 +1,329 @@
+.contactMosaic__section {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 110px;
+  }
+  .contactMosaic__container {
+    position: relative;
+    height: 292px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .purple__circle {
+    position: absolute;
+    width: 1119.832px;
+    height: 850.12px;
+    border-radius: 1119.832px;
+    background: #5a2eea8b;
+    filter: blur(200px);
+    z-index: -10;
+    right: -50%;
+  }
+  
+  .green__circle {
+    position: absolute;
+    width: 571px;
+    height: 571px;
+    border-radius: 571px;
+    background: #2eea79c0;
+    filter: blur(200px);
+    z-index: -10;
+    left: -15%;
+    top: 65%;
+    transform: translateY(-50%);
+  }
+  
+  .contactMosaic__text__container {
+    width: 156px;
+    position: absolute;
+    top: -2.5%;
+  }
+  
+  .contactMosaic__text__container > h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+  .contactMosaic__description__container {
+    position: absolute;
+    font-size: 11px;
+    line-height: 15.5px;
+    width: 140px;
+    left: 76%;
+    bottom: -45%;
+    transform: translateX(-50%);
+  }
+  .contactMosaic__description__container > p {
+    font-family: var(--font-futura);
+    line-height: 13.8px;
+  }
+  
+  .grid_template {
+    display: grid;
+    grid-template-areas:
+      ". . header1 header2"
+      ". main main side-right"
+      "side-left main main side-right"
+      ". footer . .";
+  
+    width: 95%;
+    height: 100%;
+    gap: 5px;
+  }
+  
+  .grid_template > img {
+    background-color: palegreen;
+    min-width: none;
+    object-fit: cover;
+  }
+  
+  .grid_template img:nth-child(1) {
+    grid-area: header1;
+    width: 100%;
+    height: 100%;
+    background-color: salmon;
+  }
+  
+  .grid_template img:nth-child(2) {
+    grid-area: header2;
+    width: 100%;
+    height: 100%;
+    background-color: palevioletred;
+  }
+  
+  .grid_template img:nth-child(3) {
+    grid-area: side-left;
+    width: 100%;
+    height: 100%;
+    background-color: papayawhip;
+  }
+  
+  .grid_template img:nth-child(4) {
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+    background-color: skyblue;
+  }
+  
+  .grid_template img:nth-child(5) {
+    grid-area: side-right;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+  }
+  
+  .grid_template img:nth-child(6) {
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+    background-color: plum;
+  }
+  
+  .leave__top {
+    position: absolute;
+    width: 34.732px;
+    height: 40.607px;
+    left: -2%;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  
+  .leave__bottom {
+    position: absolute;
+    width: 36.422px;
+    height: 42.583px;
+    right: -4%;
+    bottom: 24.5%;
+    transform: rotate(85deg);
+  }
+  
+  .leave__center {
+    position: absolute;
+    width: 21.53px;
+    height: 25.172px;
+    top: 72%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+  @media (390px <= width) {
+    .contactMosaic__description__container {
+      width: 150px;
+      left: 79%;
+      bottom: -38%;
+    }
+  }
+  @media (400px <= width) {
+    .contactMosaic__description__container {
+      width: 150px;
+      left: 79%;
+      bottom: -48%;
+    }
+  }
+  
+  @media (450px <= width) {
+    .contactMosaic__container {
+      height: 420px;
+    }
+    .contactMosaic__text__container {
+      top: 5%;
+      width: 200px;
+    }
+    .contactMosaic__text__container > h2 {
+    }
+    .contactMosaic__description__container {
+      width: 188px;
+      left: 77%;
+      bottom: -12%;
+    }
+    .contactMosaic__description__container > p {
+      line-height: 17px;
+      font-size: 12px;
+    }
+  }
+  @media (500px <= width) {
+    .contactMosaic__container {
+      height: 490px;
+    }
+    .contactMosaic__text__container {
+      top: 12%;
+      width: 300px;
+    }
+    .contactMosaic__text__container > h2 {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    .contactMosaic__description__container {
+      width: 200px;
+      left: 75.8%;
+      bottom: -12%;
+    }
+    .contactMosaic__description__container > p {
+      line-height: 19.8px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (640px <= width) {
+    .contactMosaic__container {
+      height: 700px;
+    }
+    .grid_template {
+      width: 95%;
+      height: 90%;
+    }
+    .contactMosaic__text__container {
+      top: 12%;
+      width: 300px;
+    }
+    .contactMosaic__text__container > h2 {
+      font-size: 25px;
+      line-height: 42.5px;
+    }
+    .contactMosaic__description__container {
+      width: 235px;
+      left: 77%;
+      bottom: 2%;
+    }
+    .contactMosaic__description__container > p {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+  @media (768px <= width) {
+    .contactMosaic__container {
+      height: 1000px;
+    }
+    .grid_template {
+      width: 95%;
+      height: 90%;
+    }
+    .contactMosaic__text__container {
+      top: 10.9%;
+      width: 380px;
+    }
+    .contactMosaic__text__container > h2 {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    .contactMosaic__description__container {
+      width: 268px;
+      left: 72.5%;
+      bottom: 9%;
+    }
+    .contactMosaic__description__container > p {
+      font-size: 17px;
+      line-height: 23px;
+    }
+  }
+  @media (1024px <= width) {
+    .contactMosaic__container {
+      height: 1200px;
+    }
+    .grid_template {
+      width: 95%;
+      height: 90%;
+    }
+    .contactMosaic__text__container {
+      width: 550px;
+      top: 11%;
+    }
+    .contactMosaic__text__container > h2 {
+      font-size: 42px;
+      line-height: 68px;
+    }
+    .contactMosaic__description__container {
+      width: 320px;
+      bottom: 6%;
+      left: 70%;
+    }
+    .contactMosaic__description__container > p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  @media (1280px <= width) {
+    .contactMosaic__container {
+      height: 1200px;
+    }
+    .contactMosaic__text__container {
+      top: 12%;
+      width: 633px;
+    }
+    .contactMosaic__text__container > h2 {
+      font-size: 50px;
+      line-height: 75px;
+    }
+    .contactMosaic__description__container {
+      left: 69.7%;
+      bottom: -0.5%;
+      width: 363px;
+    }
+    .contactMosaic__description__container > p {
+      font-size: 22px;
+      line-height: 33px;
+      text-align: justify;
+    }
+    .leave__top {
+      width: 139.305px;
+      height: 162.869px;
+      position: absolute;
+      top: 33%;
+      left: -1%;
+      transform: rotate(-15deg);
+    }
+  
+    .leave__bottom {
+      position: absolute;
+      right: -5%;
+      bottom: 4%;
+      width: 201px;
+      height: 235px;
+      transform: rotate(95deg);
+    }
+    .grid_template {
+      height: 90%;
+      width: 95%;
+      gap: 10px;
+    }
+  }
+  
