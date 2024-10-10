@@ -1,6 +1,7 @@
 .windowHead_container {
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 .windowHead_container > div {
   position: relative;

@@ -17,7 +17,7 @@ export const FeatureItem: FC<IFeature> = ({ title, content, reverse, img }) => {
             return (
               <span
                 key={index}
-                className={clsx(chunch.style ? s[chunch.style] : "")}
+                className={clsx(chunch.styles ? s[chunch.styles] : "")}
               >
                 {chunch.text}
                 {index < title.length - 1 && " "}

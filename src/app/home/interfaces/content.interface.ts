@@ -1,7 +1,7 @@
-type TitleChunk = {
+export type TitleChunk = {
   text?: string;
   title?: string;
-  style: string;
+  styles: string;
 };
 
 export type IFeature = {

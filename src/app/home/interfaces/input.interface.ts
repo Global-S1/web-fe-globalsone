@@ -1,7 +1,7 @@
 type TitleChunk = {
   text?: string;
   title?: string;
-  style: string;
+  styles: string;
 };
 
 type IFeature = {

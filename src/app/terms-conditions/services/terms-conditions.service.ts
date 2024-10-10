@@ -1,11 +1,17 @@
-import { wordpressService } from "@/shared/services/wordpress.service";
+import { TermsConditionsService } from "@/shared/services/wordpress.service";
+interface ITermsResponse {
+  content: {
+    rendered: string;
+  }
+}
 
 export const getTermsConditions = async () => {
   try {
-    const response = await wordpressService({
+    const response = await TermsConditionsService<ITermsResponse>({
       id: "406",
-      page: "terms-conditions",
+      page: "pages",
     });
-    return response;
-  } catch (error) {}
+    return response.data;
+  } catch (error) {
+  }
 };

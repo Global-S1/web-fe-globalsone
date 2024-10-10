@@ -1,8 +1,6 @@
 .heroCenterPricture__container {
   height: 600px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+
 }
 .hero_picture_mobile {
   max-width: none;
@@ -10,9 +8,9 @@
   width: 105%;
   max-width: 358px;
   position: absolute;
-  top: -5%;
+  top: -6%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-45%);
 }
 
 .hero_picture {
@@ -26,11 +24,12 @@
   .hero_picture {
     display: block;
     position: absolute;
-    width: 94%;
-    top: -4%;
+    width: 100vh;
+    top: -10%;
     left: 50%;
-    max-width: 366px;
-    transform: translate(-50%);
+    max-width: 566px;
+    min-height: 400px;
+    transform: translate(-43%);
   }
 }
 
@@ -39,10 +38,10 @@
     display: block;
     position: absolute;
     width: 94%;
-    top: -4%;
+    top: -10%;
     left: 50%;
-    max-width: 366px;
-    transform: translate(-55%);
+    max-width: 666px;
+    transform: translate(-45%);
   }
 }
 
@@ -54,25 +53,26 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: -12%;
+    top: -10%;
     left: 50%;
-    max-width: 486px;
-    transform: translate(-50%);
+    max-width: 786px;
   }
 }
 
 @media (min-width: 1024px) {
   .hero_picture {
-    top: -13%;
-    max-width: 570px;
+    max-width: 1000px;
   }
 }
 
 @media (min-width: 1280px) {
   .hero_picture {
+    object-fit: contain;
+    object-position: center;
     width: 100%;
-    max-width: 600px;
-    transform: translateX(-55%);
-    top: -12%;
+    height: 100vh;
+    max-width: 1200px;
+    max-height: 1000px;
+    transform: translateX(-45%);
   }
 }

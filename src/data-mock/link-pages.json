@@ -11,7 +11,7 @@
       },
       {
         "label": "Servicios",
-        "path": "#services-section"
+        "path": "/#services-section"
       }
     ]
   }

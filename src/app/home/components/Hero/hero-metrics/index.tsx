@@ -9,8 +9,9 @@ interface Props {
 export const HeroMetrics: FC<Props> = ({ title }) => {
   return (
     <div className={s.heroMetrics_container}>
+      <div className={s.bg_deg}></div>
       <div className={s.heroMetrics_title}>
-        <h2>{title}</h2>
+        <h2 style={{ whiteSpace: "pre-line" }}>{title}</h2>
       </div>
       <Insides size={"large"} />
     </div>

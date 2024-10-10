@@ -7,6 +7,7 @@ import s from "./footer.module.css";
 import { ColIndex } from "./footer-col-index";
 import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
 import res from "@/data-mock/footerRoutes.json";
+import Link from "next/link";
 
 const socialmedia = [BtnFacebook, BtnLinkedin, BtnInstagram];
 
@@ -49,7 +50,9 @@ export const Footer = () => {
         <div>
           <div className={s.social__text__container}>
             <h4>@2023 Global. All Rights Reserved.</h4>
+            <Link href="/terms-conditions">
             <h4>Terms & Conditions</h4>
+            </Link>
           </div>
           <div className={s.social__icons__container}>
             {socialmedia.map((Item, index) => (

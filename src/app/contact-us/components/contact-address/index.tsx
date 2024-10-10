@@ -1,9 +1,9 @@
 import { Section } from "@/shared/components/section";
-import mountains from "@/assets/contact-us/adress/background/mountains.png";
+import mountains from "@/assets/contact-us/address/background/mountains.png";
 import { ActionButton } from "@/shared/components/action-button";
-import { Building1 } from "@/assets/contact-us/adress/icons/Building1";
-import { Building2 } from "@/assets/contact-us/adress/icons/Building2";
-import { Building3 } from "@/assets/contact-us/adress/icons/Building3";
+import building1 from "@/assets/contact-us/address/background/building1.png";
+import building2 from "@/assets/contact-us/address/background/building2.png";
+import building3 from "@/assets/contact-us/address/background/building3.png";
 import s from "./contact-address.module.css";
 import { IContactUsContactDataContent } from "../../interfaces/content.interface";
 
@@ -23,18 +23,31 @@ export const ContactAddress = ({
             <p>{description}</p>
           </div>
           <div className={s.buttons__container}>
-            <ActionButton text={email} />
-            <ActionButton text={phone} />
-            <ActionButton text={address} />
+            <a href="mailto:contacto@globals.one" className={s.achor}>
+              <ActionButton text={email} extendStyle={s.button__extendStyle} />
+            </a>
+            <a href="tel:+51902594035">
+              <ActionButton text={phone} extendStyle={s.button__extendStyle} />
+            </a>
+            <a href="https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9" target="_blank">
+              <ActionButton
+                text={address}
+                extendStyle={s.button__extendStyle}
+              />
+            </a>
           </div>
         </div>
         <div
           className={s.bg__img__container}
           style={{ backgroundImage: `url(${mountains.src})` }}
         >
-          <Building1 />
-          <Building2 />
-          <Building3 />
+          <div className={s.green__circle}></div>
+
+          <div className={s.buildings__container}>
+            <div style={{ backgroundImage: `url(${building1.src})` }}></div>
+            <div style={{ backgroundImage: `url(${building2.src})` }}></div>
+            <div style={{ backgroundImage: `url(${building3.src})` }}></div>
+          </div>
         </div>
       </div>
     </Section>

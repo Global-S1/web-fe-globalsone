@@ -1,6 +1,5 @@
 .form__container {
   position: relative;
-  z-index: -1;
   border: 0.5px solid rgba(255, 255, 255, 0.223);
   border-radius: 17px;
   height: 620px;
@@ -52,6 +51,7 @@
   color: rgba(255, 255, 255, 0.43);
   font-size: 15px;
   font-family: var(--font-futura);
+  border: none;
 }
 
 .inputs__grid input:nth-child(1),
@@ -90,6 +90,19 @@
 .submit__container > button {
   width: 100%;
 }
+
+.button__form {
+  -webkit-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
+  box-shadow: -1px 4px 8px 0px rgb(0 0 0 / 34%);
+}
+
+.alert{
+  background: rgba(253, 12, 12, 0.80);
+  padding: 13px;
+  border-radius: 11px;
+}
+
 @media (640px <= width) {
   .form__container {
     border-radius: 40px;
@@ -173,10 +186,15 @@
     margin-bottom: 25px;
     gap: 10px;
   }
+  .inputs__grid > input::placeholder,
+  .inputs__grid > textarea::placeholder {
+    color: white;
+  }
   .inputs__grid > input,
   .inputs__grid > select {
     font-size: 22px;
     padding-left: 27px;
+    color: white;
   }
   .inputs__grid > textarea {
     grid-row: 1 / 4;

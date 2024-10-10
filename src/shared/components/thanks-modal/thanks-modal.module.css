@@ -1,9 +1,6 @@
 .message__container {
-  height: 90vh;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  height: 60vh;
+  border-radius: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,33 +12,35 @@
     rgba(115, 115, 115, 0) 100%
   );
 }
-
 .message__container > h2 {
-  font-size: 120px;
+  font-size: 45px;
 }
 
 .message__container > p {
-  font-size: 22px;
+  font-size: 12px;
   text-align: center;
-  line-height: 33px;
+  line-height: 17px;
   width: 80%;
-  margin-bottom: 39px;
+  margin-bottom: 29px;
+  font-family: "Urbanist";
 }
 
 .message__container > button {
-  width: 353px;
+  /* ; */
+  width: 122px;
   height: 51px;
-  border-radius: 12px;
-  margin-bottom: 69px;
+  border-radius: 32px;
+  margin-bottom: 29px;
+  font-size: 11px;
 }
 
 .message__container > span {
-  font-size: 22px;
+  font-size: 15px;
 }
 
 .icons__container {
   display: flex;
-  column-gap: 20px;
+  column-gap: 12px;
 }
 
 .icons__container > div {
@@ -49,4 +48,57 @@
   height: 40px;
   border-radius: 50px;
   background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+}
+
+@media (640px <= width) {
+  .message__container > h2 {
+    font-size: 54px;
+  }
+  .message__container > p {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  .message__container > button {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+@media (768px <= width) {
+  .message__container {
+    height: 80vh;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+  .message__container > h2 {
+    font-size: 86px;
+  }
+  .message__container > p {
+    font-size: 20px;
+  }
+}
+@media (1024px <= width) {
+  .message__container > button {
+    width: 353px;
+    border-radius: 15px;
+    font-size: 22px;
+  }
+}
+@media (1280px <= width) {
+  .message__container > h2 {
+    font-size: 100px;
+    line-height: 119px;
+  }
+
+  .message__container > p {
+    font-size: 22px;
+    text-align: center;
+    line-height: 33px;
+    width: 60%;
+    margin-bottom: 25px;
+  }
+  .message__container > span {
+    font-size: 22px;
+  }
 }

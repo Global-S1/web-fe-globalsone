@@ -1,6 +1,10 @@
+import { GlobalSLogo } from "@/assets/GlobalSLogo";
 import { ActionButton } from "../action-button";
 import { ModalWindow } from "../modal-window";
 import s from "./thanks-modal.module.css";
+import { Facebook } from "@/assets/about-us/hero/icons/Facebook";
+import { Linkedin } from "@/assets/about-us/hero/icons/Linkedin";
+import { Instagram } from "@/assets/about-us/hero/icons/Instagram";
 
 export const ThanksModal = ({
   title,
@@ -10,14 +14,23 @@ export const ThanksModal = ({
   return (
     <ModalWindow>
       <div className={s.message__container}>
+        <div>
+          <GlobalSLogo />
+        </div>
         <h2>{title}</h2>
         <p>{description}</p>
-        <ActionButton text="Ver Nuestros Proyectos" />
+        <ActionButton text="Ver Proyectos" />
         <span>{socialMedia.title}</span>
         <div className={s.icons__container}>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div>
+            <Facebook />
+          </div>
+          <div>
+            <Linkedin />
+          </div>
+          <div>
+            <Instagram />
+          </div>
         </div>
       </div>
     </ModalWindow>

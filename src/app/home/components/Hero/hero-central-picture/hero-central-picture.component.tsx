@@ -1,15 +1,11 @@
 import Image from "next/image";
 import heroPictureMobile from "@/assets/home/hero/pictures/hero-pinctue-mobile.png";
-import heroImg from "@/assets/home/hero/pictures/heroImg.png";
-import bgCenterImg from "@/assets/home/hero/background/centralImgBg.png";
+import heroImg from "@/assets/home/hero/pictures/centralImg.png";
 import s from "./hero-central-picture.module.css";
 
 export const HeroCentralPicture = () => {
   return (
-    <div
-      className={s.heroCenterPricture__container}
-      style={{ backgroundImage: `url(${bgCenterImg.src})` }}
-    >
+    <div className={s.heroCenterPricture__container}>
       <Image
         src={heroPictureMobile}
         alt="Global S1"

@@ -1,5 +1,4 @@
 import { Hero } from "@/app/home/components/hero";
-import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { ContactUs } from "./components/contact-us";
 import { Features } from "./components/feature";
 import { OurServices } from "./components/our-services";
@@ -13,8 +12,7 @@ export default async function Home() {
 
   return (
     <>
-      <BgLeave />
-      <Hero content={res.hero} />
+      <Hero content={res.hero} />z
       <Features content={res.features} />
       <WhatWeBuild content={res.whatwebuild} />
       <OurServices content={res.ourservice} />

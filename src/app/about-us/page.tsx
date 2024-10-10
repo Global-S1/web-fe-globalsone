@@ -1,4 +1,3 @@
-import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { Testimonials } from "../home/components/testimonials";
 import { Hero } from "./components/hero";
 import { AboutUsOurTeam } from "./components/our-team";
@@ -10,7 +9,6 @@ export default async function AboutUs() {
   const data = await getContentDataAboutUsPage();
   return (
     <>
-      <BgLeave />
       <Hero content={data.hero} />
       <OurValues content={data.ourValues} />
       <Overview content={data.overview} />

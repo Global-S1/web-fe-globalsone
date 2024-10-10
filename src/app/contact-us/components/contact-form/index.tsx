@@ -2,9 +2,13 @@
 import { ActionButton } from "@/shared/components/action-button";
 import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
-import { FieldValues, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { IContactUsFormContent } from "../../interfaces/content.interface";
 import s from "./contact-form.module.css";
+import { sendFormRequirementService } from "../../service/form.service";
+import { useRouter } from "next/navigation";
+import { IForm } from "../../interfaces/contact-form";
+import { useEffect } from "react";
 
 export const ContactForm = ({
   title,
@@ -16,15 +20,26 @@ export const ContactForm = ({
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
-  const onSubmit = (data: FieldValues) => {
-    console.log(data);
+  } = useForm<IForm>();
+  const router = useRouter();
+
+  const onSubmit: SubmitHandler<IForm> = async (data) => {
+    try {
+      const status = await sendFormRequirementService(data);
+      console.log("envio exitoso", status);
+      if (status === 201) {
+        router.push("/success");
+      }
+    } catch (error) {}
   };
+
   return (
     <Section extendStyle={s.section__from}>
       {Object.values(errors).length > 0 && (
         <div className={s.alert}>
-          <p>{`Hay un error en el campo “” . Por favor, de revisar y llenar el campo.`}</p>
+          <p>{`Hay un error en el campo “${Object.keys(errors).join(
+            ", "
+          )}” . Por favor, de revisar y llenar el campo.`}</p>
         </div>
       )}
       <ModalWindow active>
@@ -40,12 +55,12 @@ export const ContactForm = ({
               <input
                 type="text"
                 placeholder="Nombre"
-                {...register("firstname", { required: true })}
+                {...register("name", { required: true })}
               />
               <input
                 type="text"
                 placeholder="Apellido"
-                {...register("lastname", { required: true })}
+                {...register("lastName", { required: true })}
               />
               <input
                 type="text"
@@ -60,7 +75,7 @@ export const ContactForm = ({
               <select
                 id=""
                 className={s.select__container}
-                {...register("service", { required: true })}
+                {...register("requirements", { required: true })}
               >
                 {services.map((item, index) => (
                   <option value={item} key={index}>
@@ -70,7 +85,7 @@ export const ContactForm = ({
               </select>
               <textarea
                 placeholder="Escribe el mensaje que deseas enviarnos..."
-                {...register("message")}
+                {...register("desacription")}
               />
             </div>
 

@@ -8,13 +8,13 @@
   },
   "features": [{
       "title": [
-        { "text": "Desarrollamos", "style": "" },
-        { "text": "software", "style": "title_style_one" },
-        { "text": "personalizado", "style": "title_style_two" },
-        { "text": "para las necesidades específicas de", "style": "" },
-        { "text": "tu industria.", "style": "title_style_three" },
-        { "text": "", "style": "" },
-        { "text": "", "style": "" }
+        { "text": "Desarrollamos", "styles": "" },
+        { "text": "software", "styles": "title_styles_one" },
+        { "text": "personalizado", "styles": "title_styles_two" },
+        { "text": "para las necesidades específicas de", "styles": "" },
+        { "text": "tu industria.", "styles": "title_styles_three" },
+        { "text": "", "styles": "" },
+        { "text": "", "styles": "" }
       ],
       "content": "Pensamos en tus necesidades y creamos software a tu medida, adaptado a los desafíos únicos de tu industria para ayudarte a alcanzar tus metas.",
       "img": "",
@@ -24,31 +24,31 @@
       "title": [
         {
           "text": "Optimiza tus ventas online con",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "plataformas",
-          "style": "title_style_four"
+          "styles": "title_styles_four"
         },
         {
           "text": "robustas y seguras.",
-          "style": "title_style_five"
+          "styles": "title_styles_five"
         },
         {
           "text": "",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "",
-          "style": ""
+          "styles": ""
         }
       ],
       "content": "Nos enfocamos en ofrecerte plataformas confiables y seguras que potencien tu negocio, ayudándote a optimizar cada venta y mejorar la experiencia de tus clientes online.",
@@ -58,31 +58,31 @@
       "title": [
         {
           "text": "Implementa",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "tecnología",
-          "style": "title_style_one"
+          "styles": "title_styles_one"
         },
         {
           "text": "que mejora la",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "atención",
-          "style": "title_style_two"
+          "styles": "title_styles_two"
         },
         {
           "text": "y",
-          "style": ""
+          "styles": ""
         },
         {
           "text": "gestión",
-          "style": "title_style_three"
+          "styles": "title_styles_three"
         },
         {
           "text": "de tu empresa.",
-          "style": ""
+          "styles": ""
         }
       ],
       "content": "Te ayudamos a implementar tecnología que optimiza la atención al cliente y agiliza la gestión interna, mejorando la eficiencia y el rendimiento de tu empresa.",

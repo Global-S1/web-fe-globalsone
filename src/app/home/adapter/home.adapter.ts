@@ -1,12 +1,16 @@
-import { IHomeContent } from "../interfaces/content.interface";
+import { IHomeContent, TitleChunk } from "../interfaces/content.interface";
 import { IHomeContentInput } from "../interfaces/input.interface";
 
 export const homeAdapter = (data: IHomeContentInput): IHomeContent => {
   return {
-    hero: data.hero,
+    hero: {
+      title: data.hero.title,
+      insides: data.hero.insides,
+    },
     features: Object.values(data.features).map((feature) => ({
       ...feature,
-      title: Object.values(feature.title),
+      title: Object.values(feature.title) as TitleChunk[],
+
     })),
     whatwebuild: {
       title: data.whatwebuild.title,

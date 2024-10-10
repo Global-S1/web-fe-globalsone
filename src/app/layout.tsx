@@ -6,6 +6,7 @@ import "./globals.css";
 import { Footer } from "@/shared/components/footer";
 import { Main } from "@/shared/components/main";
 import { HeaderMobile } from "@/shared/components/header-mobile";
+import { BgLeave } from "@/shared/animations/leaves-background-animation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,7 @@ export default function RootLayout({
       className={`${grandis.variable} ${futuraMedium.variable} ${urbanistFont.variable} scroll-smooth`}
     >
       <body className="font-grandis">
+        <BgLeave />
         <Header />
         <HeaderMobile />
         <Main>{children}</Main>
