@@ -50,7 +50,7 @@
 }
 .header__item {
   font-size: 18px;
-  font-family: "Futura";
+  font-family: var(--font-futura);
   list-style: none;
 }
 

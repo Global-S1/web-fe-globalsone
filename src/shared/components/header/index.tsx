@@ -5,8 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ContactBtn } from "../contact-btn";
 import s from "./header.module.css";
+import { NavigationLinks } from "@/shared/interfaces/layout.interface";
 
-export const Header = () => {
+interface Props {
+  content: NavigationLinks;
+}
+
+export const Header = ({ content }: Props) => {
   const router = useRouter();
   const handleServices = () => {
     router.push("/");
@@ -22,20 +27,25 @@ export const Header = () => {
         <nav>
           <ul className={s.header__navbarLeft}>
             <li className={s.header__item}>
-              <Link href={"/"}>Inicio</Link>
+              <Link href={content.home.route}>{content.home.title}</Link>
             </li>
             <li className={s.header__item}>
-              <Link href={"/about-us"}>Acerca de Nosotros</Link>
+              <Link href={content["about-us"].route}>
+                {content["about-us"].title}
+              </Link>
             </li>
             <li className={s.header__item}>
-              <button onClick={handleServices}>Servicios</button>
+              <button onClick={handleServices}>{content.services.title}</button>
             </li>
           </ul>
         </nav>
         <div className={s.header__logo}>
           <GlobalSLogo />
         </div>
-        <ContactBtn />
+        <ContactBtn
+          route={content["contact-us"].route}
+          title={content["contact-us"].title}
+        />
       </div>
     </header>
   );

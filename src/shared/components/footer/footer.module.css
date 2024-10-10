@@ -51,7 +51,7 @@
 .mobile__menu {
   width: 100%;
   font-size: var(--font-urbanist);
-  font-family: "Futura";
+  font-family: var(--font-futura);
   color: #999;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -59,7 +59,7 @@
   gap: 10px 110px;
 }
 
-.mobile__menu >p{
+.mobile__menu > a{
   font-family: var(--font-urbanist);
 }
 
@@ -130,7 +130,7 @@
     flex-direction: row;
   }
   .desk__menu {
-    font-family: "Futura";
+    font-family: var(--font-futura);
     display: flex;
     justify-content: space-between;
     align-items: center;

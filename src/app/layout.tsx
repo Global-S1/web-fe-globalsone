@@ -7,6 +7,7 @@ import { Footer } from "@/shared/components/footer";
 import { Main } from "@/shared/components/main";
 import { HeaderMobile } from "@/shared/components/header-mobile";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
+import { getLayoutLinks } from "@/shared/services/layout.service";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,11 +38,12 @@ export const metadata: Metadata = {
   description: "pagina web de Global S1",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const link = await getLayoutLinks();
   return (
     <html
       lang="en"
@@ -49,10 +51,10 @@ export default function RootLayout({
     >
       <body className="font-grandis">
         <BgLeave />
-        <Header />
-        <HeaderMobile />
+        <Header content={link.headerLinks} />
+        <HeaderMobile content={link.headerLinks} />
         <Main>{children}</Main>
-        <Footer />
+        <Footer content={link.footerLinks} socialMedia={link.socialMedia} />
       </body>
     </html>
   );

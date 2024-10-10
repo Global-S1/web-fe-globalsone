@@ -1,19 +1,33 @@
 "use client";
-import Link from "next/link";
-import s from "./header-mobile.module.css";
-import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
-import { BurgerBtnIcon } from "@/assets/header/icon/BurgerBtnIcon";
-import { ContactBtn } from "../contact-btn";
-import data from "@/data-mock/link-pages.json";
-import { ClosedModal } from "@/assets/header-mobile/icons/ClosedModal";
-import clsx from "clsx";
-import { useState } from "react";
 
-export const HeaderMobile = () => {
-  const links = data.data.links;
+import { ClosedModal } from "@/assets/header-mobile/icons/ClosedModal";
+import { BurgerBtnIcon } from "@/assets/header/icon/BurgerBtnIcon";
+import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
+import { NavigationLinks } from "@/shared/interfaces/layout.interface";
+import clsx from "clsx";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { ContactBtn } from "../contact-btn";
+import s from "./header-mobile.module.css";
+
+interface Props {
+  content: NavigationLinks;
+}
+
+export const HeaderMobile = ({ content }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handlerBtnMenu = () => {
     setIsModalOpen(!isModalOpen);
+  };
+  const router = useRouter();
+  const handleServices = () => {
+    router.push("/");
+    setTimeout(() => {
+      document
+        .getElementById("services-section")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 200);
   };
 
   return (
@@ -24,18 +38,26 @@ export const HeaderMobile = () => {
           <BurgerBtnIcon />
         </button>
         <div className={s.headerMobile__contactUsBtn}>
-          <ContactBtn />
+          <ContactBtn {...content["contact-us"]} />
         </div>
         {isModalOpen && (
           <div className={clsx(s.headerMobile__menu__modal, s.active)}>
             <div className={s.menu__container}>
-              <div className={s.menu__list}>
-                {links.map((link, index) => (
-                  <li key={index} className={s.header__item}>
-                    <Link href={link.path}>{link.label}</Link>
-                  </li>
-                ))}
-              </div>
+              <ul className={s.menu__list}>
+                <li className={s.header__item}>
+                  <Link href={content.home.route}>{content.home.title}</Link>
+                </li>
+                <li className={s.header__item}>
+                  <Link href={content["about-us"].route}>
+                    {content["about-us"].title}
+                  </Link>
+                </li>
+                <li className={s.header__item}>
+                  <button onClick={handleServices}>
+                    {content.services.title}
+                  </button>
+                </li>
+              </ul>
             </div>
             <div className={s.closed__btn} onClick={handlerBtnMenu}>
               <ClosedModal />

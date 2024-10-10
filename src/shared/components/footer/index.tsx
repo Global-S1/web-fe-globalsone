@@ -8,17 +8,26 @@ import { ColIndex } from "./footer-col-index";
 import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
 import res from "@/data-mock/footerRoutes.json";
 import Link from "next/link";
+import {
+  NavigationLinks,
+  SocialMedia,
+} from "@/shared/interfaces/layout.interface";
 
 const socialmedia = [BtnFacebook, BtnLinkedin, BtnInstagram];
 
-export const Footer = () => {
+interface Props {
+  content: NavigationLinks;
+  socialMedia: SocialMedia;
+}
+
+export const Footer = ({ content, socialMedia }: Props) => {
   return (
     <footer className={s.footer}>
       <div className={s.footer__menu__container}>
         <div className={s.footer__search__container}>
-          <div className={s.logo__desk}>
+          <Link href={content.home.route} className={s.logo__desk}>
             <GlobalSLogo />
-          </div>
+          </Link>
           <div className={s.logo__mobile}>
             <LogoMobile />
           </div>
@@ -32,16 +41,29 @@ export const Footer = () => {
 
         <div className={s.footer__linklist__container}>
           <div className={s.mobile__menu}>
-            <p>Inicio</p>
-            <p>Acerca de nosotros</p>
-            <p>Proyectos</p>
-            <p>Servicios</p>
-            <p>Contactanos</p>
+            <Link href={content.home.route}>{content.home.title}</Link>
+            <Link href={content["contact-us"].route}>
+              {content["contact-us"].title}
+            </Link>
+            <Link href={content["about-us"].route}>
+              {content["about-us"].title}
+            </Link>
+            <button>{content.services.title}</button>
           </div>
           <div className={s.desk__menu}>
-            {res.data.map((col, index) => (
-              <ColIndex key={index} title={col.title} />
-            ))}
+            <ColIndex title={content.home.title} route={content.home.route} />
+            <ColIndex
+              title={content["about-us"].title}
+              route={content["about-us"].route}
+            />
+            <ColIndex
+              title={content.services.title}
+              route={content.services.route}
+            />
+            <ColIndex
+              title={content["contact-us"].title}
+              route={content.home.route}
+            />
           </div>
         </div>
       </div>
@@ -51,7 +73,7 @@ export const Footer = () => {
           <div className={s.social__text__container}>
             <h4>@2023 Global. All Rights Reserved.</h4>
             <Link href="/terms-conditions">
-            <h4>Terms & Conditions</h4>
+              <h4>Terms & Conditions</h4>
             </Link>
           </div>
           <div className={s.social__icons__container}>
