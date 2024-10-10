@@ -13,8 +13,6 @@ import {
   SocialMedia,
 } from "@/shared/interfaces/layout.interface";
 
-const socialmedia = [BtnFacebook, BtnLinkedin, BtnInstagram];
-
 interface Props {
   content: NavigationLinks;
   socialMedia: SocialMedia;
@@ -77,11 +75,18 @@ export const Footer = ({ content, socialMedia }: Props) => {
             </Link>
           </div>
           <div className={s.social__icons__container}>
-            {socialmedia.map((Item, index) => (
-              <div key={index} className={s.social__media__icon}>
-                <Item />
-              </div>
-            ))}
+            <Link href={socialMedia.facebook} className={s.social__media__icon}>
+              <BtnFacebook />
+            </Link>
+            <Link
+              href={socialMedia.instagram}
+              className={s.social__media__icon}
+            >
+              <BtnInstagram />
+            </Link>
+            <Link href={socialMedia.linkedin} className={s.social__media__icon}>
+              <BtnLinkedin />
+            </Link>
           </div>
         </div>
       </div>
