@@ -1,5 +1,6 @@
 .ourService__section {
   margin-bottom: 56px;
+  padding-top: 90px;
 }
 .ourServices_title {
   position: relative;
@@ -111,6 +112,7 @@
 @media (1024px <= width) {
   .ourService__section {
     margin-bottom: 228px;
+
   }
   .cards_container {
     column-gap: 40px;
