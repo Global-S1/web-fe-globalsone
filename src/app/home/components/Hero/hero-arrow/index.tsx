@@ -8,7 +8,7 @@ export const HeroArrow = () => {
     document.getElementById("metrics")?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <button onClick={handleMetrics} className={s.hero__arrow}>
+    <a onClick={handleMetrics} className={s.hero__arrow}>
       <div className={s.arrow__container}>
         <DobleDonwArrow />
       </div>
@@ -16,6 +16,6 @@ export const HeroArrow = () => {
       <div className={s.arrow__container}>
         <DobleDonwArrow />
       </div>
-    </button>
+    </a>
   );
 };

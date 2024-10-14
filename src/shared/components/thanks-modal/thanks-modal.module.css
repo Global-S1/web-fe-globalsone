@@ -22,7 +22,7 @@
   line-height: 17px;
   width: 80%;
   margin-bottom: 29px;
-  font-family: "Urbanist";
+  font-family: var(--font-urbanist);
 }
 
 .message__container > button {

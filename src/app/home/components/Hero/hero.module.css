@@ -1,12 +1,19 @@
 .hero__section {
+  position: relative;
+  height: calc(100vh - 79px);
+  min-height: 400px;
+  max-height: 600px;
+  min-width: 328px;
+  margin-bottom: clamp(
+    45.29px,
+    calc(45.29px + (257 - 45.29) * ((90vw - 360px) / (1200 - 360))),
+    257px
+  );
 }
 .hero__container {
   width: 100%;
+  height: 100%;
   position: relative;
-  max-height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .widowCard_container {
@@ -14,71 +21,22 @@
   padding-top: 70px;
 }
 
-.leave_base {
-  display: none;
-}
-
 @media (640px <= width) {
 }
 
 @media (768px <= width) {
-  .hero__container {
-    min-height: 600px;
-    max-height: 600px;
-    height: 600px;
-  }
-
   .hero__section {
-    margin-top: 70px;
+    height: 100vh;
+    min-height: 640px;
+    max-height: 900px;
   }
 }
 
 @media (1024px <= width) {
-  .hero__container {
-    max-height: 900px;
-    height: calc(100vh - 80px);
-  }
-
-  .leave_base {
-    display: inline-block;
-    position: absolute;
-  }
-  .leave_one {
-    width: 160px;
-    right: -4%;
-    top: 10%;
-    z-index: 2;
-  }
-  .leave_two {
-    width: 220.748px;
-    height: 214.556px;
-    z-index: 1;
-    top: -14%;
-    right: -7%;
-    transform: rotate(-55deg);
-  }
-  /* .container {
-    height: 800px;
-  } */
 }
 
 @media (1280px <= width) {
-  .hero__container {
-    margin-bottom: 257px;
-  }
-  .leave_one {
-    width: 160px;
-    right: -4%;
-    top: 10%;
-    z-index: 2;
-  }
-  .leave_two {
-    width: 220.748px;
-    height: 214.556px;
-    max-height: calc(100vh - 100px);
-    z-index: 1;
-    top: -11%;
-    right: -3%;
-    transform: rotate(-55deg);
+  .hero__section {
+    height: 100vh;
   }
 }

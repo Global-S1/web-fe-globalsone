@@ -1,3 +1,7 @@
+.section__from{
+  height: 630px;
+}
+
 .form__container {
   position: relative;
   border: 0.5px solid rgba(255, 255, 255, 0.223);
@@ -97,15 +101,20 @@
   box-shadow: -1px 4px 8px 0px rgb(0 0 0 / 34%);
 }
 
-.alert{
-  background: rgba(253, 12, 12, 0.80);
+.alert {
+  background: rgba(253, 12, 12, 0.8);
   padding: 13px;
   border-radius: 11px;
 }
 
 @media (640px <= width) {
+  .section__from {
+    margin-top: 50px;
+    height: 650px;
+  }
   .form__container {
     border-radius: 40px;
+    height: 650px;
   }
   .form__text__container > h2 {
     font-size: 33px;
@@ -135,7 +144,9 @@
   }
 }
 @media (768px <= width) {
-  .form__container {
+  .section__from {
+    margin-top: 150px;
+    height: 700px;
   }
   .section__from {
     margin-top: 100px;
@@ -150,7 +161,6 @@
     font-size: 17px;
   }
   .magenta__circle {
-    /**/
     width: 780px;
     height: 389px;
     border-radius: 39px 39px 0px 0px;

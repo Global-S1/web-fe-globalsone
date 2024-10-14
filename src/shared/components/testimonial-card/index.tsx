@@ -19,15 +19,19 @@ export const TestimonialCard: FC<ITestimonial> = ({ content }) => {
       className={s.testimonialCard__container}
       style={{ backgroundImage: `url(${BgTestimonial.src})` }}
     >
+      <div className={s.bg__layer}></div>
       <div className={s.testimonialCard__text__container}>
         <div className={s.testimonialCard__text__name}>
-          <h2>{name}</h2>
+          <h2 dangerouslySetInnerHTML={{ __html: name }} />
           <Stars numStars={5} />
         </div>
         <p>{description}</p>
       </div>
       <Image src={gian} alt="gian" className={s.client__img} />
       <MosaicImages />
+      <div className={s.green__mini__circle}></div>
+      <div className={s.green__circle}></div>
+      <div className={s.purple__circle}></div>
     </div>
   );
 };

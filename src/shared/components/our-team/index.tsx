@@ -4,11 +4,18 @@ import { CarrucelImg } from "../carrucel-image";
 import { CarrucelImageMobil } from "../carrucel-image-mobile";
 import s from "./our-team.module.css";
 import { getOurTeam } from "./service/our-team.service";
+import LogoOurteam from "@/assets/GloblaS1.png";
+import Image from "next/image";
+import Link from "next/link";
+import { ActionButton } from "../action-button";
 
 export const OurTeam = async () => {
   const ourTeam = await getOurTeam();
   return (
     <div className={s.ourTeam_container}>
+      <div className={s.logo}>
+        <Image src={LogoOurteam} alt="Global S1" width={100} height={100} />
+      </div>
       <h2>{ourTeam.title}</h2>
       <p>{ourTeam.description}</p>
       <div className={s.ourTeam__leave__one}>
@@ -16,11 +23,17 @@ export const OurTeam = async () => {
       </div>
       <CarrucelImg content={ourTeam.desktopImg} />
       <CarrucelImageMobil content={ourTeam.mobileImg} />
+      <Link href={"/about-us"} className={s.link__btn}>
+        <ActionButton text="Quiero Conocerlos" />
+      </Link>
       <div className={s.ourTeam__leave__two}>
         <LeaveClear />
       </div>
       <div className={s.ourTeam__leave__three}>
         <LeaveBig />
+      </div>
+      <div className={s.ourTeam__leave__four}>
+        <LeaveClear />
       </div>
     </div>
   );

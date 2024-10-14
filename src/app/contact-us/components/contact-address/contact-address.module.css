@@ -114,7 +114,7 @@
   flex-grow: 1;
 }
 
-.achor{
+.achor {
   display: flex;
 }
 .achor > button {
@@ -172,7 +172,7 @@
 }
 @media (768px <= width) {
   .address__section {
-    margin: 120px 0 150px 0;
+    margin: 120px 0 25px 0;
   }
   .address__container {
     height: 600px;

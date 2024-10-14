@@ -7,7 +7,7 @@ export const HeroTitleLeft = ({ title }: { title: string }) => {
     <div className={clsx(s.hero__title)}>
       <div className={s.hero__text__container}>
         <HeroTitleBgLeft />
-        <h2>{title}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: title }} />
       </div>
     </div>
   );

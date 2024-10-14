@@ -7,6 +7,11 @@
   background-blend-mode: color-dodge;
   border-radius: 16px;
   height: 436px;
+  background: linear-gradient(
+    180deg,
+    #0e1330 0%,
+    rgba(214, 43, 211, 0.32) 100%
+  );
 }
 
 .heroMetrics_title {
@@ -28,9 +33,11 @@
 
 .bg_deg {
   position: absolute;
-  width: 105%;
+  width: 100%;
   height: 90%;
-  background: linear-gradient(to bottom, #0b0033a7, #290066);
+  /* background: linear-gradient(to bottom, #0b0033a7, #290066); */
+
+  background: #0e1330;
   opacity: 0.7;
   background-blend-mode: color-dodge;
   top: 10%;
@@ -62,6 +69,10 @@
 }
 
 @media (1024px <= width) {
+  .bg_deg {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
   .heroMetrics_title > h2 {
     width: 80%;
     margin-top: 30px;
@@ -79,13 +90,13 @@
     margin-bottom: 40px;
   }
   .heroMetrics_title > h2 {
-    width: 75%;
+    width: 90%;
     margin-top: 50px;
     font-size: var(--font-size-title-8);
     line-height: 51.66px;
   }
   .bg_deg {
-    height: 80%;
+    height: 90%;
   }
 }
 

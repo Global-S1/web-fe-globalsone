@@ -7,6 +7,12 @@
   width: 100%;
   background: linear-gradient(180deg, #1a0258 0%, rgba(87, 62, 151, 0) 100%);
 }
+
+.logo__mobile {
+  display: block;
+  width: 113px;
+}
+
 .headerMobile__burger {
   position: absolute;
   top: 50%;
@@ -61,7 +67,7 @@
   right: 5%;
 }
 .headerMobile__menu__modal.active {
-  left: 0; 
+  left: 0;
 }
 
 @media (640px <= width) {

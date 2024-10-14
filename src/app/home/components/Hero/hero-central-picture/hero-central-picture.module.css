@@ -1,12 +1,13 @@
 .heroCenterPricture__container {
-  height: 600px;
-
+  position: absolute;
+  width: 100%;
+  height: 80%;
 }
 .hero_picture_mobile {
   max-width: none;
-  object-fit: cover;
-  width: 105%;
-  max-width: 358px;
+  width: 107%;
+  height: 105%;
+  min-height: 360px;
   position: absolute;
   top: -6%;
   left: 50%;
@@ -24,17 +25,19 @@
   .hero_picture {
     display: block;
     position: absolute;
-    width: 100vh;
-    top: -10%;
+    width: 100%;
+    height: 102%;
+    top: -1%;
     left: 50%;
-    max-width: 566px;
+    max-width: 460px;
     min-height: 400px;
-    transform: translate(-43%);
+    transform: translate(-50%);
+    object-position: center;
   }
 }
 
 @media (640px <= width) {
-  .hero_picture {
+  /* .hero_picture {
     display: block;
     position: absolute;
     width: 94%;
@@ -42,37 +45,36 @@
     left: 50%;
     max-width: 666px;
     transform: translate(-45%);
-  }
+  } */
 }
 
 @media (768px <= width) {
   .heroCenterPricture__container {
-    height: 700px;
+    top: 2%;
+    max-width: 600px;
+    left: 47%;
+    transform: translateX(-50%);
   }
   .hero_picture {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: -10%;
-    left: 50%;
-    max-width: 786px;
+    max-width: 790px;
+    min-height: 680px;
   }
 }
 
 @media (min-width: 1024px) {
-  .hero_picture {
+  /* .hero_picture {
     max-width: 1000px;
-  }
+  } */
 }
 
 @media (min-width: 1280px) {
+  .heroCenterPricture__container {
+    top: -1%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .hero_picture {
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    height: 100vh;
-    max-width: 1200px;
-    max-height: 1000px;
-    transform: translateX(-45%);
+    max-width: 1000px;
+    min-height: 680px;
   }
 }

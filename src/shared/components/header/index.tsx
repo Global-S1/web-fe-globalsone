@@ -35,7 +35,11 @@ export const Header = ({ content }: Props) => {
               </Link>
             </li>
             <li className={s.header__item}>
-              <button onClick={handleServices}>{content.services.title}</button>
+              <Link href={"/#services-section"}>
+                <button onClick={handleServices}>
+                  {content.services.title}
+                </button>
+              </Link>
             </li>
           </ul>
         </nav>

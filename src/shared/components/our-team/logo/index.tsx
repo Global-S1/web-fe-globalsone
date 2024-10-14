@@ -1,16 +1,12 @@
-import { FC } from "react";
 
-
-export const GlobalSLogo = ({ w = "196", h = "40"}) => {
+export const LogoOurTeam = () => {
   return (
     <svg
-      // width={w}
-      // height={h}
       viewBox="0 0 248 51"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      style={{width: "100%", height: "100%"}}
+      style={{ width: "100%", height: "100%", display: "block !important" }}
     >
       <rect width={"100%"} height={"100%"} fill="url(#pattern0_263_1118)" />
       <defs>

@@ -1,6 +1,5 @@
 .hero__title {
   position: absolute;
-  width: 190px;
   right: 0;
   bottom: 9%;
 }
@@ -9,67 +8,31 @@
 }
 .hero__text__container > h2 {
   text-align: end;
-  font-size: var(--font-size-large);
-  line-height: 25.75px;
-}
-
-@media (500px <= width) {
-  .hero__title {
-    width: 210px;
-    bottom: 11%;
-  }
-
-  .hero__text__container > h2 {
-    font-size: 28px;
-    line-height: 29.75px;
-  }
+  font-size: clamp(var(--font-size-large), 5vw, var(--font-size-title-4));
+  line-height: clamp(25.75px, 5vw, 71.07px);
 }
 
 @media (640px <= width) {
   .hero__title {
     position: absolute;
-    width: 270px;
-  }
-
-  .hero__text__container > h2 {
-    font-size: var(--font-size-title-10);
-    line-height: 38px;
   }
 }
 
 @media (768px <= width) {
   .hero__title {
     position: absolute;
-    width: 290px;
-  }
-
-  .hero__text__container > h2 {
-    font-size: var(--font-size-title-9);
-    line-height: 40px;
   }
 }
 
 @media (1024px <= width) {
   .hero__title {
     position: absolute;
-    width: 400px;
-  }
-
-  .hero__text__container > h2 {
-    font-size: var(--font-size-title-7);
-    line-height: 57px;
   }
 }
 
 @media (1280px <= width) {
   .hero__title {
     position: absolute;
-    width: 490px;
     bottom: 2%;
-  }
-
-  .hero__text__container > h2 {
-    font-size: var(--font-size-title-4);
-    line-height: 71.07px;
   }
 }

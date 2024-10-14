@@ -6,12 +6,12 @@ interface Props {
   title: string;
 }
 
-export const HeroMetrics: FC<Props> = ({ title }) => {
+export const InsideMetrics: FC<Props> = ({ title }) => {
   return (
     <div className={s.heroMetrics_container}>
       <div className={s.bg_deg}></div>
       <div className={s.heroMetrics_title}>
-        <h2 dangerouslySetInnerHTML={{__html:title}}></h2>
+        <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
       </div>
       <Insides size={"large"} />
     </div>

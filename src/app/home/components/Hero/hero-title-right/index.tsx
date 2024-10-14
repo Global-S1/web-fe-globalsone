@@ -6,7 +6,7 @@ export const HeroTitleRight = ({ title }: { title: string }) => {
     <div className={s.hero__title}>
       <div className={s.hero__text__container}>
         <HeroTitleBgRight />
-        <h2>{title}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: title }} />
       </div>
     </div>
   );

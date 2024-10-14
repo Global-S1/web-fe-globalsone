@@ -37,11 +37,11 @@ interface IHomeHeroContent {
     left: string;
     right: string;
   };
-  insides: string;
 }
 
 export interface IHomeContentInput {
   hero: IHomeHeroContent;
+  insidesSection: string;
   features: IHomeFeature;
   whatwebuild: {
     title: string;
@@ -62,10 +62,11 @@ export interface IHomeContentInput {
       service_4: Service;
     };
   };
-  contactus: {
+
+  testimonials: {
     title: string;
   };
-  testimonials: {
+  contactDescription: {
     title: string;
   };
 }

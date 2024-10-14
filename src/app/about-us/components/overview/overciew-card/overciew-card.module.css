@@ -15,11 +15,13 @@
 }
 .overviewCard__text_container > h3 {
   font-size: 12px;
+  font-family: var(--font-urbanist);
 }
 .overviewCard__text_container > p {
   font-size: 11px;
-  font-family: var(--font-futura);
+  font-family: "Futura";
   font-weight: 500;
+  text-align: justify;
 }
 
 @media (640px <= width) {
@@ -65,6 +67,7 @@
   }
   .overviewCard__text_container > h3 {
     font-size: 32px;
+    font-weight: bold;
   }
   .overviewCard__text_container > p {
     font-size: 22px;

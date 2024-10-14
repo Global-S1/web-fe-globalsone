@@ -1,14 +1,14 @@
 export const LogoMobile = () => {
   return (
     <svg
-      width="113"
-      height="23.241"
+      // width="113"
+      // height="23.241"
       viewBox="0 0 141 29"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <rect width="141" height="29" fill="url(#pattern0_87_231)" />
+      <rect width="100%" height="100%" fill="url(#pattern0_87_231)" />
       <defs>
         <pattern
           id="pattern0_87_231"

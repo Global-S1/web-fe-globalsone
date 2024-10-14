@@ -6,7 +6,7 @@ export const WindowBar = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={{
-            width: "100%",
+            width: "100.2%",
           }}
         >
           <g filter="url(#filter0_d_771_72)">
@@ -14,7 +14,7 @@ export const WindowBar = () => {
               fillRule="evenodd"
               clipRule="evenodd"
               d="M44 0C21.9086 0 4 17.9086 4 40V81.3456C4 84.7708 4.43053 88.0955 5.24041 91.2685C9.65397 73.9771 25.3339 61.1914 44 61.1914H1204C1222.67 61.1914 1238.35 73.9771 1242.76 91.2685C1243.57 88.0955 1244 84.7708 1244 81.3455V40C1244 17.9086 1226.09 0 1204 0H44Z"
-              fill="#1A2660"
+              fill="#2f3d83a6"
               style={{
                 mixBlendMode: "screen",
                 transform: "scale(1.01)",

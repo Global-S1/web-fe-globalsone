@@ -38,7 +38,6 @@ export interface IHomeHeroContent {
     left: string;
     right: string;
   };
-  insides: string;
 }
 
 export interface IWhathWeBuildContent {
@@ -58,13 +57,15 @@ export interface IOurServices {
 
 export interface IHomeContent {
   hero: IHomeHeroContent;
+  insidesSection: string;
   features: IFeature[];
   whatwebuild: IWhathWeBuildContent;
   ourservice: IOurServices;
   testimonials: {
     title: string;
   };
-  contactus: {
+  contactDescription: {
     title: string;
   };
+  
 }

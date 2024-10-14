@@ -9,7 +9,7 @@ interface Prop {
 
 export const ModalWindow: FC<Prop> = ({ children }) => {
   return (
-    <div className={s.windowCard_container}>
+    <div className={s.windowCard__container}>
       <div className="relative">
         <WindowHead active />
         {children}

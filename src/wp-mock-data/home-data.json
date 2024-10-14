@@ -3,10 +3,11 @@
     "title": {
       "left": "Impulsa tu negocio con",
       "right": "soluciones de software a medida"
-    },
-    "insides": "TRABAJA CON PROFESIONALES Y VE COMO TUS IDEAS SE DIGITALIZAN"
+    }
   },
-  "features": [{
+  "insidesSection": "TRABAJA CON PROFESIONALES Y VE COMO TUS IDEAS SE DIGITALIZAN",
+  "features": [
+    {
       "title": [
         { "text": "Desarrollamos", "styles": "" },
         { "text": "software", "styles": "title_styles_one" },
@@ -54,7 +55,8 @@
       "content": "Nos enfocamos en ofrecerte plataformas confiables y seguras que potencien tu negocio, ayudándote a optimizar cada venta y mejorar la experiencia de tus clientes online.",
       "img": "https://localhost:8000/wp-content/uploads/2024/10/Group-48096346.png",
       "reverse": true
-    }, {
+    },
+    {
       "title": [
         {
           "text": "Implementa",
@@ -120,7 +122,7 @@
       }
     ]
   },
-  "ourservice":{
+  "ourservice": {
     "title": "NUESTROS PRINCIPALES SERVICIOS",
     "services": [
       {
@@ -145,13 +147,10 @@
       }
     ]
   },
-  "contactus": "¿Listo para transformar tu negocio?",
-  "ourteam": {
-    "title": "Este es el título",
-    "description": "Esta es la descripción"
-  },
-  "testimonials":{
+  "testimonials": {
     "title": "LO QUE DICEN NUESTROS CLIENTES"
+  },
+  "contactDescription": {
+    "title": "¿Listo para transformar tu negocio?"
   }
-
 }

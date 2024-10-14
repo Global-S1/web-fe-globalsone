@@ -2,7 +2,7 @@ import { wordpressInstance } from "@/libs/axios";
 import { IHttpResponse } from "../interfaces/http.interface";
 import { IForm } from "@/app/contact-us/interfaces/contact-form";
 import { PS_FORMS, USER_FORMS } from "../constants/url";
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from "uuid";
 
 interface Props {
   page: string;
@@ -23,7 +23,6 @@ export const wordpressService = async <T>({ id, page }: Props) => {
   const response = await wordpressInstance.get<IHttpResponse<T>>(
     `/wp-json/wp/v2/${page}/${id}?acf_format=standard`
   );
-
   return response;
 };
 
@@ -43,9 +42,9 @@ export const authService = async () => {
       password: PS_FORMS,
     }
   );
-  
-  return response
-}
+
+  return response;
+};
 
 export const handlerFormsService = async <T>({ data, token }: IFromProps) => {
   const response = await wordpressInstance.post<IHttpResponse<T>>(
@@ -62,4 +61,3 @@ export const handlerFormsService = async <T>({ data, token }: IFromProps) => {
   );
   return response;
 };
-

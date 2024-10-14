@@ -5,12 +5,11 @@ export const homeAdapter = (data: IHomeContentInput): IHomeContent => {
   return {
     hero: {
       title: data.hero.title,
-      insides: data.hero.insides,
     },
+    insidesSection: data.insidesSection,
     features: Object.values(data.features).map((feature) => ({
       ...feature,
       title: Object.values(feature.title) as TitleChunk[],
-
     })),
     whatwebuild: {
       title: data.whatwebuild.title,
@@ -21,6 +20,6 @@ export const homeAdapter = (data: IHomeContentInput): IHomeContent => {
       services: Object.values(data.ourService.services),
     },
     testimonials: data.testimonials,
-    contactus: data.contactus,
+    contactDescription: data.contactDescription,
   };
 };

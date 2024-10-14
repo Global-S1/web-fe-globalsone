@@ -31,10 +31,10 @@ export const MosaicTeam = async () => {
               height={800}
             />
           ))}
+          <div className={s.contactMosaic__description__container}>
+            <p>{data.description}</p>
+          </div>
         </div>
-      </div>
-      <div className={s.contactMosaic__description__container}>
-        <p>{data.description}</p>
       </div>
       <div className={s.leave__bottom}>
         <LeaveClear />

@@ -8,7 +8,7 @@ export const HeroCentralPicture = () => {
   return (
     <div
       className={s.heroCenterPricture__container}
-      style={{ backgroundImage: `url(${bgCenterImg.src})` }}
+      // style={{ backgroundImage: `url(${bgCenterImg.src})` }}
     >
       <Image
         src={heroPictureMobile}

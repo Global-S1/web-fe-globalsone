@@ -33,7 +33,7 @@ export const HeaderMobile = ({ content }: Props) => {
   return (
     <header className={s.headerMobile}>
       <div className={s.headerMobile__container}>
-        <Link href={"/"}>
+        <Link href={"/"} className={s.logo__mobile}>
           <LogoMobile />
         </Link>
         <button onClick={handlerBtnMenu} className={s.headerMobile__burger}>

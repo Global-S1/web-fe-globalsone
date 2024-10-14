@@ -1,22 +1,40 @@
-.windowCard_container {
+.windowCard__container {
   position: relative;
   border-radius: 17px;
+  height: clamp(
+    435px,
+    calc(445px + (523 - 435) * ((90vw - 360px) / (1200 - 360))),
+    523px
+  );
+}
+
+.windowCard__container > div {
+  height: 100%;
+  width: 100%;
 }
 
 @media (640px <= width) {
-  .windowCard_container {
+  .windowCard__container {
     border-radius: 20px;
   }
 }
 
 @media (768px <= width) {
+  .windowCard__container {
+    border-radius: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
 }
 
 @media (1024px <= width) {
+  .windowCard__container {
+    border-radius: 30px;
+  }
 }
 
 @media (1280px <= width) {
-  .windowCard_container {
+  .windowCard__container {
     border-radius: 40px;
   }
 }

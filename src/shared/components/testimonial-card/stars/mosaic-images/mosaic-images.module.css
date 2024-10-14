@@ -1,4 +1,5 @@
 .mmosaic__container {
+  position: relative;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -6,6 +7,7 @@
   row-gap: 13px;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index: 2;
 }
 .mmosaic__container > img {
   object-fit: cover;
@@ -19,6 +21,10 @@
 }
 
 .mmosaic__container img:nth-last-child(2) {
+  display: none;
+}
+
+.green__circle {
   display: none;
 }
 

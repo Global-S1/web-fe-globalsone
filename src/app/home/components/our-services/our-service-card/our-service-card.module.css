@@ -16,24 +16,34 @@
 
 .title__container > h3 {
   text-align: center;
-  font-size: 24px;
   color: #19dbca;
+  font-size: 24px;
   line-height: 24px;
   margin: 10px 0;
 }
 
 .description {
-  width: 75%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 .description > p {
   text-align: center;
-  font-size: 16px;
   font-family: "Futura";
-  line-height: 33px;
-  font-size: 11px;
+  font-size: clamp(
+    16px,
+    calc(16px + (32 - 16) * ((80vw - 360px) / (1200 - 360))),
+    32px
+  );
+  line-height: clamp(
+    24px,
+    calc(24px + (48 - 24) * ((80vw - 360px) / (1200 - 360))),
+    48px
+  );
+
   font-family: var(--font-futura);
-  margin: 0 15px;
+  width: 90%;
   font-weight: 500;
 }
 
@@ -54,9 +64,6 @@
   .title__container > h3 {
     font-size: 30px;
     line-height: 30.99px;
-  }
-  .description > p {
-    font-size: 22px;
   }
 }
 
@@ -89,7 +96,6 @@
   }
   .description > p {
     text-align: justify;
-    font-size: 25px;
   }
 }
 
@@ -111,8 +117,5 @@
   }
   .description {
     width: 45%;
-  }
-  .description > p {
-    font-size: 32px;
   }
 }

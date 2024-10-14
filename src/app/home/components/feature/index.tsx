@@ -15,7 +15,7 @@ export const Features: FC<IProps> = ({ content }) => {
   const listImg = [groupOne, groupTwo, groupThree];
   return (
     <Section>
-      <div className={s.feature_container} id="features">
+      <div className={s.feature__container} id="features">
         <div className={s.green_circle_one}></div>
         {content.map((item, index) => (
           <FeatureItem key={index} {...item} img={listImg[index].src} />

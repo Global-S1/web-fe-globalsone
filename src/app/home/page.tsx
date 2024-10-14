@@ -6,19 +6,20 @@ import { OurTeamSection } from "./components/our-team";
 import { Testimonials } from "./components/testimonials";
 import { WhatWeBuild } from "./components/what-we-build";
 import { getHomeDataService } from "./service/home.service";
+import { InsideSection } from "./components/insides-serction";
 
 export default async function Home() {
   const res = await getHomeDataService();
-
   return (
     <>
       <Hero content={res.hero} />
+      <InsideSection content={res.insidesSection} />
       <Features content={res.features} />
       <WhatWeBuild content={res.whatwebuild} />
       <OurServices content={res.ourservice} />
       <Testimonials content={res.testimonials} />
       <OurTeamSection />
-      <ContactUs />
+      <ContactUs content={res.contactDescription.title} />
     </>
   );
 }

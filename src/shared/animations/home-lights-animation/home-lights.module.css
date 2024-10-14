@@ -24,6 +24,39 @@
   z-index: 30;
 }
 
+.light__line__magenta__svg {
+  position: absolute;
+  right: 14.8%;
+  top: 50%;
+  animation: rectangleUP 3s infinite;
+}
+
+.light__line__skyblue__svg {
+  position: absolute;
+  left: 14.8%;
+  top: 50%;
+  animation: rectangleDown 3s infinite;
+}
+
+.lines__white {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.25) 77%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.line__left {
+  left: 15%;
+}
+
+.line__right {
+  right: 15%;
+}
+
 .light__line__blue {
   position: absolute;
   background: linear-gradient(
@@ -33,7 +66,7 @@
   );
   width: 2.5px;
   height: 40vh;
-  animation: moveUp 4s infinite;
+  animation: moveUp 5s infinite;
   right: 0;
   z-index: 30;
 }
@@ -54,7 +87,7 @@
 
 @keyframes moveUp {
   0% {
-    top: 100px;
+    top: 400px;
     opacity: 0;
   }
   50% {
@@ -63,5 +96,23 @@
   100% {
     top: -300px;
     opacity: 0;
+  }
+}
+
+@keyframes rectangleUP {
+  0% {
+    top: 125%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+
+@keyframes rectangleDown {
+  0% {
+    top: -25%;
+  }
+  100% {
+    top: 100%;
   }
 }
