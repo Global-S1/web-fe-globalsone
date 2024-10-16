@@ -59,7 +59,7 @@
 @media (768px <= width) {
   .success__section {
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
   }
   .green__circle {
     position: absolute;

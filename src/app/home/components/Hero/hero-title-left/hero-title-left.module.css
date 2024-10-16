@@ -1,6 +1,6 @@
 .hero__title {
   position: absolute;
-  top: 5%;
+  top: 3%;
 }
 
 .hero__title > div {
@@ -19,18 +19,15 @@
 
 @media (768px <= width) {
   .hero__title {
-    top: 12%;
+    top: 18%;
   }
 }
 
 @media (1024px <= width) {
-  .hero__title {
-    top: 13%;
-  }
 }
 
 @media (1280px <= width) {
   .hero__title {
-    top: 15%;
+    top: 20%;
   }
 }

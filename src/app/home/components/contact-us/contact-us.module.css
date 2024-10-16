@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .bg__desktop {
   display: none;
 }
@@ -26,7 +27,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-size: cover;
-  background-position: center -51px;
+  background-position: center 18%;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -65,31 +66,10 @@
 
 .green_circle {
   display: none;
-
-  position: absolute;
-  z-index: -1;
-  width: 268px;
-  height: 268px;
-  flex-shrink: 0;
-  border-radius: 668px;
-  background: #2eea79;
-  filter: blur(100px);
-  right: -30%;
 }
 
 .purple_circle {
   display: none;
-
-  position: absolute;
-  z-index: -1;
-  width: 371px;
-  height: 371px;
-  flex-shrink: 0;
-  border-radius: 571px;
-  background: #5a2eea;
-  filter: blur(100px);
-  left: -30%;
-  bottom: -20%;
 }
 .contact__button {
   margin-top: 30px;
@@ -110,11 +90,14 @@
   }
   .bg__desktop {
     display: block;
-    width: 100%;
+    position: absolute;
+    width: 115%;
     height: 100%;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     z-index: -1;
   }
@@ -133,6 +116,7 @@
     border-radius: 12px;
   }
   .green_circle {
+    display: block;
     position: absolute;
     z-index: -1;
     width: 568px;
@@ -146,16 +130,17 @@
   }
 
   .purple_circle {
+    display: block;
     position: absolute;
-    z-index: -1;
-    width: 571px;
-    height: 571px;
+    z-index: 2;
+    width: 471px;
+    height: 471px;
     flex-shrink: 0;
     border-radius: 571px;
     background: #5a2eea;
     filter: blur(200px);
     left: -30%;
-    bottom: -20%;
+    bottom: -10%;
   }
 }
 @media (1280px <= width) {

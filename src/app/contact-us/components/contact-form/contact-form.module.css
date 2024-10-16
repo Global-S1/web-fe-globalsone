@@ -1,4 +1,4 @@
-.section__from{
+.section__from {
   height: 630px;
 }
 
@@ -46,7 +46,7 @@
   justify-content: space-between;
 }
 .inputs__grid > input,
-.inputs__grid > select,
+/* .inputs__grid > select, */
 .inputs__grid > textarea {
   flex-shrink: 0;
   width: 100%;
@@ -56,6 +56,21 @@
   font-size: 15px;
   font-family: var(--font-futura);
   border: none;
+}
+.inputs__grid > select {
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 11px;
+  /* color: rgba(255, 255, 255, 0.43); */
+  font-size: 15px;
+  font-family: var(--font-futura);
+  border: none;
+  background: rgba(217, 217, 217, 0.162);
+
+  background-position: 4%;
+  background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 6%;
 }
 
 .inputs__grid input:nth-child(1),
@@ -74,8 +89,9 @@
 }
 
 .inputs__grid > select {
+  position: relative;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.288);
+  /* background-color: rgba(255, 255, 255, 0.288); */
 }
 
 .terms_container {
@@ -202,9 +218,12 @@
   }
   .inputs__grid > input,
   .inputs__grid > select {
-    font-size: 22px;
+    font-size: 18px;
     padding-left: 27px;
     color: white;
+  }
+  .inputs__grid > select {
+    padding-left: 35px;
   }
   .inputs__grid > textarea {
     grid-row: 1 / 4;

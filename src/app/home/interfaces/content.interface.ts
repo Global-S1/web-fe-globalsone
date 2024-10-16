@@ -9,6 +9,7 @@ export type IFeature = {
   content: string;
   img?: string;
   reverse?: boolean;
+  pictureStyle?: string;
 };
 
 export type IService = {

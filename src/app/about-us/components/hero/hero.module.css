@@ -24,7 +24,9 @@
   line-height: 16.5px;
   width: 177px;
   font-family: var(--font-futura);
+  font-family: "Futura";
   text-align: justify;
+  
 }
 
 /* -------avatar card--------- */
@@ -44,32 +46,10 @@
   background: linear-gradient(
     180deg,
     rgba(217, 217, 217, 0.17) 0%,
-    rgba(115, 115, 115, 0) 100%
+    rgba(93, 38, 183, 0) 100%
   );
   left: 45%;
   transform: translateX(-50%);
-}
-
-.avatarCards__float__container_woman {
-  position: absolute;
-  top: 9%;
-  left: 53%;
-  transform: translateX(-50%);
-}
-.avatarCards__float__container_man {
-  position: absolute;
-  top: 5%;
-  left: 20%;
-  transform: rotate(-12deg) translate(-50%);
-}
-
-.avatar__woman__card {
-  position: absolute;
-  width: 78px;
-  height: 120px;
-  left: 50%;
-  top: 40%;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 .avatar__man__card {
@@ -103,7 +83,7 @@
   grid-column: 1 / 13;
   grid-row: 2 / 3;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   margin: 20px 0;
@@ -120,7 +100,8 @@
   font-size: 15px;
 }
 
-.socialMedia__icons__container > div {
+.socialMedia__icons__container > a {
+  display: block;
   width: 22px;
   height: 22px;
 }
@@ -159,15 +140,6 @@
   .hero__text__title > p {
     width: 180px;
   }
-
-  .avatar__woman__card {
-    width: 87.36px;
-    height: 134.4px;
-  }
-  .avatar__man__card {
-    width: 92.78px;
-    height: 128.09px;
-  }
 }
 @media (450px <= width) {
   .hero__text__title > h2 {
@@ -178,15 +150,6 @@
   .hero__text__title > p {
     width: 227.88px;
     font-size: 12px;
-  }
-  .avatar__woman__card {
-    width: 96.096px;
-    height: 147.84px;
-  }
-
-  .avatar__man__card {
-    width: 102.058px;
-    height: 140.899px;
   }
 }
 
@@ -216,25 +179,6 @@
     width: 300px;
     line-height: 21.5px;
   }
-  .avatarCards__float__container_woman {
-    top: 9%;
-    right: 0%;
-    transform: translateX(-50%);
-  }
-  .avatarCards__float__container_man {
-    top: 5%;
-    left: 42%;
-    transform: rotate(-12deg) translate(-50%);
-  }
-  .avatar__woman__card {
-    width: 138.38px;
-    height: 212.89px;
-  }
-
-  .avatar__man__card {
-    width: 146.96px;
-    height: 202.89px;
-  }
 
   .hero__socialMedia__container {
     margin: 0;
@@ -257,7 +201,6 @@
     border-radius: 1119.832px;
     background: #5a2eea;
     filter: blur(6000px);
-    border: 1px solid white;
     opacity: 0.7;
     z-index: -20;
     top: 50%;
@@ -304,28 +247,9 @@
     width: 400px;
     line-height: 24.5px;
   }
-  .avatarCards__float__container_woman {
-    top: 40%;
-    left: 60%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-  .avatarCards__float__container_man {
-    top: 38%;
-    left: 49%;
-    transform: rotate(-12deg) translateX(-50%) translateY(-50%);
-  }
   .hero__avatarCards {
     height: 100%;
     grid-row: 1 / 9;
-  }
-  .avatar__woman__card {
-    width: 173px;
-    height: 266.11px;
-  }
-
-  .avatar__man__card {
-    width: 183.7px;
-    height: 253.61px;
   }
   .hero__inside__leave {
     width: 70px;
@@ -335,15 +259,6 @@
   }
 }
 @media (1024px <= width) {
-  .avatar__woman__card {
-    width: 207.6px;
-    height: 319.34px;
-  }
-
-  .avatar__man__card {
-    width: 220.44px;
-    height: 304.34px;
-  }
   .hero__text__title > h2 {
     width: 600px;
     font-size: 58px;
@@ -364,7 +279,6 @@
     right: -100%;
     opacity: 1;
   }
-
 }
 @media (1280px <= width) {
   .hero__container {
@@ -385,40 +299,17 @@
     width: 600px;
     line-height: 33px;
   }
-  .avatar__woman__card {
-    width: 259.5px;
-    height: 399.17px;
-  }
-
-  .avatar__man__card {
-    width: 275.55px;
-    height: 380.42px;
-  }
-
-  
-
-  .avatarCards__float__container_woman {
-    top: 50%;
-    right: 0%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-  .avatarCards__float__container_man {
-    top: 46%;
-    left: 55%;
-    transform: rotate(-12deg) translateX(-50%) translateY(-50%);
-  }
 
   .hero__insides__container {
     grid-row: 7 / 8;
   }
   .hero__socialMedia__container {
-    margin-top: 30px;
     grid-row: 8 / 9;
   }
   .socialMedia__icons__container {
     column-gap: 11px;
   }
-  .socialMedia__icons__container > div {
+  .socialMedia__icons__container > a {
     width: 40px;
     height: 40px;
   }

@@ -6,12 +6,14 @@ import { aboutUsAdapter } from "../adapter/contact-us.adapter";
 export const getContentDataAboutUsPage = async () => {
   try {
     const res = await wordpressService<IAboutUs>({
-      id: "333",
-      page: "about-us_page",
+      id: "752",
+      page: "pages",
     });
     const formated = aboutUsAdapter(res.data.acf);
     return formated;
-  } catch (err) {
+  } catch (error) {
+    const err = error as Error;
+    console.log(err.message);
     return dataMoc;
   }
 };

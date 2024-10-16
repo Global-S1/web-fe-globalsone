@@ -77,6 +77,7 @@ export const ContactForm = ({
                 className={s.select__container}
                 {...register("requirements", { required: true })}
               >
+                <option value="-">Selecciona tipo de proyecto</option>
                 {services.map((item, index) => (
                   <option value={item} key={index}>
                     {item}

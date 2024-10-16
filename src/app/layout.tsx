@@ -47,7 +47,7 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${grandis.variable} ${futuraMedium.variable} ${urbanistFont.variable} scroll-smooth`}
+      className={` ${urbanistFont.variable} ${grandis.variable} ${futuraMedium.variable}  scroll-smooth`}
     >
       <body className="font-grandis">
         <BgLeave />

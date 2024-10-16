@@ -13,9 +13,6 @@ export const OurTeam = async () => {
   const ourTeam = await getOurTeam();
   return (
     <div className={s.ourTeam_container}>
-      <div className={s.logo}>
-        <Image src={LogoOurteam} alt="Global S1" width={100} height={100} />
-      </div>
       <h2>{ourTeam.title}</h2>
       <p>{ourTeam.description}</p>
       <div className={s.ourTeam__leave__one}>

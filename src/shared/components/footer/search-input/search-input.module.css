@@ -70,7 +70,8 @@
   .search__section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 60px;
     flex-grow: 2;
   }
 }

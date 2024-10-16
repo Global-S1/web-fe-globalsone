@@ -1,10 +1,10 @@
-
 @media (640px <= width) {
   .swiper {
     height: 200px;
     height: 401px;
     margin-right: 0;
     margin-left: 0;
+    border-radius: 40px;
   }
   .swiper-slide {
     text-align: center;

@@ -19,6 +19,14 @@ interface Props {
 export const CarrucelImg = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
 
+  const handleMouseEnter = () => {
+    swiperRef.current?.autoplay?.stop(); // Detiene el autoplay
+  };
+
+  const handleMouseLeave = () => {
+    swiperRef.current?.autoplay?.start(); // Reinicia el autoplay
+  };
+
   return (
     <div className={s.carrucel__container}>
       <div
@@ -60,7 +68,10 @@ export const CarrucelImg = ({ content }: Props) => {
         >
           {content.map((person, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              >
                 <Slice {...person} />
               </SwiperSlide>
             );

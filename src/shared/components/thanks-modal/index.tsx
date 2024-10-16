@@ -22,15 +22,15 @@ export const ThanksModal = ({
         <ActionButton text="Ver Proyectos" />
         <span>{socialMedia.title}</span>
         <div className={s.icons__container}>
-          <div>
+          <a href={socialMedia.facebook} target="__blank">
             <Facebook />
-          </div>
-          <div>
+          </a>
+          <a href={socialMedia.linkedin} target="_blank">
             <Linkedin />
-          </div>
-          <div>
+          </a>
+          <a href={socialMedia.instagram} target="_blank">
             <Instagram />
-          </div>
+          </a>
         </div>
       </div>
     </ModalWindow>

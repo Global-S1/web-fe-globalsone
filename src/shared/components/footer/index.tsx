@@ -22,13 +22,12 @@ export const Footer = ({ content, socialMedia }: Props) => {
           <Link href={content["about-us"].route}>
             {content["about-us"].title}
           </Link>
-          <button>{content.services.title}</button>
+          <Link href={""}>{content.services.title}</Link>
           <Link href={content["contact-us"].route}>
             {content["contact-us"].title}
           </Link>
         </div>
       </div>
-
       <TermsFooter
         facebook={socialMedia.facebook}
         instagram={socialMedia.instagram}

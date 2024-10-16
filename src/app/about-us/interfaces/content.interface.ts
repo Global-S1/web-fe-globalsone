@@ -1,6 +1,10 @@
 export type IAboutUsHeroContent = {
   title: string;
   description: string;
+  hookSocialMedia: {
+    title: string;
+    links: ISocialMedia;
+  };
 };
 
 export type IAboutUsOurValuesContent = {
@@ -24,6 +28,12 @@ export type IAboutUsContent = {
   testimonial: {
     title: string;
   };
+};
+
+export type ISocialMedia = {
+  facebook: string;
+  instagram: string;
+  linkedin: string;
 };
 
 export interface IAboutUs {

@@ -1,0 +1,100 @@
+.avatarCards__float__container_woman {
+  position: absolute;
+  top: 9%;
+  left: 53%;
+  transform: translateX(-50%);
+}
+.avatar__woman__card {
+  position: absolute;
+  width: 78px;
+  height: 120px;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 39.18px;
+}
+
+.description > h3 {
+  font-size: clamp(
+    9px,
+    calc(9px + (27 - 9) * ((90vw - 360px) / (1200 - 360))),
+    27px
+  );
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.description > a {
+  display: block;
+  background: rgba(217, 217, 217, 0.37);
+  width: 212px;
+  height: 32px;
+  font-family: var(--font-futura);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(
+    11px,
+    calc(11px + (18 - 11) * ((90vw - 360px) / (1200 - 360))),
+    18px
+  );
+}
+
+@media (400px <= width) {
+  .avatar__woman__card {
+    width: 87.36px;
+    height: 134.4px;
+  }
+}
+@media (450px <= width) {
+  .avatar__woman__card {
+    width: 96.096px;
+    height: 147.84px;
+  }
+}
+@media (640px <= width) {
+  .avatarCards__float__container_woman {
+    top: 9%;
+    right: 0%;
+    transform: translateX(-50%);
+  }
+  .avatar__woman__card {
+    width: 138.38px;
+    height: 212.89px;
+  }
+}
+@media (768px <= width) {
+  .avatarCards__float__container_woman {
+    top: 40%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .avatar__woman__card {
+    width: 173px;
+    height: 266.11px;
+  }
+}
+@media (1024px <= width) {
+  .avatar__woman__card {
+    width: 207.6px;
+    height: 319.34px;
+  }
+}
+@media (1280px <= width) {
+  .avatarCards__float__container_woman {
+    top: 50%;
+    right: 0%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .avatar__woman__card {
+    width: 259.5px;
+    height: 399.17px;
+  }
+}

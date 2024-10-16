@@ -22,7 +22,6 @@ export const OurServices = ({ content }: Props) => {
         {servicesArray.map((service, index) => (
           <CardOurService key={index} service={service} />
         ))}
-        <div className={s.purple_dot}></div>
       </div>
       <div className={s.leave__one}>
         <Leave />

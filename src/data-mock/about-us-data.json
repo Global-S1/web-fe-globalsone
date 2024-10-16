@@ -1,7 +1,15 @@
 {
   "hero": {
     "title": "Tecnología Innovadora en Armonía con la Naturaleza",
-    "description": "Fundada en 2020, Global S1 ha sido un actor clave en el desarrollo de soluciones tecnológicas que transforman la forma en que las empresas operan y se conectan con sus clientes."
+    "description": "Fundada en 2020, Global S1 ha sido un actor clave en el desarrollo de soluciones tecnológicas que transforman la forma en que las empresas operan y se conectan con sus clientes.",
+    "hookSocialMedia": {
+      "title": "Descubre lo que hacemos en redes sociales:",
+      "links": {
+        "facebook": "https://www.facebook.com/globals.one",
+        "instagram": "https://www.instagram.com/globals.one/",
+        "linkedin": "https://www.linkedin.com/company/global-s1"
+      }
+    }
   },
   "ourValues": {
     "title": "Nuestros Valores",
@@ -43,6 +51,6 @@
     }
   ],
   "testimonial": {
-      "title": "LO QUE DICEN NUESTROS CLIENTES"
-    }
+    "title": "LO QUE DICEN NUESTROS CLIENTES"
+  }
 }
