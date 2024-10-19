@@ -5,14 +5,16 @@ import clsx from "clsx";
 
 interface Prop {
   active?: boolean;
+  color?: string;
+  showGradient?: boolean;
 }
 
-export const WindowHead: FC<Prop> = ({ active }) => {
+export const WindowHead: FC<Prop> = ({ active, color, showGradient }) => {
   const controls = new Array(3).fill(null);
   return (
     <div className={s.windowHead_container}>
       <div>
-        <WindowBar />
+        <WindowBar color={color} showGradient={showGradient}/>
         <div className={s.controls}>
           {controls.map((_, index) => (
             <div

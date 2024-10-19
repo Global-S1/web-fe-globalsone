@@ -5,6 +5,7 @@
   border-radius: 50px;
   color: black;
   font-family: "Futura";
+  cursor: pointer;
 }
 
 .contactBtn > a {

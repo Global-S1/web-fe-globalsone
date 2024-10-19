@@ -1,5 +1,5 @@
 .feature__section {
-  margin-bottom: clamp(
+  padding-top: clamp(
     43px,
     calc(43px + (270 - 43) * ((90vw - 360px) / (1200 - 360))),
     270px
@@ -104,5 +104,4 @@
   .pictureStyle__style__2 {
     top: 55%;
   }
-
 }

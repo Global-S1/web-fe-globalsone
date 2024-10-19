@@ -5,6 +5,7 @@
     calc(498px + (752 - 498) * ((80vw - 360px) / (1200 - 360))),
     752px
   );
+  
 }
 .contactUs_container {
   position: relative;
@@ -33,10 +34,15 @@
 }
 
 .text_container {
+  width: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .text_container > h3 {

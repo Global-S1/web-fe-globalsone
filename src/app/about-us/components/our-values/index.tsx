@@ -11,7 +11,7 @@ interface Props {
 
 export const OurValues = ({ content }: Props) => {
   return (
-    <Section extendStyle={s.ourValues__section}>
+    <Section extendStyle={s.ourValues__section} id="our-values">
       <div className={s.ourValues__container}>
         <div className={s.ourValues__leave}>
           <Leave />
@@ -19,7 +19,7 @@ export const OurValues = ({ content }: Props) => {
         <div className={s.ourValues__title__container}>
           <h2>{content.title}</h2>
         </div>
-        <div className={s.ourValues__cards_container}>
+        <div className={s.ourValues__cards_container} >
           {content.values.map((item, index) => (
             <CardOurdValues
               key={index}

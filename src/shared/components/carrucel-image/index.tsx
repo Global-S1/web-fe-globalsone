@@ -20,21 +20,21 @@ export const CarrucelImg = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
 
   const handleMouseEnter = () => {
-    swiperRef.current?.autoplay?.stop(); // Detiene el autoplay
+    swiperRef.current?.autoplay?.stop();
   };
 
   const handleMouseLeave = () => {
-    swiperRef.current?.autoplay?.start(); // Reinicia el autoplay
+    swiperRef.current?.autoplay?.start();
   };
 
   return (
     <div className={s.carrucel__container}>
-      <div
+      <button
         className={s.arrow_left}
         onClick={() => swiperRef.current?.slidePrev()}
       >
         <ArrowLeft />
-      </div>
+      </button>
       <div className={s.carrucel__viewport}>
         <div className={s.opacity__left}></div>
         <Swiper
@@ -68,9 +68,10 @@ export const CarrucelImg = ({ content }: Props) => {
         >
           {content.map((person, index) => {
             return (
-              <SwiperSlide key={index}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              <SwiperSlide
+                key={index}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 <Slice {...person} />
               </SwiperSlide>
@@ -79,12 +80,12 @@ export const CarrucelImg = ({ content }: Props) => {
         </Swiper>
         <div className={s.opacity__right}></div>
       </div>
-      <div
+      <button
         className={s.arrow_right}
         onClick={() => swiperRef.current?.slideNext()}
       >
         <ArrowRight />
-      </div>
+      </button>
     </div>
   );
 };

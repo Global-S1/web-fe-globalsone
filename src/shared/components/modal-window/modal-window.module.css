@@ -1,11 +1,11 @@
 .windowCard__container {
   position: relative;
   border-radius: 17px;
-  height: clamp(
+  /* height: clamp(
     435px,
     calc(445px + (523 - 435) * ((90vw - 360px) / (1200 - 360))),
     523px
-  );
+  ); */
 }
 
 .windowCard__container > div {

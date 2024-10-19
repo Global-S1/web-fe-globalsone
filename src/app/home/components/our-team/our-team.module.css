@@ -1,5 +1,10 @@
 .ourTeam__section {
-  margin-bottom: clamp(
+  padding-top: clamp(
+    53px,
+    calc(41px + (123.9 - 41) * ((80vw - 360px) / (1200 - 360))),
+    256px
+  );
+  padding-bottom: clamp(
     53px,
     calc(41px + (123.9 - 41) * ((80vw - 360px) / (1200 - 360))),
     256px

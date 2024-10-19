@@ -33,7 +33,7 @@
 
 @media (640px <= width) {
   .slice_container {
-    border-radius: 40px;
+    border-radius: 20px;
   }
   .label_image {
     position: absolute;
@@ -43,7 +43,7 @@
     transform: translateX(0);
   }
   .slice_container > img {
-    border-radius: 40px;
+    border-radius: 20px;
   }
   .label_image > h3 {
     font-size: var(--font-size-tiny);
@@ -58,12 +58,12 @@
 @media (1280px <= width) {
   .slice_container {
     position: relative;
-    border-radius: 40px !important;
+    border-radius: 20px !important;
     height: 100%;
     width: 100%;
   }
   .slice_container > img {
-    border-radius: 40px;
+    border-radius: 20px;
     object-fit: cover;
     object-position: center;
   }
@@ -78,7 +78,7 @@
   .label_image > h3 {
     font-size: var(--font-size-small);
   }
-  .label_image > p{
+  .label_image > p {
     font-size: var(--font-size-tiny);
     font-family: var(--font-futura);
   }

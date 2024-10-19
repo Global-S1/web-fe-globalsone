@@ -9,20 +9,22 @@
 }
 
 .carrucel__viewport {
-  width: 78%;
+  width: 70%;
   height: 100%;
 }
 .arrow_left {
-  width: 24.25px;
-  height: 24.25px;
+  width: 34.25px;
+  height: 34.25px;
   border: 2px solid gray;
   border-radius: 50%;
+  cursor: pointer;
 }
 .arrow_right {
-  width: 24.25px;
-  height: 24.25px;
+  width: 34.25px;
+  height: 34.25px;
   border: 2px solid gray;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 @media (425px <= width) {

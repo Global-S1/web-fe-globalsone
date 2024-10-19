@@ -1,14 +1,19 @@
 .headerMobile {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 79px;
   width: 100%;
   background: linear-gradient(180deg, #1a0258 0%, rgba(87, 62, 151, 0) 100%);
+  z-index: 10;
 }
 
 .logo__mobile {
+  position: absolute;
+  top: 37%;
+  left: 43%;
+  transform: translateX(-50%);
   display: block;
   width: 113px;
 }
@@ -23,7 +28,7 @@
 .headerMobile__contactUsBtn {
   position: absolute;
   right: 4%;
-  top: 50%;
+  top: 52.5%;
 
   transform: translateY(-50%);
 }
@@ -66,8 +71,11 @@
   top: 2%;
   right: 5%;
 }
-.headerMobile__menu__modal.active {
+.active {
   left: 0;
+}
+.hidden {
+  display: none;
 }
 
 @media (640px <= width) {

@@ -59,7 +59,7 @@
 @media (1280px <= width) {
   .hero_picture {
     top: -22%;
-    max-width: 690px;
+    max-width: 600px;
     transform: translateX(-52%);
   }
 }

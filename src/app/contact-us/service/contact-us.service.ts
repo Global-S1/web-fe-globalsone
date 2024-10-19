@@ -6,11 +6,13 @@ import { ContactUsAdapter } from "../adapter/contact-us.adapter";
 export const getContactUsDataService = async () => {
   try {
     const response = await wordpressService<IContactUsInput>({
-      id: "334",
-      page: "contact-us_page",
+      id: "791",
+      page: "pages",
     });
     return ContactUsAdapter(response.data.acf);
   } catch (error) {
+    const err = error as Error
+    console.log(err.message);
     return data;
   }
 };

@@ -4,6 +4,7 @@ import { getContactUsDataService } from "./service/contact-us.service";
 
 export default async function ContactUs() {
   const res = await getContactUsDataService();
+  console.log(res);
   return (
     <>
       <ContactForm {...res.formData} />

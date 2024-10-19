@@ -1,5 +1,4 @@
 .message__container {
-  height: 60vh;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -11,9 +10,21 @@
     rgba(217, 217, 217, 0.29) 0%,
     rgba(115, 115, 115, 0) 100%
   );
+  height: clamp(
+    382px,
+    calc(382px + (731 - 382) * ((90vw - 360px) / (1200 - 360))),
+    731px
+  );
+  max-height: 382px;
+  padding-top: 20px;
 }
 .message__container > h2 {
-  font-size: 45px;
+  font-size: clamp(
+    45px,
+    calc(45px + (120 - 45) * ((90vw - 360px) / (1200 - 360))),
+    120px
+  );
+  text-align: center;
 }
 
 .message__container > p {
@@ -21,37 +32,42 @@
   text-align: center;
   line-height: 17px;
   width: 80%;
-  margin-bottom: 29px;
   font-family: var(--font-urbanist);
 }
 
 .message__container > button {
-  /* ; */
-  width: 122px;
-  height: 51px;
+  width: clamp(
+    92px,
+    calc(92px + (353 - 92) * ((90vw - 360px) / (1200 - 360))),
+    353px
+  );
+
   border-radius: 32px;
-  margin-bottom: 29px;
-  font-size: 11px;
+  font-size: 9px;
+  margin-top: 9px;
 }
 
 .message__container > span {
+  margin-top: 30px;
+  margin-bottom: 5px;
   font-size: 15px;
+  font-family: var(--font-urbanist);
 }
 
 .icons__container {
   display: flex;
-  column-gap: 12px;
+  column-gap: 5px;
 }
 
 .icons__container > a {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: 22px;
   border-radius: 50px;
-  background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+  background-color: #544dd2;
 }
 
-@media (640px <= width) {
+/* @media (640px <= width) {
   .message__container > h2 {
     font-size: 54px;
   }
@@ -64,42 +80,53 @@
     font-size: 16px;
   }
 }
+   */
 @media (768px <= width) {
   .message__container {
-    height: 80vh;
+    /* height: 80vh; */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
+    max-height: none;
   }
-  .message__container > h2 {
+  /* .message__container > h2 {
     font-size: 86px;
+  } */
+  .message__container > button {
+    background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
   }
   .message__container > p {
     font-size: 20px;
   }
+  .icons__container {
+    column-gap: 10px;
+  }
+  .icons__container > a {
+    background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+  }
 }
+
 @media (1024px <= width) {
+  .message__container > img {
+    width: 226px;
+    height: 46px;
+  }
   .message__container > button {
-    width: 353px;
     border-radius: 15px;
     font-size: 22px;
   }
+  .icons__container > a {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (1280px <= width) {
-  .message__container > h2 {
-    font-size: 100px;
-    line-height: 119px;
-  }
-
   .message__container > p {
     font-size: 22px;
     text-align: center;
     line-height: 33px;
     width: 60%;
     margin-bottom: 25px;
-  }
-  .message__container > span {
-    font-size: 22px;
   }
 }

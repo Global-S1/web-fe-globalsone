@@ -7,7 +7,7 @@ export const Facebook = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="20" cy="20" r="20" fill="url(#paint0_linear_40_18)" />
+      <circle cx="20" cy="20" r="20" fill="" />
       <path
         d="M23.51 13.32H25.39V10.14C24.4797 10.0454 23.5651 9.99865 22.65 10C19.93 10 18.07 11.66 18.07 14.7V17.32H15V20.88H18.07V30H21.75V20.88H24.81L25.27 17.32H21.75V15.05C21.75 14 22.03 13.32 23.51 13.32Z"
         fill="white"

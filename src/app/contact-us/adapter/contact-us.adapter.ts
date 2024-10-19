@@ -5,7 +5,7 @@ export const ContactUsAdapter = (data: IContactUsInput): IContactUsContent => {
     formData: {
       title: data.formDetail.title,
       content: data.formDetail.content,
-      terms: data.formDetail.terms,
+      terms: Object.values(data.formDetail.terms),
       services: Object.values(data.formDetail.services),
     },
     contactData: {

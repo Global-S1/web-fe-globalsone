@@ -8,7 +8,7 @@ export const Instagram = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <circle cx="20" cy="20" r="20" fill="url(#paint0_linear_40_17)" />
+      <circle cx="20" cy="20" r="20" fill="" />
       <rect x="7" y="7" width="26" height="26" fill="url(#pattern0_40_17)" />
       <defs>
         <pattern

@@ -4,8 +4,6 @@ import { CarrucelImg } from "../carrucel-image";
 import { CarrucelImageMobil } from "../carrucel-image-mobile";
 import s from "./our-team.module.css";
 import { getOurTeam } from "./service/our-team.service";
-import LogoOurteam from "@/assets/GloblaS1.png";
-import Image from "next/image";
 import Link from "next/link";
 import { ActionButton } from "../action-button";
 
@@ -30,7 +28,7 @@ export const OurTeam = async () => {
         <LeaveBig />
       </div>
       <div className={s.ourTeam__leave__four}>
-        <LeaveClear />
+        <LeaveBig />
       </div>
     </div>
   );

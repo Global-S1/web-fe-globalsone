@@ -12,7 +12,7 @@ export const HeroWomanCard = () => {
         </div>
         <div className={s.description}>
           <h3>GLOBALS1</h3>
-          <Link href={""}>
+          <Link href={"#our-values"} className={s.action__btn}>
             <p>Ver más de nosotros</p>
           </Link>
         </div>

@@ -150,30 +150,35 @@
 }
 
 .leave__top {
-  position: absolute;
+  display: none;
+  /* position: absolute;
   width: 34.732px;
   height: 40.607px;
   left: -2%;
   top: 40%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 
 .leave__bottom {
-  position: absolute;
+  display: none;
+
+  /* position: absolute;
   width: 36.422px;
   height: 42.583px;
   right: -4%;
   bottom: 24.5%;
-  transform: rotate(85deg);
+  transform: rotate(85deg); */
 }
 
 .leave__center {
-  position: absolute;
+  display: none;
+
+  /* position: absolute;
   width: 21.53px;
   height: 25.172px;
   top: 72%;
   left: 20%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 
 @media (450px <= width) {
@@ -233,7 +238,7 @@
 }
 @media (1280px <= width) {
   .contactMosaic__section {
-    margin-bottom: 0;
+    margin-bottom: 100px;
   }
 
   .contactMosaic__text__container {
@@ -242,21 +247,31 @@
   }
 
   .leave__top {
-    width: 139.305px;
-    height: 162.869px;
+    display: block;
+    width: 158.305px;
     position: absolute;
-    top: 33%;
-    left: -1%;
-    transform: rotate(-15deg);
+    top: 38%;
+    left: 17%;
+    transform: rotate(350deg);
+    z-index: 1;
   }
 
   .leave__bottom {
+    display: block;
     position: absolute;
     right: -5%;
-    bottom: 4%;
+    bottom: 24%;
     width: 201px;
     height: 235px;
     transform: rotate(95deg);
+  }
+  .leave__center {
+    display: block;
+    position: absolute;
+    width: 103.53px;
+    left: 24%;
+    bottom: 8%;
+    z-index: 2;
   }
   .grid_template {
     height: 90%;

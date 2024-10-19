@@ -1,9 +1,9 @@
 .ourService__section {
   position: relative;
-  margin-bottom: clamp(
-    56px,
-    calc(56px + (228.86 - 56) * ((80vw - 360px) / (1200 - 360))),
-    228.86px
+  padding-top: clamp(
+    28px,
+    calc(28px + (228.86 - 56) * ((80vw - 360px) / (1200 - 360))),
+    114.43px
   );
 }
 .ourServices_title {
@@ -233,14 +233,14 @@
     position: absolute;
     width: 345.502px;
     height: auto;
-    bottom: -24%;
+    bottom: -21%;
     left: -8%;
   }
   .leave__two {
     display: block;
     position: absolute;
     width: 131.502px;
-    top: 62%;
+    top: 66%;
     right: -1%;
     transform: translateY(-50%);
     z-index: 4;

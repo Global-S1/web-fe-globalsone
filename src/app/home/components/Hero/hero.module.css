@@ -2,14 +2,9 @@
   position: relative;
   height: calc(100vh - 79px);
   min-width: 328px;
-  margin-bottom: clamp(
-    45.29px,
-    calc(45.29px + (257 - 45.29) * ((90vw - 360px) / (1200 - 360))),
-    257px
-  );
   min-height: 494px;
   max-height: 500px;
-
+  margin-top: 79px;
 }
 .hero__container {
   width: 100%;
@@ -75,8 +70,8 @@
 @media (1280px <= width) {
   .hero__section {
     height: 100vh;
-    min-height: 800px;
-    max-height: 800px;
+    min-height: 740px;
+    max-height: 740px;
   }
   .bg__light {
     position: absolute;

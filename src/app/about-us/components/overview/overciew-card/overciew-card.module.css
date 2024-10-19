@@ -6,6 +6,7 @@
 }
 
 .number > p {
+  padding-top: 5px;
   font-size: 12px;
 }
 .overviewCard__text_container {
@@ -14,11 +15,21 @@
   row-gap: 15px;
 }
 .overviewCard__text_container > h3 {
-  font-size: 12px;
+  font-size: clamp(
+    14px,
+    calc(14px + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
+    32px
+  );
+  font-weight: bold;
   font-family: var(--font-urbanist);
 }
 .overviewCard__text_container > p {
-  font-size: 11px;
+  font-size: clamp(
+    13px,
+    calc(13px + (22 - 13) * ((90vw - 360px) / (1200 - 360))),
+    22px
+  );
+
   font-family: "Futura";
   font-weight: 500;
   text-align: justify;
@@ -29,11 +40,7 @@
     font-size: 22px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 22px;
     line-height: 25.78px;
-  }
-  .overviewCard__text_container > p {
-    font-size: 14px;
   }
 }
 @media (768px <= width) {
@@ -41,11 +48,7 @@
     font-size: 27px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 27px;
     line-height: 29.78px;
-  }
-  .overviewCard__text_container > p {
-    font-size: 17px;
   }
 }
 @media (1024px <= width) {
@@ -54,11 +57,7 @@
     line-height: 28.43px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 30px;
     line-height: 32.43px;
-  }
-  .overviewCard__text_container > p {
-    font-size: 20px;
   }
 }
 @media (1280px <= width) {
@@ -66,11 +65,9 @@
     font-size: 32px;
   }
   .overviewCard__text_container > h3 {
-    font-size: 32px;
     font-weight: bold;
   }
   .overviewCard__text_container > p {
-    font-size: 22px;
     line-height: 33px;
   }
 }

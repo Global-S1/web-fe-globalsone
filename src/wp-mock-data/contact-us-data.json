@@ -14,7 +14,24 @@
       "Hotelería",
       "Inteligencia artificial"
     ],
-    "terms": "Estoy de acuerdo con los Términos de uso y la Política de privacidad"
+    "terms": [
+      {
+        "text": "Estoy de acuerdo con los",
+        "highlight": false
+      },
+      {
+        "text": "Términos de uso",
+        "highlight": true
+      },
+      {
+        "text": "y ",
+        "highlight": false
+      },
+      {
+        "text": "la Política de privacidad",
+        "highlight": true
+      }
+    ]
   },
 
   "contactData": {
@@ -36,6 +53,5 @@
       "https://content.globals.one/wp-content/uploads/2024/10/daniel.png",
       "https://content.globals.one/wp-content/uploads/2024/10/peter.png"
     ]
-    
   }
 }

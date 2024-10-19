@@ -15,6 +15,7 @@ export const WhatWeBuild = ({ content }: Props) => {
   return (
     <Section extendStyle={s.whatWeBuild__section}>
       <div className={s.purple__circle}></div>
+      <div className={s.purple__circle__two}></div>
       <div className={s.whatWeBuild__title__container}>
         <Image src={Foco} alt="nosotros lo desarrollamos" className={s.foco} />
         <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>

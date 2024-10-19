@@ -4,6 +4,10 @@
 .swiper-wrapper {
 }
 
+.swiper-scrollbar{
+  background: none !important;
+}
+
 .swiper-slide {
   font-size: 20px;
   border-radius: 20px;
@@ -31,8 +35,8 @@
 .swiper-slide-active {
 }
 
-.swiper-slide-active .slice__float__container {
-  width: 130px;
+.slice__float__container {
+  width: 150px;
   height: 233.67px;
   top: 0;
   left: 50%;

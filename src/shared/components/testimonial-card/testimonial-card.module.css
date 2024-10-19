@@ -16,7 +16,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #ffffff2c;
+  background: #ffffff39;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -54,7 +54,7 @@
 
 .testimonialCard__text__container > p {
   font-size: clamp(
-    10px,
+    12px,
     calc(10px + (22 - 10) * ((80vw - 360px) / (1200 - 360))),
     22px
   );
@@ -70,12 +70,13 @@
 
 .client__img {
   position: absolute;
-  object-fit: cover;
+  object-fit: contain;
   object-position: right center;
   bottom: 0;
-  left: 50%;
+  left: 67%;
   transform: translateX(-50%);
   z-index: 5;
+  height: 100%;
 }
 
 .green__mini__circle {
@@ -92,7 +93,7 @@
 
 @media (390px <= width) {
   .client__img {
-    left: 60%;
+    left: 50%;
     transform: translateX(-50%);
   }
 }
@@ -153,6 +154,16 @@
     width: 68%;
     max-width: 673px;
     left: 60%;
+  }
+  .green__circle__top {
+    position: absolute;
+    width: 372.232px;
+    height: 312.557px;
+    border-radius: 572.232px;
+    background: #38ffd4;
+    filter: blur(66.75px);
+    left: -20%;
+    top: -15%;
   }
   .green__circle {
     position: absolute;

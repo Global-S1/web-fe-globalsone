@@ -1,7 +1,7 @@
 .avatarCards__float__container_woman {
   position: absolute;
-  top: 9%;
-  left: 53%;
+  top: 12%;
+  left: 64%;
   transform: translateX(-50%);
 }
 .avatar__woman__card {
@@ -17,47 +17,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 39.18px;
+  row-gap: 5px;
 }
 
 .description > h3 {
   font-size: clamp(
-    9px,
+    12px,
     calc(9px + (27 - 9) * ((90vw - 360px) / (1200 - 360))),
     27px
   );
   text-align: center;
-  margin-bottom: 19px;
 }
 
-.description > a {
+.action__btn {
+  cursor: pointer;
   display: block;
   background: rgba(217, 217, 217, 0.37);
-  width: 212px;
-  height: 32px;
+  width: 100%;
+  height: clamp(
+    21px,
+    calc(21px + (32 - 21) * ((80vw - 360px) / (1200 - 360))),
+    32px
+  );
+  max-width: 212px;
   font-family: var(--font-futura);
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: clamp(
-    11px,
-    calc(11px + (18 - 11) * ((90vw - 360px) / (1200 - 360))),
+    10px,
+    calc(11px + (18 - 11) * ((80vw - 360px) / (1200 - 360))),
     18px
   );
 }
 
 @media (400px <= width) {
-  .avatar__woman__card {
-    width: 87.36px;
-    height: 134.4px;
+  .avatarCards__float__container_woman {
+    top: 7%;
+    left: 59%;
   }
 }
 @media (450px <= width) {
-  .avatar__woman__card {
-    width: 96.096px;
-    height: 147.84px;
-  }
 }
 @media (640px <= width) {
   .avatarCards__float__container_woman {
@@ -89,8 +90,8 @@
 }
 @media (1280px <= width) {
   .avatarCards__float__container_woman {
-    top: 50%;
-    right: 0%;
+    top: 47%;
+    right: -10%;
     transform: translateX(-50%) translateY(-50%);
   }
   .avatar__woman__card {

@@ -1,12 +1,11 @@
 .section__from {
-  height: 630px;
+  position: relative;
 }
 
 .form__container {
   position: relative;
   border: 0.5px solid rgba(255, 255, 255, 0.223);
   border-radius: 17px;
-  height: 620px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -16,7 +15,7 @@
   background: linear-gradient(
     270deg,
     rgba(217, 217, 217, 0.29) 0%,
-    rgba(115, 115, 115, 0) 100%
+    rgba(115, 115, 115, 0) 50%
   );
 }
 
@@ -27,15 +26,24 @@
   justify-content: center;
   align-items: center;
 }
+
 .form__text__container {
   font-family: var(--font-futura);
 }
+
 .form__text__container > h2 {
   font-family: var(--font-urbanist);
   font-size: 25px;
+  margin-top: 8%;
 }
+
 .form__text__container > p {
-  font-size: 11px;
+  font-size: clamp(
+    13px,
+    calc(13px + (22px - 13px) * ((90vw - 360px) / (1200px - 360px))),
+    22px
+  );
+  text-align: justify;
 }
 .inputs__grid {
   margin-top: 20px;
@@ -46,31 +54,38 @@
   justify-content: space-between;
 }
 .inputs__grid > input,
-/* .inputs__grid > select, */
 .inputs__grid > textarea {
   flex-shrink: 0;
   width: 100%;
   border-radius: 11px;
-  background: rgba(217, 217, 217, 0.162);
-  color: rgba(255, 255, 255, 0.43);
   font-size: 15px;
   font-family: var(--font-futura);
   border: none;
+  background: rgba(217, 217, 217, 0.244);
+  color: rgba(255, 255, 255, 0.618);
 }
 .inputs__grid > select {
   flex-shrink: 0;
   width: 100%;
   border-radius: 11px;
-  /* color: rgba(255, 255, 255, 0.43); */
   font-size: 15px;
   font-family: var(--font-futura);
   border: none;
-  background: rgba(217, 217, 217, 0.162);
-
+  background: rgba(217, 217, 217, 0.244);
   background-position: 4%;
   background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-size: 6%;
+  background-size: 15px;
+  padding-left: 11%;
+}
+
+.inputs__grid > select > option { 
+  background-color: transparent;
+  color: black;
+}
+.inputs__grid > input::placeholder,
+.inputs__grid > textarea::placeholder {
+  color: rgba(255, 255, 255, 0.483);
 }
 
 .inputs__grid input:nth-child(1),
@@ -91,7 +106,6 @@
 .inputs__grid > select {
   position: relative;
   width: 100%;
-  /* background-color: rgba(255, 255, 255, 0.288); */
 }
 
 .terms_container {
@@ -102,11 +116,22 @@
 .terms_container > input {
   border-radius: 5px;
   background-color: transparent;
+  border: 1px solid white;
 }
 .terms_container > label {
   font-family: var(--font-futura);
   font-size: 11px;
 }
+.terms_container > label > span {
+  margin-left: 5px;
+}
+
+.submit__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .submit__container > button {
   width: 100%;
 }
@@ -122,15 +147,36 @@
   padding: 13px;
   border-radius: 11px;
 }
+.alert > p {
+  font-size: clamp(
+    11px,
+    calc(11px + (22 - 11) * ((90vw - 360px) / (1200 - 360))),
+    22px
+  );
+}
+
+.magenta__circle {
+  position: absolute;
+  width: 480px;
+  height: 389px;
+  border-radius: 39px 39px 0px 0px;
+  background: radial-gradient(
+    56.18% 55.77% at 54.11% 46.19%,
+    rgba(144, 45, 172, 0.66) 36%,
+    rgba(14, 3, 42, 0) 100%
+  );
+  right: -15%;
+  top: 20%;
+  border-radius: 50%;
+  filter: blur(20px);
+}
 
 @media (640px <= width) {
   .section__from {
-    margin-top: 50px;
-    height: 650px;
+    margin-bottom: 50px;
   }
   .form__container {
     border-radius: 40px;
-    height: 650px;
   }
   .form__text__container > h2 {
     font-size: 33px;
@@ -158,17 +204,17 @@
     width: 478.859px !important;
     height: 59.829px !important;
   }
+  .inputs__grid > select {
+    padding-left: 55px;
+  }
 }
 @media (768px <= width) {
   .section__from {
-    margin-top: 150px;
-    height: 700px;
-  }
-  .section__from {
     margin-top: 100px;
+    margin-bottom: 100px;
   }
   .form__container {
-    height: 680px;
+    /* height: 680px; */
   }
   .form__text__container > h2 {
     font-size: 50px;
@@ -177,7 +223,7 @@
     font-size: 17px;
   }
   .magenta__circle {
-    width: 780px;
+    width: 680px;
     height: 389px;
     border-radius: 39px 39px 0px 0px;
     background: radial-gradient(
@@ -192,15 +238,30 @@
     bottom: -30%;
     z-index: -10;
   }
+  .inputs__grid > select {
+    background-position: 20px;
+    padding-left: 50px;
+  }
+  .submit__container {
+    flex-direction: row;
+  }
+  .terms_container {
+    margin: 0;
+  }
 }
 @media (1024px <= width) {
+  .section__from {
+    margin-top: 100px;
+    margin-bottom: 130px;
+  }
   .form__container {
-    height: 720px;
+    /* height: 660px; */
     padding: 0 58px;
     padding-bottom: 56px;
   }
   .form__text__container > h2 {
     font-size: 63px;
+    margin-top: 7%;
   }
   .form__text__container > p {
     font-size: 22px;
@@ -223,6 +284,7 @@
     color: white;
   }
   .inputs__grid > select {
+    background-position: 4%;
     padding-left: 35px;
   }
   .inputs__grid > textarea {
@@ -231,7 +293,8 @@
     height: 100%;
     width: 425px;
     margin-top: 0;
-    font-size: 22px;
+    font-size: 18px;
+    color: white;
   }
   .inputs__grid input:nth-child(1),
   .inputs__grid input:nth-child(2) {
@@ -245,9 +308,9 @@
     width: 100%;
   }
   .magenta__circle {
-    width: 1441px;
-    height: 929px;
-    bottom: -50%;
+    width: 1100px;
+    height: 729px;
+    bottom: -13%;
   }
 }
 @media (1280px <= width) {

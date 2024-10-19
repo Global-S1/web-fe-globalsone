@@ -13,9 +13,9 @@ interface Props {
 }
 
 export const WhatWeBuildCardContainer = ({ services }: Props) => {
-  const listImg = [trading, appMobil, ecommerce, crm, apis];
+  // const listImg = [trading, appMobil, ecommerce, crm, apis];
   return (
-    <ModalWindow active>
+    <ModalWindow active showGradient>
       <div className={s.container_cards}>
         {services.map((item, index) => {
           const { title, alt } = item;
@@ -24,7 +24,7 @@ export const WhatWeBuildCardContainer = ({ services }: Props) => {
               key={index}
               altContent={alt ?? title}
               title={title}
-              image={listImg[index]}
+              image={item.img || ""}
             />
           );
         })}

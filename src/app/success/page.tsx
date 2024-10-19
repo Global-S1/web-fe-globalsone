@@ -10,19 +10,17 @@ export default async function Success() {
 
   return (
     <Section extendStyle={s.success__section}>
-      <div>
-        <div className={s.leave__one}>
-          <Leave />
-        </div>
-        <div className={s.leave__three}>
-          <Leave />
-        </div>
-        <div className={s.magenta__circle}></div>
-        <div className={s.green__circle} ></div>
-        <ThanksModal {...res}/>
-        <div className={s.leave__two}>
-          <LeaveClear />
-        </div>
+      <div className={s.leave__one}>
+        <Leave />
+      </div>
+      <div className={s.leave__three}>
+        <Leave />
+      </div>
+      <div className={s.magenta__circle}></div>
+      <div className={s.green__circle}></div>
+      <ThanksModal {...res} />
+      <div className={s.leave__two}>
+        <LeaveClear />
       </div>
     </Section>
   );

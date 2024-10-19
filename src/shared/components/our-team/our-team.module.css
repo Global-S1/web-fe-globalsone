@@ -43,11 +43,13 @@
   font-family: "Futura";
 }
 
-.link__btn{
+.link__btn {
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .ourTeam__leave__one {
+  z-index: 10;
   display: none;
 }
 
@@ -82,10 +84,10 @@
     margin-bottom: 50px;
   }
   .ourTeam__leave__one {
+    z-index: 10;
     display: block;
     position: absolute;
     width: 197.599px;
-    height: 231.024px;
     left: -8%;
     top: 25%;
     transform: rotate(350deg);
@@ -93,11 +95,11 @@
   .ourTeam__leave__two {
     display: block;
     position: absolute;
-    width: 216px;
+    width: 185px;
     bottom: -12%;
     right: -4%;
     transform: rotate(95deg);
-    z-index: 10;
+    z-index: 15;
   }
   .ourTeam__leave__three {
     display: block;
@@ -112,10 +114,11 @@
   .ourTeam__leave__four {
     display: block;
     position: absolute;
-    width: 170.213px;
-    bottom: -28%;
-    left: 14%;
-    transform: rotate(344deg);
+    width: 246.213px;
+    bottom: -1%;
+    left: -7%;
+    transform: rotate(175deg);
+    z-index: 5;
   }
 }
 @media (1280px <= width) {
@@ -127,20 +130,21 @@
     margin-top: 40px;
   }
   .ourTeam__leave__one {
-    left: -8%;
-    top: 25%;
+    z-index: 10;
+    left: -3%;
+    top: 17%;
     transform: rotate(350deg);
   }
+
   .ourTeam__leave__two {
-    bottom: -10%;
-    right: -1%;
+    bottom: 8%;
+    right: -2%;
     transform: rotate(95deg);
-    z-index: 10;
   }
   .ourTeam__leave__three {
-    right: -15%;
-    top: 33%;
-    transform: rotate(136deg);
+    right: -4%;
+    top: 17%;
+    transform: rotate(296deg);
   }
 }
 @media (1536px <= width) {

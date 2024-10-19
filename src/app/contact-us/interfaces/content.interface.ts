@@ -1,8 +1,13 @@
+export type ITermsChunk = {
+  text: string;
+  highlight: boolean;
+};
+
 export type IContactUsFormContent = {
   title: string;
   content: string;
   services: string[];
-  terms: string;
+  terms: ITermsChunk[];
 };
 
 export type IContactUsContactDataContent = {

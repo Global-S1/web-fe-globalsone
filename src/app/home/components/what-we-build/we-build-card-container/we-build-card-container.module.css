@@ -16,6 +16,7 @@
     gap: 31px 31.37px;
     padding-top: 50px;
   }
+
 }
 @media (768px <= width) {
   .container_cards {

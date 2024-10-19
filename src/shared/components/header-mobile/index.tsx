@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ContactBtn } from "../contact-btn";
 import s from "./header-mobile.module.css";
+import { ModalMobileNav } from "../modal-mobile-nav";
 
 interface Props {
   content: NavigationLinks;
@@ -39,33 +40,38 @@ export const HeaderMobile = ({ content }: Props) => {
         <button onClick={handlerBtnMenu} className={s.headerMobile__burger}>
           <BurgerBtnIcon />
         </button>
+        {/* <ModalMobileNav /> */}
         <div className={s.headerMobile__contactUsBtn}>
           <ContactBtn {...content["contact-us"]} />
         </div>
-        {isModalOpen && (
-          <div className={clsx(s.headerMobile__menu__modal, s.active)}>
-            <div className={s.menu__container}>
-              <ul className={s.menu__list}>
-                <li className={s.header__item}>
-                  <Link href={content.home.route}>{content.home.title}</Link>
-                </li>
-                <li className={s.header__item}>
-                  <Link href={content["about-us"].route}>
-                    {content["about-us"].title}
-                  </Link>
-                </li>
-                <li className={s.header__item}>
-                  <button onClick={handleServices}>
-                    {content.services.title}
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div className={s.closed__btn} onClick={handlerBtnMenu}>
-              <ClosedModal />
-            </div>
+
+        <div
+          className={clsx(s.headerMobile__menu__modal, {
+            [s.active]: isModalOpen,
+            [s.hidden]: !isModalOpen,
+          })}
+        >
+          <div className={s.menu__container}>
+            <ul className={s.menu__list}>
+              <li className={s.header__item}>
+                <Link href={content.home.route}>{content.home.title}</Link>
+              </li>
+              <li className={s.header__item}>
+                <Link href={content["about-us"].route}>
+                  {content["about-us"].title}
+                </Link>
+              </li>
+              <li className={s.header__item}>
+                <button onClick={handleServices}>
+                  {content.services.title}
+                </button>
+              </li>
+            </ul>
           </div>
-        )}
+          <div className={s.closed__btn} onClick={handlerBtnMenu}>
+            <ClosedModal />
+          </div>
+        </div>
       </div>
     </header>
   );

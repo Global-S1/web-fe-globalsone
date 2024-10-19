@@ -11,7 +11,7 @@ export default async function AboutUs() {
   const data = await getContentDataAboutUsPage();
   return (
     <>
-      <Hero content={data.hero} links={data.socialMedia}/>
+      <Hero content={data.hero} />
       <OurValues content={data.ourValues} />
       <Overview content={data.overview} />
       <AboutUsOurTeam />

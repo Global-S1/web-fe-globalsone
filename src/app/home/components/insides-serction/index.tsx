@@ -16,18 +16,18 @@ export const InsideSection: FC<Prop> = ({ content }) => {
   return (
     <>
       <Section id="metrics" extendStyle={s.inside__section}>
-        <div className={clsx(s.leave_base, s.leave_one)}>
-          <Leave />
-        </div>
-        <ModalWindow active>
+        <ModalWindow active showGradient>
+          <div className={clsx(s.leave_base, s.leave_one)}>
+            <Leave />
+          </div>
           <div className={s.inside__body__container}>
             <h2 dangerouslySetInnerHTML={{ __html: title }} />
             <Insides size="large" />
           </div>
+          <div className={clsx(s.leave_base, s.leave_two)}>
+            <LeaveBig />
+          </div>
         </ModalWindow>
-        <div className={clsx(s.leave_base, s.leave_two)}>
-          <LeaveBig />
-        </div>
       </Section>
     </>
   );

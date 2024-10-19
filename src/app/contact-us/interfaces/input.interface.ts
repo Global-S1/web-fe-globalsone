@@ -1,7 +1,17 @@
+type TermsChunk = {
+  text: string
+  highlight: boolean
+}
+
 type FormDetail = {
   title: string;
   content: string;
-  terms: string;
+  terms: {
+    chunk_1 : TermsChunk,
+    chunk_2 : TermsChunk,
+    chunk_3 : TermsChunk
+    
+  };
   services: {
     service_1: string;
     service_2: string;

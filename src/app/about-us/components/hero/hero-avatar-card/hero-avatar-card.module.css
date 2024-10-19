@@ -7,9 +7,14 @@
     rgba(14, 6, 43, 1) 7%,
     rgba(101, 42, 198, 1) 100%
   );
-  width: 100px;
-  height: 161px;
+  width: 119px;
+  height: 192px;
   padding: 5px;
+  padding-bottom: clamp(
+    7px,
+    calc(7px + (39.18 - 7) * ((90vw - 360px) / (1200 - 360))),
+    39.18px
+  );
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,14 +36,9 @@
   font-size: 9px;
   line-height: 13.5px;
   margin-bottom: 10%;
-
 }
 
 @media (400px <= width) {
-  .avatarCard__container {
-    width: 118px;
-    height: 190.98px;
-  }
 }
 @media (450px <= width) {
   .avatarCard__container {
@@ -47,10 +47,6 @@
   }
 }
 @media (500px <= width) {
-  .avatarCard__container {
-    width: 146.4px;
-    height: 235.704px;
-  }
 }
 @media (640px <= width) {
   .avatarCard__container {
@@ -62,7 +58,6 @@
   .avatarCard__container {
     width: 219.6px;
     height: 353.55px;
-    padding: 10px;
   }
   .avatarCard__bullets__container {
     column-gap: 3px;
@@ -86,7 +81,6 @@
   .avatarCard__container {
     width: 364px;
     height: 589px;
-    padding: 10px;
     border-radius: 17px;
   }
   .avatarCard__bullets__container {

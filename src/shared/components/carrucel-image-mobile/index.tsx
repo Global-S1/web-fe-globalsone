@@ -26,34 +26,34 @@ export const CarrucelImageMobil = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
   return (
     <div className={s.carrucel__container}>
-      <div
+      <button
         className={s.arrow_left}
         onClick={() => swiperRef.current?.slidePrev()}
       >
         <ArrowLeft />
-      </div>
+      </button>
       <div className={s.carrucel__viewport}>
         <Swiper
-          effect={"coverflow"}
+          effect={""}
           modules={[Autoplay]}
           autoplay={{
             delay: 2000,
-            disableOnInteraction: false,
+            // disableOnInteraction: false,
           }}
           loop
           breakpoints={{
             375: {},
           }}
-          spaceBetween={-60}
+          spaceBetween={180}
           centeredSlides
-          slidesPerView={2}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 18,
-            depth: 100,
-            modifier: 1.5,
-            slideShadows: true,
-          }}
+          // slidesPerView={2}
+          // coverflowEffect={{
+          //   rotate: 0,
+          //   stretch: 18,
+          //   depth: 100,
+          //   modifier: 1.5,
+          //   slideShadows: true,
+          // }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
@@ -64,12 +64,12 @@ export const CarrucelImageMobil = ({ content }: Props) => {
           ))}
         </Swiper>
       </div>
-      <div
+      <button
         className={s.arrow_right}
         onClick={() => swiperRef.current?.slideNext()}
       >
         <ArrowRight />
-      </div>
+      </button>
     </div>
   );
 };

@@ -25,6 +25,7 @@ export const Hero: FC<Props> = async ({ content }) => {
           <h2>{title}</h2>
           <p>{description}</p>
         </div>
+
         <div className={s.hero__avatarCards}>
           <div className={s.hero__avatarCards__bg}></div>
           <div className={s.hero__avatarCards__bg__green}></div>
@@ -32,9 +33,11 @@ export const Hero: FC<Props> = async ({ content }) => {
           <HeroManCard />
           <HeroWomanCard />
         </div>
+
         <div className={s.hero__insides__container}>
           <Insides size="small" />
         </div>
+        
         <div className={s.hero__socialMedia__container}>
           <p>{hookSocialMedia.title}</p>
           <div className={s.socialMedia__icons__container}>
@@ -48,7 +51,8 @@ export const Hero: FC<Props> = async ({ content }) => {
               <Instagram />
             </a>
           </div>
-        </div>
+        </div> 
+       
       </div>
     </Section>
   );
