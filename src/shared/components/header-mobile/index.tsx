@@ -1,26 +1,18 @@
 "use client";
-
-import { ClosedModal } from "@/assets/header-mobile/icons/ClosedModal";
-import { BurgerBtnIcon } from "@/assets/header/icon/BurgerBtnIcon";
 import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
 import { NavigationLinks } from "@/shared/interfaces/layout.interface";
-import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { ContactBtn } from "../contact-btn";
 import s from "./header-mobile.module.css";
 import { ModalMobileNav } from "../modal-mobile-nav";
+import { HeaderMobileProvider } from "./context/header-provider";
 
 interface Props {
   content: NavigationLinks;
 }
 
 export const HeaderMobile = ({ content }: Props) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const handlerBtnMenu = () => {
-    setIsModalOpen(!isModalOpen);
-  };
   const router = useRouter();
   const handleServices = () => {
     router.push("/");
@@ -32,47 +24,18 @@ export const HeaderMobile = ({ content }: Props) => {
   };
 
   return (
-    <header className={s.headerMobile}>
-      <div className={s.headerMobile__container}>
-        <Link href={"/"} className={s.logo__mobile}>
-          <LogoMobile />
-        </Link>
-        <button onClick={handlerBtnMenu} className={s.headerMobile__burger}>
-          <BurgerBtnIcon />
-        </button>
-        {/* <ModalMobileNav /> */}
-        <div className={s.headerMobile__contactUsBtn}>
-          <ContactBtn {...content["contact-us"]} />
-        </div>
-
-        <div
-          className={clsx(s.headerMobile__menu__modal, {
-            [s.active]: isModalOpen,
-            [s.hidden]: !isModalOpen,
-          })}
-        >
-          <div className={s.menu__container}>
-            <ul className={s.menu__list}>
-              <li className={s.header__item}>
-                <Link href={content.home.route}>{content.home.title}</Link>
-              </li>
-              <li className={s.header__item}>
-                <Link href={content["about-us"].route}>
-                  {content["about-us"].title}
-                </Link>
-              </li>
-              <li className={s.header__item}>
-                <button onClick={handleServices}>
-                  {content.services.title}
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div className={s.closed__btn} onClick={handlerBtnMenu}>
-            <ClosedModal />
+    <HeaderMobileProvider>
+      <header className={s.headerMobile}>
+        <div className={s.headerMobile__container}>
+          <Link href={"/"} className={s.logo__mobile}>
+            <LogoMobile />
+          </Link>
+          <ModalMobileNav content={content} />
+          <div className={s.headerMobile__contactUsBtn}>
+            <ContactBtn route="/contact-us" title="Contáctanos" />
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </HeaderMobileProvider>
   );
 };

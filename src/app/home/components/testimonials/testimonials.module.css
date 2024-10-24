@@ -1,8 +1,8 @@
 .testimonial__section {
   padding-top: clamp(
     41px,
-    calc(41px + (123.9 - 41) * ((80vw - 360px) / (1200 - 360))),
-    123.9px
+    calc(41px + (228.9 - 41) * ((80vw - 360px) / (1200 - 360))),
+    228.9px
   );
 }
 
@@ -18,9 +18,12 @@
 .title_container > h2 {
   text-align: center;
   font-size: clamp(
-    20px,
-    calc(20px + (40 - 20) * ((90vw - 360px) / (1200 - 360))),
-    40px
+    var(--title-mobile-secondary),
+    calc(
+      var(--title-mobile-secondary) + (40 - 20) *
+        ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-tertiary)
   );
   line-height: clamp(
     20.6px,
@@ -44,8 +47,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
   .button {
     margin-top: 0;

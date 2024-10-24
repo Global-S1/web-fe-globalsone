@@ -17,6 +17,14 @@
   border-radius: 8px;
   font-family: var(--font-urbanist);
   padding: 14px 44px 14px 46px;
+}
+
+.input__search::placeholder {
+  font-size: clamp(
+    9px,
+    calc(9px + (14 - 9) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-mobile)
+  );
   color: #999;
 }
 

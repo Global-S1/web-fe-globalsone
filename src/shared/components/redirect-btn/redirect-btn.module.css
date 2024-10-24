@@ -1,0 +1,28 @@
+.btn__styles {
+  font-family: var(--font-urbanist);
+  font-size: clamp(
+    var(--button-mobile),
+    calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--button-desktop)
+  );
+  background-color: #544dd2;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+
+.btn__styles:hover {
+  transform: scaleX(1.2) scaleY(1.1);
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+  .btn__styles {
+    border-radius: 100px;
+    padding: 10px 30px;
+  }
+}
+@media (1024px <= width) {
+}
+@media (1280px <= width) {
+}

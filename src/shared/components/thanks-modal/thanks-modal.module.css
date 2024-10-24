@@ -12,45 +12,52 @@
   );
   height: clamp(
     382px,
-    calc(382px + (731 - 382) * ((90vw - 360px) / (1200 - 360))),
-    731px
+    calc(382px + (520 - 382) * ((90vw - 360px) / (1200 - 360))),
+    520px
   );
-  max-height: 382px;
   padding-top: 20px;
 }
 .message__container > h2 {
   font-size: clamp(
-    45px,
-    calc(45px + (120 - 45) * ((90vw - 360px) / (1200 - 360))),
-    120px
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
   );
   text-align: center;
 }
 
 .message__container > p {
-  font-size: 12px;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
+  );
   text-align: center;
-  line-height: 17px;
+  line-height: clamp(
+    21px,
+    calc(21px + (39 - 21) * ((90vw - 360px) / (1200 - 360))),
+    39px
+  );
   width: 80%;
-  font-family: var(--font-urbanist);
+  font-family: var(--font-futura);
 }
 
-.message__container > button {
-  width: clamp(
-    92px,
-    calc(92px + (353 - 92) * ((90vw - 360px) / (1200 - 360))),
-    353px
-  );
-
-  border-radius: 32px;
-  font-size: 9px;
-  margin-top: 9px;
+.message__container > a {
+  background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+  margin: 31px 0 15px 0;
+  border-radius: 12px;
 }
 
 .message__container > span {
-  margin-top: 30px;
+  display: block;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
   font-family: var(--font-urbanist);
 }
 
@@ -67,38 +74,20 @@
   background-color: #544dd2;
 }
 
-/* @media (640px <= width) {
-  .message__container > h2 {
-    font-size: 54px;
-  }
-  .message__container > p {
-    font-size: 19px;
-    line-height: 26px;
-  }
-  .message__container > button {
-    width: 200px;
-    font-size: 16px;
-  }
+@media (640px <= width) {
 }
-   */
 @media (768px <= width) {
   .message__container {
-    /* height: 80vh; */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
     max-height: none;
   }
-  /* .message__container > h2 {
-    font-size: 86px;
-  } */
-  .message__container > button {
-    background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+  .message__container > a {
+    border-radius: 12px;
   }
-  .message__container > p {
-    font-size: 20px;
-  }
+
   .icons__container {
     column-gap: 10px;
   }
@@ -108,10 +97,6 @@
 }
 
 @media (1024px <= width) {
-  .message__container > img {
-    width: 226px;
-    height: 46px;
-  }
   .message__container > button {
     border-radius: 15px;
     font-size: 22px;
@@ -122,11 +107,4 @@
   }
 }
 @media (1280px <= width) {
-  .message__container > p {
-    font-size: 22px;
-    text-align: center;
-    line-height: 33px;
-    width: 60%;
-    margin-bottom: 25px;
-  }
 }

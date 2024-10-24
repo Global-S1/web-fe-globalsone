@@ -5,7 +5,13 @@
   align-items: center;
   column-gap: 15px;
   font-family: "Futura", sans-serif;
-  font-size: var(--font-size-tiny);
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(
+      var(--paragraph-mobile) + (30 - 14) * ((100vw - 360px) / (1200 - 360))
+    ),
+    var(--button-desktop)
+  );
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -29,25 +35,17 @@
 }
 
 @media (640px <= width) {
-  .hero__arrow {
-    font-size: 20px;
-  }
+
 }
 
 @media (768px <= width) {
-  .hero__arrow {
-    font-size: 24px;
-  }
+
 }
 
 @media (1024px <= width) {
-  .hero__arrow {
-    font-size: 28px;
-  }
+
 }
 
 @media (1280px <= width) {
-  .hero__arrow {
-    font-size: var(--font-size-big);
-  }
+
 }

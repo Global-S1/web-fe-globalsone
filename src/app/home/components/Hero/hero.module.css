@@ -1,6 +1,6 @@
 .hero__section {
   position: relative;
-  height: calc(100vh - 79px);
+  height: 100vh;
   min-width: 328px;
   min-height: 494px;
   max-height: 500px;
@@ -15,79 +15,36 @@
   display: none;
 }
 
-.widowCard_container {
-  position: relative;
-  padding-top: 70px;
-}
-
 /* -------custom media query for resize vertical screen------- */
 
 /* -------custom media query for resize vertical screen------- */
 
 @media (640px <= width) {
-  .bg__light {
-    background-size: 120%;
-    height: 400px;
-  }
 }
 
 @media (768px <= width) {
   .hero__section {
-    height: 100vh;
-    min-height: 700px;
-    max-height: 700px;
+    height: calc(100vh - 79px);
+    min-height: calc(700px - 79px);
+    max-height: calc(800px - 79px);
   }
 
   .bg__light {
     display: block;
     position: absolute;
     width: 100%;
-    height: 420px;
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+    background-position: center 70px;
+    background-size: 100%;
     background-repeat: no-repeat;
-    top: 53%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: -1;
   }
 }
 
 @media (1024px <= width) {
-  .hero__section {
-    height: 100vh;
-    min-height: 700px;
-    max-height: 800px;
-  }
-  .bg__light {
-    position: absolute;
-    width: 100%;
-    height: 450px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
 }
 
 @media (1280px <= width) {
-  .hero__section {
-    height: 100vh;
-    min-height: 740px;
-    max-height: 740px;
-  }
-  .bg__light {
-    position: absolute;
-    width: 100%;
-    height: 450px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-}
-
-/* ------- New Media Queries for Screen Height ------- */
-
-/* Media Query for when viewport height is less than 600px */
-@media (max-height: 600px) {
-  .bg__light {
-    top: 55%;
-    transform: translateY(-40%);
-  }
 }

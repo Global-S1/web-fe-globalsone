@@ -5,9 +5,9 @@ type Link = {
 
 export type NavigationLinks = {
   home: Link;
-  "about-us": Link;
+  aboutUs: Link;
   services: Link;
-  "contact-us": Link;
+  contactUs: Link;
 };
 
 export type SocialMedia = {

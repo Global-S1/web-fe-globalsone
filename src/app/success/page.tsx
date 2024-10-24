@@ -17,6 +17,7 @@ export default async function Success() {
         <Leave />
       </div>
       <div className={s.magenta__circle}></div>
+      <div className={s.blue__rec}></div>
       <div className={s.green__circle}></div>
       <ThanksModal {...res} />
       <div className={s.leave__two}>

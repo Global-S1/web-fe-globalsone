@@ -10,7 +10,13 @@
 }
 
 .ourValues__title__container > h2 {
-  font-size: 25px;
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
   margin-bottom: 35px;
 }
 
@@ -38,7 +44,6 @@
   }
 
   .ourValues__title__container > h2 {
-    font-size: 32px;
     line-height: 52.5px;
   }
 
@@ -62,7 +67,6 @@
     flex-direction: row;
   }
   .ourValues__title__container > h2 {
-    font-size: 55px;
     line-height: 82.5px;
   }
   .ourValues__leave {

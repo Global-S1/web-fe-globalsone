@@ -1,36 +1,50 @@
 import { motion } from "framer-motion";
+import { FC } from "react";
 
-const Path = props => (
+interface IProp {
+  toggle: () => void;
+  isOpen?: boolean;
+}
+const Path: FC<any> = (props) => (
   <motion.path
     fill="transparent"
-    strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    strokeWidth="10"
+    stroke="white"
     strokeLinecap="round"
     {...props}
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
+export const MenuToggle: FC<IProp> = ({ toggle, isOpen }) => (
   <button onClick={toggle}>
-    <svg width="23" height="23" viewBox="0 0 23 23">
+    <svg width="23" height="23" viewBox="0 0 100 100">
       <Path
         variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" }
+          closed: { d: "M 15 20 L 100 20" },
+          open: { d: "M60 50 L80 30" },
         }}
       />
+
       <Path
-        d="M 2 9.423 L 20 9.423"
         variants={{
-          closed: { opacity: 1 },
-          open: { opacity: 0 }
+          closed: { d: "M 15 37 L 100 37" },
+          open: { d: "M60 50 L80 70" },
         }}
         transition={{ duration: 0.1 }}
       />
+
       <Path
         variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" }
+          closed: { d: "M 15 55 L 100 55" },
+          open: { d: "M30 50 L50 30" },
+        }}
+        transition={{ duration: 0.1 }}
+      />
+
+      <Path
+        variants={{
+          closed: { d: "M 15 73 L 100 73" },
+          open: { d: "M30 50 L50 70" },
         }}
       />
     </svg>

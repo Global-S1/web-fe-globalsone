@@ -1,5 +1,4 @@
 "use client";
-import { ActionButton } from "@/shared/components/action-button";
 import { ModalWindow } from "@/shared/components/modal-window";
 import { Section } from "@/shared/components/section";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -116,11 +115,9 @@ export const ContactForm = ({
                 </label>
               </div>
 
-              <ActionButton
-                text="Enviar Mensaje"
-                extendStyle={s.button__form}
-                type="submit"
-              />
+              <button className={s.button__form} type="submit">
+                Enviar Mensaje
+              </button>
             </div>
           </form>
         </div>

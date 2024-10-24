@@ -8,8 +8,19 @@
 }
 
 .hero__text__container > h2 {
-  font-size: clamp(var(--font-size-large), 5vw, var(--font-size-title-4));
-  line-height: clamp(25.75px, 5vw, 71.07px);
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((100vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
+  line-height: clamp(
+    25.75px,
+    calc(25.75px + (41.2 * ((100vw - 360px) / (1200 - 360)))),
+    66.95px
+  );
+  font-family: var(--font-grandis);
 }
 
 @media (640px <= width) {
@@ -28,6 +39,6 @@
 
 @media (1280px <= width) {
   .hero__title {
-    top: 20%;
+    top: 14%;
   }
 }

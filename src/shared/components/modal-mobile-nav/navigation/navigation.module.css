@@ -1,0 +1,8 @@
+.nav__list {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.nav__list > li {
+    width: 200px;
+}

@@ -2,9 +2,8 @@ import bgContac from "@/assets/home/contact-us/background/bgContact.png";
 import bgContactMobile from "@/assets/home/contact-us/background/MaskContactMobile.png";
 import { Section } from "@/shared/components/section";
 import s from "./contact-us.module.css";
-import { ActionButton } from "@/shared/components/action-button";
-import Link from "next/link";
 import { FC } from "react";
+import { RedirectBtn } from "@/shared/components/redirect-btn";
 
 interface Prop {
   content: string;
@@ -19,7 +18,7 @@ export const ContactUs: FC<Prop> = ({ content }) => {
             backgroundImage: `url(${bgContactMobile.src})`,
           }}
         ></div>
-        
+
         <div
           className={s.bg__desktop}
           style={{
@@ -29,12 +28,7 @@ export const ContactUs: FC<Prop> = ({ content }) => {
         <div className={s.purple_circle}></div>
         <div className={s.text_container}>
           <h3 dangerouslySetInnerHTML={{ __html: content }} />
-          <Link href={"/contact-us"}>
-            <ActionButton
-              text="Contáctanos Ahora"
-              extendStyle={s.contact__button}
-            />
-          </Link>
+          <RedirectBtn route="/contact-us" text="Contáctanos Ahora" />
         </div>
         <div className={s.green_circle}></div>
       </div>

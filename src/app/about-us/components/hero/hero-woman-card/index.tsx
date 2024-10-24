@@ -13,7 +13,7 @@ export const HeroWomanCard = () => {
         <div className={s.description}>
           <h3>GLOBALS1</h3>
           <Link href={"#our-values"} className={s.action__btn}>
-            <p>Ver más de nosotros</p>
+            Ver más de nosotros
           </Link>
         </div>
       </HeroAvatarCard>

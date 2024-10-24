@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ContactBtn } from "../contact-btn";
 import s from "./header.module.css";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 interface Props {
   content: NavigationLinks;
@@ -21,6 +22,7 @@ export const Header = ({ content }: Props) => {
         ?.scrollIntoView({ behavior: "smooth" });
     }, 200);
   };
+
   return (
     <header className={s.header}>
       <div className={s.header__navbar}>
@@ -30,9 +32,7 @@ export const Header = ({ content }: Props) => {
               <Link href={content.home.route}>{content.home.title}</Link>
             </li>
             <li className={s.header__item}>
-              <Link href={content["about-us"].route}>
-                {content["about-us"].title}
-              </Link>
+              <Link href={content.aboutUs.route}>{content.aboutUs.title}</Link>
             </li>
             <li className={s.header__item}>
               <Link href={"/#services-section"}>
@@ -49,8 +49,8 @@ export const Header = ({ content }: Props) => {
           </Link>
         </div>
         <ContactBtn
-          route={content["contact-us"].route}
-          title={content["contact-us"].title}
+          route={content.contactUs.route}
+          title={content.contactUs.title}
         />
       </div>
     </header>

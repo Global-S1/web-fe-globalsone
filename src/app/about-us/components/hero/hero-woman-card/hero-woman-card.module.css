@@ -22,9 +22,9 @@
 
 .description > h3 {
   font-size: clamp(
-    12px,
-    calc(9px + (27 - 9) * ((90vw - 360px) / (1200 - 360))),
-    27px
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
   );
   text-align: center;
 }
@@ -34,22 +34,24 @@
   display: block;
   background: rgba(217, 217, 217, 0.37);
   width: 100%;
-  height: clamp(
+  /* height: clamp(
     21px,
     calc(21px + (32 - 21) * ((80vw - 360px) / (1200 - 360))),
     32px
-  );
-  max-width: 212px;
+  ); */
+  /* max-width: 212px; */
   font-family: var(--font-futura);
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: clamp(
-    10px,
-    calc(11px + (18 - 11) * ((80vw - 360px) / (1200 - 360))),
-    18px
+    var(--secondary-text-mobile),
+    calc(
+      var(--secondary-text-mobile) + (30 - 10) * ((80vw - 360px) / (1200 - 360))
+    ),
+    var(--button-desktop)
   );
+  text-align: center;
+  padding: 0 3px;
+  width: 90%;
 }
 
 @media (400px <= width) {

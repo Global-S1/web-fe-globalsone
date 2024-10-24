@@ -1,5 +1,6 @@
 .section__from {
   position: relative;
+  margin-top: 79px;
 }
 
 .form__container {
@@ -27,23 +28,26 @@
   align-items: center;
 }
 
-.form__text__container {
-  font-family: var(--font-futura);
-}
-
 .form__text__container > h2 {
-  font-family: var(--font-urbanist);
-  font-size: 25px;
+  font-family: var(--font-grandis);
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
   margin-top: 8%;
 }
 
 .form__text__container > p {
   font-size: clamp(
-    13px,
-    calc(13px + (22px - 13px) * ((90vw - 360px) / (1200px - 360px))),
-    22px
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
   );
   text-align: justify;
+  font-family: "Futura", var(--font-futura);
 }
 .inputs__grid {
   margin-top: 20px;
@@ -58,18 +62,28 @@
   flex-shrink: 0;
   width: 100%;
   border-radius: 11px;
-  font-size: 15px;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+
   font-family: var(--font-futura);
   border: none;
   background: rgba(217, 217, 217, 0.244);
-  color: rgba(255, 255, 255, 0.618);
+  color: white;
 }
+
 .inputs__grid > select {
   flex-shrink: 0;
   width: 100%;
   border-radius: 11px;
-  font-size: 15px;
-  font-family: var(--font-futura);
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+  font-family: "Futura", var(--font-futura);
   border: none;
   background: rgba(217, 217, 217, 0.244);
   background-position: 4%;
@@ -79,7 +93,7 @@
   padding-left: 11%;
 }
 
-.inputs__grid > select > option { 
+.inputs__grid > select > option {
   background-color: transparent;
   color: black;
 }
@@ -114,13 +128,18 @@
   margin-bottom: 14px;
 }
 .terms_container > input {
+  margin-top: 7px;
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid white;
 }
 .terms_container > label {
-  font-family: var(--font-futura);
-  font-size: 11px;
+  font-family: "Futura", var(--font-futura);
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
 }
 .terms_container > label > span {
   margin-left: 5px;
@@ -134,12 +153,30 @@
 
 .submit__container > button {
   width: 100%;
+  border-radius: 12px;
 }
 
 .button__form {
+  background-color: #544dd2;
   -webkit-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
   -moz-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
   box-shadow: -1px 4px 8px 0px rgb(0 0 0 / 34%);
+  font-family: "Futura";
+  font-size: clamp(
+    var(--button-mobile),
+    calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--button-desktop)
+  );
+  width: clamp(
+    303px,
+    calc(303px + (478.859 - 303) * ((90vw - 360px) / (1200 - 360))),
+    478.859px
+  );
+  height: clamp(
+    40px,
+    calc(40px + (59.829 - 40) * ((90vw - 360px) / (1200 - 360))),
+    59.829px
+  );
 }
 
 .alert {
@@ -178,12 +215,7 @@
   .form__container {
     border-radius: 40px;
   }
-  .form__text__container > h2 {
-    font-size: 33px;
-  }
-  .form__text__container > p {
-    font-size: 14px;
-  }
+
   .submit__container {
     display: flex;
     width: 100%;
@@ -193,9 +225,7 @@
   .terms_container {
     column-gap: 15px;
   }
-  .terms_container > label {
-    font-size: 18px;
-  }
+
   .terms_container > input {
     width: 23px;
     height: 23px;
@@ -203,6 +233,7 @@
   .submit__container > button {
     width: 478.859px !important;
     height: 59.829px !important;
+    border-radius: 36px;
   }
   .inputs__grid > select {
     padding-left: 55px;
@@ -213,15 +244,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
-  .form__container {
-    /* height: 680px; */
-  }
-  .form__text__container > h2 {
-    font-size: 50px;
-  }
-  .form__text__container > p {
-    font-size: 17px;
-  }
+
   .magenta__circle {
     width: 680px;
     height: 389px;
@@ -255,17 +278,13 @@
     margin-bottom: 130px;
   }
   .form__container {
-    /* height: 660px; */
     padding: 0 58px;
     padding-bottom: 56px;
   }
   .form__text__container > h2 {
-    font-size: 63px;
     margin-top: 7%;
   }
-  .form__text__container > p {
-    font-size: 22px;
-  }
+
   .inputs__grid {
     height: 226px;
     display: grid;
@@ -279,7 +298,6 @@
   }
   .inputs__grid > input,
   .inputs__grid > select {
-    font-size: 18px;
     padding-left: 27px;
     color: white;
   }
@@ -293,7 +311,6 @@
     height: 100%;
     width: 425px;
     margin-top: 0;
-    font-size: 18px;
     color: white;
   }
   .inputs__grid input:nth-child(1),

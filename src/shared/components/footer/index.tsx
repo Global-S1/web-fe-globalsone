@@ -19,13 +19,9 @@ export const Footer = ({ content, socialMedia }: Props) => {
         <SearchInput route={content.home.route} />
         <div className={s.footer__linklist__container}>
           <Link href={content.home.route}>{content.home.title}</Link>
-          <Link href={content["about-us"].route}>
-            {content["about-us"].title}
-          </Link>
+          <Link href={content.aboutUs.route}>{content.aboutUs.title}</Link>
           <Link href={"/#services-section"}>{content.services.title}</Link>
-          <Link href={content["contact-us"].route}>
-            {content["contact-us"].title}
-          </Link>
+          <Link href={content.contactUs.route}>{content.contactUs.title}</Link>
         </div>
       </div>
       <TermsFooter

@@ -9,7 +9,6 @@
 
 .overview__card__base {
   padding: 23px;
-  height: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +26,6 @@
 }
 
 .card__two {
-  margin-top: -14px;
   background: #19dbca;
   color: black;
 }
@@ -167,6 +165,6 @@
     padding: 50px 50px 10px 50px;
   }
   .card__three {
-    padding: 75px 100px 50px 100px;
+    padding: 76px 50px 50px 50px;
   }
 }

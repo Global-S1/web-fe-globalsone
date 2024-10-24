@@ -40,8 +40,8 @@
   transform: translateY(-50%);
   width: clamp(
     220px,
-    calc(220px + (550 - 220) * ((90vw - 360px) / (1200 - 360))),
-    550px
+    calc(220px + (600 - 220) * ((90vw - 360px) / (1200 - 360))),
+    600px
   );
   max-width: none;
 }
@@ -51,8 +51,8 @@
   transform: translateY(-50%);
   width: clamp(
     200px,
-    calc(200px + (570 - 200) * ((90vw - 360px) / (1200 - 360))),
-    570px
+    calc(200px + (600 - 200) * ((90vw - 360px) / (1200 - 360))),
+    600px
   );
 
   max-width: none;
@@ -63,8 +63,8 @@
   transform: translateY(-50%);
   width: clamp(
     220px,
-    calc(220px + (550 - 220) * ((90vw - 360px) / (1200 - 360))),
-    550px
+    calc(220px + (600 - 220) * ((90vw - 360px) / (1200 - 360))),
+    600px
   );
   max-width: none;
 }
@@ -102,6 +102,7 @@
     top: 72%;
   }
   .pictureStyle__style__2 {
-    top: 55%;
+    top: 68%;
+    left: -38%;
   }
 }

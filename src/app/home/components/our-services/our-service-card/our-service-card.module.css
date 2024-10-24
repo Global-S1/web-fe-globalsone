@@ -15,24 +15,35 @@
 .title__container > h3 {
   text-align: center;
   color: #19dbca;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: clamp(
+    var(--title-mobile-secondary),
+    calc(
+      var(--title-mobile-secondary) + (40 - 20) *
+        ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-tertiary)
+  );
+  line-height: clamp(
+    20.6px,
+    calc(20.6px + (42.8 - 20.6) * ((100vw - 360px) / (1200 - 360))),
+    42.8px
+  );
   margin: 10px 0;
+  font-family: var(--font-grandis);
 }
 
 .description {
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: center;
 }
 
 .description > p {
   text-align: center;
-  font-family: "Futura";
   font-size: clamp(
-    16px,
-    calc(16px + (32 - 16) * ((80vw - 360px) / (1200 - 360))),
-    32px
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (32 - 14) * ((80vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
   );
   line-height: clamp(
     24px,
@@ -40,7 +51,7 @@
     48px
   );
 
-  font-family: var(--font-futura);
+  font-family: "Futura";
   width: 100%;
   font-weight: 500;
 }
@@ -58,10 +69,6 @@
 @media (768px <= width) {
   .cardOurService_container {
     height: 300px;
-  }
-  .title__container > h3 {
-    font-size: 30px;
-    line-height: 30.99px;
   }
 }
 
@@ -82,8 +89,6 @@
     align-items: center;
   }
   .title__container > h3 {
-    font-size: 45px;
-    line-height: 48.65px;
     margin: 0;
   }
   .cardOurService_container > img {
@@ -109,10 +114,7 @@
   .title__container {
     width: 100%;
   }
-  .title__container > h3 {
-    font-size: 50px;
-    line-height: 51.5px;
-  }
+
   .description {
     width: 45%;
   }

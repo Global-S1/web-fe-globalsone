@@ -1,43 +1,43 @@
 {
-    "headerLinks": {
-        "home": {
-            "title": "Inicio",
-            "route": "/"
-        },
-        "about-us": {
-            "title": "Acerca de Nosotros",
-            "route": "/about-us"
-        },
-        "services": {
-            "title": "Servicios",
-            "route": "/services-section"
-        },
-        "contact-us": {
-            "title": "Contáctanos",
-            "route": "/contact-us"
-        }
+  "headerLinks": {
+    "home": {
+      "title": "Inicio",
+      "route": "/"
     },
-    "footerLinks": {
-        "home": {
-            "title": "Inicio",
-            "route": "/"
-        },
-        "about-us": {
-            "title": "Acerca de Nosotros",
-            "route": "/about-us"
-        },
-        "services": {
-            "title": "Servicios",
-            "route": "/services-section"
-        },
-        "contact-us": {
-            "title": "Contáctanos",
-            "route": "/contact-us"
-        }
+    "aboutUs": {
+      "title": "Acerca de Nosotros",
+      "route": "/about-us"
     },
-    "socialMedia": {
-      "facebook": " https://www.facebook.com/globals.one",
-      "instagram": "https://www.instagram.com/globals.one/",
-      "linkedin": "https://www.linkedin.com/company/global-s1"
+    "services": {
+      "title": "Servicios",
+      "route": "/services-section"
+    },
+    "contactUs": {
+      "title": "Contáctanos",
+      "route": "/contact-us"
     }
+  },
+  "footerLinks": {
+    "home": {
+      "title": "Inicio",
+      "route": "/"
+    },
+    "aboutUs": {
+      "title": "Acerca de Nosotros",
+      "route": "/about-us"
+    },
+    "services": {
+      "title": "Servicios",
+      "route": "/services-section"
+    },
+    "contactUs": {
+      "title": "Contáctanos",
+      "route": "/contact-us"
+    }
+  },
+  "socialMedia": {
+    "facebook": " https://www.facebook.com/globals.one",
+    "instagram": "https://www.instagram.com/globals.one/",
+    "linkedin": "https://www.linkedin.com/company/global-s1"
+  }
 }

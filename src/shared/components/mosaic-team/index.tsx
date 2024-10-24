@@ -12,9 +12,7 @@ export const MosaicTeam = async () => {
       <div className={s.leave__top}>
         <LeaveClear />
       </div>
-      <div className={s.contactMosaic__text__container}>
-        <h2>{data.title}</h2>
-      </div>
+
       <div className={s.leave__center}>
         <LeaveClear />
       </div>
@@ -22,6 +20,9 @@ export const MosaicTeam = async () => {
         <div className={s.purple__circle}></div>
         <div className={s.green__circle}></div>
         <div className={s.grid_template}>
+          <div className={s.contactMosaic__text__container}>
+            <h2>{data.title}</h2>
+          </div>
           {data.mosaicImages.map((img) => (
             <Image
               key={img.alt}

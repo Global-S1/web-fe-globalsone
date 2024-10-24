@@ -3,30 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --body-gb-color: #0F032A;
+  --body-gb-color: #0f032a;
   --custom-color-green: #19dbca;
   --custom-color-purple: #afb0ff;
 
-  --font-size-title-1: 91px;
-  --font-size-title-2: 88px;
-  --font-size-title-3: 84px;
-  --font-size-title-4: 69px;
-  --font-size-title-5: 66px;
-  --font-size-title-6: 65px;
-  --font-size-title-7: 55px;
-  --font-size-title-8: 42px;
-  --font-size-title-9: 40px;
-  --font-size-title-10: 36px;
+  --title-desktop-primary: 4.0625rem;
+  --title-desktop-secondary: 2.8125rem;
+  --title-desktop-tertiary: 2.5rem;
+  --paragraph-desktop: 2rem;
+  --button-desktop: 1.875rem;
+  --secondary-text-desktop: 1.375rem;
 
-  --font-size-big: 30px;
-  --font-size-large: 25px;
-  --font-size-medium: 22px;
-  --font-size-base: 20px;
-  --font-size-small: 18px;
-  --font-size-tiny: 16px;
-  --font-size-petite: 14px;
-  --font-size-micro: 12px;
-  --font-size-nano: 10px;
+  --title-mobile-primary: 1.5625rem;
+  --title-mobile-secondary: 1.25rem;
+  --title-mobile-tertiary: 1rem;
+  --paragraph-mobile: 0.875rem;
+  --button-mobile: 0.875rem;
+  --secondary-text-mobile: 0.625rem;
 }
 
 * {

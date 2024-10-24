@@ -14,14 +14,16 @@
 .ourServices_title > h2 {
   text-align: center;
   font-size: clamp(
-    25px,
-    calc(25px + (62 - 25) * ((80vw - 360px) / (1200 - 360))),
-    62px
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
   );
   line-height: clamp(
     25.75px,
-    calc(25.75px + (93 - 25.75) * ((80vw - 360px) / (1200 - 360))),
-    93px
+    calc(25.75px + (97.5 - 25.75) * ((90vw - 360px) / (1200 - 360))),
+    97.5px
   );
 
   background: linear-gradient(to bottom right, #fff 0%, #999 50%) bottom right /
@@ -73,10 +75,6 @@
 }
 
 @media (640px <= width) {
-  .ourServices_title > h2 {
-    font-size: var(--font-size-title-10);
-    line-height: 39.75px;
-  }
   .cards_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -107,10 +105,7 @@
     column-gap: 20px;
     row-gap: 55px;
   }
-  .ourServices_title > h2 {
-    font-size: var(--font-size-title-8);
-    line-height: 55.75px;
-  }
+
   .purple_dot {
     position: absolute;
     display: block;
@@ -218,15 +213,11 @@
 }
 @media (1024px <= width) {
   .cards_container {
-    column-gap: 40px;
+    column-gap: 68px;
     max-width: none;
   }
   .ourServices_title {
     margin-bottom: 43px;
-  }
-  .ourServices_title > h2 {
-    font-size: var(--font-size-title-7);
-    line-height: 69.7px;
   }
   .leave__one {
     display: block;
@@ -247,8 +238,4 @@
   }
 }
 @media (1280px <= width) {
-  .ourServices_title > h2 {
-    font-size: 62px;
-    line-height: 79.95px;
-  }
 }

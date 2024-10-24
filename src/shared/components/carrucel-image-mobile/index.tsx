@@ -1,11 +1,7 @@
 "use client";
-import { Autoplay } from "swiper/modules";
-
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./carrucel-image.css";
-
-// Import Swiper styles
-
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 import { IAnny } from "@/shared/interfaces/any.interface";
@@ -17,6 +13,7 @@ import "swiper/css/scrollbar";
 import { IOurTeamPersonContent } from "../our-team/interfaces/our-team.interface";
 import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
+import leaf from "@/assets/leavesImg/borders/leave-borde-3.png";
 
 interface Props {
   content: IOurTeamPersonContent[];
@@ -26,6 +23,8 @@ export const CarrucelImageMobil = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
   return (
     <div className={s.carrucel__container}>
+      <div className={s.green__circle}></div>
+
       <button
         className={s.arrow_left}
         onClick={() => swiperRef.current?.slidePrev()}
@@ -33,27 +32,25 @@ export const CarrucelImageMobil = ({ content }: Props) => {
         <ArrowLeft />
       </button>
       <div className={s.carrucel__viewport}>
+        <div
+          className={s.leaf__one}
+          style={{ backgroundImage: `url(${leaf.src})` }}
+        ></div>
         <Swiper
           effect={""}
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
           autoplay={{
-            delay: 2000,
-            // disableOnInteraction: false,
+            delay: 3000,
+          }}
+          pagination={{
+            clickable: true,
+            el: `.${s.pagination}`,
+            bulletClass: s.bullet,
+            bulletActiveClass: s.bullet_active,
           }}
           loop
-          breakpoints={{
-            375: {},
-          }}
-          spaceBetween={180}
+          spaceBetween={30}
           centeredSlides
-          // slidesPerView={2}
-          // coverflowEffect={{
-          //   rotate: 0,
-          //   stretch: 18,
-          //   depth: 100,
-          //   modifier: 1.5,
-          //   slideShadows: true,
-          // }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
@@ -63,6 +60,15 @@ export const CarrucelImageMobil = ({ content }: Props) => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className={s.bg__purpple}></div>
+        <div
+          className={s.leaf__two}
+          style={{ backgroundImage: `url(${leaf.src})` }}
+        ></div>
+        <div
+          className={s.leaf__three}
+          style={{ backgroundImage: `url(${leaf.src})` }}
+        ></div>
       </div>
       <button
         className={s.arrow_right}
@@ -70,6 +76,7 @@ export const CarrucelImageMobil = ({ content }: Props) => {
       >
         <ArrowRight />
       </button>
+      <div className={s.pagination}></div>
     </div>
   );
 };

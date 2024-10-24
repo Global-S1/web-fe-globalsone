@@ -1,0 +1,28 @@
+.btn__container {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  display: flex;
+  width: 50px;
+  height: 79px;
+}
+
+.btn__container > button {
+  position: absolute;
+  top: 26px;
+  left: 14px;
+}
+
+.background {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 2, 88, 0.9) 68%,
+    rgba(87, 62, 151, 0) 100%
+  );
+  z-index: -10;
+  width: 100%;
+}

@@ -11,7 +11,7 @@
 
 .logo__mobile {
   position: absolute;
-  top: 37%;
+  top: 36%;
   left: 43%;
   transform: translateX(-50%);
   display: block;
@@ -28,8 +28,7 @@
 .headerMobile__contactUsBtn {
   position: absolute;
   right: 4%;
-  top: 52.5%;
-
+  top: 55.5%;
   transform: translateY(-50%);
 }
 

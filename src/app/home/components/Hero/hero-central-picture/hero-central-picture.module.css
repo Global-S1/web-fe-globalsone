@@ -1,4 +1,5 @@
 .heroCenterPricture__container {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -14,6 +15,9 @@
 .hero_picture {
   display: none;
 }
+.bg__light {
+  display: none;
+}
 
 /* ------------------media query for end mobile screens----------- */
 @media (480px <= width) {
@@ -23,10 +27,14 @@
   .hero_picture {
     display: block;
     position: absolute;
-    top: -25%;
+    object-fit: cover;
+    object-position: bottom;
+    top: -31%;
     left: 50%;
-    transform: translateX(-52%);
+    transform: translateX(-53%);
     width: 100%;
+    height: 100vh;
+    max-height: calc(100% + 79px);
     max-width: 419px;
   }
 }
@@ -34,7 +42,7 @@
 
 @media (640px <= width) {
   .hero_picture {
-    top: -37%;
+    top: -27%;
     left: 50%;
     transform: translateX(-51%);
     max-width: 465px;
@@ -43,14 +51,22 @@
 
 @media (768px <= width) {
   .hero_picture {
-    top: -17%;
+    top: -25%;
     max-width: 554px;
+  }
+  .bg__light {
+    position: absolute;
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
 }
 
 @media (1024px <= width) {
   .hero_picture {
-    top: -20%;
     max-width: 601px;
     transform: translateX(-52%);
   }
@@ -58,8 +74,8 @@
 
 @media (1280px <= width) {
   .hero_picture {
-    top: -22%;
-    max-width: 600px;
+    top: -19%;
+    max-width: 660px;
     transform: translateX(-52%);
   }
 }

@@ -11,22 +11,6 @@
   object-position: center;
   border-radius: 20px;
 }
-/* 
-.label_image {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-}
-
-.label_image > h3 {
-  font-size: var(--font-size-tiny);
-}
-.label_image > p {
-  font-family: "Futura";
-  font-size: 8px;
-} */
 
 @media (425px <= width) {
 }
@@ -47,6 +31,7 @@
   }
   .label_image > h3 {
     font-size: var(--font-size-tiny);
+    font-family: var(--font-grandis);
   }
 }
 
@@ -76,10 +61,10 @@
     text-align: center;
   }
   .label_image > h3 {
-    font-size: var(--font-size-small);
+    font-size: 28px;
   }
   .label_image > p {
-    font-size: var(--font-size-tiny);
-    font-family: var(--font-futura);
+    font-size: var(--secondary-text-desktop);
+    font-family: "Futura", var(--font-futura);
   }
 }

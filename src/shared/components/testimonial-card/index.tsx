@@ -3,9 +3,7 @@ import BgTestimonial from "@/assets/home/testimonials/background/bg-testimonial.
 import { Stars } from "./stars/Stars";
 import { MosaicImages } from "./stars/mosaic-images";
 import { FC } from "react";
-import { ActionButton } from "../action-button";
 import s from "./testimonial-card.module.css";
-import gian from "@/assets/home/testimonials/pictures/gianvictor.png";
 import { ITestimonialsContent } from "./interfaces/content.interface";
 
 interface ITestimonial {
@@ -21,6 +19,7 @@ export const TestimonialCard: FC<ITestimonial> = ({ content }) => {
     >
       <div className={s.green__circle__top}></div>
       <div className={s.bg__layer}></div>
+
       <div className={s.testimonialCard__text__container}>
         <div className={s.testimonialCard__text__name}>
           <h2 dangerouslySetInnerHTML={{ __html: name }} />
@@ -28,8 +27,17 @@ export const TestimonialCard: FC<ITestimonial> = ({ content }) => {
         </div>
         <p>{description}</p>
       </div>
-      <Image src={gian} alt="gian" className={s.client__img} />
-      <MosaicImages />
+
+      <Image
+        src={clientImage}
+        alt={name}
+        className={s.client__img}
+        width={100}
+        height={100}
+      />
+
+      <MosaicImages pictures={bgImg} />
+
       <div className={s.green__mini__circle}></div>
       <div className={s.green__circle}></div>
       <div className={s.purple__circle}></div>
