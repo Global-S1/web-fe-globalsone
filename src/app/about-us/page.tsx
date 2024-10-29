@@ -1,5 +1,4 @@
 import { MosaicTeam } from "@/shared/components/mosaic-team";
-import { Testimonials } from "../home/components/testimonials";
 import { Hero } from "./components/hero";
 import { AboutUsOurTeam } from "./components/our-team";
 import { OurValues } from "./components/our-values";

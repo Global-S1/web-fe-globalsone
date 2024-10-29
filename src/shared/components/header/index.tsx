@@ -1,58 +1,36 @@
 "use client";
-
-import { GlobalSLogo } from "@/assets/GlobalSLogo";
+import { LogoMobile } from "@/assets/header/pictures/LogoMobile";
 import { NavigationLinks } from "@/shared/interfaces/layout.interface";
 import Link from "next/link";
-import { ContactBtn } from "../contact-btn";
-import s from "./header.module.css";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-
+import s from "./header-mobile.module.css";
+import { HeaderMobileProvider } from "./context/header-provider";
+import { Phone } from "@/assets/header/icon/Phone";
+import { NavBarMobile } from "./navbar-mobile";
+import { NavBarDesktop } from "./navbar-desktop";
 interface Props {
   content: NavigationLinks;
 }
 
 export const Header = ({ content }: Props) => {
-  const router = useRouter();
-  const handleServices = () => {
-    router.push("/");
-    setTimeout(() => {
-      document
-        .getElementById("services-section")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }, 200);
-  };
+  const { contactUs } = content;
 
   return (
-    <header className={s.header}>
-      <div className={s.header__navbar}>
-        <nav>
-          <ul className={s.header__navbarLeft}>
-            <li className={s.header__item}>
-              <Link href={content.home.route}>{content.home.title}</Link>
-            </li>
-            <li className={s.header__item}>
-              <Link href={content.aboutUs.route}>{content.aboutUs.title}</Link>
-            </li>
-            <li className={s.header__item}>
-              <Link href={"/#services-section"}>
-                <button onClick={handleServices}>
-                  {content.services.title}
-                </button>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className={s.header__logo}>
-          <Link href={"/"}>
-            <GlobalSLogo />
+    <HeaderMobileProvider>
+      <header className={s.header}>
+        <div className={s.header__container}>
+          <Link href={"/"} className={s.logo__mobile}>
+            <LogoMobile />
+          </Link>
+          <NavBarMobile content={content} />
+          <NavBarDesktop content={content} />
+          <Link href={contactUs.route} className={s.contact__btn}>
+            <div className={s.phone_icon}>
+              <Phone />
+            </div>
+            <p>{contactUs.title}</p>
           </Link>
         </div>
-        <ContactBtn
-          route={content.contactUs.route}
-          title={content.contactUs.title}
-        />
-      </div>
-    </header>
+      </header>
+    </HeaderMobileProvider>
   );
 };

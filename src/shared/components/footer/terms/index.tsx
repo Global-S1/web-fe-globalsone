@@ -16,7 +16,7 @@ export const TermsFooter:FC<Prop> = ({facebook, instagram, linkedin}) => {
         <div className={s.footer__terms__container}>
         <div>
           <div className={s.social__text__container}>
-            <h4>@2023 Global S1. Todos los derechos reservados.</h4>
+            <h4>@2024 Global S1. Todos los derechos reservados.</h4>
             <Link href="/terms-conditions">
               <h4>Terminos & Condiciones</h4>
             </Link>

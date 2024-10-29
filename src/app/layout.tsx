@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 import localfont from "next/font/local";
-import { Header } from "@/shared/components/header";
 import "./globals.css";
 import { Footer } from "@/shared/components/footer";
 import { Main } from "@/shared/components/main";
-import { HeaderMobile } from "@/shared/components/header-mobile";
+import { Header } from "@/shared/components/header";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getLayoutLinks } from "@/shared/services/layout.service";
 
@@ -52,7 +51,6 @@ export default async function RootLayout({
       <body className="font-grandis">
         <BgLeave />
         <Header content={link.headerLinks} />
-        <HeaderMobile content={link.headerLinks} />
         <Main>{children}</Main>
         <Footer content={link.footerLinks} socialMedia={link.socialMedia} />
       </body>

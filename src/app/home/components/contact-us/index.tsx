@@ -26,6 +26,7 @@ export const ContactUs: FC<Prop> = ({ content }) => {
           }}
         ></div>
         <div className={s.purple_circle}></div>
+        <div className={s.purple_rec}></div>
         <div className={s.text_container}>
           <h3 dangerouslySetInnerHTML={{ __html: content }} />
           <RedirectBtn route="/contact-us" text="Contáctanos Ahora" />

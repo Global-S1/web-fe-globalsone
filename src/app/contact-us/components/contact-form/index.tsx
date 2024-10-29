@@ -8,6 +8,7 @@ import { sendFormRequirementService } from "../../service/form.service";
 import { useRouter } from "next/navigation";
 import { IForm } from "../../interfaces/contact-form";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export const ContactForm = ({
   title,
@@ -19,17 +20,26 @@ export const ContactForm = ({
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm<IForm>();
   const router = useRouter();
   const onSubmit: SubmitHandler<IForm> = async (data) => {
     try {
       const status = await sendFormRequirementService(data);
+      localStorage.removeItem("email");
       console.log("envio exitoso", status);
       if (status === 201) {
         router.push("/success");
       }
     } catch (error) {}
   };
+
+  useEffect(() => {
+    const storedEmail = localStorage.getItem("email");
+    if (storedEmail) {
+      setValue("email", storedEmail);
+    }
+  }, [setValue]);
 
   return (
     <Section extendStyle={s.section__from}>
@@ -52,12 +62,12 @@ export const ContactForm = ({
             <div className={s.inputs__grid}>
               <input
                 type="text"
-                placeholder="Nombre"
+                placeholder="Nombre (s)"
                 {...register("name", { required: true })}
               />
               <input
                 type="text"
-                placeholder="Apellido"
+                placeholder="Apellidos"
                 {...register("lastName", { required: true })}
               />
               <input
@@ -67,7 +77,7 @@ export const ContactForm = ({
               />
               <input
                 type="text"
-                placeholder="Numero de Telefono"
+                placeholder="Número de Teléfono"
                 {...register("phone", { required: true })}
               />
               <select

@@ -67,11 +67,15 @@
 }
 
 .icons__container > a {
+  cursor: pointer;
   display: block;
   width: 22px;
   height: 22px;
   border-radius: 50px;
   background-color: #544dd2;
+}
+.icons__container > a:hover {
+  transform: scale(1.2);
 }
 
 @media (640px <= width) {

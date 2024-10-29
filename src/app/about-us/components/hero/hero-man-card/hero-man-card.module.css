@@ -1,7 +1,7 @@
 .avatarCards__float__container_man {
   position: absolute;
   top: 5%;
-  left: 38%;
+  left: 31%;
   transform: rotate(-12deg) translate(-50%) scale(0.85);
 }
 .avatar__man__card {
@@ -15,7 +15,7 @@
 @media (400px <= width) {
   .avatarCards__float__container_man {
     top: 1%;
-    left: 38%;
+    left: 24%;
   }
 }
 @media (450px <= width) {

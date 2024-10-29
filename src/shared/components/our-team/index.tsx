@@ -17,7 +17,7 @@ export const OurTeam = async () => {
       </div>
       <CarrucelImg content={ourTeam.desktopImg} />
       <CarrucelImageMobil content={ourTeam.mobileImg} />
-      <RedirectBtn route="/about-us" text="Quiero Conocerlos" />
+      {/* <RedirectBtn route="/about-us" text="Quiero Conocerlos" /> */}
       <div className={s.ourTeam__leave__two}>
         <LeaveClear />
       </div>

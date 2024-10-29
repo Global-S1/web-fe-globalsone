@@ -26,6 +26,7 @@
   grid-area: insides;
   justify-self: center;
   margin-top: 32px;
+  width: 100%;
 }
 
 .hero__socialMedia__container {
@@ -63,11 +64,11 @@
     var(--paragraph-desktop)
   );
   line-height: clamp(
-    var(--paragraph-mobile),
-    calc(var(--paragraph-mobile) + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
-    var(--paragraph-desktop)
+    21px,
+    calc(21px + (48 - 21) * ((90vw - 360px) / (1200 - 360))),
+    48px
   );
-  width: 90%;
+  width: 80%;
   font-family: "Futura", var(--font-futura);
   text-align: justify;
 }
@@ -107,11 +108,15 @@
 }
 
 .socialMedia__icons__container > a {
+  cursor: pointer;
   display: block;
   width: 22px;
   height: 22px;
   background-color: #544dd2;
   border-radius: 50%;
+}
+.socialMedia__icons__container > a:hover {
+  transform: scale(1.2);
 }
 
 .hero__avatarCards__bg__purple {
@@ -174,11 +179,13 @@
   .hero__socialMedia__container {
     grid-area: links;
     justify-self: left;
-    justify-content: flex-start;
-    column-gap: 30px;
+    justify-content: space-between;
     width: 100%;
     max-width: none;
     margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 90%;
   }
   .hero__avatarCards__bg {
     top: -10%;

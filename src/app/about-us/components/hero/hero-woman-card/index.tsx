@@ -11,9 +11,9 @@ export const HeroWomanCard = () => {
           <Woman />
         </div>
         <div className={s.description}>
-          <h3>GLOBALS1</h3>
+          <h3>GLOBAL S1</h3>
           <Link href={"#our-values"} className={s.action__btn}>
-            Ver más de nosotros
+            Ver más
           </Link>
         </div>
       </HeroAvatarCard>

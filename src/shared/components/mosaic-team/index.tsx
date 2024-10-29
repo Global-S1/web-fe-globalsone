@@ -1,9 +1,8 @@
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 import { Section } from "@/shared/components/section";
+import { getMosaicTeam } from "./services/mosaic-team.service";
 import Image from "next/image";
 import s from "./mosaic-team.module.css";
-
-import { getMosaicTeam } from "./services/mosaic-team.service";
 
 export const MosaicTeam = async () => {
   const data = await getMosaicTeam();

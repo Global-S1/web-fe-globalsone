@@ -7,6 +7,7 @@ import { MailIcon } from "@/assets/contact-us/address/icons/MailIcon";
 import { PhoneIcon } from "@/assets/contact-us/address/icons/PhoneIcon";
 import { AddressIcon } from "@/assets/contact-us/address/icons/AddressIcon";
 import { RedirectBtn } from "@/shared/components/redirect-btn";
+import Link from "next/link";
 
 export const ContactAddress = ({
   city,
@@ -25,18 +26,24 @@ export const ContactAddress = ({
             <p>{description}</p>
           </div>
           <div className={s.buttons__container}>
-            <RedirectBtn route={"mailto:contacto@globals.one"} text={email}>
-              <MailIcon />
-            </RedirectBtn>
-            <RedirectBtn route={"tel:+51902594035"} text={phone}>
-              <PhoneIcon />
-            </RedirectBtn>
-            <RedirectBtn
-              route={"https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9"}
-              text={address}
-            >
-              <AddressIcon />
-            </RedirectBtn>
+            <Link href={"mailto:contacto@globals.one"}>
+              <div>
+                <MailIcon />
+              </div>
+              <p>{email}</p>
+            </Link>
+            <Link href={"tel:+51902594035"}>
+              <div>
+                <PhoneIcon />
+              </div>
+              <p>{phone}</p>
+            </Link>
+            <Link href={"https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9"}>
+              <div>
+                <AddressIcon />
+              </div>
+              <p>{address}</p>
+            </Link>
           </div>
         </div>
         <div className={s.bg__img__container}>

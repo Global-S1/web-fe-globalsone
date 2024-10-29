@@ -20,7 +20,7 @@
     column-gap: 9px;
   }
   .star {
-    width: 25px;
+    width: 22.5px;
   }
 }
 @media (1024px <= width) {
@@ -28,7 +28,7 @@
     column-gap: 12px;
   }
   .star {
-    width: 36px;
+    width: 32.4px;
   }
 }
 @media (1280px <= width) {
@@ -36,6 +36,6 @@
     column-gap: 15px;
   }
   .star {
-    width: 43px;
+    width: 38.7px;
   }
 }

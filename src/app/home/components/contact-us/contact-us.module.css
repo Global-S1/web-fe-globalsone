@@ -116,6 +116,16 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+  .purple_rec {
+    position: absolute;
+    width: 120%;
+    height: 218px;
+    background-color: #0f032f;
+    top: -93px;
+    border: 1px solid white;
+    filter: blur(31px);
+    z-index: -1;
+  }
 }
 @media (768px <= width) {
   .text_container > a {
@@ -135,6 +145,12 @@
     filter: blur(200px);
     border: 1px solid white;
     right: -30%;
+  }
+  @-moz-document url-prefix() {
+    .green_circle {
+      filter: blur(150px);
+      background: #2eea7991;
+    }
   }
 
   .purple_circle {

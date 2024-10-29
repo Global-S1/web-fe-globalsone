@@ -47,11 +47,15 @@
   }
 }
 @media (500px <= width) {
+  .avatarCard__container {
+    width: 135px;
+    height: 214.42px;
+  }
 }
 @media (640px <= width) {
   .avatarCard__container {
-    width: 175.68px;
-    height: 282.84px;
+    width: 183.68px;
+    height: 306.84px;
   }
 }
 @media (768px <= width) {

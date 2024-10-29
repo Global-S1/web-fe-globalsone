@@ -32,10 +32,6 @@ export const CarrucelImageMobil = ({ content }: Props) => {
         <ArrowLeft />
       </button>
       <div className={s.carrucel__viewport}>
-        <div
-          className={s.leaf__one}
-          style={{ backgroundImage: `url(${leaf.src})` }}
-        ></div>
         <Swiper
           effect={""}
           modules={[Autoplay, Pagination]}

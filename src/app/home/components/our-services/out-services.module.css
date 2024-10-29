@@ -1,8 +1,8 @@
 .ourService__section {
   position: relative;
   padding-top: clamp(
-    28px,
-    calc(28px + (228.86 - 56) * ((80vw - 360px) / (1200 - 360))),
+    60px,
+    calc(68px + (228.86 - 60) * ((80vw - 360px) / (1200 - 360))),
     114.43px
   );
 }

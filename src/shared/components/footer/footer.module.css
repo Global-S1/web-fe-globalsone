@@ -34,7 +34,7 @@
   margin-bottom: 18px;
 }
 
-.footer__linklist__container > a {
+.link__style{
   font-size: clamp(
     var(--button-mobile),
     calc(var(--button-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
