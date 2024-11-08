@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 import { IOurTeamPersonContent } from "../our-team/interfaces/our-team.interface";
 import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
-import leaf from "@/assets/leavesImg/borders/leave-borde-3.png";
+import leaf from "@/assets/leavesImg/leaf.png";
 
 interface Props {
   content: IOurTeamPersonContent[];

@@ -10,12 +10,19 @@ interface Props {
 export const CardOurService: FC<Props> = ({ service }) => {
   const { title, content, img } = service;
   return (
-    <div className={s.cardOurService_container}>
-      <Image src={img} alt={title} width={100} height={100} />
+    <div className={s.cardOurService__container}>
+      <Image
+        src={img}
+        alt={title}
+        width={100}
+        height={100}
+        className={s.service__img}
+      />
       <div className={s.title__container}>
         <h3>{title}</h3>
       </div>
       <div className={s.description}>
+        <div className={s.text__bg}></div>
         <p>{content}</p>
       </div>
     </div>

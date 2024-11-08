@@ -1,11 +1,23 @@
-.cardOurService_container {
+.cardOurService__container {
+  position: relative;
   width: 328px;
-  height: 226px;
+  height: 151px;
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  background-image: url(../../../../../assets/home/our-services/background/bgcolors-services.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 10px;
+}
+
+.service__img {
+  width: 148.2px;
+  height: 108.72px;
+  object-fit: contain;
 }
 
 .title__container {
@@ -18,24 +30,26 @@
   font-size: clamp(
     var(--title-mobile-secondary),
     calc(
-      var(--title-mobile-secondary) + (40 - 20) *
+      var(--title-mobile-secondary) + (50 - 20) *
         ((90vw - 360px) / (1200 - 360))
     ),
-    var(--title-desktop-tertiary)
+    50px
   );
   line-height: clamp(
     20.6px,
     calc(20.6px + (42.8 - 20.6) * ((100vw - 360px) / (1200 - 360))),
     42.8px
   );
-  margin: 10px 0;
+  margin: 5px 0;
   font-family: var(--font-grandis);
 }
 
 .description {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .description > p {
@@ -46,20 +60,61 @@
     var(--paragraph-desktop)
   );
   line-height: clamp(
-    24px,
-    calc(24px + (48 - 24) * ((80vw - 360px) / (1200 - 360))),
+    21px,
+    calc(21px + (48 - 21) * ((80vw - 360px) / (1200 - 360))),
     48px
   );
 
   font-family: "Futura";
-  width: 100%;
+  width: 95%;
   font-weight: 500;
 }
 
+.cardOurService__container::before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  background-image: url(../../../../../assets/leavesImg/leaf.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -10%;
+  right: 4%;
+  transform: rotate(-100deg);
+  z-index: 2;
+}
+
+.cardOurService__container::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url(../../../../../assets/leavesImg/leaf.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -2%;
+  right: -3%;
+  transform: rotate(-25deg);
+  z-index: 3;
+}
+
+.text__bg::after {
+  position: absolute;
+  content: "";
+  width: 73.052px;
+  height: 147.147px;
+  background: linear-gradient(0deg, #b14dff -55.03%, #f7cbad 245.64%);
+  filter: blur(44px);
+  top: -27%;
+  right: -5%;
+}
+
 @media (640px <= width) {
-  .cardOurService_container {
+  .cardOurService__container {
     width: 100%;
-    height: 256px;
+    height: 160px;
   }
   .description {
     width: 90%;
@@ -67,55 +122,175 @@
 }
 
 @media (768px <= width) {
-  .cardOurService_container {
-    height: 300px;
+  .cardOurService__container {
+    height: 270px;
+    max-width: 370px;
+    position: relative;
+    border: none;
+    background: none;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "img content"
+      "img content"
+      "img content";
+  }
+
+  .cardOurService__container::before {
+    top: -15%;
+    right: 0%;
+  }
+
+  .cardOurService__container::after {
+    top: -7%;
+    right: -8%;
+  }
+
+  .service__img {
+    grid-area: img;
+    min-width: unset;
+    max-width: unset;
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+  }
+  .title__container {
+    grid-area: title;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title__container > h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  .description {
+    position: relative;
+    grid-area: content;
+    align-self: start;
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  .text__bg {
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.38) 100%
+    );
+    width: 123%;
+    height: 150%;
+    border-radius: 40px;
+    z-index: -1;
+    border: 0.5px solid rgba(255, 255, 255, 0.205);
+    bottom: -4%;
+    right: -5%;
+  }
+
+  .text__bg::before {
+    position: absolute;
+    content: "";
+    width: 83.532px;
+    height: 94.812px;
+    background: #6660ff;
+    filter: blur(38.5px);
+    bottom: 22%;
+    left: -15%;
+  }
+
+  .text__bg::after {
+    position: absolute;
+    content: "";
+    width: 75px;
+    height: 120px;
+    background: linear-gradient(0deg, #b14dff -55.03%, #f7cbad 245.64%);
+    filter: blur(40px);
+    top: -11%;
+    right: -7%;
+  }
+
+  .description > p {
+    text-align: justify;
+    width: 80%;
+    height: 100%;
   }
 }
 
 @media (1024px <= width) {
-  .cardOurService_container {
-    height: 326px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    column-gap: 30px;
-    padding-top: 20px;
+  .cardOurService__container {
+    width: 400px;
+    height: 342px;
+    max-width: unset;
+  }
+
+  .text__bg {
+    height: 342px;
   }
   .title__container {
-    order: -1;
-    height: 97px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .title__container > h3 {
-    margin: 0;
-  }
-  .cardOurService_container > img {
-    width: 170px;
-  }
-  .description {
-    width: 40%;
+    width: 86%;
   }
   .description > p {
-    text-align: justify;
+    width: 80%;
+  }
+  .cardOurService__container::before {
+    width: 90px;
+    height: 90px;
+    top: -15%;
+    right: -2%;
+  }
+
+  .cardOurService__container::after {
+    width: 70px;
+    height: 70px;
+    top: -11%;
+    right: -11%;
+  }
+
+  .text__bg::after {
+    top: 2%;
+    right: 1%;
+    filter: blur(45px);
   }
 }
 
 @media (1280px <= width) {
-  .cardOurService_container {
-    height: 363px;
-    column-gap: 26px;
-    row-gap: 0;
+  .service__img {
+    width: 180px;
+    height: 180px;
   }
-  .cardOurService_container > img {
-    width: 200px;
+  .service__img {
+    width: 255.355px;
+    height: 218.933px;
+    margin-right: -40px;
   }
-  .title__container {
-    width: 100%;
+  .text__bg {
+    max-width: 303px;
+    height: 358px;
+    right: 0;
+  }
+  .description {
+    width: 300px !important;
+    padding-left: 50px;
+  }
+  .description > p {
+    width: 72%;
+    margin-top: 25px;
+  }
+  .cardOurService__container::before {
+    width: 106px;
+    height: 106px;
+    top: -21%;
+    right: -1%;
   }
 
-  .description {
-    width: 45%;
+  .cardOurService__container::after {
+    width: 80px;
+    height: 80px;
+    top: -14%;
+    right: -13%;
   }
 }

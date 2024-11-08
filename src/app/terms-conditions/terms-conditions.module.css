@@ -12,8 +12,6 @@
   margin-bottom: 15px;
 }
 
-.terms__section > hr {
-}
 .terms__section p:first-child {
   font-size: 25px;
   margin-bottom: 40px;
@@ -61,8 +59,6 @@
     font-family: "Futura";
   }
 
-  .terms__section > hr {
-  }
   .terms__section p:first-child {
     font-size: 63px !important;
     margin-bottom: 40px;
@@ -99,16 +95,13 @@
   .terms__section p {
     font-size: 25px !important;
     text-align: left !important;
-    /* font-family: var(--font-futura); */
-    font-family: "Futura";
-  }
-  .terms__section h2 {
-    /* font-family: var(--font-futura); */
-    font-family: "Futura";
+    font-family: "Futura", var(--font-futura);
   }
 
-  .terms__section > hr {
+  .terms__section h2 {
+    font-family: "Futura", var(--font-futura);
   }
+
   .terms__section p:first-child {
     font-size: 63px !important;
     margin-bottom: 40px;

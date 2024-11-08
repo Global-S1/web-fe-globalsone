@@ -23,12 +23,6 @@ export const OurServices = ({ content }: Props) => {
           <CardOurService key={index} service={service} />
         ))}
       </div>
-      <div className={s.leave__one}>
-        <Leave />
-      </div>
-      <div className={s.leave__two}>
-        <LeaveClear />
-      </div>
     </Section>
   );
 };

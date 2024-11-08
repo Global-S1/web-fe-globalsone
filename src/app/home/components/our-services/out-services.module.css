@@ -9,7 +9,7 @@
 .ourServices_title {
   position: relative;
   width: 100%;
-  margin-bottom: 21px;
+  margin-bottom: 80px;
 }
 .ourServices_title > h2 {
   text-align: center;
@@ -45,7 +45,7 @@
   align-items: center;
   width: 100%;
   margin-bottom: 100px;
-  row-gap: 42px;
+  row-gap: 80px;
 }
 
 .icon {
@@ -68,12 +68,6 @@
   display: none;
 }
 
-.cards_container > div {
-  background-image: url(../../../../assets/home/our-services/background/bgcolors-services.png);
-  background-position: center;
-  background-size: cover;
-}
-
 @media (640px <= width) {
   .cards_container {
     display: grid;
@@ -81,6 +75,7 @@
     justify-items: center;
     margin: 0 auto;
     column-gap: 20px;
+    row-gap: 100px;
   }
   .icon {
     width: 200px;
@@ -102,8 +97,7 @@
 @media (768px <= width) {
   .cards_container {
     flex-direction: row;
-    column-gap: 20px;
-    row-gap: 55px;
+    row-gap: 100px;
   }
 
   .purple_dot {
@@ -118,98 +112,6 @@
     right: -6%;
     bottom: 4%;
   }
-  /* ------------cardas personalizadas------------ */
-  /* ------------general style card--------------- */
-  .cards_container > div {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 13%,
-      rgba(255, 255, 255, 0.301) 100%
-    );
-    border: 0.5px solid #fff;
-  }
-  /* ------------general style card--------------- */
-  /* ------------style card one--------------- */
-  .cards_container div:nth-child(1) {
-    position: relative;
-    overflow: hidden;
-  }
-  .cards_container div:nth-child(1)::before {
-    position: absolute;
-    content: "";
-    width: 339.21px;
-    height: 144.403px;
-    border-radius: 339.21px;
-    background-color: #38ffd4;
-    filter: blur(68.5px);
-    top: -10%;
-    left: -40%;
-    z-index: -1;
-  }
-
-  .cards_container div:nth-child(1)::after {
-    position: absolute;
-    content: "";
-    width: 339.21px;
-    height: 144.403px;
-    border-radius: 339.21px;
-    background: #6660ff;
-    filter: blur(68.5px);
-    top: 60%;
-    transform: translateY(-50%);
-    right: -20%;
-    z-index: -1;
-  }
-  /* ------------style card one--------------- */
-  /* ------------style card three--------------- */
-  .cards_container > div:nth-child(3) {
-    position: relative;
-    overflow: hidden;
-  }
-  .cards_container > div:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    width: 339.21px;
-    height: 144.403px;
-    border-radius: 339.21px;
-    background: rgba(56, 255, 212, 0.5);
-    filter: blur(68.5px);
-    top: -10%;
-    right: -10%;
-  }
-  /* ------------style card three--------------- */
-  /* ------------style card four--------------- */
-  .cards_container > div:nth-child(4) {
-    position: relative;
-    overflow: hidden;
-  }
-  .cards_container > div:nth-child(4)::before {
-    content: "";
-    position: absolute;
-    width: 339.21px;
-    height: 144.403px;
-    border-radius: 339.21px;
-    background: #6660ff;
-    filter: blur(68.5px);
-    bottom: 17%;
-    left: -30%;
-    z-index: -1;
-  }
-  .cards_container > div:nth-child(4)::after {
-    position: absolute;
-    content: "";
-    width: 138.278px;
-    height: 156.454px;
-    background: linear-gradient(0deg, #b14dff -55.03%, #f7cbad 245.64%);
-    border-radius: 339.21px;
-    filter: blur(54px);
-    z-index: 3;
-    right: -5%;
-  }
-
-  /* ------------style card four--------------- */
-
-  /* ------------cardas personalizadas------------ */
 }
 @media (1024px <= width) {
   .cards_container {
@@ -238,4 +140,7 @@
   }
 }
 @media (1280px <= width) {
+  .ourServices_title {
+    margin-bottom: 70px;
+  }
 }

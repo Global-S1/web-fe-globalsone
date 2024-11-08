@@ -34,7 +34,7 @@
   margin-bottom: 18px;
 }
 
-.link__style{
+.link__style {
   font-size: clamp(
     var(--button-mobile),
     calc(var(--button-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
@@ -42,7 +42,6 @@
   );
   text-align: center;
 }
-
 
 @media (640px <= width) {
 }

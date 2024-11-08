@@ -7,14 +7,26 @@
   width: 100%;
   background: linear-gradient(180deg, #1a0258 0%, rgba(87, 62, 151, 0) 100%);
   z-index: 10;
+  /* border: 3px dashed tomato; */
 }
 .header__container {
   position: relative;
   width: 100%;
   max-width: 1240px;
   padding-left: 16px;
-  /* border: 1px dotted skyblue; */
 }
+
+.opacity__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.isBlur {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);
+}
+
 .logo__mobile {
   position: absolute;
   top: -11px;

@@ -1,8 +1,8 @@
-.section_container{
-    width: 100%;
-    max-width: 1240px;
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
+.section_container {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
 }
