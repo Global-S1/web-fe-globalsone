@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/develop',
+  basePath: process.env.NEXT_PUBLIC_ROOT_BASE || "",
   images: {
     unoptimized: true,
   },

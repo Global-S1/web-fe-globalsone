@@ -6,6 +6,7 @@ import { HeaderMobileContext } from "../../context/header-context";
 import { FC, useContext } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { ROOT_PATH } from "@/shared/constants/url";
 
 const variants = {
   open: {
@@ -23,19 +24,25 @@ interface IProp {
 
 export const Navigation: FC<IProp> = ({ isOpen, setIsOpen }) => {
   const router = useRouter();
+
   const { content } = useContext(HeaderMobileContext);
-  const handleNavigation = async () => {
-    console.log("handleServices")
-    router.push("/");
-    setTimeout(() => {
-      document
-        .getElementById("services-section")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }, 300);
+  
+  const handleServices = (e: any) => {
+    e.preventDefault();
+    const currentRoute =
+      typeof window !== "undefined" ? window.location.pathname : null;
+    console.log("currentRoute", currentRoute);
+    if (currentRoute) {
+      window.location.href = `${
+        ROOT_PATH?.length ? ROOT_PATH : "/"
+      }#services-section`;
+    }
   };
+
   const handlerHome = () => {
     router.push("/");
   };
+
   return (
     <motion.ul
       variants={variants}
@@ -48,7 +55,7 @@ export const Navigation: FC<IProp> = ({ isOpen, setIsOpen }) => {
         </button>
       </MenuItem>
       <MenuItem setIsOpen={setIsOpen}>
-        <button className={s.link__styles} onClick={handleNavigation}>
+        <button className={s.link__styles} onClick={handleServices}>
           {content.services.title}
         </button>
       </MenuItem>
