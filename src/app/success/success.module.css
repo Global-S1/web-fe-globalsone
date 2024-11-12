@@ -5,6 +5,8 @@
   justify-content: center;
   margin-top: 79px;
   margin-bottom: 40px;
+  height: calc(100vh - 499px);
+  min-height: 500px;
 }
 
 .leave__one {
@@ -76,9 +78,6 @@
   }
 }
 @media (768px <= width) {
-  .success__section {
-    margin-top: 79px;
-  }
   .green__circle {
     position: absolute;
     width: 431px;
@@ -101,6 +100,10 @@
   }
 }
 @media (1024px <= width) {
+  .success__section {
+    height: calc(100vh - 519px);
+    min-height: 650px;
+  }
 }
 @media (1280px <= width) {
 }

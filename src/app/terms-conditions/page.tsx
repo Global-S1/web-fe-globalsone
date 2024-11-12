@@ -4,7 +4,7 @@ import s from "./terms-conditions.module.css";
 
 export default async function TermsConditions() {
   const res = await getTermsConditions();
-  if (!res) return null;
+  if (!res || !res.content) return null;
   return (
     <>
       <Section extendStyle={s.terms__section}>
@@ -12,4 +12,8 @@ export default async function TermsConditions() {
       </Section>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return [{}];
 }

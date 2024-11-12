@@ -4,9 +4,9 @@ import { IForm } from "@/app/contact-us/interfaces/contact-form";
 import { PS_FORMS, USER_FORMS } from "../constants/url";
 import { v4 as uuidv4 } from "uuid";
 
-interface Props {
-  page: string;
+interface IProps {
   id: string;
+  contentType: string;
 }
 
 interface IFromProps {
@@ -16,21 +16,16 @@ interface IFromProps {
 
 interface IAuthResponse {
   token: string;
-  [key: string]: any; // Permite cualquier otra propiedad adicional
+  [key: string]: any;
 }
 
-export const wordpressService = async <T>({ id, page }: Props) => {
+export const WPGetDataByContentType = async <T>({
+  id,
+  contentType,
+}: IProps) => {
   const response = await wordpressInstance.get<IHttpResponse<T>>(
-    `/wp-json/wp/v2/${page}/${id}?acf_format=standard`
+    `/wp-json/wp/v2/${contentType}/${id}?acf_format=standard`
   );
-  return response;
-};
-
-export const TermsConditionsService = async <T>({ id, page }: Props) => {
-  const response = await wordpressInstance.get<T>(
-    `/wp-json/wp/v2/${page}/${id}?acf_format=standard`
-  );
-
   return response;
 };
 

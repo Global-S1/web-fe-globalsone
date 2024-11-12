@@ -1,14 +1,14 @@
 import { ILayoutLinks } from "../interfaces/layout.interface";
-import { wordpressService } from "./wordpress.service";
+import { WPGetDataByContentType } from "./wordpress.service";
 import data from "@/wp-mock-data/links-data.json";
 
 export const getLayoutLinks = async () => {
   try {
-    const response = await wordpressService<ILayoutLinks>({
+    const response = await WPGetDataByContentType<ILayoutLinks>({
       id: "830",
-      page: "posts",
+      contentType: "posts",
     });
-    
+
     return response.data.acf;
   } catch (error) {
     const err = error as Error;

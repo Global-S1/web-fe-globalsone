@@ -19,3 +19,7 @@ export default async function AboutUs() {
     </>
   );
 }
+
+export async function generateStaticParams() {
+  return [{}];
+}

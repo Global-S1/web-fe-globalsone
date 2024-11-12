@@ -11,3 +11,7 @@ export default async function ContactUs() {
     </>
   );
 }
+
+export async function generateStaticParams() {
+  return [{}];
+}

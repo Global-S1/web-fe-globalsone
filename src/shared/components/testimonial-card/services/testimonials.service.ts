@@ -1,15 +1,15 @@
-import { ClinetDaTA } from "@/data-mock/testimonial.moc";
-import { wordpressService } from "@/shared/services/wordpress.service";
+import { WPGetDataByContentType } from "@/shared/services/wordpress.service";
 import { testimonialAdapter } from "../adapter/testimonial.adapter";
+import data from "@/wp-mock-data/testimonial-data.json";
 
 export const getTestimonials = async () => {
   try {
-    const response = await wordpressService<ITestimonialInput>({
+    const response = await WPGetDataByContentType<ITestimonialInput>({
       id: "398",
-      page: "testimonial",
+      contentType: "testimonial",
     });
     return testimonialAdapter(response.data.acf);
   } catch (error) {
-    return ClinetDaTA;
+    return data;
   }
 };

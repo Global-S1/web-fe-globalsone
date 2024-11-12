@@ -26,3 +26,7 @@ export default async function Success() {
     </Section>
   );
 }
+
+export async function generateStaticParams() {
+  return [{}];
+}
