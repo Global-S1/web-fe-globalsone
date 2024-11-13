@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": [
+      {
+        "text": "Conoce",
+        "styles": ""
+      },
+      {
+        "text": "lo que podemos",
+        "styles": "title_styles_four"
+      },
+      {
+        "text": "hacer por ti",
+        "styles": "title_styles_five"
+      },
+      {
+        "text": "",
+        "styles": ""
+      },
+      {
+        "text": "",
+        "styles": ""
+      },
+      {
+        "text": "",
+        "styles": ""
+      },
+      {
+        "text": "",
+        "styles": ""
+      }
+    ],
+    "content": "Your journey to finding the perfect property begins here."
+  }
+}

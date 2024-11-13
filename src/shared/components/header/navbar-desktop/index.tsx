@@ -26,7 +26,7 @@ export const NavBarDesktop = ({ content }: IProps): JSX.Element => {
   const handlerHome = () => {
     router.push("/");
   };
-  
+
   return (
     <nav className={s.navbar__desk__container}>
       <ul className={s.navbar__desk__list}>
@@ -37,7 +37,8 @@ export const NavBarDesktop = ({ content }: IProps): JSX.Element => {
           <Link href={content.aboutUs.route}>{content.aboutUs.title}</Link>
         </li>
         <li>
-          <button onClick={handleServices}>{content.services.title}</button>
+          {/* <button onClick={handleServices}>{content.services.title}</button> */}
+          <Link href={"/our-services"}>{content.services.title}</Link>
         </li>
       </ul>
     </nav>

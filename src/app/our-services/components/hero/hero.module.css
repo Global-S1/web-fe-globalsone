@@ -1,0 +1,141 @@
+.hero__section {
+  position: relative;
+  height: 260px;
+  /* border: 1px solid white; */
+  margin-top: 79px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 440px;
+}
+
+.laptop {
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  left: 50%;
+  background-image: url("../../../../assets/our-services/hero/background/laptop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateX(-50%);
+  border: 1px dashed tomato;
+}
+
+.title__container {
+  position: absolute;
+  max-width: 150px;
+  width: 40%;
+  left: 35%;
+  top: 45%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.title__container > h2 {
+  font-size: clamp(
+    var(--title-mobile-tertiary),
+    calc(
+      var(--title-mobile-tertiary) + (65 - 16) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
+  line-height: clamp(
+    16.48px,
+    calc(16.48px + (70.2 - 14) * ((90vw - 360px) / (1200 - 360))),
+    70.2px
+  );
+  font-family: var(--font-grandis);
+}
+
+.title__container > p {
+  font-size: clamp(
+    10px,
+    calc(8px + (32 - 10) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
+  );
+  font-family: "Futura", var(--font-futura);
+}
+
+.board__img {
+  position: absolute;
+  width: 60%;
+  max-width: 223px;
+  left: 80%;
+  bottom: 4%;
+  /* border: 1px solid tomato; */
+  transform: translateX(-50%);
+}
+@media (430px <= width) {
+  .title__container {
+    left: 38%;
+  }
+}
+@media (480px <= width) {
+  .hero__section {
+    height: 380px;
+    border: 1px dotted white;
+  }
+  .hero__container {
+    max-width: unset;
+  }
+  .laptop {
+    width: 105%;
+    background-size: 102%;
+  }
+  .board__img {
+    max-width: 350px;
+    bottom: 9%;
+  }
+  .title__container {
+    left: 32%;
+  }
+}
+@media (500px <= width) {
+  .board__img {
+    bottom: 7%;
+  }
+  .title__container {
+    left: 35%;
+    max-width: 220px;
+  }
+}
+@media (540px <= width) {
+  .board__img {
+    bottom: 3%;
+  }
+}
+@media (600px <= width) {
+  .hero__section {
+    height: 450px;
+  }
+}
+@media (640px <= width) {
+  .hero__section{
+    height: 700px;
+  }
+}
+@media (700px <= width) {
+}
+@media (768px <= width) {
+}
+@media (1024px <= width) {
+}
+@media (1280px <= width) {
+  .hero__section {
+    height: calc(100vh - 79px);
+  }
+  .laptop {
+    width: 105%;
+    background-size: contain;
+    height: 100%;
+  }
+  .title__container {
+    top: 10%;
+  }
+}
