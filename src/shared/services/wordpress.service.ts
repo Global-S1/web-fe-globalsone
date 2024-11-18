@@ -47,6 +47,7 @@ export const handlerFormsService = async <T>({ data, token }: IFromProps) => {
     {
       title: uuidv4(),
       acf: data,
+      status: "publish",
     },
     {
       headers: {

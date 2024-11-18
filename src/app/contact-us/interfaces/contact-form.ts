@@ -4,6 +4,6 @@ export interface IForm {
   email: string;
   phone: string;
   requirements: string;
-  desacription: string;
+  description: string;
   terms?: boolean;
 }

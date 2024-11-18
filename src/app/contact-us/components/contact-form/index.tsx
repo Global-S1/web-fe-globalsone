@@ -98,7 +98,7 @@ export const ContactForm = ({
               </select>
               <textarea
                 placeholder="Escribe el mensaje que deseas enviarnos..."
-                {...register("desacription")}
+                {...register("description")}
               />
             </div>
 
