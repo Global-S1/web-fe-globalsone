@@ -8,7 +8,9 @@ import { sendFormRequirementService } from "../../service/form.service";
 import { useRouter } from "next/navigation";
 import { IForm } from "../../interfaces/contact-form";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import clsx from "clsx";
+import { div } from "framer-motion/client";
 
 export const ContactForm = ({
   title,
@@ -23,7 +25,10 @@ export const ContactForm = ({
     setValue,
   } = useForm<IForm>();
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
   const onSubmit: SubmitHandler<IForm> = async (data) => {
+    setLoading(true);
     try {
       const status = await sendFormRequirementService(data);
       localStorage.removeItem("email");
@@ -31,7 +36,11 @@ export const ContactForm = ({
       if (status === 201) {
         router.push("/success");
       }
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error sending form:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -73,11 +82,19 @@ export const ContactForm = ({
               <input
                 type="text"
                 placeholder="Email"
-                {...register("email", { required: true })}
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                    message:
+                      "Por favor, introduce un correo electrónico válido.",
+                  },
+                })}
               />
               <input
-                type="text"
+                type="number"
                 placeholder="Número de Teléfono"
+                className={s.inputNumber}
                 {...register("phone", { required: true })}
               />
               <select
@@ -125,8 +142,14 @@ export const ContactForm = ({
                 </label>
               </div>
 
-              <button className={s.button__form} type="submit">
-                Enviar Mensaje
+              <button
+                className={clsx(
+                  s.button__base__styles,
+                  loading ? s.button__form__loading : s.button__form
+                )}
+                type="submit"
+              >
+                {loading ? <div className={s.loader}></div> : "Enviar Mensaje"}
               </button>
             </div>
           </form>

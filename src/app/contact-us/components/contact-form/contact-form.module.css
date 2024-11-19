@@ -156,34 +156,65 @@
   flex-direction: column;
 }
 
-.submit__container > button {
+.button__base__styles {
   width: 100%;
-  border-radius: 12px;
-}
-
-.button__form {
-  background-color: #544dd2;
-  -webkit-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
-  -moz-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
-  box-shadow: -1px 4px 8px 0px rgb(0 0 0 / 34%);
-  font-family: "Futura";
-  font-size: clamp(
-    var(--button-mobile),
-    calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
-    var(--button-desktop)
-  );
-  width: clamp(
-    303px,
-    calc(303px + (478.859 - 303) * ((90vw - 360px) / (1200 - 360))),
-    478.859px
-  );
+  max-width: 478px;
   height: clamp(
     40px,
     calc(40px + (59.829 - 40) * ((90vw - 360px) / (1200 - 360))),
     59.829px
   );
+  font-size: clamp(
+    var(--button-mobile),
+    calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--button-desktop)
+  );
+  font-family: "Futura";
+  border-radius: clamp(
+    12px,
+    calc(32px + (478.859 - 12) * ((90vw - 360px) / (1200 - 360))),
+    32px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.button__form {
+  font-family: "Futura";
+  background-color: #544dd2;
+  -webkit-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
+  box-shadow: -1px 4px 8px 0px rgb(0 0 0 / 34%);
+}
+
+.button__form__loading {
+  background-color: #8980bb;
+}
+
+.loader {
+  width: 25px;
+  width: clamp(
+    25px,
+    calc(25px + (40 - 25) * ((90vw - 360px) / (1200 - 360))),
+    40px
+  );
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border-width: clamp(
+    5px,
+    calc(5px + (8 - 5) * ((90vw - 360px) / (1200 - 360))),
+    8px
+  );
+  border-style: solid;
+  border-color: #ffff #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
 .alert {
   background: rgba(253, 12, 12, 0.8);
   padding: 13px;
@@ -213,6 +244,14 @@
   filter: blur(20px);
 }
 
+.inputNumber {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
+}
 @media (640px <= width) {
   .section__from {
     margin-bottom: 50px;
@@ -235,11 +274,7 @@
     width: 23px;
     height: 23px;
   }
-  .submit__container > button {
-    width: 478.859px !important;
-    height: 59.829px !important;
-    border-radius: 36px;
-  }
+
   .inputs__grid > select {
     padding-left: 55px;
   }
