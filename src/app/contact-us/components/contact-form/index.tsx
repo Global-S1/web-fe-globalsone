@@ -118,7 +118,6 @@ export const ContactForm = ({
                 {...register("description")}
               />
             </div>
-
             <div className={s.submit__container}>
               <div className={s.terms_container}>
                 <input

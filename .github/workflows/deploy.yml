@@ -1,0 +1,14 @@
+name: Deploy to hosting globals1
+
+on:
+  push:
+    branches:
+      - IGS-1-GlobalS1-website # Cambia esto a la rama que quieras usar para el despliegue
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "show message"
+        run: echo "hola mundo"
