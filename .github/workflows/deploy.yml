@@ -20,7 +20,7 @@ jobs:
           cache: npm
 
       - name: install dependencies
-        run: npm install
+        run: npm install --include=dev
 
       - name: build the project
         env:
