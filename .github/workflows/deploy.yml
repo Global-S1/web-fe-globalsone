@@ -6,9 +6,34 @@ on:
       - IGS-1-GlobalS1-website # Cambia esto a la rama que quieras usar para el despliegue
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "show message"
-        run: echo "hola mundo"
+      - name: checout repo
+        uses: actions/checkout@v4
+
+      - name: setup Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: install dependencies
+        run: npm install
+
+      - name: build the project
+        env:
+          NEXT_PUBLIC_ROOT_BASE: "/develop"
+        run: npm run build
+
+      - name: upload to hosting via SFTP
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ftp.globals.one
+          username: bruno.guerra@globals.one
+          password: x2jUVeeqmKFitrV
+          port: 21
+          source: "./out/**"
+          target: "/path/to/your/hosting/root"
+          rm: true
