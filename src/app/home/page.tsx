@@ -1,4 +1,4 @@
-import { Hero } from "@/app/home/components/hero";
+import { Hero } from "@/app/home/components/hero-v3";
 import { ContactUs } from "./components/contact-us";
 import { Features } from "./components/feature";
 import { OurServices } from "./components/our-services";
