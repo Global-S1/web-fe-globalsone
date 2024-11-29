@@ -3,7 +3,7 @@ name: Deploy to hosting globals1
 on:
   push:
     branches:
-      - IGS-1-GlobalS1-website # Cambia esto a la rama que quieras usar para el despliegue
+      - IGS-1-GlobalS1-website
 
 jobs:
   build-and-deploy:
@@ -33,9 +33,9 @@ jobs:
       - name: upload to hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.globals.one
-          username: bruno.guerra@globals.one
-          password: x2jUVeeqmKFitrV
+          server: ${{ secrets.HOSTNAME }}
+          username: ${{ secrets.HOST_USERNAME}}
+          password: ${{ secrets.HOST_PASSWORD}}
           port: 21
           local-dir: ./out/
           server-dir: /
