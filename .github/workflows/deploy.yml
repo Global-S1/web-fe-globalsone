@@ -33,10 +33,9 @@ jobs:
       - name: upload to hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp://ftp.globals.one
+          server: ftp.globals.one
           username: bruno.guerra@globals.one
           password: x2jUVeeqmKFitrV
           port: 21
-          protocol: ftps
           local-dir: ./out/
           server-dir: /
