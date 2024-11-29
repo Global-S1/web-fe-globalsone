@@ -37,5 +37,6 @@ jobs:
           username: bruno.guerra@globals.one
           password: x2jUVeeqmKFitrV
           port: 21
+          protocol: ftps
           local-dir: ./out/
           server-dir: /
