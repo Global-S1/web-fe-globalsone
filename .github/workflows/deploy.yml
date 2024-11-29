@@ -20,7 +20,7 @@ jobs:
           cache: npm
 
       - name: install dependencies
-        run: npm install --include=dev
+        run: npm install
 
       - name: build the project
         env:
@@ -30,13 +30,12 @@ jobs:
           NEXT_PUBLIC_ROOT_BASE: "/develop"
         run: npm run build
 
-      - name: upload to hosting via SFTP
-        uses: appleboy/scp-action@v0.1.4
+      - name: upload to hosting via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: ftp.globals.one
+          server: ftp://ftp.globals.one
           username: bruno.guerra@globals.one
           password: x2jUVeeqmKFitrV
-          port: 21
-          source: "./out/**"
-          target: "/path/to/your/hosting/root"
-          rm: true
+          protocol: ftp
+          local-dir: ./out/
+          server-dir: /
