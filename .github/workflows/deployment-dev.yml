@@ -1,0 +1,42 @@
+name: Deploy to hosting globals1
+
+on:
+  push:
+    branches:
+      - develop
+      - IGS-1-GlobalS1-website
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checout repo
+        uses: actions/checkout@v4
+
+      - name: setup Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: install dependencies
+        run: npm install
+
+      - name: build the project
+        env:
+          NEXT_PUBLIC_WP_BASE_URL: ${{ secrets.WP_BASE_URL}}
+          NEXT_PUBLIC_WP_USER_FORMS: ${{ secrets.WP_USER_FORMS }}
+          NEXT_PUBLIC_WP_PS_FORMS: ${{ secrets.WP_PS_FORMS }}
+          NEXT_PUBLIC_ROOT_BASE: "/develop"
+        run: npm run build
+
+      - name: upload to hosting via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.DEV_HOSTNAME }}
+          username: ${{ secrets.DEV_HOST_USERNAME}}
+          password: ${{ secrets.DEV_HOST_PASSWORD}}
+          port: 21
+          local-dir: ./out/
+          server-dir: /

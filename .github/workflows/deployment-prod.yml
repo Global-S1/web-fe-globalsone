@@ -3,7 +3,7 @@ name: Deploy to hosting globals1
 on:
   push:
     branches:
-      - IGS-1-GlobalS1-website
+      - main
 
 jobs:
   build-and-deploy:
@@ -24,18 +24,18 @@ jobs:
 
       - name: build the project
         env:
-          NEXT_PUBLIC_WP_BASE_URL: https://content.globals.one
-          NEXT_PUBLIC_WP_USER_FORMS: user_form
-          NEXT_PUBLIC_WP_PS_FORMS: "kKw0gKkPB6FPv#UsMVIXsLv5"
-          NEXT_PUBLIC_ROOT_BASE: "/develop"
+          NEXT_PUBLIC_WP_BASE_URL: ${{ secrets.WP_BASE_URL}}
+          NEXT_PUBLIC_WP_USER_FORMS: ${{ secrets.WP_USER_FORMS }}
+          NEXT_PUBLIC_WP_PS_FORMS: ${{ secrets.WP_PS_FORMS }}
+          NEXT_PUBLIC_ROOT_BASE: ""
         run: npm run build
 
       - name: upload to hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.HOSTNAME }}
-          username: ${{ secrets.HOST_USERNAME}}
-          password: ${{ secrets.HOST_PASSWORD}}
+          server: ${{ secrets.PROD_HOSTNAME }}
+          username: ${{ secrets.PROD_HOST_USERNAME}}
+          password: ${{ secrets.PROD_HOST_PASSWORD}}
           port: 21
           local-dir: ./out/
           server-dir: /
