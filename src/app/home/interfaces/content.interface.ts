@@ -61,7 +61,7 @@ export interface IHomeContent {
   insidesSection: string;
   features: IFeature[];
   whatwebuild: IWhathWeBuildContent;
-  ourservice: IOurServices;
+  ourService: IOurServices;
   testimonials: {
     title: string;
   };

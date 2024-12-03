@@ -16,7 +16,7 @@ export default async function Home() {
       <InsideSection content={res.insidesSection} />
       <Features content={res.features} />
       <WhatWeBuild content={res.whatwebuild} />
-      <OurServices content={res.ourservice} />
+      <OurServices content={res.ourService} />
       <Testimonials content={res.testimonials} />
       <OurTeamSection />
       <ContactUs content={res.contactDescription.title} />

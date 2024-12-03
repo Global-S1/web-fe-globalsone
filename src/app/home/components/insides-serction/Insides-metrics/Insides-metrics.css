@@ -35,8 +35,6 @@
   position: absolute;
   width: 100%;
   height: 90%;
-  /* background: linear-gradient(to bottom, #0b0033a7, #290066); */
-
   background: #0e1330;
   opacity: 0.7;
   background-blend-mode: color-dodge;

@@ -12,8 +12,6 @@ export const getContentDataAboutUsPage = async () => {
     const formated = aboutUsAdapter(res.data.acf);
     return formated;
   } catch (error) {
-    const err = error as Error;
-    console.log(err.message);
     return data;
   }
 };

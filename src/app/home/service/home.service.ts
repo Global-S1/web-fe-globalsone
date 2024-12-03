@@ -12,8 +12,6 @@ export const getHomeDataService = async (): Promise<IHomeContent> => {
     });
     return homeAdapter(response.data.acf);
   } catch (error) {
-    const err = error as Error;
-    console.error("Error fetching data:", err.message);
     return data;
   }
 };

@@ -11,8 +11,6 @@ export const getContactUsDataService = async () => {
     });
     return ContactUsAdapter(response.data.acf);
   } catch (error) {
-    const err = error as Error;
-    console.log(err.message);
     return data;
   }
 };

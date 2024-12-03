@@ -47,10 +47,6 @@
 }
 
 @media (768px <= width) {
-  /* .footer {
-    height: 342px;
-  } */
-
   .footer__menu__container {
     flex-direction: row;
     justify-content: space-around;

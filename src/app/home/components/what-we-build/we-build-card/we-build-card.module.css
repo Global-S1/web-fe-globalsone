@@ -100,9 +100,7 @@
   .img_container {
     height: 320px;
   }
-  /* .text_container > h3 {
-    font-size: 40px;
-  } */
+
 }
 
 @media (1280px <= width) {
@@ -113,9 +111,7 @@
     display: flex;
     justify-content: center;
   }
-  /* .text_container > h3 {
-    font-size: 40px;
-  } */
+
 }
 @media (1536px <= width) {
 }

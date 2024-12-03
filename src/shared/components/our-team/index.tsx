@@ -4,7 +4,6 @@ import { CarrucelImg } from "../carrucel-image";
 import { CarrucelImageMobil } from "../carrucel-image-mobile";
 import s from "./our-team.module.css";
 import { getOurTeam } from "./service/our-team.service";
-import { RedirectBtn } from "../redirect-btn";
 
 export const OurTeam = async () => {
   const ourTeam = await getOurTeam();
@@ -17,7 +16,6 @@ export const OurTeam = async () => {
       </div>
       <CarrucelImg content={ourTeam.desktopImg} />
       <CarrucelImageMobil content={ourTeam.mobileImg} />
-      {/* <RedirectBtn route="/about-us" text="Quiero Conocerlos" /> */}
       <div className={s.ourTeam__leave__two}>
         <LeaveClear />
       </div>

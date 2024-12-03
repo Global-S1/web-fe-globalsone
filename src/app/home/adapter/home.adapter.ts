@@ -15,7 +15,7 @@ export const homeAdapter = (data: IHomeContentInput): IHomeContent => {
       title: data.whatwebuild.title,
       services: Object.values(data.whatwebuild.services),
     },
-    ourservice: {
+    ourService: {
       title: data.ourService.title,
       services: Object.values(data.ourService.services),
     },

@@ -218,7 +218,6 @@
 }
 @media (768px <= width) {
   .hero__container {
-    /* margin-top: 80px; */
     height: 650px;
   }
   .hero__avatarCards {

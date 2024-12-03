@@ -57,7 +57,6 @@
   );
 }
 .inside__body__container > h2 {
-  /* padding: 0 16px; */
   text-align: center;
   font-family: var(--font-grandis);
   font-size: clamp(
