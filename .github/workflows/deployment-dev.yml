@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - develop
-      - IGS-1-GlobalS1-website
+      - feature/*
 
 jobs:
   build-and-deploy:
@@ -25,18 +25,18 @@ jobs:
 
       - name: build the project
         env:
-          NEXT_PUBLIC_WP_BASE_URL: ${{ secrets.WP_BASE_URL}}
-          NEXT_PUBLIC_WP_USER_FORMS: ${{ secrets.WP_USER_FORMS }}
-          NEXT_PUBLIC_WP_PS_FORMS: ${{ secrets.WP_PS_FORMS }}
+          NEXT_PUBLIC_WP_BASE_URL: ${{ secrets.WP_BASE_API_URL }}
+          NEXT_PUBLIC_WP_USER_FORMS: ${{ secrets.WP_AUTH_REGISTER_FORMS_USER }}
+          NEXT_PUBLIC_WP_PS_FORMS: ${{ secrets.WP_AUTH_REGISTER_FORMS_PASSWORD }}
           NEXT_PUBLIC_ROOT_BASE: "/develop"
         run: npm run build
 
       - name: upload to hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.DEV_HOSTNAME }}
-          username: ${{ secrets.DEV_HOST_USERNAME}}
-          password: ${{ secrets.DEV_HOST_PASSWORD}}
+          server: ${{ secrets.DEV_HOSTING_HOSTNAME_WEBSITE_GLOBALS1 }}
+          username: ${{ secrets.DEV_HOSTING_USERNAME_WEBSITE_GLOBALS1 }}
+          password: ${{ secrets.DEV_HOSTING_PASSWORD_WEBSITE_GLOBALS1 }}
           port: 21
           local-dir: ./out/
           server-dir: /
