@@ -5,10 +5,50 @@
     calc(498px + (752 - 498) * ((80vw - 360px) / (1200 - 360))),
     752px
   );
+  min-height: 513px;
 }
+
+.canva_container {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff0f;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  z-index: -10;
+}
+
+.top__image {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  transform: translateY(-58%);
+}
+
+.left__image {
+  height: 93%;
+  object-fit: contain;
+  position: absolute;
+  left: 0%;
+  transform: translateX(-69%);
+  bottom: 0%;
+  z-index: -5;
+}
+
+.right__image {
+  position: absolute;
+  object-fit: contain;
+  height: 80%;
+  right: 0%;
+  top: 50%;
+  z-index: -5;
+  transform: translateX(75%) translateY(-50%);
+}
+
 .contactUs_container {
   position: relative;
-  width: 100%;
+  width: 110%;
+  margin-left: -10px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -23,11 +63,11 @@
 .bg__mobile {
   position: absolute;
   height: 100%;
-  width: 105%;
+  width: calc(100% + 32px);
   left: 50%;
   transform: translateX(-50%);
   background-size: cover;
-  background-position: center 18%;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -39,8 +79,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 60%;
+  top: 50%;
   left: 50%;
+  z-index: 10;
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -80,17 +121,64 @@
 }
 
 .green_circle {
-  display: none;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 268px;
+  height: 268px;
+  flex-shrink: 0;
+  border-radius: 668px;
+  background: #2eea79;
+  filter: blur(120px);
+  right: -40%;
+  top: 0%;
 }
 
 .purple_circle {
-  display: none;
+  display: block;
+  position: absolute;
+  z-index: -2;
+  width: 271px;
+  height: 271px;
+  flex-shrink: 0;
+  border-radius: 571px;
+  background: #5a2eea;
+  filter: blur(100px);
+  left: -30%;
+  bottom: 0%;
 }
 .contact__button {
   margin-top: 30px;
   width: 100%;
   height: 40px;
   font-size: 12px;
+}
+
+.purple_rec {
+  position: absolute;
+  width: 120%;
+  height: 88px;
+  background-color: #0f032f;
+  filter: blur(21px);
+  bottom: -9%;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.purple_rec_vertical {
+  position: absolute;
+  height: 100%;
+  width: 88px;
+  background-color: #0f032f;
+  filter: blur(35px);
+  z-index: 2;
+  left: 0%;
+  transform: translateX(-75%);
+}
+
+.bottom__image {
+  display: none;
 }
 
 @media (640px <= width) {
@@ -103,6 +191,7 @@
   .bg__mobile {
     display: none;
   }
+
   .bg__desktop {
     display: block;
     position: absolute;
@@ -116,13 +205,13 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
   .purple_rec {
     position: absolute;
     width: 120%;
     height: 218px;
     background-color: #0f032f;
     top: -93px;
-    border: 1px solid white;
     filter: blur(31px);
     z-index: -1;
   }
@@ -131,19 +220,41 @@
   .text_container > a {
     border-radius: 57px;
   }
+
+  .bottom__image {
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    height: 100px;
+    max-width: none;
+    width: 110%;
+    object-fit: cover;
+    object-position: top;
+    z-index: -5;
+    transform: translateY(35%) translateX(-50%);
+  }
+
+  .purple_rec_bottom_desk {
+    position: absolute;
+    width: 120%;
+    height: 88px;
+    background-color: #0f032f;
+    filter: blur(40px);
+    bottom: -5%;
+  }
 }
 @media (1024px <= width) {
   .green_circle {
     display: block;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     width: 568px;
     height: 568px;
     flex-shrink: 0;
     border-radius: 668px;
-    background: #2eea79;
+    background: #2eea79bf;
     filter: blur(200px);
-    border: 1px solid white;
     right: -30%;
   }
   @-moz-document url-prefix() {
@@ -156,7 +267,7 @@
   .purple_circle {
     display: block;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     width: 471px;
     height: 471px;
     flex-shrink: 0;
@@ -166,6 +277,17 @@
     left: -30%;
     bottom: -10%;
   }
+
+  .text_container {
+    top: 60%;
+  }
+
+  .bottom__image {
+    transform: translateY(0%) translateX(-50%);
+  }
 }
 @media (1280px <= width) {
+  .purple_rec_vertical {
+    display: none;
+  }
 }

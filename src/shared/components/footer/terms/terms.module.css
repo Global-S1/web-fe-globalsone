@@ -23,15 +23,14 @@
 
 .social__text__container {
   font-size: clamp(
-    var(--secondary-text-mobile),
-    calc(
-      var(--secondary-text-mobile) + (22 - 10) * ((90vw - 360px) / (1200 - 360))
-    ),
+    10px,
+    calc(10px + (22 - 10) * ((90vw - 360px) / (1200 - 360))),
     var(--secondary-text-desktop)
   );
   display: flex;
+  flex-direction: column;
   column-gap: 20px;
-  padding: 10px 0;
+  padding: 10px 5px 10px 0;
 }
 
 .social__icons__container {
@@ -47,6 +46,7 @@
     height: 64px;
   }
   .social__text__container {
+    flex-direction: row;
     padding: 16px 0;
   }
   .social__media__icon {

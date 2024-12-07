@@ -23,3 +23,7 @@ export default async function Home() {
     </>
   );
 }
+
+export async function generateStaticParams() {
+  return [{}];
+}

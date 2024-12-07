@@ -33,9 +33,9 @@ jobs:
       - name: upload to hosting via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.PROD_HOSTING_HOSTNAME_WEBSITE_GLOBALS1 }}
-          username: ${{ secrets.PROD_HOSTING_USERNAME_WEBSITE_GLOBALS1 }}
-          password: ${{ secrets.PROD_HOSTING_PASSWORD_WEBSITE_GLOBALS1 }}
+          server: ${{ secrets.GLOBALS1_WEBSITE_HOSTNAME_PROD }}
+          username: ${{ secrets.GLOBALS1_WEBSITE_USERNAME_PROD }}
+          password: ${{ secrets.GLOBALS1_WEBSITE_PASSWORD_PROD }}
           port: 21
           local-dir: ./out/
           server-dir: /
