@@ -1,5 +1,3 @@
-import bgContac from "@/assets/home/contact-us/background/bgContact.png";
-import bgContactMobile from "@/assets/home/contact-us/background/MaskContactMobile.png";
 import { Section } from "@/shared/components/section";
 import s from "./contact-us.module.css";
 import { FC } from "react";

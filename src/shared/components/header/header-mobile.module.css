@@ -6,7 +6,7 @@
   height: 79px;
   width: 100%;
   background: linear-gradient(180deg, #1a0258 0%, rgba(87, 62, 151, 0) 100%);
-  z-index: 10;
+  z-index: 100;
 }
 .header__container {
   position: relative;
