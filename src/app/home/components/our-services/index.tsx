@@ -2,8 +2,6 @@ import { Section } from "@/shared/components/section";
 import { IOurServices } from "../../interfaces/content.interface";
 import { CardOurService } from "./our-service-card";
 import s from "./out-services.module.css";
-import { Leave } from "@/assets/leavesComponents/Leave";
-import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
 
 interface Props {
   content: IOurServices;

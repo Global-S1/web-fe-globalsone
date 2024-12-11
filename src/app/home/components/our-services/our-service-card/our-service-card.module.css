@@ -5,19 +5,23 @@
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
   align-items: center;
   background-image: url(../../../../../assets/home/our-services/background/bgcolors-services.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 10px;
+  padding-top: 53px;
 }
 
 .service__img {
+  position: absolute;
+  top: 0%;
+  max-width: none;
   width: 148.2px;
   height: 108.72px;
   object-fit: contain;
+  transform: translateY(-55%);
 }
 
 .title__container {
@@ -100,21 +104,26 @@
   z-index: 3;
 }
 
-.text__bg::after {
+.bg_pink {
   position: absolute;
-  content: "";
   width: 73.052px;
   height: 147.147px;
   background: linear-gradient(0deg, #b14dff -55.03%, #f7cbad 245.64%);
   filter: blur(44px);
-  top: -27%;
-  right: -5%;
+  right: 0%;
+  top: -25%;
+}
+
+@media (490px <= width) {
+  .cardOurService__container {
+    height: 181px;
+  }
 }
 
 @media (640px <= width) {
   .cardOurService__container {
     width: 100%;
-    height: 160px;
+    height: 180px;
   }
   .description {
     width: 90%;
@@ -123,17 +132,10 @@
 
 @media (768px <= width) {
   .cardOurService__container {
+    padding-top: 0;
     height: 270px;
-    max-width: 370px;
-    position: relative;
-    border: none;
     background: none;
-    display: grid;
-    grid-template-areas:
-      "title title"
-      "img content"
-      "img content"
-      "img content";
+    max-width: 370px;
   }
 
   .cardOurService__container::before {
@@ -147,19 +149,26 @@
   }
 
   .service__img {
-    grid-area: img;
     min-width: unset;
-    max-width: unset;
+    max-width: 257px;
     height: 150px;
     width: 150px;
-    object-fit: contain;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
   }
+
   .title__container {
+    position: absolute;
+    top: 0%;
+    left: 50%;
     grid-area: title;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateX(-50%);
+    z-index: 2;
   }
 
   .title__container > h3 {
@@ -168,55 +177,34 @@
   }
 
   .description {
-    position: relative;
-    grid-area: content;
-    align-self: start;
-    height: 100%;
-    justify-content: flex-start;
-  }
-
-  .text__bg {
     position: absolute;
+    width: 62%;
+    top: 50%;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0.38) 100%
     );
-    width: 123%;
-    height: 150%;
-    border-radius: 40px;
-    z-index: -1;
     border: 0.5px solid rgba(255, 255, 255, 0.205);
-    bottom: -4%;
-    right: -5%;
-  }
-
-  .text__bg::before {
-    position: absolute;
-    content: "";
-    width: 83.532px;
-    height: 94.812px;
-    background: #6660ff;
-    filter: blur(38.5px);
-    bottom: 22%;
-    left: -15%;
-  }
-
-  .text__bg::after {
-    position: absolute;
-    content: "";
-    width: 75px;
-    height: 120px;
-    background: linear-gradient(0deg, #b14dff -55.03%, #f7cbad 245.64%);
-    filter: blur(40px);
-    top: -11%;
-    right: -7%;
+    border-radius: 40px;
+    height: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
   }
 
   .description > p {
+    height: 50%;
+    width: 75%;
+    margin-top: 25px;
+    padding-right: 20px;
     text-align: justify;
-    width: 80%;
-    height: 100%;
+  }
+
+  .bg_pink {
+    top: -9%;
   }
 }
 
@@ -227,15 +215,19 @@
     max-width: unset;
   }
 
-  .text__bg {
-    height: 342px;
+  .service__img {
+    width: 209.82px;
+    height: 177.04px;
   }
+
+  .description {
+    justify-content: flex-end;
+  }
+
   .title__container {
     width: 86%;
   }
-  .description > p {
-    width: 80%;
-  }
+
   .cardOurService__container::before {
     width: 90px;
     height: 90px;
@@ -249,37 +241,36 @@
     top: -11%;
     right: -11%;
   }
-
-  .text__bg::after {
-    top: 2%;
-    right: 1%;
-    filter: blur(45px);
-  }
 }
 
 @media (1280px <= width) {
+  .cardOurService__container {
+    width: 510px;
+  }
+
   .service__img {
     width: 180px;
     height: 180px;
+    top: 55%;
   }
+
   .service__img {
     width: 255.355px;
     height: 218.933px;
     margin-right: -40px;
   }
-  .text__bg {
-    max-width: 303px;
-    height: 358px;
-    right: 0;
-  }
+
   .description {
     width: 300px !important;
     padding-left: 50px;
   }
+
   .description > p {
-    width: 72%;
-    margin-top: 25px;
+    width: 95%;
+    margin: 0;
+    padding-right: 25px;
   }
+
   .cardOurService__container::before {
     width: 106px;
     height: 106px;

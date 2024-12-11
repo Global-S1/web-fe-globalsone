@@ -7,7 +7,7 @@ import leftPictur from "@/assets/home/contact-us/pictures/picture_rleft.png";
 import rightPicture from "@/assets/home/contact-us/pictures/picture_right.png";
 import topPicture from "@/assets/home/contact-us/pictures/picture_top.png";
 import bottomPicture from "@/assets/home/contact-us/pictures/picture_bottom.png";
-
+import bottomPictureMobile from "@/assets/home/contact-us/pictures/pinture_bottom_mobile.png";
 interface Prop {
   content: string;
 }
@@ -24,10 +24,12 @@ export const ContactUs: FC<Prop> = ({ content }) => {
         <RedirectBtn route="/contact-us" text="Contáctanos Ahora" />
       </div>
       <div className={s.purple_circle}></div>
+      <div className={s.purple_rec_top}></div>
       <div className={s.purple_rec}></div>
       <div className={s.purple_rec_vertical}></div>
       <div className={s.green_circle}></div>
       <Image src={bottomPicture} alt="dashboard" className={s.bottom__image} />
+      <Image src={bottomPictureMobile} alt="dashboard" className={s.bottom__image__mobile} />
       <div className={s.purple_rec_bottom_desk}></div>
     </Section>
   );

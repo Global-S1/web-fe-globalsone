@@ -22,9 +22,9 @@ export const CardOurService: FC<Props> = ({ service }) => {
         <h3>{title}</h3>
       </div>
       <div className={s.description}>
-        <div className={s.text__bg}></div>
         <p>{content}</p>
       </div>
+      <div className={s.bg_pink}></div>
     </div>
   );
 };
