@@ -10,16 +10,32 @@
   padding: 5px 20px;
 }
 
-.btn__styles:hover {
-  transform: scaleX(1.2) scaleY(1.1);
+.btn__styles:active {
+  animation: pressEffect 0.3s forwards;
+}
+
+@keyframes pressEffect {
+  0% {
+    transform: scaleX(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (640px <= width) {
 }
 @media (768px <= width) {
+  .btn__styles:active {
+    animation: none;
+  }
+
   .btn__styles {
     border-radius: 100px;
     padding: 10px 30px;
+  }
+  .btn__styles:hover {
+    transform: scaleX(1.2) scaleY(1.1);
   }
 }
 @media (1024px <= width) {

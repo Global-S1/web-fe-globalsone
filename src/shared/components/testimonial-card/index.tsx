@@ -15,7 +15,7 @@ export const TestimonialCard: FC<ITestimonial> = ({ content }) => {
   return (
     <div
       className={s.testimonialCard__container}
-      style={{ backgroundImage: `url(${BgTestimonial.src})` }}
+      // style={{ backgroundImage: `url(${BgTestimonial.src})` }}
     >
       <div className={s.green__circle__top}></div>
       <div className={s.bg__layer}></div>

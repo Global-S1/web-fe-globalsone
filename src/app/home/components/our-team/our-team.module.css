@@ -19,7 +19,7 @@
 }
 .ourTeam__btn {
   max-width: 302px !important;
-  border-radius: 12px ;
+  border-radius: 12px;
 }
 
 @media (640px <= width) {

@@ -1,5 +1,4 @@
 import { NavigationLinks } from "@/shared/interfaces/layout.interface";
-import { MouseEvent, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import s from "./navbar-desktop.module.css";

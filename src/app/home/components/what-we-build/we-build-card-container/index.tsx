@@ -9,7 +9,7 @@ interface Props {
 
 export const WhatWeBuildCardContainer = ({ services }: Props) => {
   return (
-    <ModalWindow active showGradient>
+    <ModalWindow active showGradient color="#2D2A57">
       <div className={s.container_cards}>
         {services.map((item, index) => {
           const { title, alt } = item;

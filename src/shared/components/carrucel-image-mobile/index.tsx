@@ -23,8 +23,6 @@ export const CarrucelImageMobil = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
   return (
     <div className={s.carrucel__container}>
-      <div className={s.green__circle}></div>
-
       <button
         className={s.arrow_left}
         onClick={() => swiperRef.current?.slidePrev()}

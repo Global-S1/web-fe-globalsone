@@ -38,7 +38,10 @@ export const ContactAddress = ({
               </div>
               <p>{phone}</p>
             </Link>
-            <Link href={"https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9"}>
+            <Link
+              href={"https://maps.app.goo.gl/t7ApEnhLD3cAkvdn9"}
+              target="_black"
+            >
               <div>
                 <AddressIcon />
               </div>

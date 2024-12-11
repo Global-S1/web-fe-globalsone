@@ -17,7 +17,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #ffffff39;
+  background: #ffffff14;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -93,6 +93,23 @@
   filter: blur(66.75px);
   left: -35%;
   top: -25%;
+  z-index: 2;
+}
+
+.purple__circle {
+  position: absolute;
+  width: 472.232px;
+  height: 472.232px;
+  border-radius: 572.232px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(52 35 164) 80%
+  );
+  filter: blur(66.75px);
+  left: 70%;
+  bottom: -65%;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
@@ -184,7 +201,11 @@
     width: 572.232px;
     height: 572.232px;
     border-radius: 572.232px;
-    background: #6660ff;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgb(52 35 164) 80%
+    );
     filter: blur(66.75px);
     left: 50%;
     bottom: -65%;
