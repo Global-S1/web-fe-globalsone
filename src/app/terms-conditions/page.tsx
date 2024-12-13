@@ -8,7 +8,7 @@ export default async function TermsConditions() {
   return (
     <>
       <Section extendStyle={s.terms__section}>
-        <div dangerouslySetInnerHTML={{ __html: res.content.rendered }} />
+        <div className={s.terms__container} dangerouslySetInnerHTML={{ __html: res.content.rendered }} />
       </Section>
     </>
   );

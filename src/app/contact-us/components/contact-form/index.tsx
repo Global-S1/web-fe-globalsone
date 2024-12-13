@@ -8,9 +8,8 @@ import { sendFormRequirementService } from "../../service/form.service";
 import { useRouter } from "next/navigation";
 import { IForm } from "../../interfaces/contact-form";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import clsx from "clsx";
-import { div } from "framer-motion/client";
 
 export const ContactForm = ({
   title,
@@ -49,6 +48,10 @@ export const ContactForm = ({
       setValue("email", storedEmail);
     }
   }, [setValue]);
+
+  useEffect(() => {
+    console.log("termas", terms);
+  }, []);
 
   return (
     <Section extendStyle={s.section__from}>
@@ -129,7 +132,7 @@ export const ContactForm = ({
                     term.highlight ? (
                       <Link
                         key={index}
-                        href={"/terms-conditions"}
+                        href={term.link ? term.link : "/terms-conditions"}
                         style={{ textDecoration: "underline" }}
                       >
                         {term.text}

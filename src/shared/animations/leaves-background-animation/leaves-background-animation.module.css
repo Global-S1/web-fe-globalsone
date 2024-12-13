@@ -23,62 +23,62 @@
 }
 
 .leaf4 {
-  background-image: url("../../../assets/leavesImg/leave2.png");
+  background-image: url("../../../assets/leavesImg/leave2.webp");
   left: 1%;
   animation-duration: 21s;
   animation-delay: 2s;
 }
 
 .leaf1 {
-  background-image: url("../../../assets/leavesImg/leave2.png");
+  background-image: url("../../../assets/leavesImg/leave2.webp");
   left: 5%;
   animation-duration: 18s;
   animation-delay: 20s;
 }
 
 .leaf7 {
-  background-image: url("../../../assets/leavesImg/leave1.png");
+  background-image: url("../../../assets/leavesImg/leave1.webp");
   left: 15%;
   animation-duration: 15s;
   animation-delay: 7s;
 }
 
 .leaf2 {
-  background-image: url("../../../assets/leavesImg/leave3.png");
+  background-image: url("../../../assets/leavesImg/leave3.webp");
   left: 30%;
   animation-duration: 20s;
   animation-delay: 3s;
 }
 
 .leaf8 {
-  background-image: url("../../../assets/leavesImg/leave1.png");
+  background-image: url("../../../assets/leavesImg/leave1.webp");
   left: 45%;
   animation-duration: 24s;
   animation-delay: 6s;
 }
 
 .leaf5 {
-  background-image: url("../../../assets/leavesImg/leave3.png");
+  background-image: url("../../../assets/leavesImg/leave3.webp");
   left: 50%;
   animation-duration: 22s;
   animation-delay: 4s;
 }
 
 .leaf3 {
-  background-image: url("../../../assets/leavesImg/leave3.png");
+  background-image: url("../../../assets/leavesImg/leave3.webp");
   left: 60%;
   animation-duration: 16s;
   animation-delay: 5s;
 }
 
 .leaf9 {
-  background-image: url("../../../assets/leavesImg/leave3.png");
+  background-image: url("../../../assets/leavesImg/leave3.webp");
   left: 75%;
   animation-duration: 26s;
 }
 
 .leaf6 {
-  background-image: url("../../../assets/leavesImg/leave2.png");
+  background-image: url("../../../assets/leavesImg/leave2.webp");
   left: 89%;
   animation-duration: 21s;
   animation-delay: 1s;
@@ -99,29 +99,29 @@
   height: 150px;
 }
 
-.size4{
-    width: 90px;
-    height: 90px;
+.size4 {
+  width: 90px;
+  height: 90px;
 }
 
-.size5{
-    width: 180px;
-    height: 180px;
+.size5 {
+  width: 180px;
+  height: 180px;
 }
 
-.size6{
-    width: 250px;
-    height: 250px;
+.size6 {
+  width: 250px;
+  height: 250px;
 }
 
-.size7{
-    width: 190px;
-    height: 190px;
+.size7 {
+  width: 190px;
+  height: 190px;
 }
 
-.size8{
-    width: 200px;
-    height: 200px;
+.size8 {
+  width: 200px;
+  height: 200px;
 }
 
 @keyframes fall {

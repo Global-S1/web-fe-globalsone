@@ -1,6 +1,7 @@
 type TermsChunk = {
   text: string
   highlight: boolean
+  link?: string
 }
 
 type FormDetail = {

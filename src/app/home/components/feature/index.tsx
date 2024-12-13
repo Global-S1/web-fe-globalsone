@@ -1,6 +1,6 @@
-import groupOne from "@/assets/home/features/pictures/groupOne.png";
-import groupThree from "@/assets/home/features/pictures/groupThree.png";
-import groupTwo from "@/assets/home/features/pictures/groupTwo.png";
+import groupOne from "@/assets/home/features/pictures/groupOne.webp";
+import groupThree from "@/assets/home/features/pictures/groupThree.webp";
+import groupTwo from "@/assets/home/features/pictures/groupTwo.webp";
 import { Section } from "@/shared/components/section";
 import { FC } from "react";
 import { IFeature } from "../../interfaces/content.interface";

@@ -11,6 +11,7 @@ export const CardOurService: FC<Props> = ({ service }) => {
   const { title, content, img } = service;
   return (
     <div className={s.cardOurService__container}>
+      <div className={s.bg_mobile_color}></div>
       <Image
         src={img}
         alt={title}

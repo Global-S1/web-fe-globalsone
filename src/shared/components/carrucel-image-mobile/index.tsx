@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 import { IOurTeamPersonContent } from "../our-team/interfaces/our-team.interface";
 import s from "./carrucel-image-mobile.module.css";
 import { Slice } from "./slice";
-import leaf from "@/assets/leavesImg/leaf.png";
+import leaf from "@/assets/leavesImg/leaf.webp";
 
 interface Props {
   content: IOurTeamPersonContent[];
@@ -35,12 +35,6 @@ export const CarrucelImageMobil = ({ content }: Props) => {
           modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 3000,
-          }}
-          pagination={{
-            clickable: true,
-            el: `.${s.pagination}`,
-            bulletClass: s.bullet,
-            bulletActiveClass: s.bullet_active,
           }}
           loop
           spaceBetween={30}
@@ -70,7 +64,6 @@ export const CarrucelImageMobil = ({ content }: Props) => {
       >
         <ArrowRight />
       </button>
-      <div className={s.pagination}></div>
     </div>
   );
 };

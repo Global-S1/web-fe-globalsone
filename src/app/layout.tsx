@@ -7,6 +7,8 @@ import { Main } from "@/shared/components/main";
 import { Header } from "@/shared/components/header";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getLayoutLinks } from "@/shared/services/layout.service";
+import heroPictureMobile from "@/assets/home/hero/pictures/hero-pinctue-mobile.webp";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 

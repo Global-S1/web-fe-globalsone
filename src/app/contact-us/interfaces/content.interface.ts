@@ -1,6 +1,7 @@
 export type ITermsChunk = {
   text: string;
   highlight: boolean;
+  link?: string;
 };
 
 export type IContactUsFormContent = {

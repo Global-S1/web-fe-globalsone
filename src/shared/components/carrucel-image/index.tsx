@@ -2,7 +2,7 @@
 import { ArrowLeft } from "@/assets/home/our-team/icons/ArrowLeft";
 import { ArrowRight } from "@/assets/home/our-team/icons/ArrowRight";
 import { IAnny } from "@/shared/interfaces/any.interface";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { A11y, Autoplay } from "swiper/modules";
@@ -18,6 +18,21 @@ interface Props {
 
 export const CarrucelImg = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
+  // const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(false);
+
+  // useEffect(() => {
+  //   const onLoad = () => {
+  //     setIsAutoplayEnabled(true);
+  //   };
+
+  //   window.addEventListener("load", onLoad);
+
+  //   console.log("isAutoplayEnabled", isAutoplayEnabled);
+
+  //   return () => {
+  //     window.removeEventListener("load", onLoad);
+  //   };
+  // }, []);
 
   const handleMouseEnter = () => {
     swiperRef.current?.autoplay?.stop();
@@ -41,10 +56,12 @@ export const CarrucelImg = ({ content }: Props) => {
           loop
           slidesPerView={1}
           spaceBetween={10}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          // autoplay={
+          //   isAutoplayEnabled
+          //     ? { delay: 3000, disableOnInteraction: false }
+          //     : false
+          // }
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{
             clickable: true,
           }}

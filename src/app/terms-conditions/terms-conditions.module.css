@@ -1,124 +1,44 @@
 .terms__section {
-  margin-top: 97px;
-  margin-bottom: 94px;
-}
-
-.terms__section p {
-  font-size: 25px;
+  padding-top: 97px;
   font-family: "Futura";
-}
-.terms__section h2 {
-  font-family: "Futura";
-  margin-bottom: 15px;
-}
-
-.terms__section p:first-child {
-  font-size: 25px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.terms__section p:nth-child(2) {
   margin-bottom: 50px;
-  font-size: 15px;
-  text-align: center;
 }
-.terms__section p:nth-child(4) {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 15px;
+.terms__container strong:first-child {
+  display: inline-block;
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
+  margin-bottom: 20px;
+}
+
+.terms__container > p {
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
   text-align: justify;
 }
 
-.terms__section h2 {
-  font-size: 25px;
+.terms__container > h2 {
+  font-size: clamp(
+    var(--title-mobile-tertiary),
+    calc(
+      var(--title-mobile-tertiary) + (32 - 16) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--paragraph-desktop)
+  );
+  padding-top: 70px;
 }
-
-.terms__section p:nth-child(n + 5) {
-  font-size: 15px;
-  margin-bottom: 40px;
-  text-align: justify;
-}
-
 @media (640px <= width) {
 }
 @media (768px <= width) {
-  .terms__section {
-    margin-top: 200px;
-    margin-bottom: 94px;
-  }
-
-  .terms__section p {
-    font-size: 25px !important;
-    text-align: left !important;
-    font-family: "Futura";
-  }
-  .terms__section h2 {
-    font-family: "Futura";
-  }
-
-  .terms__section p:first-child {
-    font-size: 63px !important;
-    margin-bottom: 40px;
-  }
-
-  .terms__section p:nth-child(2) {
-    margin-bottom: 50px;
-  }
-  .terms__section p:nth-child(4) {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .terms__section h2 {
-    font-size: 32px;
-  }
-
-  .terms__section p:nth-child(n + 5) {
-    font-size: 22px;
-    margin-bottom: 40px;
-  }
 }
 @media (1024px <= width) {
-  .alert {
-    background: rgba(253, 12, 12, 0.8);
-  }
 }
 @media (1280px <= width) {
-  .terms__section {
-    margin-top: 160px;
-    margin-bottom: 94px;
-  }
-
-  .terms__section p {
-    font-size: 25px !important;
-    text-align: left !important;
-    font-family: "Futura", var(--font-futura);
-  }
-
-  .terms__section h2 {
-    font-family: "Futura", var(--font-futura);
-  }
-
-  .terms__section p:first-child {
-    font-size: 63px !important;
-    margin-bottom: 40px;
-  }
-
-  .terms__section p:nth-child(2) {
-    margin-bottom: 50px;
-  }
-  .terms__section p:nth-child(4) {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .terms__section h2 {
-    font-size: 32px;
-  }
-
-  .terms__section p:nth-child(n + 5) {
-    font-size: 22px;
-    margin-bottom: 40px;
-  }
 }
