@@ -14,7 +14,6 @@ export const NavBarDesktop = ({ content }: IProps): JSX.Element => {
     e.preventDefault();
     const currentRoute =
       typeof window !== "undefined" ? window.location.pathname : null;
-    console.log("currentRoute", currentRoute);
     if (currentRoute) {
       window.location.href = `${
         ROOT_PATH?.length ? ROOT_PATH : "/"
@@ -25,7 +24,7 @@ export const NavBarDesktop = ({ content }: IProps): JSX.Element => {
   const handlerHome = () => {
     router.push("/");
   };
-  
+
   return (
     <nav className={s.navbar__desk__container}>
       <ul className={s.navbar__desk__list}>

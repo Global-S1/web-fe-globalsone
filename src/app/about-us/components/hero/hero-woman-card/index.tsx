@@ -2,6 +2,7 @@ import { Woman } from "@/assets/about-us/hero/icons/Woman";
 import { HeroAvatarCard } from "../hero-avatar-card";
 import s from "./hero-woman-card.module.css";
 import Link from "next/link";
+import leaf from "@/assets/leavesImg/leaf.webp";
 
 export const HeroWomanCard = () => {
   return (
@@ -16,6 +17,10 @@ export const HeroWomanCard = () => {
             Ver más
           </Link>
         </div>
+        <div
+          style={{ backgroundImage: `url(${leaf.src})` }}
+          className={s.leaf}
+        ></div>
       </HeroAvatarCard>
     </div>
   );

@@ -9,7 +9,6 @@ export const getContactUsDataService = async () => {
       id: "791",
       contentType: "pages",
     });
-    console.log(response.data.acf.formDetail);
     return ContactUsAdapter(response.data.acf);
   } catch (error) {
     return data;

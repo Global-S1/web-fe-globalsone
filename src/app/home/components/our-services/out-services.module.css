@@ -6,11 +6,13 @@
     114.43px
   );
 }
+
 .ourServices_title {
   position: relative;
   width: 100%;
   margin-bottom: 80px;
 }
+
 .ourServices_title > h2 {
   text-align: center;
   font-size: clamp(

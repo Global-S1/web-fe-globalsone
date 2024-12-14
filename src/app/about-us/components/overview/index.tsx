@@ -40,9 +40,6 @@ export const Overview = ({ content }: Props) => {
           <div className={s.leave}>
             <Leave />
           </div>
-          <div className={s.leaveClear}>
-            <LeaveClear />
-          </div>
         </div>
       </div>
     </Section>

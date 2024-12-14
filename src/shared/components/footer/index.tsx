@@ -21,7 +21,6 @@ export const Footer = ({ content, socialMedia }: Props) => {
     e.preventDefault();
     const currentRoute =
       typeof window !== "undefined" ? window.location.pathname : null;
-    console.log("currentRoute", currentRoute);
     if (currentRoute) {
       window.location.href = `${
         ROOT_PATH?.length ? ROOT_PATH : "/"

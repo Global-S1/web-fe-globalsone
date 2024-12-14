@@ -8,7 +8,6 @@ interface IProps {
 }
 
 export const SmoothScrollLink = ({ href, children }: IProps): JSX.Element => {
-  console.log(href);
   const [sectionToScroll, setSectionToScroll] = useState<string | null>(null);
   const router = useRouter();
   const pathname = usePathname();

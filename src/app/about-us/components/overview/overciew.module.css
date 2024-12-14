@@ -41,15 +41,6 @@
   );
 }
 
-.card__three .leaveClear {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  transform: rotate(180deg);
-  left: 0;
-  bottom: -45%;
-}
-
 .purple__circle {
   position: absolute;
   width: 1119.832px;
@@ -98,17 +89,13 @@
     left: -40%;
     top: -40%;
   }
-  .card__three .leaveClear {
-    display: none;
-  }
+
   .card__three .leave {
     display: block;
     position: absolute;
-    width: 150px;
-    height: 150px;
-    bottom: -25%;
-    left: -10%;
-    transform: rotate(15deg);
+    width: 130px;
+    height: 130px;
+    transform: rotate(290deg);
   }
 }
 @media (768px <= width) {
@@ -133,10 +120,10 @@
   .card__three .leave {
     display: block;
     position: absolute;
-    width: 190px;
-    height: 190px;
-    bottom: -25%;
-    left: -5%;
+    width: 130px;
+    height: 130px;
+    bottom: -8%;
+    right: -5%;
   }
 }
 @media (1024px <= width) {

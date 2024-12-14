@@ -3,10 +3,7 @@ import { Instagram } from "@/assets/about-us/hero/icons/Instagram";
 import { Linkedin } from "@/assets/about-us/hero/icons/Linkedin";
 import { Section } from "@/shared/components/section";
 import { Insides } from "@/shared/components/Insides";
-import {
-  IAboutUsHeroContent,
-  ISocialMedia,
-} from "../../interfaces/content.interface";
+import { IAboutUsHeroContent } from "../../interfaces/content.interface";
 import { FC } from "react";
 import { HeroManCard } from "./hero-man-card";
 import { HeroWomanCard } from "./hero-woman-card";
@@ -37,7 +34,7 @@ export const Hero: FC<Props> = async ({ content }) => {
         <div className={s.hero__insides__container}>
           <Insides size="small" />
         </div>
-        
+
         <div className={s.hero__socialMedia__container}>
           <p>{hookSocialMedia.title}</p>
           <div className={s.socialMedia__icons__container}>
@@ -51,8 +48,7 @@ export const Hero: FC<Props> = async ({ content }) => {
               <Instagram />
             </a>
           </div>
-        </div> 
-       
+        </div>
       </div>
     </Section>
   );

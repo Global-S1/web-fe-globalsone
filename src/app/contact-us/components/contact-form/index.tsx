@@ -31,7 +31,6 @@ export const ContactForm = ({
     try {
       const status = await sendFormRequirementService(data);
       localStorage.removeItem("email");
-      console.log("envio exitoso", status);
       if (status === 201) {
         router.push("/success");
       }
@@ -47,10 +46,10 @@ export const ContactForm = ({
     if (storedEmail) {
       setValue("email", storedEmail);
     }
-  }, [setValue]);
 
-  useEffect(() => {
-    console.log("termas", terms);
+    return () => {
+      localStorage.removeItem("email");
+    };
   }, []);
 
   return (
