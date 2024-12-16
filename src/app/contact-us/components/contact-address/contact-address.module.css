@@ -220,10 +220,32 @@
     z-index: 1;
   }
 
+  .leaf {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+  }
+
+  .leaf__1 {
+    width: 150px;
+    height: 150px;
+    bottom: 0%;
+    right: 0%;
+    transform: rotate(172deg) translate(-4%, -50%);
+  }
+
+  .leaf__2 {
+    width: 95px;
+    height: 90px;
+    right: 0%;
+    bottom: 0%;
+    transform: rotate(219deg) translate(19%, 11%);
+  }
+
   .bg__img__container {
     height: 300px;
   }
-
 }
 @media (1024px <= width) {
   .title__container > span {

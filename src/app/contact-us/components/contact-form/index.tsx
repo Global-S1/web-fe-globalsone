@@ -8,8 +8,9 @@ import { sendFormRequirementService } from "../../service/form.service";
 import { useRouter } from "next/navigation";
 import { IForm } from "../../interfaces/contact-form";
 import Link from "next/link";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
+import errorMessages from "@/lang/es/translation.json";
 
 export const ContactForm = ({
   title,
@@ -56,9 +57,9 @@ export const ContactForm = ({
     <Section extendStyle={s.section__from}>
       {Object.values(errors).length > 0 && (
         <div className={s.alert}>
-          <p>{`Hay un error en el campo “${Object.keys(errors).join(
-            ", "
-          )}” . Por favor, de revisar y llenar el campo.`}</p>
+          <p>{`Hay un error en el campo “${Object.keys(errors) 
+            .map((key) => errorMessages.errors[key as keyof typeof errorMessages.errors] || key)
+            .join(", ")}” . Por favor, de revisar y llenar el campo.`}</p>
         </div>
       )}
       <div className={s.magenta__circle}></div>
@@ -97,7 +98,14 @@ export const ContactForm = ({
                 type="number"
                 placeholder="Número de Teléfono"
                 className={s.inputNumber}
-                {...register("phone", { required: true })}
+                {...register("phone", {
+                  required: true,
+                  pattern: {
+                    value: /^[0-9]{6,}$/,
+                    message:
+                      "Por favor, introduce un número de teléfono válido.",
+                  },
+                })}
               />
               <select
                 id=""

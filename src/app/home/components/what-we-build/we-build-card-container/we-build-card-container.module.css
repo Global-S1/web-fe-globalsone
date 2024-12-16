@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  /* background-color: #2f3d83; */
 }
 
 @media (640px <= width) {

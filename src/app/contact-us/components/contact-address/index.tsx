@@ -6,8 +6,9 @@ import { IContactUsContactDataContent } from "../../interfaces/content.interface
 import { MailIcon } from "@/assets/contact-us/address/icons/MailIcon";
 import { PhoneIcon } from "@/assets/contact-us/address/icons/PhoneIcon";
 import { AddressIcon } from "@/assets/contact-us/address/icons/AddressIcon";
-import { RedirectBtn } from "@/shared/components/redirect-btn";
+import leaf from "@/assets/leavesImg/leaf.webp";
 import Link from "next/link";
+import clsx from "clsx";
 
 export const ContactAddress = ({
   city,
@@ -48,6 +49,14 @@ export const ContactAddress = ({
               <p>{address}</p>
             </Link>
           </div>
+          <div
+            style={{ backgroundImage: `url(${leaf.src})` }}
+            className={clsx(s.leaf, s.leaf__1)}
+          ></div>
+          <div
+            style={{ backgroundImage: `url(${leaf.src})` }}
+            className={clsx(s.leaf, s.leaf__2)}
+          ></div>
         </div>
         <div className={s.bg__img__container}>
           <div className={s.green__circle}></div>

@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 import { MenuItem } from "../menu-item";
 import s from "./navigation.module.css";
@@ -24,13 +23,13 @@ interface IProp {
 
 export const Navigation: FC<IProp> = ({ isOpen, setIsOpen }) => {
   const router = useRouter();
-
   const { content } = useContext(HeaderMobileContext);
 
   const handleServices = (e: any) => {
     e.preventDefault();
     const currentRoute =
       typeof window !== "undefined" ? window.location.pathname : null;
+
     if (currentRoute) {
       window.location.href = `${
         ROOT_PATH?.length ? ROOT_PATH : "/"

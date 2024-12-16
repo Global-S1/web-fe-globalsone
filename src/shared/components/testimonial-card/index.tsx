@@ -13,10 +13,7 @@ interface ITestimonial {
 export const TestimonialCard: FC<ITestimonial> = ({ content }) => {
   const { bgImg, clientImage, description, name } = content;
   return (
-    <div
-      className={s.testimonialCard__container}
-      // style={{ backgroundImage: `url(${BgTestimonial.src})` }}
-    >
+    <div className={s.testimonialCard__container}>
       <div className={s.green__circle__top}></div>
       <div className={s.bg__layer}></div>
 

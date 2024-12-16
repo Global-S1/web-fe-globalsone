@@ -12,7 +12,15 @@
     ),
     var(--title-desktop-primary)
   );
-  margin-bottom: 20px;
+  font-family: var(--font-grandis);
+}
+
+.terms__container p:nth-of-type(2) {
+  margin-bottom: 5px;
+}
+
+.terms__container p:nth-of-type(3) {
+  margin-top: 10px;
 }
 
 .terms__container > p {
@@ -32,8 +40,9 @@
     ),
     var(--paragraph-desktop)
   );
-  padding-top: 70px;
+  padding-top: 40px;
 }
+
 @media (640px <= width) {
 }
 @media (768px <= width) {

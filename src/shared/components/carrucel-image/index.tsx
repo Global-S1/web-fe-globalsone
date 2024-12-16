@@ -18,21 +18,6 @@ interface Props {
 
 export const CarrucelImg = ({ content }: Props) => {
   const swiperRef = useRef<IAnny>(null);
-  // const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(false);
-
-  // useEffect(() => {
-  //   const onLoad = () => {
-  //     setIsAutoplayEnabled(true);
-  //   };
-
-  //   window.addEventListener("load", onLoad);
-
-  //   console.log("isAutoplayEnabled", isAutoplayEnabled);
-
-  //   return () => {
-  //     window.removeEventListener("load", onLoad);
-  //   };
-  // }, []);
 
   const handleMouseEnter = () => {
     swiperRef.current?.autoplay?.stop();
@@ -56,11 +41,6 @@ export const CarrucelImg = ({ content }: Props) => {
           loop
           slidesPerView={1}
           spaceBetween={10}
-          // autoplay={
-          //   isAutoplayEnabled
-          //     ? { delay: 3000, disableOnInteraction: false }
-          //     : false
-          // }
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{
             clickable: true,
