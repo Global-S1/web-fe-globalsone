@@ -5,7 +5,7 @@
     "name": "nombre",
     "lastName": "apellidos",
     "requirements": "tipo de proyecto",
-    "description": "mensaje",
+    "description": "detalle de proyecto",
     "terms": "términos y condiciones"
   },
   "messages": {

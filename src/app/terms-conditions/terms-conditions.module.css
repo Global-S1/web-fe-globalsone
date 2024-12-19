@@ -41,6 +41,7 @@
     var(--paragraph-desktop)
   );
   padding-top: 40px;
+  font-weight: bold;
 }
 
 @media (640px <= width) {

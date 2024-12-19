@@ -11,6 +11,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import errorMessages from "@/lang/es/translation.json";
+import countriesList from "@/wp-mock-data/countries.json";
+import { SelectCountry } from "./components/select-country";
 
 export const ContactForm = ({
   title,
@@ -23,23 +25,27 @@ export const ContactForm = ({
     handleSubmit,
     formState: { errors },
     setValue,
+    control,
   } = useForm<IForm>();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const onSubmit: SubmitHandler<IForm> = async (data) => {
-    setLoading(true);
-    try {
-      const status = await sendFormRequirementService(data);
-      localStorage.removeItem("email");
-      if (status === 201) {
-        router.push("/success");
-      }
-    } catch (error) {
-      console.error("Error sending form:", error);
-    } finally {
-      setLoading(false);
-    }
+    console.log("data", data);
+    // setLoading(true);
+    // data.phone = `${data.prefix}${data.phone}`;
+    // const { prefix, ...formattedData } = data;
+    // try {
+    //   const status = await sendFormRequirementService(formattedData);
+    //   localStorage.removeItem("email");
+    //   if (status === 201) {
+    //     router.push("/success");
+    //   }
+    // } catch (error) {
+    //   console.error("Error sending form:", error);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   useEffect(() => {
@@ -57,8 +63,13 @@ export const ContactForm = ({
     <Section extendStyle={s.section__from}>
       {Object.values(errors).length > 0 && (
         <div className={s.alert}>
-          <p>{`Hay un error en el campo “${Object.keys(errors) 
-            .map((key) => errorMessages.errors[key as keyof typeof errorMessages.errors] || key)
+          <p>{`Hay un error en el campo “${Object.keys(errors)
+            .map(
+              (key) =>
+                errorMessages.errors[
+                  key as keyof typeof errorMessages.errors
+                ] || key
+            )
             .join(", ")}” . Por favor, de revisar y llenar el campo.`}</p>
         </div>
       )}
@@ -94,22 +105,14 @@ export const ContactForm = ({
                   },
                 })}
               />
-              <input
-                type="number"
-                placeholder="Número de Teléfono"
-                className={s.inputNumber}
-                {...register("phone", {
-                  required: true,
-                  pattern: {
-                    value: /^[0-9]{6,}$/,
-                    message:
-                      "Por favor, introduce un número de teléfono válido.",
-                  },
-                })}
+
+              <SelectCountry
+                register={register}
+                // errors={errors}
+                setValue={setValue}
               />
               <select
-                id=""
-                className={s.select__container}
+                className={s.select__requirements}
                 {...register("requirements", {
                   required: true,
                   validate: (value) =>
@@ -125,7 +128,7 @@ export const ContactForm = ({
               </select>
               <textarea
                 placeholder="Escribe el mensaje que deseas enviarnos..."
-                {...register("description")}
+                {...register("description", { required: true })}
               />
             </div>
             <div className={s.submit__container}>

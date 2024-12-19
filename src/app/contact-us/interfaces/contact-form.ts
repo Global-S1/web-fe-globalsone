@@ -6,4 +6,5 @@ export interface IForm {
   requirements: string;
   description: string;
   terms?: boolean;
+  prefix?: string;
 }
