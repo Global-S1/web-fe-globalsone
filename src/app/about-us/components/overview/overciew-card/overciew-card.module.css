@@ -40,7 +40,7 @@
     var(--secondary-text-desktop)
   );
 
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   font-weight: 500;
   text-align: justify;
 }

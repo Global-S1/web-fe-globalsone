@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   column-gap: 15px;
-  font-family: "Futura", sans-serif;
+  font-family: "Futura", var(--font-futura);
   font-size: clamp(
     var(--paragraph-mobile),
     calc(
@@ -35,17 +35,13 @@
 }
 
 @media (640px <= width) {
-
 }
 
 @media (768px <= width) {
-
 }
 
 @media (1024px <= width) {
-
 }
 
 @media (1280px <= width) {
-
 }

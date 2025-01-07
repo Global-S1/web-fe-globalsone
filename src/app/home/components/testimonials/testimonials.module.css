@@ -39,7 +39,7 @@
   padding: 6px 15px;
   border-radius: 50px;
   margin-top: 14px;
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
 }
 
 @media (425px <= width) {

@@ -43,7 +43,7 @@
   );
   font-weight: 500;
   margin-bottom: 20px;
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
 }
 
 .ourTeam__leave__one {

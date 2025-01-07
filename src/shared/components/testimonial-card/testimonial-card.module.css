@@ -68,7 +68,7 @@
     calc(21px + (48 - 21) * ((80vw - 360px) / (1200 - 360))),
     48px
   );
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   text-align: justify;
 }
 

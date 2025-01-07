@@ -239,7 +239,7 @@
     calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
     var(--button-desktop)
   );
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   border-radius: clamp(
     12px,
     calc(32px + (478.859 - 12) * ((90vw - 360px) / (1200 - 360))),
@@ -251,7 +251,7 @@
 }
 
 .button__form {
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   background-color: #544dd2;
   -webkit-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
   -moz-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);

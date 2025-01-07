@@ -59,7 +59,7 @@
     calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
     var(--secondary-text-desktop)
   );
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   color: white;
 }
 

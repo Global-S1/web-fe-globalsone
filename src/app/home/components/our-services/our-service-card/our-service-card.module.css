@@ -104,7 +104,7 @@
     48px
   );
 
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   width: 95%;
   font-weight: 500;
 }

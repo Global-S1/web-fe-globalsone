@@ -13,6 +13,7 @@ import clsx from "clsx";
 import errorMessages from "@/lang/es/translation.json";
 import countriesList from "@/wp-mock-data/countries.json";
 import { SelectCountry } from "./components/select-country";
+import { SelectRequirement } from "./components/select-requirement";
 
 export const ContactForm = ({
   title,
@@ -26,26 +27,26 @@ export const ContactForm = ({
     formState: { errors },
     setValue,
     control,
+    watch,
   } = useForm<IForm>();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const onSubmit: SubmitHandler<IForm> = async (data) => {
-    console.log("data", data);
-    // setLoading(true);
-    // data.phone = `${data.prefix}${data.phone}`;
-    // const { prefix, ...formattedData } = data;
-    // try {
-    //   const status = await sendFormRequirementService(formattedData);
-    //   localStorage.removeItem("email");
-    //   if (status === 201) {
-    //     router.push("/success");
-    //   }
-    // } catch (error) {
-    //   console.error("Error sending form:", error);
-    // } finally {
-    //   setLoading(false);
-    // }
+    setLoading(true);
+    data.phone = `${data.prefix}${data.phone}`;
+    const { prefix, ...formattedData } = data;
+    try {
+      const status = await sendFormRequirementService(formattedData);
+      localStorage.removeItem("email");
+      if (status === 201) {
+        router.push("/success");
+      }
+    } catch (error) {
+      console.error("Error sending form:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -106,31 +107,21 @@ export const ContactForm = ({
                 })}
               />
 
-              <SelectCountry
+              <SelectCountry register={register} setValue={setValue} />
+
+              <SelectRequirement
                 register={register}
-                // errors={errors}
                 setValue={setValue}
+                services={services}
+                errors={errors}
               />
-              <select
-                className={s.select__requirements}
-                {...register("requirements", {
-                  required: true,
-                  validate: (value) =>
-                    value !== "-" || "Por favor, selecciona una opción válida",
-                })}
-              >
-                <option value="">Selecciona tipo de proyecto</option>
-                {services.map((item, index) => (
-                  <option value={item} key={index}>
-                    {item}
-                  </option>
-                ))}
-              </select>
+
               <textarea
                 placeholder="Escribe el mensaje que deseas enviarnos..."
                 {...register("description", { required: true })}
               />
             </div>
+            
             <div className={s.submit__container}>
               <div className={s.terms_container}>
                 <input

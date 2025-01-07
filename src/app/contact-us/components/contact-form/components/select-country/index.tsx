@@ -5,8 +5,21 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ROOT_PATH } from "@/shared/constants/url";
 import listCountries from "@/wp-mock-data/select-countries.json";
+import { UseFormRegister, UseFormSetValue } from "react-hook-form";
+import { IForm } from "@/app/contact-us/interfaces/contact-form";
 
-export const SelectCountry = ({ register, setValue, errors }) => {
+interface ICountry {
+  country: string;
+  code: string;
+  iso: string;
+}
+
+interface SelectCountryProps {
+  register: UseFormRegister<IForm>;
+  setValue: UseFormSetValue<IForm>;
+}
+
+export const SelectCountry = ({ register, setValue }: SelectCountryProps) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState({
     country: "Perú",
@@ -14,26 +27,21 @@ export const SelectCountry = ({ register, setValue, errors }) => {
     iso: "PE",
   });
 
-  const flagSrc = (code) => `${ROOT_PATH}/flags/${code.toLowerCase()}.svg`;
+  const flagSrc = (code: string) =>
+    `${ROOT_PATH ?? ""}/flags/${code.toLowerCase()}.svg`;
 
   const showModal = () => {
     setIsActive(!isActive);
   };
 
-  const handleCountrySelection = (country) => {
+  const handleCountrySelection = (country: ICountry) => {
     setSelectedCountry(country);
     setIsActive(false);
-    // Update the phone field with the new country code
-    setValue("phone", `+${country.code}`);
-  };
-
-  const handlePhoneChange = (e) => {
-    const phoneValue = e.target.value;
-    setValue("phone", `+${selectedCountry.code}${phoneValue}`);
+    setValue("prefix", country.code);
   };
 
   useEffect(() => {
-    console.log("code", selectedCountry.code);
+    setValue("prefix", selectedCountry.code);
   }, []);
 
   return (
@@ -70,6 +78,7 @@ export const SelectCountry = ({ register, setValue, errors }) => {
           </div>
         ))}
       </div>
+
       <input
         className={s.inputPhone}
         type="number"
@@ -80,7 +89,6 @@ export const SelectCountry = ({ register, setValue, errors }) => {
             value: /^[0-9]{6,}$/,
             message: "El teléfono debe tener al menos 6 dígitos.",
           },
-          onChange: handlePhoneChange,
         })}
       />
     </div>

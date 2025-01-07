@@ -42,6 +42,10 @@ body {
   align-items: center;
 }
 
-#data-protection{
+p {
+  font-family: "Futura", var(--font-futura);
+}
+
+#data-protection {
   scroll-margin-top: 50px;
 }

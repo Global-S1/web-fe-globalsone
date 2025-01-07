@@ -1,6 +1,6 @@
 .terms__section {
   padding-top: 97px;
-  font-family: "Futura";
+  font-family: "Futura", var(--font-futura);
   margin-bottom: 50px;
 }
 .terms__container strong:first-child {
