@@ -12,6 +12,7 @@ export const getHomeDataService = async (): Promise<IHomeContent> => {
     });
     return homeAdapter(response.data.acf);
   } catch (error) {
+    console.log("Esto es un error");
     return data;
   }
 };
