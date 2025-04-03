@@ -73,7 +73,7 @@ export const HeroBubbleChatBot = () => {
                 <p>Si necesitas algo, ¡estoy aquí para ayudarte!</p>
               </motion.div>
               <Image
-                src={"/chat-bot/bot-icon.svg"}
+                src={"/develop/chat-bot/bot-icon.svg"}
                 alt="chatbot-image"
                 width={30}
                 height={30}

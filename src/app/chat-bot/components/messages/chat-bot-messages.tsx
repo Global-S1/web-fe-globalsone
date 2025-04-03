@@ -49,7 +49,7 @@ export const ChatBotMessages = ({ messages }: Props) => {
             />
 
             <motion.img
-              src="/chat-bot/bot-icon.svg"
+              src="/develop/chat-bot/bot-icon.svg"
               alt="con"
               className="size-[70px] z-[1]"
               animate={{
@@ -102,13 +102,14 @@ export const ChatBotMessages = ({ messages }: Props) => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     key={mess.id}
-                    className="flex gap-2"
+                    className="flex gap-2 items-start"
                   >
                     <Image
-                      src={"/chat-bot/bot-in-chat.svg"}
+                      src={"/develop/chat-bot/bot-in-chat.svg"}
                       alt="icon"
                       height={20}
                       width={20}
+                      className="mt-[2px]"
                     />
                     <div>
                       <Markdown

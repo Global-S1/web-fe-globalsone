@@ -51,7 +51,7 @@ export const ChatBotInput = ({
               className="flex items-center px-[15px] bg-white border-[3px] border-[#D2CCE1] rounded-[10px] grow"
             >
               <Image
-                src={"/chat-bot/bot-icon.svg"}
+                src={"/develop/chat-bot/bot-icon.svg"}
                 alt="icon"
                 width={25}
                 height={25}
