@@ -59,7 +59,7 @@
     border-color: transparent transparent transparent #1A0259;
     position: absolute;
     top: 38px;
-    margin-left: 2px;
+    margin-left: 1.5px;
 }
 
 .input__icon__cloud::before{
