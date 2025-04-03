@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import s from "./hero.bubble-chat-bot.module.css";
 import Image from "next/image";
+import { ELocalStorage } from "@/shared/enums/local-storage.enum";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, useState } from "react";
 
 export const HeroBubbleChatBot = () => {
+  const [input, setInput] = useState<string>("");
+  const router = useRouter();
   const messageVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -18,6 +23,28 @@ export const HeroBubbleChatBot = () => {
   const instantMessageVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+  };
+
+  const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
+  const sendMessage = (message: string) => {
+    localStorage.setItem(ELocalStorage.TEMPORAL_MESSAGE, message);
+    router.push("/chat-bot?message=true");
+  };
+
+  const handleSend = () => {
+    if (input.trim() !== "") {
+      sendMessage(input.trim());
+      setInput("");
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSend();
+    }
   };
 
   const messages = [
@@ -57,9 +84,14 @@ export const HeroBubbleChatBot = () => {
               type="text"
               placeholder="Escríbenos..."
               className={s.input__input}
+              value={input}
+              onChange={onChangeInput}
+              onKeyDown={handleKeyDown}
             />
           </label>
-          <button className={s.input__button}>Hablemos ahora</button>
+          <button className={s.input__button} onClick={handleSend}>
+            Hablemos ahora
+          </button>
         </motion.div>
 
         <motion.div
@@ -79,6 +111,7 @@ export const HeroBubbleChatBot = () => {
               }}
               variants={instantMessageVariants}
               className={s.instant__message}
+              onClick={() => sendMessage(message)}
             >
               {message}
             </motion.button>

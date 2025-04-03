@@ -6,6 +6,7 @@ import { ChatBotInput } from "../input/chat-bot-input";
 import { ChatBotMessages } from "../messages/chat-bot-messages";
 import { ChangeEvent, useEffect, useState } from "react";
 import { ChatBotService } from "../../services/chat-bot.service";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const { sendQuestion } = ChatBotService();
 
@@ -13,6 +14,9 @@ export const ChatSystem = () => {
   const [messages, setMessages] = useState<IMessage[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [input, setInput] = useState<string>("");
+  const query = useSearchParams();
+  const router = useRouter();
+  const isMessage = Boolean(query.get("message"));
 
   const instantsMessages = [
     "Solicitar una propuesta personalizada",
@@ -132,6 +136,19 @@ export const ChatSystem = () => {
     setMessages(localMessages);
 
     return;
+  }, []);
+
+  useEffect(() => {
+    if (isMessage) {
+      const temporalMesage = localStorage.getItem(
+        ELocalStorage.TEMPORAL_MESSAGE
+      );
+      if (temporalMesage) {
+        sendInstantMessage(temporalMesage);
+        localStorage.removeItem(ELocalStorage.TEMPORAL_MESSAGE);
+        router.push("/chat-bot");
+      }
+    }
   }, []);
 
   return (
