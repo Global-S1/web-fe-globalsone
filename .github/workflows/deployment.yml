@@ -6,7 +6,7 @@ on:
       - develop
       - prod
 env:
-  develop_branch: "dev"
+  develop_branch: "develop"
   prod_branch: "prod"
 
 permissions:
