@@ -1,0 +1,54 @@
+.terms__section {
+  padding-top: 97px;
+  font-family: "Futura", var(--font-futura);
+  margin-bottom: 50px;
+}
+.terms__container strong:first-child {
+  display: inline-block;
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
+  font-family: var(--font-grandis);
+}
+
+.terms__container p:nth-of-type(2) {
+  margin-bottom: 5px;
+}
+
+.terms__container p:nth-of-type(3) {
+  margin-top: 10px;
+}
+
+.terms__container > p {
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+  text-align: justify;
+}
+
+.terms__container > h2 {
+  font-size: clamp(
+    var(--title-mobile-tertiary),
+    calc(
+      var(--title-mobile-tertiary) + (32 - 16) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--paragraph-desktop)
+  );
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+}
+@media (1024px <= width) {
+}
+@media (1280px <= width) {
+}

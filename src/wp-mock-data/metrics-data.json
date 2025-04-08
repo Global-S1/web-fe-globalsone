@@ -1,0 +1,14 @@
+{
+  "clients": {
+    "label": "Clientes",
+    "quantity": "+20"
+  },
+  "projects": {
+    "label": "Proyectos",
+    "quantity": "+30 "
+  },
+  "yearsExperience": {
+    "label": "Años de experiencia",
+    "quantity": "+6"
+  }
+}

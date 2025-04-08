@@ -1,0 +1,114 @@
+.message__container {
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid rgba(145, 145, 145, 0.68);
+  background: linear-gradient(
+    270deg,
+    rgba(217, 217, 217, 0.29) 0%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  height: clamp(
+    382px,
+    calc(382px + (520 - 382) * ((90vw - 360px) / (1200 - 360))),
+    520px
+  );
+  padding-top: 20px;
+}
+.message__container > h2 {
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
+  text-align: center;
+}
+
+.message__container > p {
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
+  );
+  text-align: center;
+  line-height: clamp(
+    21px,
+    calc(21px + (39 - 21) * ((90vw - 360px) / (1200 - 360))),
+    39px
+  );
+  width: 80%;
+  font-family: var(--font-futura);
+}
+
+.message__container > a {
+  background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+  margin: 31px 0 15px 0;
+  border-radius: 12px;
+}
+
+.message__container > span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+  font-family: var(--font-urbanist);
+}
+
+.icons__container {
+  display: flex;
+  column-gap: 5px;
+}
+
+.icons__container > a {
+  cursor: pointer;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  background-color: #544dd2;
+}
+.icons__container > a:hover {
+  transform: scale(1.2);
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+  .message__container {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    max-height: none;
+  }
+  .message__container > a {
+    border-radius: 12px;
+  }
+
+  .icons__container {
+    column-gap: 10px;
+  }
+  .icons__container > a {
+    background: linear-gradient(127deg, #995af0 18.95%, #6d0cbc 90.47%);
+  }
+}
+
+@media (1024px <= width) {
+  .message__container > button {
+    border-radius: 15px;
+    font-size: 22px;
+  }
+  .icons__container > a {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (1280px <= width) {
+}

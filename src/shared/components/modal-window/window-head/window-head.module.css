@@ -1,0 +1,78 @@
+.windowHead_container {
+  position: absolute;
+  left: -0.15%;
+  top: -0.15%;
+  width: 100%;
+  z-index: 1;
+}
+.windowHead_container > div {
+  position: relative;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 1.7%;
+  width: fit-content;
+  display: flex;
+  transform: translateY(-150%);
+  column-gap: 2.1px;
+}
+
+.controls > div {
+  width: 3.8px;
+  height: 3.8px;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #7f87b7;
+}
+.disable {
+  background-color: #0e1330;
+}
+
+@media (640px <= width) {
+  .controls {
+    column-gap: 4px;
+    transform: translateY(-150%);
+  }
+  .controls > div {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (768px <= width) {
+  .controls {
+    column-gap: 5px;
+    transform: translateY(-150%);
+  }
+  .controls > div {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+@media (1024px <= width) {
+  .controls {
+    transform: translateY(-150%);
+  }
+  .controls > div {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (1280px <= width) {
+  .controls {
+    column-gap: 7px;
+    transform: translateY(-150%);
+  }
+  .controls > div {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (1536px <= width) {
+}

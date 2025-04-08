@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-gb-color: #0f032a;
+  --custom-color-green: #19dbca;
+  --custom-color-purple: #afb0ff;
+
+  --title-desktop-primary: 4.0625rem;
+  --title-desktop-secondary: 2.8125rem;
+  --title-desktop-tertiary: 2.5rem;
+  --paragraph-desktop: 2rem;
+  --button-desktop: 1.875rem;
+  --secondary-text-desktop: 1.375rem;
+
+  --title-mobile-primary: 1.5625rem;
+  --title-mobile-secondary: 1.25rem;
+  --title-mobile-tertiary: 1rem;
+  --paragraph-mobile: 0.875rem;
+  --button-mobile: 0.875rem;
+  --secondary-text-mobile: 0.625rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-gb-color);
+  color: white;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-family: "Futura", var(--font-futura);
+}
+
+#data-protection {
+  scroll-margin-top: 50px;
+}

@@ -1,0 +1,120 @@
+.inside__section {
+  position: relative;
+  padding-top: clamp(
+    64px,
+    calc(64px + (300 - 64) * ((90vw - 360px) / (1200 - 360))),
+    244px
+  );
+}
+
+.leave_base {
+  display: none;
+}
+
+.inside__body__container {
+  height: clamp(
+    445px,
+    calc(445px + (523 - 445) * ((90vw - 360px) / (1200 - 360))),
+    523px
+  );
+
+  width: 100%;
+  border-top-left-radius: clamp(
+    7px,
+    calc(7px + (40 - 7) * ((90vw - 360px) / (1200 - 360))),
+    40px
+  );
+  border-top-right-radius: clamp(
+    7px,
+    calc(7px + (40 - 7) * ((90vw - 360px) / (1200 - 360))),
+    40px
+  );
+  border-bottom-left-radius: clamp(
+    17px,
+    calc(7px + (40 - 7) * ((90vw - 360px) / (1200 - 360))),
+    40px
+  );
+  border-bottom-right-radius: clamp(
+    17px,
+    calc(7px + (40 - 7) * ((90vw - 360px) / (1200 - 360))),
+    40px
+  );
+  background: #342f64;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  -webkit-box-shadow: 0px 5px 8px 2px rgba(74, 67, 96, 1);
+  -moz-box-shadow: 0px 5px 8px 2px rgba(74, 67, 96, 1);
+  box-shadow: 0px 5px 8px 2px rgba(74, 67, 96, 1);
+  padding: 0 16px;
+}
+.inside__body__container > div {
+  margin-bottom: clamp(
+    14px,
+    calc(14px + (83 - 14) * ((90vw - 360px) / (1200 - 360))),
+    83px
+  );
+}
+.inside__body__container > h2 {
+  text-align: center;
+  font-family: var(--font-grandis);
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(25px + (45 - 25) * ((90vw - 360px) / (1200 - 360))),
+    var(--title-desktop-secondary)
+  );
+  line-height: clamp(
+    37.5px,
+    calc(37.5px + (51.66 - 37.5) * ((90vw - 360px) / (1200 - 360))),
+    51.66px
+  );
+  margin-bottom: clamp(
+    8px,
+    calc(8px + (64 - 8) * ((90vw - 360px) / (1200 - 360))),
+    64px
+  );
+}
+@media (640px <= width) {
+  .inside__body__container {
+    background: linear-gradient(
+      180deg,
+      #0e13308b 0%,
+      rgba(83, 43, 214, 0.32) 100%
+    );
+    background-blend-mode: color-dodge;
+    box-shadow: none;
+  }
+}
+
+@media (768px <= width) {
+}
+
+@media (1024px <= width) {
+  .leave_base {
+    display: inline-block;
+    position: absolute;
+  }
+
+  .leave_one {
+    width: 140px;
+    right: -4%;
+    top: -8.5%;
+    z-index: -1;
+  }
+
+  .leave_two {
+    width: 220.748px;
+    height: 214.556px;
+    z-index: 1;
+    top: -33%;
+    right: -3%;
+    transform: rotate(-55deg);
+  }
+}
+
+@media (1280px <= width) {
+  .inside__body__container {
+    justify-content: flex-end;
+  }
+}

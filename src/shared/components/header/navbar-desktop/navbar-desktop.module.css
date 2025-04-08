@@ -1,0 +1,32 @@
+.navbar__desk__container {
+  display: none;
+}
+
+@media (640px <= width) {
+  .navbar__desk__container {
+    display: block;
+  }
+  .navbar__desk__list {
+    display: flex;
+    font-size: clamp(
+      var(--paragraph-mobile),
+      calc(
+        var(--paragraph-mobile) + (22 - 14) * ((80vw - 360px) / (1200 - 360))
+      ),
+      var(--secondary-text-desktop)
+    );
+    font-family: var(--font-urbanist);
+    column-gap: clamp(
+      10px,
+      calc(10px + (22 - 14) * ((80vw - 360px) / (1200 - 360))),
+      24px
+    );
+    font-family: var(--font-urbanist);
+  }
+}
+@media (768px <= width) {
+}
+@media (1024px <= width) {
+}
+@media (1280px <= width) {
+}

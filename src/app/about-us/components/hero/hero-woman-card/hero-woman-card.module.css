@@ -1,0 +1,135 @@
+.avatarCards__float__container_woman {
+  position: absolute;
+  top: 12%;
+  left: 57%;
+  transform: translateX(-50%);
+}
+.avatar__woman__card {
+  position: absolute;
+  width: 78px;
+  height: 120px;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.description > h3 {
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
+  );
+  text-align: center;
+}
+
+.action__btn {
+  cursor: pointer;
+  display: block;
+  background: rgba(217, 217, 217, 0.37);
+  width: 100%;
+  font-family: var(--font-futura);
+  border-radius: 8px;
+  font-size: clamp(
+    var(--button-mobile),
+    calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--button-desktop)
+  );
+  text-align: center;
+  padding: 0 3px;
+  width: 97%;
+}
+
+.leaf {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  z-index: 5;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0%;
+  right: 0%;
+  transform: rotate(-90deg) translateX(0%) translateY(40%);
+}
+
+@media (400px <= width) {
+  .avatarCards__float__container_woman {
+    top: 7%;
+    left: 59%;
+  }
+}
+@media (450px <= width) {
+}
+@media (640px <= width) {
+  .avatarCards__float__container_woman {
+    top: 9%;
+    right: 0%;
+    transform: translateX(-60%);
+  }
+  .avatar__woman__card {
+    width: 138.38px;
+    height: 212.89px;
+  }
+  .action__btn {
+    border-radius: 39px;
+    width: 90%;
+  }
+
+  .leaf {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (768px <= width) {
+  .avatarCards__float__container_woman {
+    top: 40%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .avatar__woman__card {
+    width: 173px;
+    height: 266.11px;
+  }
+
+  .leaf {
+    width: 60px;
+    height: 60px;
+    transform: rotate(0deg) translate(20%, -20%);
+  }
+}
+@media (1024px <= width) {
+  .avatar__woman__card {
+    width: 207.6px;
+    height: 319.34px;
+  }
+
+  .leaf {
+    width: 90px;
+    height: 90px;
+    transform: rotate(0deg) translate(30%, -36%);
+  }
+}
+@media (1280px <= width) {
+  .avatarCards__float__container_woman {
+    top: 47%;
+    right: -10%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .avatar__woman__card {
+    width: 259.5px;
+    height: 399.17px;
+  }
+
+  .leaf {
+    width: 110px;
+    height: 110px;
+    transform: rotate(0deg) translate(30%, -36%);
+  }
+}

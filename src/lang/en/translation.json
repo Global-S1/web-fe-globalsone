@@ -1,0 +1,14 @@
+{
+    "errors": {
+      "phone": "phone",
+      "email": "email",
+      "name": "name",
+      "lastName": "last name",
+      "requirements": "project type",
+      "description": "message",
+      "terms": "terms and conditions"
+    },
+    "messages": {
+      "fieldError": "There is an error in the field “{{field}}”. Please check and fill out the field."
+    }
+  }

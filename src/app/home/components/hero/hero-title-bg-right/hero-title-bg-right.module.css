@@ -1,0 +1,65 @@
+.bg_container {
+  display: none;
+}
+
+.bg_line_one {
+  width: 404px;
+  height: 27px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #19dbca 0%, #19db95 100%);
+  filter: blur(52.95000076293945px);
+}
+
+.bg_line_two {
+  width: 488px;
+  height: 27px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #19dbca 0%, #19db95 100%);
+  filter: blur(52.95000076293945px);
+}
+
+.bg_line_three {
+  width: 365px;
+  height: 29px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #19dbca 0%, #19db95 100%);
+  filter: blur(52.95000076293945px);
+}
+
+@media (425px <= width) {
+}
+@media (640px <= width) {
+  .bg_container {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 16%;
+    right: -30%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+  }
+}
+@media (768px <= width) {
+  .bg_container {
+    bottom: 18%;
+    right: -20%;
+    height: 150px;
+  }
+}
+@media (1024px <= width) {
+  .bg_container {
+    bottom: 15%;
+    right: -10%;
+    height: 200px;
+  }
+}
+@media (1280px <= width) {
+  .bg_container {
+    bottom: 7%;
+    right: 5%;
+    height: 300px;
+  }
+}

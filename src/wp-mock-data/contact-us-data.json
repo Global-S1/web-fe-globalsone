@@ -1,0 +1,57 @@
+{
+  "formData": {
+    "title": "Platícanos de tu proyecto",
+    "content": "Nos entusiasma comunicarnos con usted y conocer más sobre sus objetivos. Utilice el formulario a continuación para ponerse en contacto con nuestro equipo. Ya sea que sea un dueño de negocio, un socio o simplemente sienta curiosidad por nuestros servicios, estamos aquí para responder sus preguntas y brindarle la asistencia que necesita.",
+    "services": [
+      "Plataforma de CRM",
+      "Plataformas de educación",
+      "Plataforma de Traiding (LMS)",
+      "Plataformas de gestión empresarial (ERP)",
+      "Aplicaciones Móviles",
+      "e-Commerce",
+      "Integración con apps",
+      "Restaurantes",
+      "Hotelería",
+      "Inteligencia artificial"
+    ],
+    "terms": [
+      {
+        "text": "Estoy de acuerdo con los",
+        "highlight": false
+      },
+      {
+        "text": "Términos de uso",
+        "highlight": true
+      },
+      {
+        "text": "y ",
+        "highlight": false
+      },
+      {
+        "text": "la Política de privacidad",
+        "highlight": true
+      }
+    ]
+  },
+
+  "contactData": {
+    "city": "Nuestras oficinas en Lima, Perú.",
+    "description": "Nuestra sede principal se encuentra en el corazón del centro de Lima. Desde aquí, nuestro equipo de expertos impulsa soluciones tecnológicas avanzadas para nuestros clientes.",
+    "email": "contacto@globals.one",
+    "phone": "(+51) 902 594 035",
+    "address": "Av República de Chile 772, Jesus María 15072"
+  },
+
+  "ourTeam": {
+    "title": "Hacemos realidad proyectos más ambiciosos",
+    "description": "En Global S1, creemos en la tecnología como un aliado de la naturaleza. Nuestro equipo se esfuerza por desarrollar soluciones que no solo impulsen la innovación, sino que también respeten el entorno, integrando prácticas sostenibles en cada proyecto que realizamos.",
+    "groupImages": [
+      "https://content.globals.one/wp-content/uploads/2024/10/703255B9-FDAD-4F65-9906-E0FE77CB31EB-1.png",
+      "https://content.globals.one/wp-content/uploads/2024/10/Mask-group.png",
+      "https://content.globals.one/wp-content/uploads/2024/10/onin.png",
+      "https://content.globals.one/wp-content/uploads/2024/10/team.png",
+      "https://content.globals.one/wp-content/uploads/2024/10/daniel.png",
+      "https://content.globals.one/wp-content/uploads/2024/10/peter.png"
+    ]
+  }
+}

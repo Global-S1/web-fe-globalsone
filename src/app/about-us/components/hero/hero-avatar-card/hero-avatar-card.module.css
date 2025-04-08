@@ -1,0 +1,114 @@
+.avatarCard__container {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 6, 43, 1) 7%,
+    rgba(101, 42, 198, 1) 100%
+  );
+  width: 119px;
+  height: 192px;
+  padding: 5px;
+  padding-bottom: clamp(
+    7px,
+    calc(7px + (39.18 - 7) * ((90vw - 360px) / (1200 - 360))),
+    39.18px
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.avatarCard__bullets__container {
+  display: flex;
+  column-gap: 1px;
+}
+
+.avatarCard__bullets__container > div {
+  width: 1.912px;
+  height: 1.912px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.avatarCard__text__container > h3 {
+  text-align: center;
+  font-size: 9px;
+  line-height: 13.5px;
+  margin-bottom: 10%;
+}
+
+@media (400px <= width) {
+}
+
+@media (450px <= width) {
+  .avatarCard__container {
+    width: 122px;
+    height: 196.42px;
+  }
+}
+
+@media (500px <= width) {
+  .avatarCard__container {
+    width: 135px;
+    height: 214.42px;
+  }
+}
+
+@media (640px <= width) {
+  .avatarCard__container {
+    width: 183.68px;
+    height: 306.84px;
+  }
+}
+
+@media (768px <= width) {
+  .avatarCard__container {
+    width: 219.6px;
+    height: 353.55px;
+  }
+
+  .avatarCard__bullets__container {
+    column-gap: 3px;
+  }
+
+  .avatarCard__bullets__container > div {
+    width: 3.5px;
+    height: 3.5px;
+  }
+
+  .avatarCard__text__container > h3 {
+    font-size: 18px;
+  }
+}
+
+@media (1024px <= width) {
+  .avatarCard__container {
+    width: 291.2px;
+    height: 471.2px;
+    border-radius: 15px;
+  }
+}
+
+@media (1280px <= width) {
+  .avatarCard__container {
+    width: 364px;
+    height: 589px;
+    border-radius: 17px;
+  }
+
+  .avatarCard__bullets__container {
+    column-gap: 5px;
+    padding: 25px 19px;
+  }
+
+  .avatarCard__bullets__container > div {
+    width: 7px;
+    height: 7px;
+  }
+
+  .avatarCard__text__container > h3 {
+    font-size: 27px;
+  }
+}
