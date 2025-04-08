@@ -1,0 +1,34 @@
+.slice__body__container {
+  position: relative;
+  height: 100%;
+}
+.slice__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.text__container {
+  position: absolute;
+  z-index: 2;
+  bottom: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.text__container > h3 {
+  font-family: var(--font-grandis);
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.text__container > p {
+  font-family: "Futura", var(--font-futura);
+  font-size: 11px;
+}

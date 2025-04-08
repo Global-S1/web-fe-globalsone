@@ -1,0 +1,15 @@
+.ourTeam__section {
+  margin-bottom: 56px;
+}
+
+@media (640px <= width) {
+}
+@media (768px <= width) {
+  .ourTeam__section {
+    margin-bottom: 222px;
+  }
+}
+@media (1024px <= width) {
+}
+@media (1280px <= width) {
+}

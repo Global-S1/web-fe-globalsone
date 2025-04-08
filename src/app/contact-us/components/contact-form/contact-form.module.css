@@ -1,0 +1,467 @@
+.section__from {
+  position: relative;
+  margin-top: 79px;
+}
+
+.form__container {
+  position: relative;
+  border: 0.5px solid rgba(255, 255, 255, 0.223);
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 12px;
+  padding-bottom: 12px;
+  background: linear-gradient(
+    270deg,
+    rgba(217, 217, 217, 0.29) 0%,
+    rgba(115, 115, 115, 0) 50%
+  );
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__text__container > h2 {
+  font-family: var(--font-grandis);
+  font-size: clamp(
+    var(--title-mobile-primary),
+    calc(
+      var(--title-mobile-primary) + (65 - 25) * ((90vw - 360px) / (1200 - 360))
+    ),
+    var(--title-desktop-primary)
+  );
+  margin-top: 8%;
+}
+
+.form__text__container > p {
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (32 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--paragraph-desktop)
+  );
+  line-height: clamp(
+    21px,
+    calc(21px + (48 - 21) * ((90vw - 360px) / (1200 - 360))),
+    48px
+  );
+  text-align: justify;
+  font-family: "Futura", var(--font-futura);
+}
+
+.inputs__grid {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 9px;
+  justify-content: space-between;
+}
+
+.inputs__grid > input,
+.inputs__grid > textarea {
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 11px;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+
+  font-family: var(--font-futura);
+  border: none;
+  background: rgba(217, 217, 217, 0.244);
+  color: white;
+}
+.phone__input {
+  width: 100%;
+  border-radius: 11px;
+  display: flex;
+}
+
+.phone__input .select__country {
+  display: block;
+  width: 22%;
+  min-width: none;
+  max-width: 74px;
+  background: rgba(217, 217, 217, 0.244);
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border: none;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    22px
+  );
+  font-family: "Futura", var(--font-futura);
+  padding-left: 0px;
+  padding-right: 2px;
+  text-align: center;
+}
+.select__country > option {
+  background-color: transparent;
+  color: black;
+}
+
+.phone__input .select__country::placeholder {
+  text-align: center;
+  font-family: "Futura", var(--font-futura);
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+  color: rgba(255, 255, 255, 0.483);
+}
+
+.phone__input .inputNumber {
+  flex: 1;
+  background: none;
+  width: 100%;
+  background: rgba(217, 217, 217, 0.244);
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  border: none;
+  color: white;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+  font-family: "Futura", var(--font-futura);
+  padding-left: 5px;
+}
+
+.phone__input .inputNumber::placeholder {
+  color: rgba(255, 255, 255, 0.483);
+  font-family: "Futura", var(--font-futura);
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+}
+
+.inputs__grid .select__requirements {
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 11px;
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+  font-family: "Futura", var(--font-futura);
+  border: none;
+  background: rgba(217, 217, 217, 0.244);
+  background-position: 4%;
+  background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  padding-left: 11%;
+}
+
+.select__requirements > option {
+  background-color: transparent;
+  color: black;
+}
+.inputs__grid > input::placeholder,
+.inputs__grid > textarea::placeholder {
+  color: rgba(255, 255, 255, 0.483);
+}
+
+.inputs__grid input:nth-child(1),
+.inputs__grid input:nth-child(2) {
+  width: 48%;
+}
+
+.inputs__grid > textarea {
+  resize: none;
+  height: 110px;
+  margin-top: 19px;
+}
+.inputs__grid > textarea {
+  resize: none;
+  padding: 16px;
+}
+
+.select__requirements {
+  position: relative;
+  width: 100%;
+}
+
+.terms_container {
+  display: flex;
+  column-gap: 5px;
+  margin-bottom: 14px;
+}
+.terms_container > input {
+  margin-top: 7px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.terms_container > label {
+  font-family: "Futura", var(--font-futura);
+  font-size: clamp(
+    var(--paragraph-mobile),
+    calc(var(--paragraph-mobile) + (22 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--secondary-text-desktop)
+  );
+}
+.terms_container > label > span {
+  margin-left: 5px;
+}
+
+.submit__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button__base__styles {
+  width: 100%;
+  max-width: 478px;
+  height: clamp(
+    40px,
+    calc(40px + (59.829 - 40) * ((90vw - 360px) / (1200 - 360))),
+    59.829px
+  );
+  font-size: clamp(
+    var(--button-mobile),
+    calc(var(--button-mobile) + (30 - 14) * ((90vw - 360px) / (1200 - 360))),
+    var(--button-desktop)
+  );
+  font-family: "Futura", var(--font-futura);
+  border-radius: clamp(
+    12px,
+    calc(32px + (478.859 - 12) * ((90vw - 360px) / (1200 - 360))),
+    32px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__form {
+  font-family: "Futura", var(--font-futura);
+  background-color: #544dd2;
+  -webkit-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 1px 11px 14px 7px rgba(0, 0, 0, 0.76);
+  box-shadow: -1px 4px 8px 0px rgb(0 0 0 / 34%);
+}
+
+.button__form__loading {
+  background-color: #8980bb;
+}
+
+.loader {
+  width: 25px;
+  width: clamp(
+    25px,
+    calc(25px + (40 - 25) * ((90vw - 360px) / (1200 - 360))),
+    40px
+  );
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border-width: clamp(
+    5px,
+    calc(5px + (8 - 5) * ((90vw - 360px) / (1200 - 360))),
+    8px
+  );
+  border-style: solid;
+  border-color: #ffff #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+.alert {
+  background: rgba(253, 12, 12, 0.8);
+  padding: 13px;
+  border-radius: 11px;
+}
+.alert > p {
+  font-size: clamp(
+    11px,
+    calc(11px + (22 - 11) * ((90vw - 360px) / (1200 - 360))),
+    22px
+  );
+}
+
+.magenta__circle {
+  position: absolute;
+  width: 480px;
+  height: 389px;
+  border-radius: 39px 39px 0px 0px;
+  background: radial-gradient(
+    56.18% 55.77% at 54.11% 46.19%,
+    rgba(144, 45, 172, 0.66) 36%,
+    rgba(14, 3, 42, 0) 100%
+  );
+  right: -15%;
+  top: 20%;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.inputNumber {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
+}
+@media (640px <= width) {
+  .section__from {
+    margin-bottom: 50px;
+  }
+  .form__container {
+    border-radius: 40px;
+  }
+
+  .submit__container {
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+    justify-content: space-between;
+  }
+  .terms_container {
+    column-gap: 15px;
+  }
+
+  .terms_container > input {
+    width: 23px;
+    height: 23px;
+  }
+
+  .select__requirements {
+    padding-left: 55px;
+  }
+
+  .phone__input .select__country {
+    width: 30%;
+    max-width: 100px;
+  }
+}
+@media (768px <= width) {
+  .section__from {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .magenta__circle {
+    width: 680px;
+    height: 389px;
+    border-radius: 39px 39px 0px 0px;
+    background: radial-gradient(
+      56.18% 55.77% at 54.11% 46.19%,
+      rgba(144, 45, 172, 0.66) 36%,
+      rgba(14, 3, 42, 0) 100%
+    );
+    filter: blur(61.349998474121094px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -30%;
+    z-index: -10;
+  }
+  .select__requirements {
+    background-position: 20px;
+    padding-left: 50px;
+  }
+  .submit__container {
+    flex-direction: row;
+  }
+  .terms_container {
+    margin: 0;
+  }
+}
+@media (1024px <= width) {
+  .section__from {
+    margin-top: 100px;
+    margin-bottom: 130px;
+  }
+  .form__container {
+    padding: 0 58px;
+    padding-bottom: 56px;
+  }
+  .form__text__container > h2 {
+    margin-top: 7%;
+  }
+
+  .inputs__grid {
+    height: 226px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 25px;
+    gap: 10px;
+  }
+  .inputs__grid > input::placeholder,
+  .inputs__grid > textarea::placeholder {
+    color: white;
+  }
+  .inputs__grid > input {
+    padding-left: 27px;
+    color: white;
+  }
+  .select__requirements {
+    background-position: 4%;
+    padding-left: 45px;
+    grid-column: 1 / 3;
+    padding-left: 27px;
+    color: white;
+  }
+  .inputs__grid > textarea {
+    grid-row: 1 / 4;
+    grid-column: 3 / 4;
+    height: 100%;
+    width: 425px;
+    margin-top: 0;
+    color: white;
+  }
+  .inputs__grid input:nth-child(1),
+  .inputs__grid input:nth-child(2) {
+    width: 100%;
+  }
+
+  .submit__container {
+    display: flex;
+  }
+  .magenta__circle {
+    width: 1100px;
+    height: 729px;
+    bottom: -13%;
+  }
+
+  .phone__input .select__country {
+    width: 100%;
+    max-width: 97px;
+    text-align: center;
+    padding-left: 10px;
+  }
+}
+@media (1280px <= width) {
+  .inputs__grid {
+    column-gap: 13px;
+    row-gap: 14px;
+  }
+  .inputs__grid > textarea {
+    width: 525px;
+    height: 226px;
+  }
+
+  .phone__input .inputNumber {
+    /* padding-left: 10px; */
+  }
+}

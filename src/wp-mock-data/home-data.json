@@ -1,0 +1,156 @@
+{
+  "hero": {
+    "title": {
+      "left": "Impulsa tu negocio con",
+      "right": "soluciones de software a medida"
+    }
+  },
+  "insidesSection": "TRABAJA CON PROFESIONALES Y VE COMO TUS IDEAS SE DIGITALIZAN",
+  "features": [
+    {
+      "title": [
+        { "text": "Desarrollamos", "styles": "" },
+        { "text": "software", "styles": "title_styles_one" },
+        { "text": "personalizado", "styles": "title_styles_two" },
+        { "text": "para las necesidades específicas de", "styles": "" },
+        { "text": "tu industria.", "styles": "title_styles_three" },
+        { "text": "", "styles": "" },
+        { "text": "", "styles": "" }
+      ],
+      "content": "Pensamos en tus necesidades y creamos software a tu medida, adaptado a los desafíos únicos de tu industria para ayudarte a alcanzar tus metas.",
+      "img": "",
+      "reverse": false
+    },
+    {
+      "title": [
+        {
+          "text": "Optimiza tus ventas online con",
+          "styles": ""
+        },
+        {
+          "text": "plataformas",
+          "styles": "title_styles_four"
+        },
+        {
+          "text": "robustas y seguras.",
+          "styles": "title_styles_five"
+        },
+        {
+          "text": "",
+          "styles": ""
+        },
+        {
+          "text": "",
+          "styles": ""
+        },
+        {
+          "text": "",
+          "styles": ""
+        },
+        {
+          "text": "",
+          "styles": ""
+        }
+      ],
+      "content": "Nos enfocamos en ofrecerte plataformas confiables y seguras que potencien tu negocio, ayudándote a optimizar cada venta y mejorar la experiencia de tus clientes online.",
+      "img": "https://localhost:8000/wp-content/uploads/2024/10/Group-48096346.png",
+      "reverse": true
+    },
+    {
+      "title": [
+        {
+          "text": "Implementa",
+          "styles": ""
+        },
+        {
+          "text": "tecnología",
+          "styles": "title_styles_one"
+        },
+        {
+          "text": "que mejora la",
+          "styles": ""
+        },
+        {
+          "text": "atención",
+          "styles": "title_styles_two"
+        },
+        {
+          "text": "y",
+          "styles": ""
+        },
+        {
+          "text": "gestión",
+          "styles": "title_styles_three"
+        },
+        {
+          "text": "de tu empresa.",
+          "styles": ""
+        }
+      ],
+      "content": "Te ayudamos a implementar tecnología que optimiza la atención al cliente y agiliza la gestión interna, mejorando la eficiencia y el rendimiento de tu empresa.",
+      "img": "",
+      "reverse": false
+    }
+  ],
+  "whatwebuild": {
+    "title": "¿Tienes una idea? <br /> NOSOTROS LO DESARROLLAMOS <br /> POR TÍ",
+    "services": [
+      {
+        "title": "Plataforma de Traiding",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/trading-plataform.png",
+        "alt": "Desarrollamos Plataforma de Traiding"
+      },
+      {
+        "title": "Aplicaciones Móviles",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/app-mobil.png",
+        "alt": "Desarrollamos Aplicaciones Móviles"
+      },
+      {
+        "title": "Ecommerce",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/ecommerce.png",
+        "alt": "Desarrollamos plataformas Ecommerce"
+      },
+      {
+        "title": "CRM para Negocios y Empresas",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/crm-plataform.png",
+        "alt": "Desarrollamos Plataformas CRM"
+      },
+      {
+        "title": "Conexión entre diferentes Apps",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/apis.png",
+        "alt": "Desarrollamos Integración de Apps"
+      }
+    ]
+  },
+  "ourService": {
+    "title": "NUESTROS PRINCIPALES SERVICIOS",
+    "services": [
+      {
+        "title": "Diseño web",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/videoPlayer.png",
+        "content": "Creamos sitios web atractivos que reflejan tu marca."
+      },
+      {
+        "title": "UX/UI",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/tags.png",
+        "content": "Diseñamos experiencias intuitivas para una navegación fluida."
+      },
+      {
+        "title": "Desarrollo de Software",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/cpu.png",
+        "content": "Soluciones de software personalizadas para tu negocio."
+      },
+      {
+        "title": "Consultoria",
+        "img": "https://localhost:8000/wp-content/uploads/2024/10/users.png",
+        "content": "Asesoramos en estrategias tecnológicas."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "LO QUE DICEN NUESTROS CLIENTES"
+  },
+  "contactDescription": {
+    "title": "¿Listo para transformar tu negocio?"
+  }
+}

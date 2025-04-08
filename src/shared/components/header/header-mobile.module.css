@@ -1,0 +1,151 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 79px;
+  width: 100%;
+  background: linear-gradient(180deg, #1a0258 0%, rgba(87, 62, 151, 0) 100%);
+  z-index: 100;
+}
+.header__container {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  padding-left: 16px;
+}
+
+.opacity__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -21;
+}
+.isBlur {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);
+}
+
+.logo__mobile {
+  position: absolute;
+  top: -11px;
+  left: 43%;
+  transform: translateX(-50%);
+  display: block;
+  width: clamp(
+    113px,
+    calc(113px + (196 - 113) * ((80vw - 360px) / (1200 - 360))),
+    196px
+  );
+}
+
+.contact__btn {
+  position: absolute;
+  background-color: white;
+  color: black;
+  font-size: clamp(
+    var(--button-mobile),
+    calc(var(--button-mobile) + (30 - 14) * ((80vw - 360px) / (1200 - 360))),
+    var(--button-desktop)
+  );
+  height: clamp(
+    20px,
+    calc(20px + (44.859 - 20) * ((80vw - 360px) / (1200 - 360))),
+    44.859px
+  );
+  width: clamp(
+    108px,
+    calc(108px + (238 - 108) * ((80vw - 360px) / (1200 - 360))),
+    238px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: clamp(
+    3px,
+    calc(3px + (9 - 3) * ((80vw - 360px) / (1200 - 360))),
+    9px
+  );
+  border-radius: 25px;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-urbanist);
+}
+
+.contact__btn:active {
+  animation: pressEffect 0.3s forwards;
+}
+
+@keyframes pressEffect {
+  0% {
+    transform: scale(1.1) translateY(-50%);
+  }
+  100% {
+    transform: scale(1) translateY(-50%);
+  }
+}
+
+.contact__btn > div {
+  width: clamp(
+    13px,
+    calc(13px + (22 - 13) * ((80vw - 360px) / (1200 - 360))),
+    22px
+  );
+}
+
+@media (640px <= width) {
+  .header {
+    background: linear-gradient(
+      180deg,
+      rgba(75, 49, 138, 1) 0%,
+      rgba(78, 53, 142, 0) 92%
+    );
+    display: flex;
+  }
+  .logo__mobile {
+    left: 55%;
+    top: -5%;
+  }
+}
+
+@media (768px <= width) {
+  .logo__mobile {
+    left: 50%;
+  }
+  .contact__btn {
+    right: 2%;
+  }
+
+  .contact__btn:active {
+    animation: none;
+  }
+  .contact__btn:hover {
+    background: linear-gradient(115deg, #6329c1 -4.75%, #1eb088 91.61%);
+    color: white;
+    transform: scaleX(1.1);
+    top: -3%;
+  }
+
+  .contact__btn:hover svg path {
+    stroke: white;
+  }
+}
+
+@media (1024px <= width) {
+  .logo__mobile {
+    left: 53%;
+  }
+}
+
+@media (1280px <= width) {
+  .logo__mobile {
+    left: 51.2%;
+  }
+  .contact__btn {
+    right: 0;
+  }
+  .header__container {
+    padding: 0;
+  }
+}

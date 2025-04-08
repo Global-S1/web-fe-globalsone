@@ -1,0 +1,63 @@
+.avatarCards__float__container_man {
+  position: absolute;
+  top: 5%;
+  left: 31%;
+  transform: rotate(-12deg) translate(-50%) scale(0.85);
+}
+.avatar__man__card {
+  position: absolute;
+  width: 82.84px;
+  height: 114.361px;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (400px <= width) {
+  .avatarCards__float__container_man {
+    top: 1%;
+    left: 24%;
+  }
+}
+@media (450px <= width) {
+}
+
+@media (640px <= width) {
+  .avatarCards__float__container_man {
+    top: 5%;
+    left: 42%;
+    transform: rotate(-12deg) translate(-50%) scale(0.87);
+  }
+  .avatar__man__card {
+    width: 146.96px;
+    height: 202.89px;
+  }
+}
+@media (768px <= width) {
+  .avatarCards__float__container_man {
+    top: 38%;
+    left: 49%;
+    transform: rotate(-12deg) translateX(-50%) translateY(-50%) scale(0.87);
+  }
+
+  .avatar__man__card {
+    width: 183.7px;
+    height: 253.61px;
+  }
+}
+@media (1024px <= width) {
+  .avatar__man__card {
+    width: 220.44px;
+    height: 304.34px;
+  }
+}
+@media (1280px <= width) {
+  .avatarCards__float__container_man {
+    top: 37%;
+    left: 49%;
+    transform: rotate(-12deg) translateX(-50%) translateY(-50%) scale(0.87);
+  }
+  .avatar__man__card {
+    width: 309.55px;
+    height: 380.42px;
+  }
+}

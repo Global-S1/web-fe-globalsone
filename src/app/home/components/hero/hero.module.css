@@ -1,0 +1,46 @@
+.hero__section {
+  position: relative;
+  height: 100vh;
+  min-width: 328px;
+  min-height: 494px;
+  max-height: 500px;
+  margin-top: 79px;
+}
+.hero__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bg__light {
+  display: none;
+}
+
+@media (640px <= width) {
+}
+
+@media (768px <= width) {
+  .hero__section {
+    height: calc(100vh - 79px);
+    min-height: calc(700px - 79px);
+    max-height: calc(800px - 79px);
+  }
+
+  .bg__light {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center 70px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+}
+
+@media (1024px <= width) {
+}
+
+@media (1280px <= width) {
+}

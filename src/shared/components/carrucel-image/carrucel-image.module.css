@@ -1,0 +1,131 @@
+.carrucel__container {
+  display: none;
+}
+
+@media (640px <= width) {
+  .carrucel__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrucel__viewport {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .arrow_left {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 1%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .arrow_left:active {
+    animation: pressEffect 0.3s forwards;
+  }
+
+  .arrow_right {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 1%;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .arrow_right:active {
+    animation: pressEffect 0.3s forwards;
+  }
+
+  @keyframes pressEffect {
+    0% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+@media (768px <= width) {
+  .carrucel__viewport {
+    width: 85%;
+  }
+
+  .arrow_left {
+    width: 40px;
+    height: 40px;
+    left: 0%;
+  }
+
+  .arrow_right {
+    width: 40px;
+    height: 40px;
+    right: 0%;
+  }
+}
+@media (1024px <= width) {
+  .arrow_left {
+    width: 50px;
+    height: 50px;
+    left: 1%;
+  }
+
+  .arrow_right {
+    width: 50px;
+    height: 50px;
+    right: 1%;
+  }
+}
+@media (1280px <= width) {
+  .carrucel__container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrucel__viewport {
+    justify-content: center;
+    align-items: center;
+  }
+  .opacity__left {
+    position: absolute;
+    height: 143%;
+    background: #0e032a;
+    z-index: 5;
+    left: -5.5%;
+    width: 120px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    filter: blur(23px);
+  }
+  .opacity__right {
+    position: absolute;
+    height: 126%;
+    background: #0e032a;
+    z-index: 5;
+    width: 122px;
+    right: -6%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: blur(23px);
+  }
+  .arrow_left {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0%;
+  }
+  .arrow_right {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 0%;
+  }
+}
