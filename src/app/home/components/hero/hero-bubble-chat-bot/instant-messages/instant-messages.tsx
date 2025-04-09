@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Props {
   messages: string[];
@@ -10,8 +10,6 @@ interface Props {
 
 export const InstantMessages = ({ messages, sendMessages }: Props) => {
   const contentRef = useRef<HTMLDivElement>(null);
-  const [isAllLeft, setIsAllLeft] = useState<boolean>(false);
-  const [isAllRight, setIsAllRight] = useState<boolean>(false);
 
   const buttonVariants = (index: number): Variants => ({
     hidden: {
@@ -24,7 +22,7 @@ export const InstantMessages = ({ messages, sendMessages }: Props) => {
         delay: index * 0.2,
         type: "spring",
         stiffness: 300,
-        damping: 10,
+        damping: 20,
       },
     },
   });

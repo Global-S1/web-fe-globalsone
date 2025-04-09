@@ -1,9 +1,7 @@
 "use client";
 
 import { IMessage } from "@/app/chat-bot/interfaces/chat-bot.interface";
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Markdown from "react-markdown";
 
 interface Props {
@@ -11,37 +9,10 @@ interface Props {
 }
 
 export const Messages = ({ messages }: Props) => {
-  const chatRef = useRef<HTMLDivElement>(null);
-  const [isAtTop, setIsAtTop] = useState(false);
-  const [isAtBottom, setIsAtBottom] = useState(true);
-
-  useEffect(() => {
-    const chatContainer = chatRef.current;
-    if (chatContainer) {
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-  }, [messages]);
-
-  const handleScroll = () => {
-    const chatContainer = chatRef.current;
-    if (chatContainer) {
-      const { scrollTop, scrollHeight, clientHeight } = chatContainer;
-      setIsAtTop(scrollTop === 0);
-      setIsAtBottom(scrollTop + clientHeight >= scrollHeight - 1);
-    }
-  };
   return (
     <div className="grow w-[85%] m-auto overflow-auto relative scrollbar-hidden my-2">
-      {!isAtTop && (
-        <div className="absolute top-0 left-0 right-0 h-10 pointer-events-none bg-gradient-to-b from-[#ffffff44] to-transparent z-10"></div>
-      )}
-
-      <div
-        className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden"
-        ref={chatRef}
-        onScroll={handleScroll}
-      >
-        {messages.map((mess, index) => {
+      <div className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden">
+        {messages.map((mess) => {
           if (mess.sender == "user") {
             return (
               <motion.div
@@ -52,7 +23,6 @@ export const Messages = ({ messages }: Props) => {
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
-                  delay: index * 0.2,
                 }}
               >
                 <p className="max-w-[60vw] py-[10px] px-[30px] bg-white rounded-[75px] text-wrap text-black font-urbanist font-medium overflow-hidden">
@@ -70,7 +40,6 @@ export const Messages = ({ messages }: Props) => {
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
-                  delay: index * 0.2,
                 }}
                 key={mess.id}
                 className="flex gap-2 items-start max-w-[90%]"
@@ -104,10 +73,6 @@ export const Messages = ({ messages }: Props) => {
           }
         })}
       </div>
-
-      {!isAtBottom && (
-        <div className="absolute -bottom-1 left-0 right-0 h-8 pointer-events-none bg-gradient-to-t from-[#0E032A88] to-transparent z-10"></div>
-      )}
     </div>
   );
 };
