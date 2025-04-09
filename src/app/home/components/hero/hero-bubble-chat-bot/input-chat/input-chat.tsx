@@ -68,7 +68,7 @@ export const InputChat = ({
       initial="hidden"
       animate="visible"
       variants={inputSectionVariants}
-      className={`${s.input__container} ${
+      className={`border-[2px] border-[#D2CCE1] rounded-[12px_40px_40px_12px] bg-white flex items-center justify-between w-full mx-auto relative z-[20]  ${
         isFocus && "max-w-[80%] transition-all duration-150"
       }`}
     >
