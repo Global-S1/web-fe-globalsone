@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import s from "./floating-bot.module.css";
 import { usePathname, useRouter } from "next/navigation";
+import { ROOT_PATH } from "@/shared/constants/url";
 
 interface Props {
   className?: string;
@@ -31,7 +32,7 @@ export const FloatingBot = ({ className }: Props) => {
       onClick={handleButtonClick}
     >
       <Image
-        src={"/develop/chat-bot/bot-white.svg"}
+        src={`${ROOT_PATH}/chat-bot/bot-white.svg`}
         alt="bot"
         width={40}
         height={40}
