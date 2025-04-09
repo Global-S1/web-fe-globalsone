@@ -1,0 +1,9 @@
+.text__shadow {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(to right, #19DBCA, #6C6EF0, #A941C7);
+    -webkit-background-clip: text;
+    background-clip: text;
+}

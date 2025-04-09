@@ -47,7 +47,8 @@ const config: Config = {
       },
       fontFamily: {
         grandis: ["var(--font-grandis)"],
-        futura: ["var(--font-futura)"],
+        futura: ["Futura", "var(--font-futura)", "sans-serif"],
+        urbanist: ["var(--font-urbanist)"],
       },
       fontSize: {
         "title-1": "91px",

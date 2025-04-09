@@ -1,0 +1,43 @@
+.input__container {
+    border: 1px solid #ccc;
+    border-radius: 12px 40px 40px 12px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 6px #D2CCE1 inset;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+}
+
+.input__input {
+    border: none;
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    flex-grow: 2;
+    font-family: var(--font-urbanist);
+    font-size: 18px;
+    font-weight: 600;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.input__button {
+    padding: 12px 9px;
+    background-color: #544DD2;
+    border-radius: 40px;
+    text-wrap: nowrap;
+    box-shadow: -3px 0 40px black;
+    z-index: 21;
+}
+
+@media (640px <=width) {}
+
+@media (768px <=width) {}
+
+@media (1024px <=width) {}
+
+@media (1280px <=width) {}

@@ -1,123 +1,211 @@
 "use client";
 
-import { motion } from "framer-motion";
-import s from "./hero.bubble-chat-bot.module.css";
-import Image from "next/image";
+import { IMessage } from "@/app/chat-bot/interfaces/chat-bot.interface";
+import { ArrowDropDown } from "@/assets/icons/arrow-drop-down";
 import { ELocalStorage } from "@/shared/enums/local-storage.enum";
-import { useRouter } from "next/navigation";
-import { ChangeEvent, useState } from "react";
+import { motion, Variants } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { EmptyChat } from "./empty-chat/empty-chat";
+import s from "./hero.bubble-chat-bot.module.css";
+import { InputChat } from "./input-chat/input-chat";
+import { Messages } from "./messages/messages";
+import { ChatBotService } from "@/app/chat-bot/services/chat-bot.service";
+
+const { sendQuestion } = ChatBotService();
 
 export const HeroBubbleChatBot = () => {
+  const [messages, setMessages] = useState<IMessage[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [input, setInput] = useState<string>("");
-  const router = useRouter();
-  const messageVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  const [isFocus, setIsFocus] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  const containerCloudVariants: Variants = {
+    focused: {
+      width: "100%",
+      height: "60vh",
+      top: "-50vh",
+      background: "linear-gradient(to right, #1A0259cc, #277686cc)",
+      backdropFilter: "blur(10px)",
+      boxShadow: "0 4px 30px rgba(39, 118, 134, 0.5)",
+      transition: { duration: 0.2 },
+    },
+    unfocused: {
+      width: "auto",
+      height: "46px",
+      fontSize: "10px",
+      textWrap: "nowrap",
+      padding: "11px 18px",
+      background: "linear-gradient(to right, #1A0259, #277686)",
+      border: "solid 2px #19DBCA",
+      boxShadow: "none",
+      backdropFilter: "none",
+      transition: { duration: 0.2 },
+    },
   };
 
-  const inputSectionVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      containerRef.current &&
+      !containerRef.current.contains(event.target as Node)
+    ) {
+      setIsFocus(false);
+    }
   };
 
-  const instantMessageVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
-  };
+  const setNewMessage = (message: IMessage) => {
+    setMessages((prevMessages) => {
+      const messageIndex = prevMessages
+        ? prevMessages.findIndex((msg) => msg.id === message.id)
+        : -1;
 
-  const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
+      if (messageIndex > -1) {
+        const concatMessage = prevMessages[messageIndex].text + message.text;
+
+        const updatedMessages = [...prevMessages];
+        updatedMessages[messageIndex] = {
+          ...prevMessages[messageIndex],
+          text: concatMessage,
+        };
+        return updatedMessages;
+      } else {
+        return prevMessages ? [...prevMessages, message] : [message];
+      }
+    });
+
+    let storedMessages: IMessage[] = [];
+    const currentMessage = localStorage.getItem(
+      ELocalStorage.CHAT_BOT_MESSAGES
+    );
+
+    if (currentMessage) {
+      storedMessages = JSON.parse(currentMessage) as IMessage[];
+    }
+
+    const messageIndex = storedMessages.findIndex(
+      (msg) => msg.id === message.id
+    );
+
+    if (messageIndex > -1) {
+      storedMessages[messageIndex].text += message.text;
+    } else {
+      storedMessages.push(message);
+    }
+
+    localStorage.setItem(
+      ELocalStorage.CHAT_BOT_MESSAGES,
+      JSON.stringify(storedMessages)
+    );
   };
 
   const sendMessage = (message: string) => {
-    localStorage.setItem(ELocalStorage.TEMPORAL_MESSAGE, message);
-    router.push("/chat-bot?message=true");
+    setIsLoading(true);
+    const userMessage: IMessage = {
+      id: `user-${Date.now()}`,
+      sender: "user",
+      text: message,
+      timestamp: new Date(),
+    };
+    setNewMessage(userMessage);
+
+    const botMessageId = `bot-${Date.now()}`;
+    const errorMessage: IMessage = {
+      id: `error-${Date.now()}`,
+      sender: "error",
+      text: "Ocurrió un error al procesar tu mensaje.",
+      timestamp: new Date(),
+    };
+
+    sendQuestion({ message }, (partialResponse) => {
+      const botMessage: IMessage = {
+        id: botMessageId,
+        sender: "bot",
+        text: partialResponse,
+        timestamp: new Date(),
+      };
+      setNewMessage(botMessage);
+    })
+      .then(() => {
+        setNewMessage(errorMessage);
+      })
+      .catch(() => {
+        setNewMessage(errorMessage);
+      })
+      .finally(() => setIsLoading(false));
   };
 
-  const handleSend = () => {
-    if (input.trim() !== "") {
-      sendMessage(input.trim());
-      setInput("");
-    }
-  };
+  useEffect(() => {
+    const localMessages = () => {
+      try {
+        const localMessages: IMessage[] = JSON.parse(
+          localStorage.getItem(ELocalStorage.CHAT_BOT_MESSAGES) as string
+        );
+        return localMessages;
+      } catch {
+        return [];
+      }
+    };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      handleSend();
-    }
-  };
+    setMessages(localMessages);
 
-  const messages = [
-    "Ver nuestros servicios",
-    "¿Quiénes somos?",
-    "Nuestros casos de éxito",
-    "Contacto",
-  ];
+    return;
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className={s.container__master}>
-      <div className={s.container__items}>
+    <motion.div
+      initial={"hidden"}
+      animate={"visible"}
+      variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+      className="absolute left-0 top-0 h-screen w-screen flex items-end pb-4 z-[20]"
+    >
+      <div
+        className="h-fit max-w-[90%] mx-auto md:mb-8 w-full relative"
+        ref={containerRef}
+      >
+        <InputChat
+          input={input}
+          setInput={setInput}
+          isFocus={isFocus}
+          setIsFocus={setIsFocus}
+          isLoading={isLoading}
+          sendMessage={sendMessage}
+        />
         <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={inputSectionVariants}
-          className={s.input__container}
+          className={`${s.cloud__default} overflow-hidden ${
+            isFocus && "after:opacity-0 before:opacity-0"
+          }`}
+          variants={containerCloudVariants}
+          animate={isFocus ? "focused" : "unfocused"}
         >
-          <label htmlFor="chat-input" className={s.input__with__icon}>
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1, transition: { duration: 0.5 } }}
-              className={s.input__icon__container}
-            >
-              <motion.div className={s.input__icon__cloud}>
-                <p>Si necesitas algo, ¡estoy aquí para ayudarte!</p>
-              </motion.div>
-              <Image
-                src={"/develop/chat-bot/bot-icon.svg"}
-                alt="chatbot-image"
-                width={30}
-                height={30}
-              />
-            </motion.div>
-            <input
-              id="chat-input"
-              type="text"
-              placeholder="Escríbenos..."
-              className={s.input__input}
-              value={input}
-              onChange={onChangeInput}
-              onKeyDown={handleKeyDown}
-            />
-          </label>
-          <button className={s.input__button} onClick={handleSend}>
-            Hablemos ahora
-          </button>
-        </motion.div>
+          {!isFocus && (
+            <p className="text-[14px] font-urbanist font-medium">
+              Si necesitas algo, ¡estoy aquí para ayudarte!
+            </p>
+          )}
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={messageVariants}
-          className={s.instant__message__container}
-        >
-          {messages.map((message, index) => (
-            <motion.button
-              key={index}
-              initial="hidden"
-              animate={{
-                opacity: 1,
-                scale: 1,
-                transition: { duration: 0.3, delay: 0.4 * index },
-              }}
-              variants={instantMessageVariants}
-              className={s.instant__message}
-              onClick={() => sendMessage(message)}
-            >
-              {message}
-            </motion.button>
-          ))}
+          {isFocus && (
+            <div className="flex flex-col h-[80%]">
+              <div className="px-[60px] pt-[20px] hidden md:block">
+                <button
+                  className="size-[40px] rounded-full border border-white flex items-center justify-center"
+                  onClick={() => setIsFocus(false)}
+                >
+                  <ArrowDropDown size={30} />
+                </button>
+              </div>
+              {!messages && <EmptyChat sendMessage={sendMessage} />}
+              {messages && <Messages messages={messages} />}
+            </div>
+          )}
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };

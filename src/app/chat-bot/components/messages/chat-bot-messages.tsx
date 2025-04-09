@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import { IMessage } from "../../interfaces/chat-bot.interface";
 import Image from "next/image";
+import s from "./chat-bot.module.css";
 
 interface Props {
   messages?: IMessage[];
@@ -71,12 +72,8 @@ export const ChatBotMessages = ({ messages }: Props) => {
       )}
       {messages && messages?.length > 0 && (
         <div className="relative max-h-[calc(100%-100px)] grow">
-          {!isAtTop && (
-            <div className="absolute top-0 left-0 right-0 h-10 pointer-events-none bg-gradient-to-b from-[#0E032A88] to-transparent z-10"></div>
-          )}
-
           <div
-            className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden"
+            className={`max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden ${s.fade__text__container}`}
             ref={chatRef}
             onScroll={handleScroll}
           >
@@ -135,10 +132,6 @@ export const ChatBotMessages = ({ messages }: Props) => {
               }
             })}
           </div>
-
-          {!isAtBottom && (
-            <div className="absolute -bottom-1 left-0 right-0 h-8 pointer-events-none bg-gradient-to-t from-[#0E032A88] to-transparent z-10"></div>
-          )}
         </div>
       )}
     </>

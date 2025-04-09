@@ -1,93 +1,36 @@
-.container__master{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: end;
-}
-
-.container__items{
-    height: fit-content;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.input__container{
-    border: 1px solid #ccc;
-    border-radius: 12px 40px 40px 12px;
-    background: #f5f5f5;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    border: solid 6px #D2CCE1 inset;
-}
-
-.input__with__icon{
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 4px 0px 4px 10px;
-    flex-grow: 1;
-}
-
-.input__icon__container{
-    position: relative;
-}
-
-.input__icon__cloud{
-    font-size: 10px;
-    position: absolute;
-    top: -60px;
-    left: -10px;
-    text-wrap: nowrap;
+.cloud__default{
     background: linear-gradient(to right, #1A0259, #277686);
     border: solid 2px #19DBCA;
-    padding: 12px 18px;
+    position: absolute;
+    bottom: 65px;
+    left: 8px;
     border-radius: 49px;
+    height: auto;
 }
 
-.input__icon__cloud::after{
+.cloud__default::after{
     content: '';
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 10px 10px;
+    border-width: 0 0 11px 12px;
     border-color: transparent transparent transparent #1A0259;
     position: absolute;
-    top: 38px;
+    top: 43px;
     margin-left: 1.5px;
 }
 
-.input__icon__cloud::before{
+.cloud__default::before{
     content: '';
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 14px 14px;
+    border-width: 0 0 14px 15px;
     border-color: transparent transparent transparent #19DBCA;
     position: absolute;
-    top: 38px;
-}
-
-.input__input{
-    border: none;
-    background-color: transparent;
-    color: black;
-    width: 100%;
-    flex-grow: 2;
-}
-
-.input__button{
-    padding: 12px 9px;
-    background-color: #544DD2;
-    border-radius: 40px;
-    text-wrap: nowrap;
-    box-shadow: -3px 0 40px black;
+    top: 43px;
 }
 
 .input__button:hover{
@@ -111,6 +54,22 @@
     font-size: 14px;
 }
 
+.text__shadow::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    background: linear-gradient(to right, #19DBCA, #6C6EF0, #A941C7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: blur(15px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
 @media (640px <=width) {
 }
 
@@ -130,6 +89,6 @@
 
 @media (1280px <=width) {
     .container__items {
-        margin-bottom: 8px;
+        margin-bottom: 42px;
     }
 }

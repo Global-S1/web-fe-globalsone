@@ -1,9 +1,14 @@
 interface Props {
   scale?: number;
   color?: string;
+  className?: string;
 }
 
-export const LoaderDots = ({ scale = 1, color = "#ffffff" }: Props) => {
+export const LoaderDots = ({
+  scale = 1,
+  color = "#ffffff",
+  className,
+}: Props) => {
   return (
     <>
       <style>
@@ -36,7 +41,7 @@ export const LoaderDots = ({ scale = 1, color = "#ffffff" }: Props) => {
   100%{transform: rotate(.5turn)}
 }`}
       </style>
-      <div className="loader"></div>
+      <div className={`loader ${className}`}></div>
     </>
   );
 };

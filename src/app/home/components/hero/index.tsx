@@ -13,16 +13,17 @@ interface Props {
 export const Hero = ({ content }: Props) => {
   const { title } = content;
   return (
-    <Section extendStyle={s.hero__section}>
-      <HomeLights />
+    <>
+      <Section extendStyle={s.hero__section}>
+        <HomeLights />
 
-      <div className={s.hero__container}>
-        <HeroCentralPicture />
-      </div>
+        <div className={s.hero__container}>
+          <HeroCentralPicture />
+        </div>
 
-      <HeroTitleLeft title={title.left} />
-
+        <HeroTitleLeft title={title.left} />
+      </Section>
       <HeroBubbleChatBot />
-    </Section>
+    </>
   );
 };

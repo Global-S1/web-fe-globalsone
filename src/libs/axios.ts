@@ -7,4 +7,5 @@ export const wordpressInstance = axios.create({
 
 export const chatIAInstance = axios.create({
   baseURL: URL_CHAT_IA,
+  responseType: "stream",
 });
