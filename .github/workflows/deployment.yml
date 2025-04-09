@@ -33,7 +33,7 @@ jobs:
         id: set-target
         run: |
           if [ "${{ github.ref_name }}" == "${{ env.develop_branch }}" ]; then
-            echo "target=public_html/develop" >> $GITHUB_ENV
+            echo "target=develop.globals.one" >> $GITHUB_ENV
           elif [ "${{ github.ref_name }}" == "${{ env.prod_branch }}" ]; then
             echo "target=public_html" >> $GITHUB_ENV
           else
