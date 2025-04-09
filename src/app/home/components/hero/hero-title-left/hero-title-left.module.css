@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.hero__title > div {
+.hero__title__text {
   position: relative;
 }
 
@@ -21,8 +21,9 @@
     66.95px
   );
   font-family: var(--font-grandis);
+  text-shadow: 0 10px 30px black;
 }
- 
+
 .hero__title__text > span{
   background: linear-gradient(to bottom, #6C6EF0, #19DBCA);
     -webkit-background-clip: text;
@@ -30,6 +31,7 @@
     background-clip: text;
     color: transparent;
     text-wrap: nowrap;
+    text-shadow: none;
 }
 
 @media (640px <= width) {

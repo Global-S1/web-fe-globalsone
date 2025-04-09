@@ -124,14 +124,7 @@ export const HeroBubbleChatBot = () => {
         timestamp: new Date(),
       };
       setNewMessage(botMessage);
-    })
-      .then(() => {
-        setNewMessage(errorMessage);
-      })
-      .catch(() => {
-        setNewMessage(errorMessage);
-      })
-      .finally(() => setIsLoading(false));
+    }).finally(() => setIsLoading(false));
   };
 
   useEffect(() => {
@@ -165,7 +158,6 @@ export const HeroBubbleChatBot = () => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Si el elemento no es visible, muestra el chatbot
         if (!entry.isIntersecting) {
           setIsChatVisible(true);
         } else {
@@ -173,9 +165,9 @@ export const HeroBubbleChatBot = () => {
         }
       },
       {
-        root: null, // Usa el viewport (ventana de visualización) por defecto
+        root: null,
         rootMargin: "0px",
-        threshold: 0.1, // Trigger cuando al menos el 10% esté visible
+        threshold: 0.1,
       }
     );
 
@@ -184,7 +176,6 @@ export const HeroBubbleChatBot = () => {
       observer.observe(currentContainer);
     }
 
-    // Limpieza del observer cuando el componente se desmonte
     return () => {
       if (currentContainer) {
         observer.unobserve(currentContainer);
