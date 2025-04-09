@@ -3,6 +3,7 @@ import { ChangeEvent, Dispatch } from "react";
 import s from "./input-chat.module.css";
 import { LoaderDots } from "@/shared/components/loader/loader-dots.component";
 import { ArrowSend } from "@/assets/icons/arrow-send";
+import { ROOT_PATH } from "@/shared/constants/url";
 
 interface Props {
   input: string;
@@ -82,7 +83,7 @@ export const InputChat = ({
         >
           <div className={`${!isFocus && "pl-2 duration-100"}`}>
             <motion.img
-              src={"/develop/chat-bot/bot-icon.svg"}
+              src={`${ROOT_PATH}/chat-bot/bot-icon.svg`}
               alt="chatbot-image"
               variants={iconVariants}
               animate={isFocus ? "focused" : "unfocused"}

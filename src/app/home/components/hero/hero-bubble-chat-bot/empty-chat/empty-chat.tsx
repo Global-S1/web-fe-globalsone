@@ -1,6 +1,7 @@
 import { motion, Variants } from "framer-motion";
 import { InstantMessages } from "../instant-messages/instant-messages";
 import s from "./empty-chat.module.css";
+import { ROOT_PATH } from "@/shared/constants/url";
 
 interface Props {
   sendMessage: (value: string) => void;
@@ -37,7 +38,7 @@ export const EmptyChat = ({ sendMessage }: Props) => {
             ¡Hola!
           </p>
           <motion.img
-            src="/develop/chat-bot/bot-in-chat.svg"
+            src={`${ROOT_PATH}/chat-bot/bot-in-chat.svg`}
             variants={iconVariants}
             initial="hidden"
             animate="visible"

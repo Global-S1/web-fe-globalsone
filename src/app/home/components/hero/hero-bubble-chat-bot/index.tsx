@@ -44,21 +44,6 @@ export const HeroBubbleChatBot = () => {
     },
   };
 
-  const chatBotVariants: Variants = {
-    hidden: {
-      scale: 0.2,
-    },
-    visible: {
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        type: "spring",
-        stiffness: 300,
-        damping: 10,
-      },
-    },
-  };
-
   const handleClickOutside = (event: MouseEvent) => {
     if (
       containerRef.current &&

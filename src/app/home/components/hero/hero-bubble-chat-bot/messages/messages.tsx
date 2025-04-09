@@ -1,6 +1,7 @@
 "use client";
 
 import { IMessage } from "@/app/home/interfaces/message.interface";
+import { ROOT_PATH } from "@/shared/constants/url";
 import { motion } from "framer-motion";
 import Markdown from "react-markdown";
 
@@ -45,7 +46,7 @@ export const Messages = ({ messages }: Props) => {
                 className="flex gap-2 items-start max-w-[90%]"
               >
                 <motion.img
-                  src={"/develop/chat-bot/bot-in-chat.svg"}
+                  src={`${ROOT_PATH}/chat-bot/bot-in-chat.svg`}
                   alt="icon"
                   className="size-[22px] mt-[2px]"
                 />
