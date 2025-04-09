@@ -24,7 +24,7 @@ export const sendQuestion = async (
   onMessage: (msg: string) => void
 ) => {
   try {
-    const response = await fetch(`${URL_CHAT_IA}/chat/create-chats`, {
+    const response = await fetch(`${URL_CHAT_IA}/chat/create-chat`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

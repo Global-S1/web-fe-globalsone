@@ -41,13 +41,10 @@ export const InstantMessages = ({ messages, sendMessages }: Props) => {
       }
     };
 
-    // Comprueba el desbordamiento inicial
     checkOverflow();
 
-    // Evento listener para scroll
     container?.addEventListener("scroll", checkOverflow);
 
-    // Limpiar el listener al desmontar
     return () => {
       container?.removeEventListener("scroll", checkOverflow);
     };
