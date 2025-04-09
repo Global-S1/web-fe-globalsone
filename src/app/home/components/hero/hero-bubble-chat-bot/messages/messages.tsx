@@ -1,6 +1,6 @@
 "use client";
 
-import { IMessage } from "@/app/chat-bot/interfaces/chat-bot.interface";
+import { IMessage } from "@/app/home/interfaces/message.interface";
 import { motion } from "framer-motion";
 import Markdown from "react-markdown";
 
