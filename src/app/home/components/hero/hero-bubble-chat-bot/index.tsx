@@ -116,14 +116,19 @@ export const HeroBubbleChatBot = () => {
       timestamp: new Date(),
     };
 
-    sendQuestion({ message }, (partialResponse) => {
-      const botMessage: IMessage = {
-        id: botMessageId,
-        sender: "bot",
-        text: partialResponse,
-        timestamp: new Date(),
-      };
-      setNewMessage(botMessage);
+    sendQuestion({ message }, (partialResponse, success) => {
+      if (success) {
+        const botMessage: IMessage = {
+          id: botMessageId,
+          sender: "bot",
+          text: partialResponse,
+          timestamp: new Date(),
+        };
+        setNewMessage(botMessage);
+        setNewMessage(errorMessage);
+      } else {
+        setNewMessage(errorMessage);
+      }
     }).finally(() => setIsLoading(false));
   };
 

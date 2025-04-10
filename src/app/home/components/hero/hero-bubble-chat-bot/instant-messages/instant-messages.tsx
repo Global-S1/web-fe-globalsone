@@ -1,8 +1,7 @@
 "use client";
-import { ArrowLeft } from "@/assets/icons/arrow-left";
 import { Triangle } from "@/assets/icons/triangle";
 import { motion, Variants } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
   messages: string[];

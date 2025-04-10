@@ -3,6 +3,7 @@ import { IMessage } from "@/app/home/interfaces/message.interface";
 import { ROOT_PATH } from "@/shared/constants/url";
 import { motion } from "framer-motion";
 import Markdown from "react-markdown";
+import { Alert } from "@/assets/icons/alert";
 
 interface Props {
   messages: IMessage[];
@@ -42,6 +43,7 @@ export const Messages = ({ messages }: Props) => {
               </motion.div>
             );
           }
+
           if (mess.sender == "bot") {
             return (
               <motion.div
@@ -78,6 +80,26 @@ export const Messages = ({ messages }: Props) => {
                     {mess.text}
                   </Markdown>
                 </div>
+              </motion.div>
+            );
+          }
+
+          if (mess.sender == "error") {
+            return (
+              <motion.div
+                key={mess.id}
+                className="w-fit flex gap-4 items-center max-w-[60vw] bg-red-500 rounded-[12px] pl-4 pr-8"
+                initial={{ x: "10%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
+              >
+                <Alert />
+                <p className="text-wrap font-urbanist font-medium py-[10px]">
+                  {mess.text}
+                </p>
               </motion.div>
             );
           }
