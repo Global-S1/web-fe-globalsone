@@ -42,9 +42,6 @@ export const sendQuestion = async (
     const success = response.headers.get("success") === "true" ? true : false;
     const thredId = response.headers.get("thread-id");
 
-    console.log(success);
-    console.log(thredId);
-
     if (thredId) {
       localStorage.setItem(ELocalStorage.THREAD_ID, thredId);
     }
