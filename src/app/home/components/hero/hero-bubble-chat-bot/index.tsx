@@ -125,7 +125,6 @@ export const HeroBubbleChatBot = () => {
           timestamp: new Date(),
         };
         setNewMessage(botMessage);
-        setNewMessage(errorMessage);
       } else {
         setNewMessage(errorMessage);
       }
