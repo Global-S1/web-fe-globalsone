@@ -4,26 +4,30 @@ import s from "./success.module.css";
 import { getSuccessPageData } from "./service/success.service";
 import { Leave } from "@/assets/leavesComponents/Leave";
 import { LeaveClear } from "@/assets/leavesComponents/LeaveClear";
+import { FloatingBot } from "@/shared/components/floating-bot/floating-bot";
 
 export default async function Success() {
   const res = await getSuccessPageData();
 
   return (
-    <Section extendStyle={s.success__section}>
-      <div className={s.leave__one}>
-        <Leave />
-      </div>
-      <div className={s.leave__three}>
-        <Leave />
-      </div>
-      <div className={s.magenta__circle}></div>
-      <div className={s.blue__rec}></div>
-      <div className={s.green__circle}></div>
-      <ThanksModal {...res} />
-      <div className={s.leave__two}>
-        <LeaveClear />
-      </div>
-    </Section>
+    <>
+      <Section extendStyle={s.success__section}>
+        <div className={s.leave__one}>
+          <Leave />
+        </div>
+        <div className={s.leave__three}>
+          <Leave />
+        </div>
+        <div className={s.magenta__circle}></div>
+        <div className={s.blue__rec}></div>
+        <div className={s.green__circle}></div>
+        <ThanksModal {...res} />
+        <div className={s.leave__two}>
+          <LeaveClear />
+        </div>
+      </Section>
+      <FloatingBot />
+    </>
   );
 }
 

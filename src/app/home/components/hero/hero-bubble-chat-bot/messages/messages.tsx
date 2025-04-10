@@ -1,24 +1,35 @@
-"use client";
-
+import { useEffect, useRef } from "react";
 import { IMessage } from "@/app/home/interfaces/message.interface";
 import { ROOT_PATH } from "@/shared/constants/url";
 import { motion } from "framer-motion";
 import Markdown from "react-markdown";
+import { Alert } from "@/assets/icons/alert";
 
 interface Props {
   messages: IMessage[];
 }
 
 export const Messages = ({ messages }: Props) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   return (
     <div className="grow w-[85%] m-auto overflow-auto relative scrollbar-hidden my-2">
-      <div className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden">
+      <div
+        className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden relative"
+        ref={containerRef}
+      >
         {messages.map((mess) => {
           if (mess.sender == "user") {
             return (
               <motion.div
                 key={mess.id}
-                className="w-full  flex items-center justify-end"
+                className="w-full flex items-center justify-end"
                 initial={{ x: "10%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
@@ -56,7 +67,7 @@ export const Messages = ({ messages }: Props) => {
                       a: (e) => (
                         <a
                           href={e.href}
-                          className="undeline bg-gradient-to-b from-[#19DBCA] to-[#6C6EF0] bg-clip-text text-transparent font-semibold"
+                          className="underline bg-gradient-to-b from-[#19DBCA] to-[#6C6EF0] bg-clip-text text-transparent font-semibold"
                         >
                           {e.children}
                         </a>
@@ -69,6 +80,26 @@ export const Messages = ({ messages }: Props) => {
                     {mess.text}
                   </Markdown>
                 </div>
+              </motion.div>
+            );
+          }
+
+          if (mess.sender == "error") {
+            return (
+              <motion.div
+                key={mess.id}
+                className="w-fit flex gap-4 items-center max-w-[60vw] bg-red-500 rounded-[12px] pl-4 pr-8"
+                initial={{ x: "10%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
+              >
+                <Alert />
+                <p className="text-wrap font-urbanist font-medium py-[10px]">
+                  {mess.text}
+                </p>
               </motion.div>
             );
           }
