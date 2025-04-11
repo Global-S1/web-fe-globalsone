@@ -11,6 +11,7 @@ import { Messages } from "./messages/messages";
 import { FloatingBot } from "@/shared/components/floating-bot/floating-bot";
 import { sendQuestion } from "@/app/home/service/home.service";
 import { IMessage } from "@/app/home/interfaces/message.interface";
+import dayjs from "dayjs";
 
 export const HeroBubbleChatBot = () => {
   const [messages, setMessages] = useState<IMessage[]>([]);
@@ -80,6 +81,11 @@ export const HeroBubbleChatBot = () => {
 
     if (currentMessage) {
       storedMessages = JSON.parse(currentMessage) as IMessage[];
+    } else {
+      localStorage.setItem(
+        ELocalStorage.DATE_LAST_MESSAGE,
+        JSON.stringify(new Date())
+      );
     }
 
     const messageIndex = storedMessages.findIndex(
@@ -185,6 +191,19 @@ export const HeroBubbleChatBot = () => {
         observer.unobserve(currentContainer);
       }
     };
+  }, []);
+
+  useEffect(() => {
+    const currentLastDate = JSON.parse(
+      localStorage.getItem(ELocalStorage.DATE_LAST_MESSAGE) as string
+    );
+    const currentDate = dayjs(currentLastDate);
+    const diff = dayjs().diff(currentDate, "day");
+
+    if (diff >= 2) {
+      localStorage.removeItem(ELocalStorage.CHAT_BOT_MESSAGES);
+      localStorage.removeItem(ELocalStorage.DATE_LAST_MESSAGE);
+    }
   }, []);
 
   return (

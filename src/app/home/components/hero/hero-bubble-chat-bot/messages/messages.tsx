@@ -66,14 +66,37 @@ export const Messages = ({ messages }: Props) => {
                     components={{
                       a: (e) => (
                         <a
-                          href={e.href}
+                          {...e}
                           className="underline bg-gradient-to-b from-[#19DBCA] to-[#6C6EF0] bg-clip-text text-transparent font-semibold"
                         >
                           {e.children}
                         </a>
                       ),
                       p: (e) => (
-                        <p className="font-medium text-lg">{e.children}</p>
+                        <p {...e} className="font-medium text-lg">
+                          {e.children}
+                        </p>
+                      ),
+                      ol: (e) => (
+                        <ol
+                          {...e}
+                          className="flex flex-col gap-2 mt-3 list-decimal"
+                        >
+                          {e.children}
+                        </ol>
+                      ),
+                      ul: (e) => (
+                        <ul
+                          {...e}
+                          className="flex flex-col gap-2 mt-3 list-disc"
+                        >
+                          {e.children}
+                        </ul>
+                      ),
+                      li: (e) => (
+                        <li {...e} className="font-urbanist">
+                          {e.children}
+                        </li>
                       ),
                     }}
                   >

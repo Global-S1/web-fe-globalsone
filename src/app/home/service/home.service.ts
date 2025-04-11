@@ -1,12 +1,12 @@
+import { URL_CHAT_IA } from "@/shared/constants/url";
+import { ELocalStorage } from "@/shared/enums/local-storage.enum";
 import { WPGetDataByContentType } from "@/shared/services/wordpress.service";
 import data from "@/wp-mock-data/home-data.json";
 import { homeAdapter } from "../adapter/home.adapter";
-import { IHomeContentInput } from "../interfaces/input.interface";
 import { IHomeContent } from "../interfaces/content.interface";
+import { IHomeContentInput } from "../interfaces/input.interface";
 import { ISendQuestionParam } from "./param-interface";
-import { URL_CHAT_IA } from "@/shared/constants/url";
-import { ELocalStorage } from "@/shared/enums/local-storage.enum";
-import { th } from "framer-motion/client";
+import axios from "axios";
 
 export const getHomeDataService = async (): Promise<IHomeContent> => {
   try {
@@ -21,12 +21,23 @@ export const getHomeDataService = async (): Promise<IHomeContent> => {
   }
 };
 
+const getUserIP = async (): Promise<string | null> => {
+  try {
+    const response = await axios.get("https://api.ipify.org?format=json");
+    return response.data.ip;
+  } catch (error) {
+    console.error("Error obtaining IP:", error);
+    return null;
+  }
+};
+
 export const sendQuestion = async (
   fields: ISendQuestionParam,
   onMessage: (msg: string, success: boolean) => void
 ) => {
   try {
     const currentThreadId = localStorage.getItem(ELocalStorage.THREAD_ID);
+    const userIp = await getUserIP();
     const body = {
       ...fields,
       ...(currentThreadId && { threadId: currentThreadId }),
@@ -35,6 +46,7 @@ export const sendQuestion = async (
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        ...(userIp && { "ip-address": userIp }),
       },
       body: JSON.stringify(body),
     });
