@@ -5,6 +5,7 @@ import { OurValues } from "./components/our-values";
 import { Overview } from "./components/overview";
 import { getContentDataAboutUsPage } from "./services/about-us.service";
 import { TestimonialSection } from "./components/testimonial-section";
+import { FloatingBot } from "@/shared/components/floating-bot/floating-bot";
 
 export default async function AboutUs() {
   const data = await getContentDataAboutUsPage();
@@ -16,6 +17,7 @@ export default async function AboutUs() {
       <AboutUsOurTeam />
       <MosaicTeam />
       <TestimonialSection content={data.testimonial} />
+      <FloatingBot />
     </>
   );
 }

@@ -44,10 +44,13 @@ const config: Config = {
           "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(240,202,251,1) 47%, rgba(255,255,255,1) 100%)",
         "custom-gradian-btn-project":
           "linear-gradient(141deg, rgba(153,90,240,1) 0%, rgba(109,12,188,1) 100%)",
+        "radial-gradient-arrow-chatbot":
+          "radial-gradient(circle, #204B6B, transparent)",
       },
       fontFamily: {
         grandis: ["var(--font-grandis)"],
-        futura: ["var(--font-futura)"],
+        futura: ["Futura", "var(--font-futura)", "sans-serif"],
+        urbanist: ["var(--font-urbanist)"],
       },
       fontSize: {
         "title-1": "91px",

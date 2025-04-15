@@ -7,6 +7,7 @@ import { Main } from "@/shared/components/main";
 import { Header } from "@/shared/components/header";
 import { BgLeave } from "@/shared/animations/leaves-background-animation";
 import { getLayoutLinks } from "@/shared/services/layout.service";
+import { ROOT_PATH } from "@/shared/constants/url";
 
 const inter = Inter({ subsets: ["latin"] });
 

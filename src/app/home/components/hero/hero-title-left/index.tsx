@@ -1,12 +1,12 @@
 import s from "./hero-title-left.module.css";
-import { HeroTitleBgLeft } from "../hero-title-bg-left/hero-title-bg.component";
 
 export const HeroTitleLeft = ({ title }: { title: string }) => {
   return (
     <div className={s.hero__title}>
       <div className={s.hero__text__container}>
-        <HeroTitleBgLeft />
-        <h2 dangerouslySetInnerHTML={{ __html: title }} />
+        <h2 className={s.hero__title__text}>
+          Impulsa tu negocio con soluciones de <span>Software a medida</span>
+        </h2>
       </div>
     </div>
   );
