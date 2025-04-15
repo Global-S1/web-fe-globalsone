@@ -1,3 +1,4 @@
+import { FloatingBot } from "@/shared/components/floating-bot/floating-bot";
 import { ContactAddress } from "./components/contact-address";
 import { ContactForm } from "./components/contact-form";
 import { getContactUsDataService } from "./service/contact-us.service";
@@ -8,6 +9,7 @@ export default async function ContactUs() {
     <>
       <ContactForm {...res.formData} />
       <ContactAddress {...res.contactData} />
+      <FloatingBot />
     </>
   );
 }

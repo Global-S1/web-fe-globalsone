@@ -1,0 +1,15 @@
+.container{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    z-index: 25;
+    background: linear-gradient(to right, #544DD2, #19DBCA);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 3px white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px #19DBCA;
+}
