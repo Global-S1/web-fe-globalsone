@@ -28,7 +28,7 @@ export const HeroBubbleChatBot = () => {
       top: "-50vh",
       background: "linear-gradient(to right, #1A0259cc, #277686cc)",
       backdropFilter: "blur(10px)",
-      boxShadow: "0 4px 30px rgba(39, 118, 134, 0.5)",
+      boxShadow: "0 4px 0px rgba(39, 118, 134, 0.5)",
       transition: { duration: 0.2 },
     },
     unfocused: {
@@ -212,10 +212,10 @@ export const HeroBubbleChatBot = () => {
         initial={"hidden"}
         animate={"visible"}
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-        className="absolute left-0 top-0 h-screen w-full flex items-end pb-4 z-[20]"
+        className="absolute left-0 top-0 h-screen w-full flex items-end justify-center pb-4 z-[20]"
       >
         <div
-          className="h-fit max-w-[90%] mx-auto md:mb-8 w-full relative"
+          className="h-auto max-w-[90vw] md:mb-8 w-full relative"
           ref={containerRef}
         >
           <InputChat
