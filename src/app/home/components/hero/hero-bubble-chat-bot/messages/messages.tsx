@@ -19,7 +19,7 @@ export const Messages = ({ messages }: Props) => {
   }, [messages]);
 
   return (
-    <div className="grow max-w-[85%] mx-auto overflow-auto relative scrollbar-hidden my-2">
+    <div className="grow max-w-[85%] mx-auto w-full overflow-auto relative scrollbar-hidden my-2">
       <div
         className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden relative"
         ref={containerRef}
