@@ -41,8 +41,9 @@
 
 .contact__btn {
   position: absolute;
-  background-color: white;
-  color: black;
+  /* background-color: white; */
+  background: linear-gradient(115deg, #6329c1 -4.75%, #1eb088 91.61%);
+  color: #e3e3e3;
   font-size: clamp(
     var(--button-mobile),
     calc(var(--button-mobile) + (30 - 14) * ((80vw - 360px) / (1200 - 360))),
@@ -66,11 +67,16 @@
     calc(3px + (9 - 3) * ((80vw - 360px) / (1200 - 360))),
     9px
   );
-  border-radius: 25px;
+  border-radius: 12px;
   right: 3%;
   top: 50%;
   transform: translateY(-50%);
   font-family: var(--font-urbanist);
+  transition-duration: 200ms;
+}
+
+.contact__btn svg path {
+  stroke: #e3e3e3;
 }
 
 .contact__btn:active {
@@ -121,10 +127,9 @@
     animation: none;
   }
   .contact__btn:hover {
-    background: linear-gradient(115deg, #6329c1 -4.75%, #1eb088 91.61%);
+    background: linear-gradient(115deg, #1eb088 -4.75%, #6329c1 91.61%);
     color: white;
-    transform: scaleX(1.1);
-    top: -3%;
+    transition-duration: 150ms;
   }
 
   .contact__btn:hover svg path {

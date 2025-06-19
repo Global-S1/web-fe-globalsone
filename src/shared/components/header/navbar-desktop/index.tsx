@@ -13,7 +13,7 @@ export const NavBarDesktop = ({ content }: IProps): JSX.Element => {
           <Link href={content.home.route}>{content.home.title}</Link>
         </li>
         <li>
-          <Link href={content.aboutUs.route}>{content.aboutUs.title}</Link>
+          <Link href={content.aboutUs.route}>Nosotros</Link>
         </li>
         <li>
           <Link href={content.services.route}>{content.services.title}</Link>
