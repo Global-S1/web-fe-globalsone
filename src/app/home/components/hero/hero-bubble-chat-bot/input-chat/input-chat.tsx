@@ -68,7 +68,7 @@ export const InputChat = ({
       initial="hidden"
       animate="visible"
       variants={inputSectionVariants}
-      className={`border-[2px] border-[#D2CCE1] rounded-[12px_40px_40px_12px] bg-white flex items-center justify-between w-full mx-auto relative z-[20]  ${
+      className={`border-[2px] border-[rgba(25,219,202,.7)] rounded-[12px_20px_20px_12px] bg-[#ffffff11] flex items-center justify-between w-full mx-auto relative z-[20]  ${
         isFocus && "max-w-[80%] transition-all duration-150"
       }`}
     >
@@ -83,7 +83,7 @@ export const InputChat = ({
         >
           <div className={`${!isFocus && "pl-2 duration-100"}`}>
             <motion.img
-              src={`${ROOT_PATH}/chat-bot/bot-icon.svg`}
+              src={`${ROOT_PATH}/chat-bot/bot-in-chat.svg`}
               alt="chatbot-image"
               variants={iconVariants}
               animate={isFocus ? "focused" : "unfocused"}
@@ -95,7 +95,7 @@ export const InputChat = ({
           id="chat-input"
           type="text"
           placeholder="Escríbenos, ¿cómo podemos ayudarte?"
-          className={`${s.input__input} focus:border-transparent focus:ring-0`}
+          className={`${s.input__input} focus:border-transparent focus:ring-0 placeholder:text-white`}
           value={input}
           onChange={onChangeInput}
           onKeyDown={(e) => {
@@ -105,7 +105,7 @@ export const InputChat = ({
         />
       </label>
       <button
-        className={`px-[9px] bg-[#544DD2] hover:bg-[#544ddf] duration-200 rounded-[40px] text-nowrap shadow-[-3px_0_40px_black] h-[54px]`}
+        className={`px-[16px] bg-[#544DD2] hover:bg-[#544ddf] duration-200 rounded-[30px] text-nowrap h-[40px] mr-4`}
         onClick={() => {
           !isLoading && handleSend();
         }}

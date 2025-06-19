@@ -37,7 +37,7 @@ export const Messages = ({ messages }: Props) => {
                   ease: "easeOut",
                 }}
               >
-                <p className="max-w-[60vw] py-[10px] px-[30px] bg-white rounded-[75px] text-wrap text-black font-urbanist font-medium overflow-hidden">
+                <p className="max-w-[60vw] py-[10px] px-[30px] bg-[#ffffff11] border border-[rgba(25,219,202, .7)] text-white rounded-[12px] text-wrap  font-urbanist font-medium overflow-hidden">
                   {mess.text}
                 </p>
               </motion.div>
