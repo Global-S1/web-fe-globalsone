@@ -8,6 +8,7 @@
   }
   .navbar__desk__list {
     display: flex;
+    gap: 38px;
     font-size: clamp(
       var(--paragraph-mobile),
       calc(
@@ -16,11 +17,11 @@
       var(--secondary-text-desktop)
     );
     font-family: var(--font-urbanist);
-    column-gap: clamp(
+    /* column-gap: clamp(
       10px,
       calc(10px + (22 - 14) * ((80vw - 360px) / (1200 - 360))),
       24px
-    );
+    ); */
     font-family: var(--font-urbanist);
   }
 }
