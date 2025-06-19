@@ -59,7 +59,7 @@ export const InputChat = ({
   };
 
   const inputSectionVariants = {
-    hidden: { opacity: 0, x: -10 },
+    hidden: { opacity: 0, x: 0 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
   };
 
@@ -68,13 +68,13 @@ export const InputChat = ({
       initial="hidden"
       animate="visible"
       variants={inputSectionVariants}
-      className={`border-[2px] border-[#D2CCE1] rounded-[12px_40px_40px_12px] bg-white flex items-center justify-between w-full mx-auto relative z-[20]  ${
-        isFocus && "max-w-[80%] transition-all duration-150"
+      className={`border-[2px] border-[rgba(25,219,202,.7)] rounded-[12px_20px_20px_12px] bg-[#ffffff11] flex items-center justify-between w-full mx-auto relative z-[20] transition-all duration-150 ${
+        isFocus && "max-w-[85%]"
       }`}
     >
       <label
         htmlFor="chat-input"
-        className="relative flex items-center py-[4px] pl-[10px] w-full"
+        className="relative flex items-center py-[2px] pl-[10px] w-full"
       >
         <motion.div
           initial={{ scale: 0 }}
@@ -83,7 +83,7 @@ export const InputChat = ({
         >
           <div className={`${!isFocus && "pl-2 duration-100"}`}>
             <motion.img
-              src={`${ROOT_PATH}/chat-bot/bot-icon.svg`}
+              src={`${ROOT_PATH}/chat-bot/bot-in-chat.svg`}
               alt="chatbot-image"
               variants={iconVariants}
               animate={isFocus ? "focused" : "unfocused"}
@@ -94,8 +94,8 @@ export const InputChat = ({
         <input
           id="chat-input"
           type="text"
-          placeholder="Escríbenos, ¿cómo podemos ayudarte?"
-          className={`${s.input__input} focus:border-transparent focus:ring-0`}
+          placeholder="..."
+          className={`${s.input__input} tracking-widest text-sm md:text-base focus:border-transparent focus:ring-0 placeholder:text-white placeholder:text-ellipsis placeholder:overflow-hidden placeholder:line-clamp-1`}
           value={input}
           onChange={onChangeInput}
           onKeyDown={(e) => {
@@ -105,7 +105,7 @@ export const InputChat = ({
         />
       </label>
       <button
-        className={`px-[9px] bg-[#544DD2] hover:bg-[#544ddf] duration-200 rounded-[40px] text-nowrap shadow-[-3px_0_40px_black] h-[54px]`}
+        className={`px-[16px] bg-[#544DD2] hover:bg-[#544ddf] duration-200 rounded-[16px] text-nowrap h-[40px] text-sm md:text-base m-2`}
         onClick={() => {
           !isLoading && handleSend();
         }}
@@ -114,13 +114,14 @@ export const InputChat = ({
           <LoaderDots scale={0.4} />
         ) : (
           <>
-            <span className="font-urbanist font-medium">
+            <p className="hidden md:block font-urbanist font-medium">
               {isFocus ? (
                 <ArrowSend className="size-[30px]" />
               ) : (
                 "Hablemos ahora"
               )}
-            </span>
+            </p>
+            <ArrowSend className="md:hidden size-[30px]" />
           </>
         )}
       </button>

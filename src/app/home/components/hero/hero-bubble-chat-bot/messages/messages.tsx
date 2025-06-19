@@ -19,7 +19,7 @@ export const Messages = ({ messages }: Props) => {
   }, [messages]);
 
   return (
-    <div className="grow w-[85%] m-auto overflow-auto relative scrollbar-hidden my-2">
+    <div className="grow max-w-[85%] mx-auto overflow-auto relative scrollbar-hidden my-2">
       <div
         className="max-h-full flex flex-col gap-4 overflow-auto scrollbar-hidden relative"
         ref={containerRef}
@@ -37,7 +37,7 @@ export const Messages = ({ messages }: Props) => {
                   ease: "easeOut",
                 }}
               >
-                <p className="max-w-[60vw] py-[10px] px-[30px] bg-white rounded-[75px] text-wrap text-black font-urbanist font-medium overflow-hidden">
+                <p className="max-w-[60vw] py-[10px] px-[30px] bg-[#ffffff11] text-white rounded-[12px] text-wrap  font-urbanist font-medium overflow-hidden">
                   {mess.text}
                 </p>
               </motion.div>
@@ -54,7 +54,7 @@ export const Messages = ({ messages }: Props) => {
                   ease: "easeOut",
                 }}
                 key={mess.id}
-                className="flex gap-2 items-start max-w-[90%]"
+                className="flex gap-2 items-start max-w-[90%] bg-[#ffffff11] p-4 rounded-[12px]"
               >
                 <motion.img
                   src={`${ROOT_PATH}/chat-bot/bot-in-chat.svg`}

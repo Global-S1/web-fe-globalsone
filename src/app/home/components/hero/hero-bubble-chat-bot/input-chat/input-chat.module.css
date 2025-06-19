@@ -1,7 +1,6 @@
 .input__input {
     border: none;
     background-color: transparent;
-    color: black;
     width: 100%;
     flex-grow: 2;
     font-family: var(--font-urbanist);
